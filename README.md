@@ -1,1 +1,3 @@
-# Game2D_LabofFate
+# Lab Of Fate
+
+Do an thuc tap co so 
