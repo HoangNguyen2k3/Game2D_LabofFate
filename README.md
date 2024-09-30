@@ -1,3 +1,3 @@
 # Lab Of Fate
 
-Do an thuc tap co so 
+Do an thuc tap co so chuyen nganh
