@@ -1,0 +1,5336 @@
+fileFormatVersion: 2
+guid: 64ca15a1b8ebf3749adb3f32053145da
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: f3268c876daf4890b6af6cd462063137, type: 3}
+  _reimportOnDependencyChange: 1
+  _pixelsPerUnit: 32
+  _overrideTexture: {instanceID: 0}
+  _sprites:
+  - name: Enemies_x1_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 1184
+      width: 32
+      height: 32
+    spriteID: d22879893520624468615a06aa404867
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 1184
+      width: 32
+      height: 32
+    spriteID: f86c4f23ce93d994d8a4a42ea2d92da4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 1184
+      width: 32
+      height: 32
+    spriteID: dcda8c6d1cd310a4ea1a6b2bcab51cf6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 1184
+      width: 32
+      height: 32
+    spriteID: 13e9b9b977b9d3240a23a3a9206e3fc0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 1184
+      width: 32
+      height: 32
+    spriteID: be48fc2b829b9f64fab8e8ae434edefc
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 1184
+      width: 32
+      height: 32
+    spriteID: b2a8a195c139f844abf61126e0056845
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 1184
+      width: 32
+      height: 32
+    spriteID: 64c00f1f35c39b441ad09252d660c4ec
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 1184
+      width: 32
+      height: 32
+    spriteID: f3d9373f2519bb14f8e975b6ba6ecce6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 1184
+      width: 32
+      height: 32
+    spriteID: 767f48d559f6fe8448101e327ce3dfd6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 1184
+      width: 32
+      height: 32
+    spriteID: bd404aa5ec701a74686717aa43bae8f5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_10
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 1152
+      width: 32
+      height: 32
+    spriteID: fbb01dd1f3e60f34d851a68b8a5a168e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_11
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 1152
+      width: 32
+      height: 32
+    spriteID: 976bb2714fc98d2418ccc381b4750bd5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_12
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 1152
+      width: 32
+      height: 32
+    spriteID: 33ffb961c0e721b488983fcb62f1ec9e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_13
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 1152
+      width: 32
+      height: 32
+    spriteID: 2ed7e70c92f8ec4469c03e27718a44b7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_14
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 1152
+      width: 32
+      height: 32
+    spriteID: 11dd345e68fdae449a24ea6b84bee3f2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_15
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 1152
+      width: 32
+      height: 32
+    spriteID: 2e6dd7f552fd4e540aba2317a770c725
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_16
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 1152
+      width: 32
+      height: 32
+    spriteID: d4841288d6182984b9adb6188e1216e6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_17
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 1152
+      width: 32
+      height: 32
+    spriteID: fa5795f0aedf9ba4aa9b1ba5254221b6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_18
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 1152
+      width: 32
+      height: 32
+    spriteID: e454c30a9ee99b040b6c964e269bc502
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_19
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 1152
+      width: 32
+      height: 32
+    spriteID: ed4ef06182df2b24eb3234f7ee86047c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_20
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 1120
+      width: 32
+      height: 32
+    spriteID: c053d1a52168c6e4ba766d4f67310bda
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_21
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 1120
+      width: 32
+      height: 32
+    spriteID: 2f74b6798864cc448b8b4902c6647afe
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_22
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 1120
+      width: 32
+      height: 32
+    spriteID: 417fe8a4c4f59cb41beb2a318cf84e18
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_23
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 1120
+      width: 32
+      height: 32
+    spriteID: 65f47ac2b6188744c85b5184ae5ebcb9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_24
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 1120
+      width: 32
+      height: 32
+    spriteID: e2eea80d53135cb45b6003a6f3415a87
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_25
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 1120
+      width: 32
+      height: 32
+    spriteID: a3073445c9b77464896d060fa98b2151
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_26
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 1120
+      width: 32
+      height: 32
+    spriteID: 5189cab63d87fb34994130d049b388fa
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_27
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 1120
+      width: 32
+      height: 32
+    spriteID: a8220b9170510494e8bea7a45e11c7d8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_28
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 1120
+      width: 32
+      height: 32
+    spriteID: 041a7c699951b45409f7f94e440f9ed8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_29
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 1120
+      width: 32
+      height: 32
+    spriteID: ea964777338942c41a118e39ddfa3f52
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_30
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 1088
+      width: 32
+      height: 32
+    spriteID: e6e35e95b55d9b8498f03459e9886d01
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_31
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 1088
+      width: 32
+      height: 32
+    spriteID: 22e9e8107d88ebb4bbd60d38034ac37a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_32
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 1088
+      width: 32
+      height: 32
+    spriteID: 7db1ce7efac4e8f4e9f628c27c59951e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_33
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 1088
+      width: 32
+      height: 32
+    spriteID: 3ddc65449cf6bf1439ee8d9c4a112984
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_34
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 1088
+      width: 32
+      height: 32
+    spriteID: e8efcd0b53ae1a4479a6f99a63ac3fa9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_35
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 1088
+      width: 32
+      height: 32
+    spriteID: 8628387a9556d6d4ca030a6561762dda
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_36
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 1088
+      width: 32
+      height: 32
+    spriteID: 632f5b2c3f92cc243a10c1c99b708992
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_37
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 1088
+      width: 32
+      height: 32
+    spriteID: d9a5e88cbec92734191ef24e9e999f6c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_38
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 1088
+      width: 32
+      height: 32
+    spriteID: a77d5c572fdd80e4ebf2c2a9b7106bdf
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_39
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 1088
+      width: 32
+      height: 32
+    spriteID: e037caa862e79d14087d3b324ec8422e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_40
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 1056
+      width: 32
+      height: 32
+    spriteID: f3c1d2fdb96feac4ba61646d52454918
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_41
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 1056
+      width: 32
+      height: 32
+    spriteID: 35ff4be86543c4b4dba44e3f6596dbd9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_42
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 1056
+      width: 32
+      height: 32
+    spriteID: 1f851e739cc5cef45a78b601a8fc4992
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_43
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 1056
+      width: 32
+      height: 32
+    spriteID: ec8f41df385756e4780dea2250f37661
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_44
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 1056
+      width: 32
+      height: 32
+    spriteID: 9186590cea40e7b43b809f8fc0995690
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_45
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 1056
+      width: 32
+      height: 32
+    spriteID: 6f0855d66dc333e4a932d14bf0fe7147
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_46
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 1056
+      width: 32
+      height: 32
+    spriteID: 56727a4f3dd6f304eadd5ecc43a2bf36
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_47
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 1056
+      width: 32
+      height: 32
+    spriteID: 360583750a2382848a0106785ea1a449
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_48
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 1056
+      width: 32
+      height: 32
+    spriteID: e7a967c07e351544dab30f50276f5a9c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_49
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 1056
+      width: 32
+      height: 32
+    spriteID: 84cb06b359b2cc94c8afa7e785623870
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_50
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 1024
+      width: 32
+      height: 32
+    spriteID: ea5b253c9908e4b49a016c712532120e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_51
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 1024
+      width: 32
+      height: 32
+    spriteID: b3991da3415f7f3469b0a7c1d6f5279a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_52
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 1024
+      width: 32
+      height: 32
+    spriteID: e5dcb5ee61b184a42adc66d40619a4ef
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_53
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 1024
+      width: 32
+      height: 32
+    spriteID: 18cf1689e1425794aa3ba12000f49d3d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_54
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 1024
+      width: 32
+      height: 32
+    spriteID: d0866afccbfea7546884d8f5d0ea5c75
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_55
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 1024
+      width: 32
+      height: 32
+    spriteID: 6f7982abf7b90e64aa7425078d1a5e1b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_56
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 1024
+      width: 32
+      height: 32
+    spriteID: eab05c160638f9d4ea6825449724b2a1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_57
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 1024
+      width: 32
+      height: 32
+    spriteID: 88de36345c1bd194a8293d8252e3f746
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_58
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 1024
+      width: 32
+      height: 32
+    spriteID: 0fad11a1c3da3bf40b5b511538a4101a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_59
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 1024
+      width: 32
+      height: 32
+    spriteID: c478ce6dc72f3f9498c647eeb800bd8c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_60
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 992
+      width: 32
+      height: 32
+    spriteID: eb806a9166bfa7045ae7f6816a723923
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_61
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 992
+      width: 32
+      height: 32
+    spriteID: c3509980e3dcfd14aa91cbd49037ba37
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_62
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 992
+      width: 32
+      height: 32
+    spriteID: f0a10cfc842cf4c4c8489583c935c3b0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_63
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 992
+      width: 32
+      height: 32
+    spriteID: 60fc2a5014f9f564680ba3814112b8a7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_64
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 992
+      width: 32
+      height: 32
+    spriteID: 428bd2b5b9b614944a7f0d11bccf593b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_65
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 992
+      width: 32
+      height: 32
+    spriteID: 94886d610bced40499095e36e18b4d73
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_66
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 992
+      width: 32
+      height: 32
+    spriteID: d18b7595e82ac0b4b81c4330ae669487
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_67
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 992
+      width: 32
+      height: 32
+    spriteID: e879e281329a02649a24294fddb2c1e3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_68
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 992
+      width: 32
+      height: 32
+    spriteID: 76598a72dd9bab14bae5c696a65bd588
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_69
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 992
+      width: 32
+      height: 32
+    spriteID: 6f552da8e45efc44f856415607be0453
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_70
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 960
+      width: 32
+      height: 32
+    spriteID: 916cfa4160a093445a51fa3364a59d1e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_71
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 960
+      width: 32
+      height: 32
+    spriteID: 8d0b69098a209754492bb69495336bcd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_72
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 960
+      width: 32
+      height: 32
+    spriteID: 02e9812efe9c5134681d8fa65cebdb3f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_73
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 960
+      width: 32
+      height: 32
+    spriteID: 25e92484925e21343b49b55ebbf24d6f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_74
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 960
+      width: 32
+      height: 32
+    spriteID: 7bd469486429c89449579ae500141bea
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_75
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 960
+      width: 32
+      height: 32
+    spriteID: b7eba87edf208994abe5274e13c2349e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_76
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 960
+      width: 32
+      height: 32
+    spriteID: 49586162597b66849a3ee5761ce5ff44
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_77
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 960
+      width: 32
+      height: 32
+    spriteID: 9e1d2eb4a112b7b4fa4605f47fd7df63
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_78
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 960
+      width: 32
+      height: 32
+    spriteID: 3016c5b1940dae946a5b8213a048a623
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_79
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 960
+      width: 32
+      height: 32
+    spriteID: 5c8abe7076906904c8849808242ced1c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_80
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 928
+      width: 32
+      height: 32
+    spriteID: 95d131007fbd3ad43825d0644290ef8c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_81
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 928
+      width: 32
+      height: 32
+    spriteID: b2f6532868712384284c3438e5ec5ac7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_82
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 928
+      width: 32
+      height: 32
+    spriteID: 3b1bdaae2ae4044458e595752f82980e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_83
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 928
+      width: 32
+      height: 32
+    spriteID: 9e01b8ef391f0ea49b8529da74ea36ab
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_84
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 928
+      width: 32
+      height: 32
+    spriteID: 2507d1d68fb504f40a77ce2fe94e6ca7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_85
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 928
+      width: 32
+      height: 32
+    spriteID: f2303ec3173740e418b9e0b4116ca72d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_86
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 928
+      width: 32
+      height: 32
+    spriteID: 2052d6219d4b8fc4b97271c2adf61c97
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_87
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 928
+      width: 32
+      height: 32
+    spriteID: 036ab1035c316104db4eb0e9d61d35fe
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_88
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 928
+      width: 32
+      height: 32
+    spriteID: 2d1472e33af0447449dcca915db7cdaf
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_89
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 928
+      width: 32
+      height: 32
+    spriteID: be5c9faec47dc0543bb59e71fbc8dd39
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_90
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 896
+      width: 32
+      height: 32
+    spriteID: b4b4d545c762cd14e8c02bd9a6b9db6d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_91
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 896
+      width: 32
+      height: 32
+    spriteID: ab7d3fa0a98fb97478a8117e4e7d2917
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_92
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 896
+      width: 32
+      height: 32
+    spriteID: c231a5ff4e807ed4599706b80da4054c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_93
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 896
+      width: 32
+      height: 32
+    spriteID: 604f3fb5d7bcd484fbc66ae0549d0b77
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_94
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 896
+      width: 32
+      height: 32
+    spriteID: 94ff66058f7fa1b45a77c279b3bb3a7c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_95
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 896
+      width: 32
+      height: 32
+    spriteID: 7e48027420d8e5b4a89e2925142d0466
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_96
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 896
+      width: 32
+      height: 32
+    spriteID: ac25f469efe11554ba432c4477195130
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_97
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 896
+      width: 32
+      height: 32
+    spriteID: 5ad5ce1faff8fd244be8359613a1287a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_98
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 896
+      width: 32
+      height: 32
+    spriteID: 04ae960cb8b601946ae25703d798798a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_99
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 896
+      width: 32
+      height: 32
+    spriteID: e985d475abc9d3847a1c344d2b381924
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_100
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 864
+      width: 32
+      height: 32
+    spriteID: a35aae87afc9be247933e528933dc507
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_101
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 864
+      width: 32
+      height: 32
+    spriteID: 74dc7943b5713e645b9750b3fcf5ad95
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_102
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 864
+      width: 32
+      height: 32
+    spriteID: 0c062b6e9de8f1a4bbba1c545c81d370
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_103
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 864
+      width: 32
+      height: 32
+    spriteID: bb6d1f95053bc9547a6fc2ad0134af8f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_104
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 864
+      width: 32
+      height: 32
+    spriteID: 2b7253b8a671440438f1a9e803740a3e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_105
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 864
+      width: 32
+      height: 32
+    spriteID: 7a760ead5a5bac74cbedc4044a2327d6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_106
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 864
+      width: 32
+      height: 32
+    spriteID: 0959c7d1143638d43b4add58958fbb0d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_107
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 864
+      width: 32
+      height: 32
+    spriteID: a14142230d27c5649956e410daccf4ac
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_108
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 864
+      width: 32
+      height: 32
+    spriteID: 567db72c41c8b43408265d3c9b9c7bde
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_109
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 864
+      width: 32
+      height: 32
+    spriteID: 4c2ab2a99c984e748b31cfdf0b4be7ca
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_110
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 832
+      width: 32
+      height: 32
+    spriteID: d07c74ddc9bc46642b1b75d3835b5901
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_111
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 832
+      width: 32
+      height: 32
+    spriteID: 830778884904202459a3e97f23f6e081
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_112
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 832
+      width: 32
+      height: 32
+    spriteID: b9dc87a2ff053ea4c9535d57b3b43428
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_113
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 832
+      width: 32
+      height: 32
+    spriteID: 453ddaf12a00343488690d7821fad438
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_114
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 832
+      width: 32
+      height: 32
+    spriteID: 71d9539a2d2247247b0d50f20b9999e3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_115
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 832
+      width: 32
+      height: 32
+    spriteID: bcd0da1a7d082cd45bdc0538a933f1bb
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_116
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 832
+      width: 32
+      height: 32
+    spriteID: 716f664072960c64cbeeef5de0358b5a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_117
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 832
+      width: 32
+      height: 32
+    spriteID: 906a7bc9a0b2eaf478fde7d980397f36
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_118
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 832
+      width: 32
+      height: 32
+    spriteID: 994aba6683474474bbc2a743ed5f59c0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_119
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 832
+      width: 32
+      height: 32
+    spriteID: 966f8589721e4b8488be64b2fa8d9e7a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_120
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 800
+      width: 32
+      height: 32
+    spriteID: bc08f797fa30da547bd9d9bace7857e7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_121
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 800
+      width: 32
+      height: 32
+    spriteID: d23309aceda2d7a4b944e1502d084c37
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_122
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 800
+      width: 32
+      height: 32
+    spriteID: 3984af1667cdc8841a47f3fae5f5f218
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_123
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 800
+      width: 32
+      height: 32
+    spriteID: 355f61e7ab0d74a40a28b18b738cb2f6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_124
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 800
+      width: 32
+      height: 32
+    spriteID: af43cb7243607e748acb58a105cefec4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_125
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 800
+      width: 32
+      height: 32
+    spriteID: 673e0fa00c5e7914a95be9bd8def04a7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_126
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 800
+      width: 32
+      height: 32
+    spriteID: 03bff0f38e8a1934e8145c5eab168812
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_127
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 800
+      width: 32
+      height: 32
+    spriteID: 40583970d6262194c81ae4b8c1cabf7b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_128
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 800
+      width: 32
+      height: 32
+    spriteID: 8a3a33a2931d338469dc65800a07e8a0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_129
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 800
+      width: 32
+      height: 32
+    spriteID: 7b7c74632da43a84da4a0505f4a9e705
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_130
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 768
+      width: 32
+      height: 32
+    spriteID: f3214594d7a8dd34695ce81524714ce9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_131
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 768
+      width: 32
+      height: 32
+    spriteID: fefd2c77a5e22f44a966545109472e2c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_132
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 768
+      width: 32
+      height: 32
+    spriteID: a59969f7415b40b4398b50d37f03f056
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_133
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 768
+      width: 32
+      height: 32
+    spriteID: 3aa9726382b80be4da165222edb8afe5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_134
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 768
+      width: 32
+      height: 32
+    spriteID: 60f0f6d497acdd34893797fde4e70c57
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_135
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 768
+      width: 32
+      height: 32
+    spriteID: e786d525f54e56140a5068a49c62bd02
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_136
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 768
+      width: 32
+      height: 32
+    spriteID: 82f6628117720bc4eb1401f9a09c573b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_137
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 768
+      width: 32
+      height: 32
+    spriteID: 1e3d28208241662468776a37583f9a27
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_138
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 768
+      width: 32
+      height: 32
+    spriteID: f68dda7e9a77faf4ab9bbb2946ea2d21
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_139
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 768
+      width: 32
+      height: 32
+    spriteID: 452c3e0336c4dbe40bccd1cfbb558728
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_140
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 736
+      width: 32
+      height: 32
+    spriteID: b4dd4f75ece315643adbad3dde3c159e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_141
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 736
+      width: 32
+      height: 32
+    spriteID: dfe8918e44e6588439cdc2dbf154f15c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_142
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 736
+      width: 32
+      height: 32
+    spriteID: bbf846b7efb75ac4f9a88b7da74b5874
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_143
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 736
+      width: 32
+      height: 32
+    spriteID: a410e5040caac1b4d9d46d642ebd8863
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_144
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 736
+      width: 32
+      height: 32
+    spriteID: a02d3f91098a3874ba4dde07e3cd4fd5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_145
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 736
+      width: 32
+      height: 32
+    spriteID: 793b2cf553839304a939d5ab97d772e1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_146
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 736
+      width: 32
+      height: 32
+    spriteID: 07bf49ab519cc064a9e1711829b64aaf
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_147
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 736
+      width: 32
+      height: 32
+    spriteID: 483e8d515d1d6dd498ce170a44c74104
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_148
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 736
+      width: 32
+      height: 32
+    spriteID: 84f885ac482ac0044a2f464e2012ca23
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_149
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 736
+      width: 32
+      height: 32
+    spriteID: 5ed645e40f1204d43ba538425a066935
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_150
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 704
+      width: 32
+      height: 32
+    spriteID: bf00836aac6dc5a4ab35f0f7b543813d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_151
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 704
+      width: 32
+      height: 32
+    spriteID: 686fe855c603d354b9f55af3ae216b29
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_152
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 704
+      width: 32
+      height: 32
+    spriteID: 2984c184d9779b04d90a002d86b80a01
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_153
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 704
+      width: 32
+      height: 32
+    spriteID: ce0212c6e2bdcca41aae82aefc99f38b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_154
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 704
+      width: 32
+      height: 32
+    spriteID: c86864235213726479910cfe019abe9b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_155
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 704
+      width: 32
+      height: 32
+    spriteID: 476afb6878a96bd4c8f8a2006e164cfb
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_156
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 704
+      width: 32
+      height: 32
+    spriteID: 0b1e84f381ca6ce42890067112ff098e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_157
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 704
+      width: 32
+      height: 32
+    spriteID: f71e2913b33c84f48bb9b3e0c4764be0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_158
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 704
+      width: 32
+      height: 32
+    spriteID: db7d1f512df24ef43a7f291953f1b9d3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_159
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 704
+      width: 32
+      height: 32
+    spriteID: 4ec39f2834610124bb6680db778ad7b7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_160
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 672
+      width: 32
+      height: 32
+    spriteID: 6c7dc212e5cc79c4cbae0c4ba4a4d94c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_161
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 672
+      width: 32
+      height: 32
+    spriteID: f5128f68564fd6441b9e9a8d9e55a642
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_162
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 672
+      width: 32
+      height: 32
+    spriteID: 08ee2345b8729e54cb55499b9be9ac08
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_163
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 672
+      width: 32
+      height: 32
+    spriteID: 9abb8aada1793344aacc47236be861e5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_164
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 672
+      width: 32
+      height: 32
+    spriteID: 723c1dce71e344f45a31111f6015e78e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_165
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 672
+      width: 32
+      height: 32
+    spriteID: f63d21eac2999154dbf921f54fbd0767
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_166
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 672
+      width: 32
+      height: 32
+    spriteID: 1dabec64d2c0a60459dd0a03c8f42af1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_167
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 672
+      width: 32
+      height: 32
+    spriteID: 7033a946fa6ff384da5c93c6f804b6c2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_168
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 672
+      width: 32
+      height: 32
+    spriteID: 6996ecd27e5277547be507fd0eeabc8b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_169
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 672
+      width: 32
+      height: 32
+    spriteID: b2a941c11ac9f924490b2c087edd3ad3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_170
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 640
+      width: 32
+      height: 32
+    spriteID: 98d862ee50c0e6f4da2b20ba8cd91529
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_171
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 640
+      width: 32
+      height: 32
+    spriteID: 10429a8541bef134cabcc4e2c5b22219
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_172
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 640
+      width: 32
+      height: 32
+    spriteID: e57dcb5b07bd89a49b9d6f1e8c4ac826
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_173
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 640
+      width: 32
+      height: 32
+    spriteID: 4872f41b0f2b0f249b6007652fb602f5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_174
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 640
+      width: 32
+      height: 32
+    spriteID: e2ba23efbf22c284f805cebc1a4ef8ee
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_175
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 640
+      width: 32
+      height: 32
+    spriteID: 03c3ebdc53652c54faf28ff7e1bab738
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_176
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 640
+      width: 32
+      height: 32
+    spriteID: 72ad88882f81bda44ac8d3ec1d41cee9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_177
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 640
+      width: 32
+      height: 32
+    spriteID: 774ecd399cee18b44a118f06d58e5cd0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_178
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 640
+      width: 32
+      height: 32
+    spriteID: b95ef1ae002e63a4b8e0672a41523f1f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_179
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 640
+      width: 32
+      height: 32
+    spriteID: 82b563e55ab1e634a9f32730fa6fe9f1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_180
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 608
+      width: 32
+      height: 32
+    spriteID: e0eaf8d0df5b5e046ac14cedac8aa73c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_181
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 608
+      width: 32
+      height: 32
+    spriteID: 5aea783d0c4f3a64eab6b205b6344eae
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_182
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 608
+      width: 32
+      height: 32
+    spriteID: 3c77e2bf0335dad44a8b58525aaedcda
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_183
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 608
+      width: 32
+      height: 32
+    spriteID: 7027e5f1c4bfba54ba8b917c2b3124a1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_184
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 608
+      width: 32
+      height: 32
+    spriteID: d5b6b374060bf3948a23ad78d6390cb7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_185
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 608
+      width: 32
+      height: 32
+    spriteID: e27a17e200a234846bfa8c484777f8e7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_186
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 608
+      width: 32
+      height: 32
+    spriteID: b46837620fc3cc74cbcda52a3468f161
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_187
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 608
+      width: 32
+      height: 32
+    spriteID: 43f9e36b573004746898a404e5eeff6c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_188
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 608
+      width: 32
+      height: 32
+    spriteID: 572589560180dfa4ebefeccd24554b45
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_189
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 608
+      width: 32
+      height: 32
+    spriteID: 2cc50924caae18b4e85158cd9c6dc4e7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_190
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 576
+      width: 32
+      height: 32
+    spriteID: 79754d3bbf0ff94418184185a464a955
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_191
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 576
+      width: 32
+      height: 32
+    spriteID: 41002049a043c0e4fb04a2f67d2c2925
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_192
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 576
+      width: 32
+      height: 32
+    spriteID: 7fe559efab2e5ee4ebbe3563a16a4f2f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_193
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 576
+      width: 32
+      height: 32
+    spriteID: 87947803414d41d4a8b8b3af942fcd25
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_194
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 576
+      width: 32
+      height: 32
+    spriteID: 8ec223685eff736409fb9028a3582eec
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_195
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 576
+      width: 32
+      height: 32
+    spriteID: cee09978f33dd764182921de6f1630ed
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_196
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 576
+      width: 32
+      height: 32
+    spriteID: 6143b9a36aa96f44cb075096dfdc77d1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_197
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 576
+      width: 32
+      height: 32
+    spriteID: 13d88b9f3afa2ba48b86c8111e977a9d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_198
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 576
+      width: 32
+      height: 32
+    spriteID: 7a5ac74827a208a49b8d63f6c7cd2933
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_199
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 576
+      width: 32
+      height: 32
+    spriteID: c1ab9f7f7de3f6f4b8fd3f34db6a959e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_200
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 544
+      width: 32
+      height: 32
+    spriteID: a43f445ba46be5d438bbda1e3704b68f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_201
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 544
+      width: 32
+      height: 32
+    spriteID: 0c39b826592f8104f88d631e4f7fc929
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_202
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 544
+      width: 32
+      height: 32
+    spriteID: 0ed17caa7c3f239438b4ec51eaf083ba
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_203
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 544
+      width: 32
+      height: 32
+    spriteID: 6e445b4020dea4a479fb5b21044a4529
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_204
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 544
+      width: 32
+      height: 32
+    spriteID: 003b7cda2ee031a40938a0ccf6db52de
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_205
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 544
+      width: 32
+      height: 32
+    spriteID: 1693796762dee404ea47e1cf754484d6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_206
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 544
+      width: 32
+      height: 32
+    spriteID: 842e9a9196dacbd438ff1c0dcad011b9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_207
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 544
+      width: 32
+      height: 32
+    spriteID: a65cd241cffee0d42adfb0739815ddd4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_208
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 544
+      width: 32
+      height: 32
+    spriteID: 228c808087d569d449e502ae459a7bc0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_209
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 544
+      width: 32
+      height: 32
+    spriteID: 11e406a8bcdff004b85d24efc3dd96c9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_210
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 512
+      width: 32
+      height: 32
+    spriteID: 6ee076dbf5e5e544b95243366694577e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_211
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 512
+      width: 32
+      height: 32
+    spriteID: 8f31e570551c4c943aa68d5f0300c4d7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_212
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 512
+      width: 32
+      height: 32
+    spriteID: ef4525f69157d774889c48fa99c52ffb
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_213
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 512
+      width: 32
+      height: 32
+    spriteID: 39cf6e70084c527449209c7ae147a37a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_214
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 512
+      width: 32
+      height: 32
+    spriteID: 7d3144741cadc364cb153f675c9d4e11
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_215
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 512
+      width: 32
+      height: 32
+    spriteID: 599ba52561304df4fba7ae0b531eb344
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_216
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 512
+      width: 32
+      height: 32
+    spriteID: 2fca3939d52ee344ca06b76385a9933e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_217
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 512
+      width: 32
+      height: 32
+    spriteID: a27f8f055c7b51048b94d74e96113e0f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_218
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 512
+      width: 32
+      height: 32
+    spriteID: bdd7a36889810df4da6990cf9b370e84
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_219
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 512
+      width: 32
+      height: 32
+    spriteID: 5e82818ce5bbbae46a4eac5c689f0e01
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_220
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 480
+      width: 32
+      height: 32
+    spriteID: 56e69cb15def6d34f82cd9a8b4407b9d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_221
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 480
+      width: 32
+      height: 32
+    spriteID: bc5770dc57f5fa543833f12ec4df8d82
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_222
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 480
+      width: 32
+      height: 32
+    spriteID: 6cda5f0be106f3b4793684bfa6a63cc2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_223
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 480
+      width: 32
+      height: 32
+    spriteID: 2767b3809fa667d4492d3f32422aed9e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_224
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 480
+      width: 32
+      height: 32
+    spriteID: 8581456ce3193e54dba974dfd7b12189
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_225
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 480
+      width: 32
+      height: 32
+    spriteID: 04c2df43148fe6d44ab55532e255c811
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_226
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 480
+      width: 32
+      height: 32
+    spriteID: c7c24303dc0713d48bf565c4b86af206
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_227
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 480
+      width: 32
+      height: 32
+    spriteID: caf8016bc94340845a548f27a5683080
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_228
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 480
+      width: 32
+      height: 32
+    spriteID: 515ca28785e64e34db31c8f6b1c2a66b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_229
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 480
+      width: 32
+      height: 32
+    spriteID: 8836c85dae276c24c8eff8cdefea9753
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_230
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 448
+      width: 32
+      height: 32
+    spriteID: 5152c64b49b79544ba0b0e7fbe15fd2a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_231
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 448
+      width: 32
+      height: 32
+    spriteID: 0e83e9c59cde64e41a75de1d526cad95
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_232
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 448
+      width: 32
+      height: 32
+    spriteID: 71194183feb100542b683aeea7941793
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_233
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 448
+      width: 32
+      height: 32
+    spriteID: 9d04e73aaf6b1784ab4a1d487ec5e9ce
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_234
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 448
+      width: 32
+      height: 32
+    spriteID: 931c1b3d9314950479add43973829df0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_235
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 448
+      width: 32
+      height: 32
+    spriteID: 8c8f04dd92f3b424a9d65625848814c7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_236
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 448
+      width: 32
+      height: 32
+    spriteID: 43fb7dcd01a85c3428ef5b8874d0659b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_237
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 448
+      width: 32
+      height: 32
+    spriteID: e857560694437f841aa508552e0c6547
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_238
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 448
+      width: 32
+      height: 32
+    spriteID: 507ef7ca769f82c46a6a0b7f83f4a20c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_239
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 448
+      width: 32
+      height: 32
+    spriteID: fca70033b416bae4198f39d002c03e41
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_240
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 1fb544b9756fd0940bf69193875bf395
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_241
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 416
+      width: 32
+      height: 32
+    spriteID: c0e44a9e41483cf40a75109af3c4c3f4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_242
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 19a512ddcca27e34998c8e2f14dfa31b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_243
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 9ab349261a980dd42af35510f5ebb7f8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_244
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 83b7a4a8d0f3e5044ada00111a513b80
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_245
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 416
+      width: 32
+      height: 32
+    spriteID: c7919a0a4d161bf46a53a0d11a3211f1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_246
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 416
+      width: 32
+      height: 32
+    spriteID: acdb18283af10a6489ecccff4f204978
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_247
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 8fd2aec61d9b757448d6f9e0e3a69c45
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_248
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 9a99fc5ad65808944b0801a74cfd8112
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_249
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 0db77d472d7845747ae68d5045d95fdd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_250
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 384
+      width: 32
+      height: 32
+    spriteID: bd507730fe3f70f4697e01a645108e09
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_251
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 4b56dc2a901e80e439965708daae4101
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_252
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 642f227e7c7b44a4e87cdef4bd1da79b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_253
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 45d9cd1f1d8aea94d8a019bfd108f0fd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_254
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 8bea1d8d838f63742849fcd93bb154d3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_255
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 96eefddc0d84bc04097889a4a8a16691
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_256
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 73a98dffe9f6f5a4485437b36514d600
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_257
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 06b2cf43846550844a1853228b596953
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_258
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 384
+      width: 32
+      height: 32
+    spriteID: f6a953c9d93f0b6418b04cb38b156ce8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_259
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 384
+      width: 32
+      height: 32
+    spriteID: f6c2dcc2ce114374e93ffbe2b833c5b4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_260
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 352
+      width: 32
+      height: 32
+    spriteID: f43707a69c2a6274a979aebee66fc539
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_261
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 000b84a17e50792499399fe2b49893a5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_262
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 1976184127135954bbd037b2559a010c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_263
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 00e8c1b47e47b87499d6e2ae8944da18
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_264
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 99d90ff4b1d5d7944b6f086b789822ed
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_265
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 352
+      width: 32
+      height: 32
+    spriteID: fb8640afac1788945bf2db0cd314efac
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_266
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 352
+      width: 32
+      height: 32
+    spriteID: a7a15ae490cfca5429e44255b4c48218
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_267
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 5c8701f6a4c058a42aac368dba991e14
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_268
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 352
+      width: 32
+      height: 32
+    spriteID: bb68a36fd9163df4aa7bfbfe45782088
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_269
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 352
+      width: 32
+      height: 32
+    spriteID: b3036d25a8b931f47a802ebc29b72886
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_270
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 320
+      width: 32
+      height: 32
+    spriteID: b8d9dfeb962e03d43bbfb4987b7bfaeb
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_271
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 320
+      width: 32
+      height: 32
+    spriteID: a08067b918a05cd4faf080cf690b1e9f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_272
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 630006f6858fe57468b32d42daf03791
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_273
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 3c41d1d270fe85148b127af8d7677313
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_274
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 24b54e04787ca274dbb082208694b87e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_275
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 320
+      width: 32
+      height: 32
+    spriteID: cb2a039731e2d3840aa30581a3324c5f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_276
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 15210c2ae0d72f146b87b203718e1921
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_277
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 51ddbfa9ca9ad1e45a811cae68194d1e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_278
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 9e927f5cc6d38ea4cb98082eda3680dd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_279
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 320
+      width: 32
+      height: 32
+    spriteID: f4864bf75318f134db9f9b20397054ef
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_280
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 50e715b3e07bb0a488b28850fc4a23b3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_281
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 288
+      width: 32
+      height: 32
+    spriteID: d9208cc9f97da44418b01d2ef0312b3b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_282
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 4eed606c44da4814aa873feca6e2f551
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_283
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 2b4605e8b41cda9419d6111d34a8200d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_284
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 288
+      width: 32
+      height: 32
+    spriteID: ac423d691879535429469e415905f36f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_285
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 288
+      width: 32
+      height: 32
+    spriteID: fc5745c00578a3e4487381199b420cd9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_286
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 1108a091265f1e64a871a661ea70b4c6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_287
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 288
+      width: 32
+      height: 32
+    spriteID: aebc1ea721de8f54ea7b69231789ddc2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_288
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 288
+      width: 32
+      height: 32
+    spriteID: de88f0f50a0f9bc4695f98d49eae905b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_289
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 3d2eb319314a6b8488b043e263ed8145
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_290
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 05867d3a003518742b036f960293c887
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_291
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 256
+      width: 32
+      height: 32
+    spriteID: a570a0d71eb186b4d82f0f1cf702d330
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_292
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 256
+      width: 32
+      height: 32
+    spriteID: a3e15549e7fa8ca4288432248a581236
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_293
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 132ebfe44056434489932b815f1e88c5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_294
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 256
+      width: 32
+      height: 32
+    spriteID: d27664d369fab2746a594e64b1f7a2b6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_295
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 1f009de00d1424a4a8f2cd849b1abe06
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_296
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 7a2d39c34ddf097499eecb2716b5a428
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_297
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 256
+      width: 32
+      height: 32
+    spriteID: cbd1d4b92c89bb944a6cd1293e6621ef
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_298
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 4ace55bfc3cb2dc42b1132a72d99c83d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_299
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 256
+      width: 32
+      height: 32
+    spriteID: b8b96f1b93dedd0458db4ce10eca83e1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_300
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 224
+      width: 32
+      height: 32
+    spriteID: b73fbeb011874b34482d5dcb416448e1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_301
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 16a712dd310f7b448a0302702c247933
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_302
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 224
+      width: 32
+      height: 32
+    spriteID: b0e7c2692f9cbf448bfd3d8d6d14ca71
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_303
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 269d0ca3f65b73f4b91432b84221b7b5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_304
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 37c1734390967c640a633bf3f8326912
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_305
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 83ff7dc55e2ee90439cb827e40a4efc7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_306
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 283d2f3f922220f4c840af125d935ed1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_307
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 7f6d9bae314ec98489c137455575d6df
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_308
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 0d6e6ba47699a994e87036719f08fb4b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_309
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 6bb75719786699e43903a6fd4017959a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_310
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 04a5a5031246d6549b6bd77acb942c29
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_311
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 3f7a001253dbd7746995ec814fd28012
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_312
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 192
+      width: 32
+      height: 32
+    spriteID: f0abdeba176f54d44bfec16ac2eaeb3b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_313
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 84d8f8efd97320f47ba1189de25b364b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_314
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 192
+      width: 32
+      height: 32
+    spriteID: f6b4a63b775fde3448978a6015404fa3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_315
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 139115079e4df1e429c4bd3c427b18e3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_316
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 0870efe51a0413d48931f5db74dda8b6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_317
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 192
+      width: 32
+      height: 32
+    spriteID: aa5132f9f6e270544a7777ba4b1ffa6d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_318
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 192
+      width: 32
+      height: 32
+    spriteID: dff2baa1d550ece43a928e2f3cf6d4ce
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_319
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 133fb8036183e6742822aec99d60e72c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_320
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 36adcda1add79754280e998f4c81fb9b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_321
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 160
+      width: 32
+      height: 32
+    spriteID: ee862415de1e70d48aa0ce77973eda73
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_322
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 1e9cdbda3acc9e64e8315aed661fb1d6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_323
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 160
+      width: 32
+      height: 32
+    spriteID: ba348342a0bd4204489487882ca38899
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_324
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 160
+      width: 32
+      height: 32
+    spriteID: db0cfb3e4dbc4774286057a28dd1b913
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_325
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 71247241864bd3b4da585f68d1430af1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_326
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 065d6e91def89084aa1da300ea7a90d0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_327
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 806f2867eccdbce44baf266502ba5d16
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_328
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 160
+      width: 32
+      height: 32
+    spriteID: d124d475d97326e49af9213969aaef6f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_329
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 160
+      width: 32
+      height: 32
+    spriteID: b257965c532fd1e4c8372db1dbe3db18
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_330
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 06228e5e7d9449043af5dcba865dda90
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_331
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 2c660931f01bcff459074e7d99ac7418
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_332
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 5c415289cecb7384f8b7ccf3cf9e06c1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_333
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 128
+      width: 32
+      height: 32
+    spriteID: e6858f9045c40924182accfecaa3e08e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_334
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 1eadc2ece3a748842bb9be3d4fe11ebe
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_335
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 2ff9675ed0b50f74da3c54387450d3f4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_336
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 128
+      width: 32
+      height: 32
+    spriteID: f8e82a582eeff0047ad1903dc61c91e3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_337
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 0f00c97528f93a1449281e9e9dfffc98
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_338
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 128
+      width: 32
+      height: 32
+    spriteID: f84cfa00ed296e9458a654539d9deb18
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_339
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 05eb139368a0d2345ba7af0e774adb30
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_340
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 4d801f0ad0446a040856c5aa4b1e4027
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_341
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 5f7a6f22a2d210b458951609f28020f5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_342
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 3d87f863fe54604489da438cb71627e5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_343
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 727cd5c0a8a94eb43977b3595d59f356
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_344
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 96
+      width: 32
+      height: 32
+    spriteID: e25ccc00ccd46224d8c381d821ac3d19
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_345
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 96
+      width: 32
+      height: 32
+    spriteID: cf6deea658939974e87be55d7b87a2a8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_346
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 5e884d3a2a3ca1f489e8d85b5304d725
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_347
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 7e939da3b7d03bf4fa89396a26ea5417
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_348
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 0739fb9dfa0922849ab33029856011fa
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_349
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 1cf6995f95121db4f8e5fdab6827b3bc
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_350
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 64
+      width: 32
+      height: 32
+    spriteID: dfc1c64bce2ae6642a3e9e2e23fdaec0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_351
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 64
+      width: 32
+      height: 32
+    spriteID: bf3a5ba0f85ccc44ca3e89ee99b061f5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_352
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 4ca87c996aada194498a14d2dd21eab5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_353
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 2cfce257a6f3db543b05d9b0dfd8908d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_354
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 27634ebf6b7dcc348a719e97e3e27e84
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_355
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 64
+      width: 32
+      height: 32
+    spriteID: ebdd3b23be761c040b2a2756056dd36a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_356
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 786eda6682fcfa946b7384e8580ef996
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_357
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 2935bd2b43fd7c34baa0fe7cfa6e65ca
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_358
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 83721fd073bc141449facba01b7a5802
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_359
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 75ad4a239fc35fa4ab3bedab9c364942
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_360
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 5dad548976c3a3d418bc9529db5a5a5e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_361
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 941dbe48512fcc84c9d50880b4fd84dc
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_362
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 6caace8654d74a2499e35917ccd960ee
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_363
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 86d13b3af138ad244911c3a9ce523ae1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_364
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 3c769fddf37be1a46992057400d9767c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_365
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 32
+      width: 32
+      height: 32
+    spriteID: f251dea9a7c56fa43bd3d4288f3ae425
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_366
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 32
+      width: 32
+      height: 32
+    spriteID: e2ec69c5a409d3f4a896a3b383cb8cae
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_367
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 902082a2414344445a27b83ce1a33a61
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_368
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 08ee8bb6a0aa45a419393be0c2bfd803
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_369
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 5b7bb58fda1d1c6438d5067661dec15c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_370
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 161d6a6b881f97a4583f866279f9ae0c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_371
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 0
+      width: 32
+      height: 32
+    spriteID: f495dd707d3c22a4cb15ac06e9d90b1c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_372
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 0
+      width: 32
+      height: 32
+    spriteID: aa5370de49814cb4e89f08b856f23597
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_373
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 0
+      width: 32
+      height: 32
+    spriteID: df5cf7bd9fedb444fb92d513d8e6066e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_374
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 5bb4be308e39e4247ae6d601419aed5c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_375
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 3d7503152f313b24b968cf8930f544ea
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_376
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 1cb31ca1f5a23764c9b08a83f0f98c15
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_377
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 0
+      width: 32
+      height: 32
+    spriteID: e89fe2542164e204792fab8cfe408c3c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_378
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 0
+      width: 32
+      height: 32
+    spriteID: eae85236877bd4141b3c08fc3589427a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Enemies_x1_379
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 0
+      width: 32
+      height: 32
+    spriteID: b91e061c3ea5adf46b8639c0b2a4a3e4
+    spriteOutline: []
+    tessellationDetail: 0
+  _secondaryTextures: []
+  _artifacts: {instanceID: 0}

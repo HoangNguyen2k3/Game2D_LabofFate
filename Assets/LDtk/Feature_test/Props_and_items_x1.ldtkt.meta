@@ -1,0 +1,7408 @@
+fileFormatVersion: 2
+guid: 68d9b87aea9420141bc6cbdeaf570ace
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: f3268c876daf4890b6af6cd462063137, type: 3}
+  _reimportOnDependencyChange: 1
+  _pixelsPerUnit: 32
+  _overrideTexture: {instanceID: 0}
+  _sprites:
+  - name: Props_and_items_x1_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 672
+      width: 32
+      height: 32
+    spriteID: 72b646a04664a1f438138baab667fd1c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 672
+      width: 32
+      height: 32
+    spriteID: 9b9782eaf8762aa48a3a8912db392de1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 672
+      width: 32
+      height: 32
+    spriteID: 2f9e9a06f05cf1f4facf182178268920
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 672
+      width: 32
+      height: 32
+    spriteID: 00ac770cc3c656240b798436651e0d35
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 672
+      width: 32
+      height: 32
+    spriteID: 77040b66b4b8ffa4d9b65f3d8c4e6b00
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 672
+      width: 32
+      height: 32
+    spriteID: fb82dfbaa6e90cd48966a045f9bf4435
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 672
+      width: 32
+      height: 32
+    spriteID: f127211f3a1438441afdcbd9f8867d44
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 672
+      width: 32
+      height: 32
+    spriteID: 839ad293e58a9f44b8bda7a5d9f074f8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 672
+      width: 32
+      height: 32
+    spriteID: aad0b503aca30e64698cc738ddd2b539
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 672
+      width: 32
+      height: 32
+    spriteID: baaec7159b33ac14281d70ee8691b15b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_10
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 672
+      width: 32
+      height: 32
+    spriteID: dd3a241d58d69ef4992f301f3e8f6eb5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_11
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 672
+      width: 32
+      height: 32
+    spriteID: b9aef484e9d71aa46acfd80479c1fc21
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_12
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 672
+      width: 32
+      height: 32
+    spriteID: 1e3aa6c6a2c686448b0ec71e95a39cf7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_13
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 672
+      width: 32
+      height: 32
+    spriteID: 7a493a3f989a75244bd23d5bcce9c717
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_14
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 672
+      width: 32
+      height: 32
+    spriteID: c289dcf7fee81794da6be14890a23042
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_15
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 480
+      y: 672
+      width: 32
+      height: 32
+    spriteID: 45c43574b4f705e4eb12c6a353e36ef5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_16
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 672
+      width: 32
+      height: 32
+    spriteID: d1d75a73d65570840a7dd3f5fe705dcb
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_17
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 544
+      y: 672
+      width: 32
+      height: 32
+    spriteID: ae9de84eab3eb1f448b43835f10c017a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_18
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 576
+      y: 672
+      width: 32
+      height: 32
+    spriteID: 783117c48280ed54fbefda9c38373d05
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_19
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 608
+      y: 672
+      width: 32
+      height: 32
+    spriteID: 01acdd253ecb2e345a67bf9810917953
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_20
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 672
+      width: 32
+      height: 32
+    spriteID: 93cae83cb941f8c47a3b520232f64fef
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_21
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 672
+      y: 672
+      width: 32
+      height: 32
+    spriteID: 955bbcd29274b2c44846e04f3185125a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_22
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 704
+      y: 672
+      width: 32
+      height: 32
+    spriteID: 4e4ede5cefd4dde4b899db3d6bfe7985
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_23
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 736
+      y: 672
+      width: 32
+      height: 32
+    spriteID: f24ad1ee12e457745a11cf7e1b82853d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_24
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 640
+      width: 32
+      height: 32
+    spriteID: 0b57cbad0ae8b1b44ac6a3c915791b41
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_25
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 640
+      width: 32
+      height: 32
+    spriteID: f4785e12b6ad4db4cbdf4efc452b622c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_26
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 640
+      width: 32
+      height: 32
+    spriteID: 99e2ff1b74a997742aaa145d9cf318f2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_27
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 640
+      width: 32
+      height: 32
+    spriteID: fdcf3ea53cb5b4947bc3520bab2e01bf
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_28
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 640
+      width: 32
+      height: 32
+    spriteID: 64a35d4539d405e41aae4a3aa39c093c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_29
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 640
+      width: 32
+      height: 32
+    spriteID: d7e790aa51118d242bf9e443de48c01f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_30
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 640
+      width: 32
+      height: 32
+    spriteID: 79491ab87a692f04cbfb50a8bcb7aae4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_31
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 640
+      width: 32
+      height: 32
+    spriteID: ba0a1c627927a18428d7494ef97c2891
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_32
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 640
+      width: 32
+      height: 32
+    spriteID: 7f0e8ebf373df6c429ce56166122a06a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_33
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 640
+      width: 32
+      height: 32
+    spriteID: 98f6ccc70880b4f44b7e21d6504bedd6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_34
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 640
+      width: 32
+      height: 32
+    spriteID: 4f73284aee394004ab9624086fb44e54
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_35
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 640
+      width: 32
+      height: 32
+    spriteID: 763f9a073a9195447bd1638fbf6f2ce4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_36
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 640
+      width: 32
+      height: 32
+    spriteID: d17b7e0c80efd6c4db90ae942e066ebd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_37
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 640
+      width: 32
+      height: 32
+    spriteID: 4380c045233ef8d4b952c7422deaff79
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_38
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 640
+      width: 32
+      height: 32
+    spriteID: 1ed53021ee5137b4da376434ff68c5da
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_39
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 480
+      y: 640
+      width: 32
+      height: 32
+    spriteID: 4bdbc81663ac967478ada6db8457372e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_40
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 640
+      width: 32
+      height: 32
+    spriteID: 1d7c918e6061347469b51198646e0bf1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_41
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 544
+      y: 640
+      width: 32
+      height: 32
+    spriteID: d359c4ab669649447993fe2ad0a694d3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_42
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 576
+      y: 640
+      width: 32
+      height: 32
+    spriteID: 28baea96fb3007c42b7818981b44ca00
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_43
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 608
+      y: 640
+      width: 32
+      height: 32
+    spriteID: 87a8b92f4635c614390f6ec2483b06a4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_44
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 640
+      width: 32
+      height: 32
+    spriteID: 6b52e1b13913a264480fc3d05db3e306
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_45
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 672
+      y: 640
+      width: 32
+      height: 32
+    spriteID: e44b47d924858f74da23c34f5a00cf5b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_46
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 704
+      y: 640
+      width: 32
+      height: 32
+    spriteID: 88bfdcc4a93d6024586c720d600a6cc3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_47
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 736
+      y: 640
+      width: 32
+      height: 32
+    spriteID: 64a43317bea1de349820f1f40f47fd29
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_48
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 608
+      width: 32
+      height: 32
+    spriteID: 74f4e002a02c5ed448de7fda9ead78b5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_49
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 608
+      width: 32
+      height: 32
+    spriteID: 0b1507687bf808041bfd5f7b9764fba3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_50
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 608
+      width: 32
+      height: 32
+    spriteID: 43a3f5e57e3f0794987cf490d6d55b56
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_51
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 608
+      width: 32
+      height: 32
+    spriteID: c7dae7454e2917d4da5edff34e6b3e7b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_52
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 608
+      width: 32
+      height: 32
+    spriteID: ea231efb8f4c7b84da26e031922d84b8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_53
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 608
+      width: 32
+      height: 32
+    spriteID: ee69dbe517d902344abbfe8add0b830e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_54
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 608
+      width: 32
+      height: 32
+    spriteID: 9721ab01bed23954f84ed3958faca3f3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_55
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 608
+      width: 32
+      height: 32
+    spriteID: 59c563d54ba8c434698e093e9aa3a4a9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_56
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 608
+      width: 32
+      height: 32
+    spriteID: fcb7b4d99d27359468ebb7d20fe47fa8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_57
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 608
+      width: 32
+      height: 32
+    spriteID: 553408d1423012c47a70a48811c5be85
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_58
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 608
+      width: 32
+      height: 32
+    spriteID: 618d39b3ddb38894a91cec97e0effad1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_59
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 608
+      width: 32
+      height: 32
+    spriteID: a1e22bafbc6989b4180fc40554f115e4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_60
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 608
+      width: 32
+      height: 32
+    spriteID: 53d23519217924b45bcecd08d2b5d8fe
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_61
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 608
+      width: 32
+      height: 32
+    spriteID: 031c44828534b184390a0025fcb42c2e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_62
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 608
+      width: 32
+      height: 32
+    spriteID: 2b8cbbfd650c2864f81144cefac86ec7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_63
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 480
+      y: 608
+      width: 32
+      height: 32
+    spriteID: 3cea36a3eaeb466459437d442dbff693
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_64
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 608
+      width: 32
+      height: 32
+    spriteID: cc83b6a1e4250e342b40f7e1a058cdd8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_65
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 544
+      y: 608
+      width: 32
+      height: 32
+    spriteID: fbe5338f1108a8c4dae344b46922c33f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_66
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 576
+      y: 608
+      width: 32
+      height: 32
+    spriteID: 9c37ef5650f2e484ebd03ec20334ff76
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_67
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 608
+      y: 608
+      width: 32
+      height: 32
+    spriteID: 0c508df68a32e3f49959bc159b651a18
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_68
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 608
+      width: 32
+      height: 32
+    spriteID: 7a3bdd06df8f48a4789c95a399a47cb5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_69
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 672
+      y: 608
+      width: 32
+      height: 32
+    spriteID: ecd88c16e05049d4ca8bdaffa631f228
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_70
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 704
+      y: 608
+      width: 32
+      height: 32
+    spriteID: 2887c30dc4a4247419de16628d8cfc1c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_71
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 736
+      y: 608
+      width: 32
+      height: 32
+    spriteID: bf42ee301f257dd4f84857aa996923bf
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_72
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 576
+      width: 32
+      height: 32
+    spriteID: fecb348e70f978e41a842308867fa1ef
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_73
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 576
+      width: 32
+      height: 32
+    spriteID: 584c3f7c3a8608d469cbe7b3388de9b1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_74
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 576
+      width: 32
+      height: 32
+    spriteID: daec83ef45a027b4984bcd7c59231d81
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_75
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 576
+      width: 32
+      height: 32
+    spriteID: 03c84cbece4b5874d9c1458268c7bf78
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_76
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 576
+      width: 32
+      height: 32
+    spriteID: 3a4274d08572c2c4ca5c3421d78546c6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_77
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 576
+      width: 32
+      height: 32
+    spriteID: 2d54b950eb3210d40a3db9d7c90be7a7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_78
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 576
+      width: 32
+      height: 32
+    spriteID: 934c28d48454d9241800febaf7acc53a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_79
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 576
+      width: 32
+      height: 32
+    spriteID: a7590f754414eea41a6ddc5b434411df
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_80
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 576
+      width: 32
+      height: 32
+    spriteID: 172e3233dbd35334b98f83e5e714dd28
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_81
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 576
+      width: 32
+      height: 32
+    spriteID: 0197a5d053574314ca315a9dd2eba8da
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_82
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 576
+      width: 32
+      height: 32
+    spriteID: 9227db394d7828e4aa1401e46317aa8a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_83
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 576
+      width: 32
+      height: 32
+    spriteID: f705efe4201e6fe4ebc87b8c0308eba9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_84
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 576
+      width: 32
+      height: 32
+    spriteID: f6f3008ed72f1a34cbaf57969ea7423a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_85
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 576
+      width: 32
+      height: 32
+    spriteID: 6a4098b5b2d08404e833bbd24829f976
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_86
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 576
+      width: 32
+      height: 32
+    spriteID: 5f3456b6c5a1efc43840fde9bfcf0701
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_87
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 480
+      y: 576
+      width: 32
+      height: 32
+    spriteID: 6290e73778aba87498b82dd7582eec1b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_88
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 576
+      width: 32
+      height: 32
+    spriteID: 3039ddfedec526b4f8e2c9143ca73521
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_89
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 544
+      y: 576
+      width: 32
+      height: 32
+    spriteID: 351bc0187e63e0047b0f56387c13da15
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_90
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 576
+      y: 576
+      width: 32
+      height: 32
+    spriteID: 2d2fc7773fd2fee4aa6569b4990f2bfa
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_91
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 608
+      y: 576
+      width: 32
+      height: 32
+    spriteID: c4fe6dc7e35f2a846821d48e8507e0ba
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_92
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 576
+      width: 32
+      height: 32
+    spriteID: 24098cf93ef8a5c41b912ebb4e528d31
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_93
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 672
+      y: 576
+      width: 32
+      height: 32
+    spriteID: 2214c996d0d27ad409682e1a6aa4afb1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_94
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 704
+      y: 576
+      width: 32
+      height: 32
+    spriteID: 6569d64ad4a9ac54d854715355499667
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_95
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 736
+      y: 576
+      width: 32
+      height: 32
+    spriteID: 3d407070e2a16f2409b9e58eb84e45ff
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_96
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 544
+      width: 32
+      height: 32
+    spriteID: 2913787bceb8fba409cdfe05c40bc7dc
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_97
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 544
+      width: 32
+      height: 32
+    spriteID: 80829c249ff6d7a4bbd98c3755d0c8da
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_98
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 544
+      width: 32
+      height: 32
+    spriteID: 1d99e447485df914f9dce3cc7a63feb3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_99
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 544
+      width: 32
+      height: 32
+    spriteID: 8dcdd27921cfcd0448879cd844a08bb9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_100
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 544
+      width: 32
+      height: 32
+    spriteID: e0681eb3f5964fd4dad899493182b52e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_101
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 544
+      width: 32
+      height: 32
+    spriteID: 8337f1453caf7784680e9c6450d64466
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_102
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 544
+      width: 32
+      height: 32
+    spriteID: 4854cefc57fc55544ad3c4102bd2afb8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_103
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 544
+      width: 32
+      height: 32
+    spriteID: 4c5374413aa8a3c41b53e9aec8d41119
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_104
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 544
+      width: 32
+      height: 32
+    spriteID: c9cf977d734d10e49ac43e9a183d45e5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_105
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 544
+      width: 32
+      height: 32
+    spriteID: 0390fdbe29c78624c8b7b7847709efb2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_106
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 544
+      width: 32
+      height: 32
+    spriteID: 8bad0b6e1253aed4187151b62d8cbb6e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_107
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 544
+      width: 32
+      height: 32
+    spriteID: 2cf589ab0d712d84d80aade4bd53a76c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_108
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 544
+      width: 32
+      height: 32
+    spriteID: 77678af2885b57d4791f088c32823f17
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_109
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 544
+      width: 32
+      height: 32
+    spriteID: dfc4f93518d569e419e752805ba0c59d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_110
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 544
+      width: 32
+      height: 32
+    spriteID: 5c8fab1fed3c2444dbc75fab00671c3c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_111
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 480
+      y: 544
+      width: 32
+      height: 32
+    spriteID: fb1017cf65e0bd64685752871a4de5df
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_112
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 544
+      width: 32
+      height: 32
+    spriteID: 7ef5b56edb3b0a443956dd8d9510d48b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_113
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 544
+      y: 544
+      width: 32
+      height: 32
+    spriteID: 39e393e1c1b11c94aa89d3ab599cabbd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_114
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 576
+      y: 544
+      width: 32
+      height: 32
+    spriteID: 3c12b9d401aee9c43bf6ce4c4cc86167
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_115
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 608
+      y: 544
+      width: 32
+      height: 32
+    spriteID: 100990ec323d2e34a841ade73b3ae016
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_116
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 544
+      width: 32
+      height: 32
+    spriteID: 0f76cdea872ec8447917eda0bf6fa1d2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_117
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 672
+      y: 544
+      width: 32
+      height: 32
+    spriteID: d576f007bd3c2614e85ca22ff2cfafe9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_118
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 704
+      y: 544
+      width: 32
+      height: 32
+    spriteID: bf81995018241b446a4837d94757fbdc
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_119
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 736
+      y: 544
+      width: 32
+      height: 32
+    spriteID: 37961c5af173af641bd640a627318efa
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_120
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 512
+      width: 32
+      height: 32
+    spriteID: 6e33436dc592ca3439ba2e4581c64ee3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_121
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 512
+      width: 32
+      height: 32
+    spriteID: cf9752cf6fb97e9469315cc62fd568fa
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_122
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 512
+      width: 32
+      height: 32
+    spriteID: fc767ac9a9991f144aefb431a91b5525
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_123
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 512
+      width: 32
+      height: 32
+    spriteID: 4db63a50d41156441a786f93197b7f61
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_124
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 512
+      width: 32
+      height: 32
+    spriteID: 16be6a9dea10d5f46b16a57ceb9c7bdd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_125
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 512
+      width: 32
+      height: 32
+    spriteID: 4a373b856a4a3f2438822b687b6e1398
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_126
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 512
+      width: 32
+      height: 32
+    spriteID: 96df396be7f86574fbe7767613c6663e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_127
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 512
+      width: 32
+      height: 32
+    spriteID: a0281d4c6758d90429f7a9631d91bcc1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_128
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 512
+      width: 32
+      height: 32
+    spriteID: 6be241eea3f4e114a84521ffd5cd416e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_129
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 512
+      width: 32
+      height: 32
+    spriteID: 92829397e30db754ca26293912e646b6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_130
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 512
+      width: 32
+      height: 32
+    spriteID: 9798487e71930eb47b17ffa5e9006bad
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_131
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 512
+      width: 32
+      height: 32
+    spriteID: cbd0a9a543124474f8411c3a1130031b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_132
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 512
+      width: 32
+      height: 32
+    spriteID: 2a116ae7e340ef34dbbebf42ee799b15
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_133
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 512
+      width: 32
+      height: 32
+    spriteID: 9f28e9ab05e8c5d4f9a081678f9e2f5a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_134
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 512
+      width: 32
+      height: 32
+    spriteID: af0b6d0fc0bbfee4d86c4074f8dc740e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_135
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 480
+      y: 512
+      width: 32
+      height: 32
+    spriteID: 6b929528f6ec11b49b5cfe0a2a591bdb
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_136
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 512
+      width: 32
+      height: 32
+    spriteID: 409f6da5e31911949bae7551f3dda90e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_137
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 544
+      y: 512
+      width: 32
+      height: 32
+    spriteID: 7601afcbb8c647544809d06e1949babe
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_138
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 576
+      y: 512
+      width: 32
+      height: 32
+    spriteID: 333d435f24aaaef478bdf18991d99a3b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_139
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 608
+      y: 512
+      width: 32
+      height: 32
+    spriteID: fd0debaabba5d7946a229320184f5200
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_140
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 512
+      width: 32
+      height: 32
+    spriteID: 24897acb1b51e10408ceb5544bb1b155
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_141
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 672
+      y: 512
+      width: 32
+      height: 32
+    spriteID: f36ca432e4ea869419faa90a14638e9e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_142
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 704
+      y: 512
+      width: 32
+      height: 32
+    spriteID: bf848786cb756044a9ac8ae4535039d6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_143
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 736
+      y: 512
+      width: 32
+      height: 32
+    spriteID: 5dbe9e8eee868af4fb745bf02b999059
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_144
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 480
+      width: 32
+      height: 32
+    spriteID: 71d17404d9d476a4db3e172057d73071
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_145
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 480
+      width: 32
+      height: 32
+    spriteID: e9831ff770aeed842af2606231b40876
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_146
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 480
+      width: 32
+      height: 32
+    spriteID: 0b96afc97d497e642980fe3582a68267
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_147
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 480
+      width: 32
+      height: 32
+    spriteID: da7c5518b686e434b8b1a7c1ba3d859d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_148
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 480
+      width: 32
+      height: 32
+    spriteID: b1f197c25f711704ea043ce163f60a46
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_149
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 480
+      width: 32
+      height: 32
+    spriteID: b7f49d3520e06e443ba2ce792297eea4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_150
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 480
+      width: 32
+      height: 32
+    spriteID: b09c737c92c63ea4886098dba6ad7dd1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_151
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 480
+      width: 32
+      height: 32
+    spriteID: 6fecdf3858383574ea36910399fd9c2d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_152
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 480
+      width: 32
+      height: 32
+    spriteID: aefefcd9eebbe3840931f87ac103398b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_153
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 480
+      width: 32
+      height: 32
+    spriteID: 130c372bf2b71d342b95b1c1825c4a66
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_154
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 480
+      width: 32
+      height: 32
+    spriteID: 7e7f3bcc8d5e7694cba8e60d485b10e2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_155
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 480
+      width: 32
+      height: 32
+    spriteID: 12d5e6c7cebf01c4799d2ff0e3af9a57
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_156
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 480
+      width: 32
+      height: 32
+    spriteID: 71dddb616bbd8bc409cfdb9874cde4c4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_157
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 480
+      width: 32
+      height: 32
+    spriteID: 288352a03ea9f574ab2c535e09b38410
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_158
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 480
+      width: 32
+      height: 32
+    spriteID: e05b9d94ee489ec43beeaa382687e9a8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_159
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 480
+      y: 480
+      width: 32
+      height: 32
+    spriteID: 878cd739aa7a55f44b4f078f943c0750
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_160
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 480
+      width: 32
+      height: 32
+    spriteID: f7b40f48cf8e7f44c910d214ff567674
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_161
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 544
+      y: 480
+      width: 32
+      height: 32
+    spriteID: 09906a971910f8f41863ec25641c92fd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_162
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 576
+      y: 480
+      width: 32
+      height: 32
+    spriteID: bc03afa1678012548bd236db58a5c20a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_163
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 608
+      y: 480
+      width: 32
+      height: 32
+    spriteID: bbe1bf762d133844193a05cac85967ab
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_164
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 480
+      width: 32
+      height: 32
+    spriteID: d64be1cace2fb3743809a9db28821bac
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_165
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 672
+      y: 480
+      width: 32
+      height: 32
+    spriteID: f4df79d4eacd5ea46b0b6d1fe5062ead
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_166
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 704
+      y: 480
+      width: 32
+      height: 32
+    spriteID: da701caca9ddb4c4089add7c03e3947f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_167
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 736
+      y: 480
+      width: 32
+      height: 32
+    spriteID: b4de020aae42be7459bc3e5cd917a423
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_168
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 448
+      width: 32
+      height: 32
+    spriteID: a1984b669dab0fb49b84e32dbdb1e2ec
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_169
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 448
+      width: 32
+      height: 32
+    spriteID: 37aae8f1cfb7ed947a46b6b9b5190d46
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_170
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 448
+      width: 32
+      height: 32
+    spriteID: 44170f83b595e254dbfa7949cd386b6a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_171
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 448
+      width: 32
+      height: 32
+    spriteID: 1325162463b304345bccc83de2866b0a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_172
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 448
+      width: 32
+      height: 32
+    spriteID: 273a0ab82be9d7448ad08a12365b80ec
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_173
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 448
+      width: 32
+      height: 32
+    spriteID: fc72b4b00620e63468a1b187135b0602
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_174
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 448
+      width: 32
+      height: 32
+    spriteID: 78f925260b393d944b5cdec0b8a841dc
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_175
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 448
+      width: 32
+      height: 32
+    spriteID: 43e388d8b2eec8043932de32fb66a211
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_176
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 448
+      width: 32
+      height: 32
+    spriteID: 8b9f98043cb438145802296e8b6b4a31
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_177
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 448
+      width: 32
+      height: 32
+    spriteID: 93fba317ad501114ab3b890a45b00049
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_178
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 448
+      width: 32
+      height: 32
+    spriteID: 9027169f2616c3946849a3839f52ce1c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_179
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 448
+      width: 32
+      height: 32
+    spriteID: 1e8ce597d43be84409c4e7abe494ca03
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_180
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 448
+      width: 32
+      height: 32
+    spriteID: cc87e496cfcf81749bed63c6301f9b5d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_181
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 448
+      width: 32
+      height: 32
+    spriteID: 48d2fc8941fda784fbbb8fca4f452634
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_182
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 448
+      width: 32
+      height: 32
+    spriteID: 52b3171db55befc45a193c1cc464d2a4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_183
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 480
+      y: 448
+      width: 32
+      height: 32
+    spriteID: 19e615a13b62a6d448efe72418d15929
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_184
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 448
+      width: 32
+      height: 32
+    spriteID: edf158e670199b34c9eb00c4d549fff3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_185
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 544
+      y: 448
+      width: 32
+      height: 32
+    spriteID: f0b0457e7de62894a9ca45e93712b406
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_186
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 576
+      y: 448
+      width: 32
+      height: 32
+    spriteID: de16c7ac59eb228448858800ed9b51ac
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_187
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 608
+      y: 448
+      width: 32
+      height: 32
+    spriteID: a5233671610949a42b009c794c9f5937
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_188
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 448
+      width: 32
+      height: 32
+    spriteID: 5e9ec1227afab7641b7edfe03c355aa2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_189
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 672
+      y: 448
+      width: 32
+      height: 32
+    spriteID: 26dfdb447723f9d48bad6573c47c5d00
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_190
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 704
+      y: 448
+      width: 32
+      height: 32
+    spriteID: 9edce84721a046648847d59d6bd65896
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_191
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 736
+      y: 448
+      width: 32
+      height: 32
+    spriteID: 202a0364aa77e7849a9cdd7e55dfd068
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_192
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 56a265010abbe2b459389dbf90627369
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_193
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 416
+      width: 32
+      height: 32
+    spriteID: eac45867a53d39d4f82214d1282d014f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_194
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 85b7d58d2bf48294f95d6e52c02caa37
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_195
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 0e7713b4aacfb4544be2f1b1b7e01022
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_196
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 2f36ecabf242a1048add9215cd4e43c9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_197
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 416
+      width: 32
+      height: 32
+    spriteID: e9ce9bf8f16cb2644921d23afeafcc5e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_198
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 416
+      width: 32
+      height: 32
+    spriteID: c1ed9947dc028da40ba4af2acfb634cb
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_199
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 261113e7f0917d14e89fc56ae6a14a17
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_200
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 11f0d56663279314aac1b6b0f7a3ae2e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_201
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 416
+      width: 32
+      height: 32
+    spriteID: ea2a6e4ab9c19464dbaa751ee020f145
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_202
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 58f7610abb23f814c9e1312071014056
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_203
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 6c2fd77da1b9d694eb342f37fa435de9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_204
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 8d29efebd2f4b1d44b7445e558f0e7a3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_205
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 8a480eacff1bc714085efcf64fd8d7d1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_206
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 416
+      width: 32
+      height: 32
+    spriteID: b3dcfb3866553e94eba6447b59a758f9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_207
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 480
+      y: 416
+      width: 32
+      height: 32
+    spriteID: c61bf14c2b1600f4cb3827cb74253ad0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_208
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 416
+      width: 32
+      height: 32
+    spriteID: c2655031c1bcf584cb0311a295148336
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_209
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 544
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 836b016c0e716e24bbdf7af40f73d879
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_210
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 576
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 003f7a18bdcb8ce43b3364876b82d1d9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_211
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 608
+      y: 416
+      width: 32
+      height: 32
+    spriteID: d8aa6a0b6292e4f4ca8c453ac82af266
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_212
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 416
+      width: 32
+      height: 32
+    spriteID: c4653cb92f43ff548b422406563a1490
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_213
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 672
+      y: 416
+      width: 32
+      height: 32
+    spriteID: b4d79dc2d3376d446b41e7e945d617d1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_214
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 704
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 7aa3b3c23e981bf4fb414878a247b054
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_215
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 736
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 753c4e219e504f94f85f7d26bfe937c9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_216
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 467304a90fcd3d04fbe536d64980e2ab
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_217
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 384
+      width: 32
+      height: 32
+    spriteID: ff8733977ea165b40bbe243e44b167ba
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_218
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 116ddbd1dc5e605478c7dfa89c87298e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_219
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 384
+      width: 32
+      height: 32
+    spriteID: b7b20d05c3366d5408d953fb7d2bcadd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_220
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 2a154d7c9968c5f46965f78a03fceb66
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_221
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 384
+      width: 32
+      height: 32
+    spriteID: fb303a84c8cb15648bfdd62ddebdf40e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_222
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 93cb5a60601c4eb4e82a00200c652292
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_223
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 8826acb0e2e4b894eaf6e7bb8c8a8585
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_224
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 4bbda6028854b524e906f5d0ee127f24
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_225
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 6b2f1f53912dfdc44b76f7f13b7a7b9b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_226
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 090609828b1303444bdb31c7c44acb67
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_227
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 7e0c64a80ece0f948ba84fe9cc9c2543
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_228
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 30d4d1fbb2cb110418fa93e8cbefcbc8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_229
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 19baca7c6db9b6c4bacd37ac9a8fb27b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_230
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 5fc5a912304574b46993726ec5d48785
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_231
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 480
+      y: 384
+      width: 32
+      height: 32
+    spriteID: b7a5819a91af81246b0a80b2190aed57
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_232
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 5184dfb117129e54b9a852d608799117
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_233
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 544
+      y: 384
+      width: 32
+      height: 32
+    spriteID: fcf42b33d6bbe94469e15316a285db66
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_234
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 576
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 0bfe6ef95b9298740845657333986cf7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_235
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 608
+      y: 384
+      width: 32
+      height: 32
+    spriteID: c1730b7cac6cfe742a8bd3cbac76a88c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_236
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 7a7ad95fffe8af14eb9430541025b46c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_237
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 672
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 492bf8b49726858498751b20dc568c35
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_238
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 704
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 86331790d737d2a4394c728709d6b1d2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_239
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 736
+      y: 384
+      width: 32
+      height: 32
+    spriteID: af25676035a82354285aeef8a1d38ae7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_240
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 352
+      width: 32
+      height: 32
+    spriteID: ee147ddd713687f46872118ce6923c61
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_241
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 8e083b9bce7d5fe48b8a68a9d63c65c7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_242
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 352
+      width: 32
+      height: 32
+    spriteID: e2431d576a36b0d45a15bc4c48da1d00
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_243
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 6a356ca58650e004da3d52e9561bdabc
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_244
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 352
+      width: 32
+      height: 32
+    spriteID: ef6ba8b4ff36d1d45a8089ac2d4ca5eb
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_245
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 352
+      width: 32
+      height: 32
+    spriteID: e138655a46bdb8a43b3abbbfe96e3291
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_246
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 8e06c7616075bd14fa494ed75831ac75
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_247
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 352
+      width: 32
+      height: 32
+    spriteID: a045f2d624606a148b392958f5f85da1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_248
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 352
+      width: 32
+      height: 32
+    spriteID: e39f2ec4abcaffa4dbc613ef33b178c6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_249
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 49ca62de44ce4dc44a0720373758ab91
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_250
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 352
+      width: 32
+      height: 32
+    spriteID: e9a8c87a89e6236448390005a74e71f9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_251
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 352
+      width: 32
+      height: 32
+    spriteID: cf3be92f57f2bf74a8cdb509c8aebc05
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_252
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 352
+      width: 32
+      height: 32
+    spriteID: aa577a90b199e794aba990617cfea6fa
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_253
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 352
+      width: 32
+      height: 32
+    spriteID: f7d99b3c822b1754599b6bd08a659e37
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_254
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 6f724afade68d3c4eb620e3b5a866ebf
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_255
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 480
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 7016303617b4354468cbdf40f8a93291
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_256
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 0b1706508da20fa4d8771bb59b322407
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_257
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 544
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 8ad611a68f1954745aaca09c1273ac22
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_258
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 576
+      y: 352
+      width: 32
+      height: 32
+    spriteID: a9e63a5d8534fb84fa06932586671210
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_259
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 608
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 396124dd215107a49aaea0d6c72f1e1b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_260
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 5aad7cd4d75eb894a8c78646fbde3cd7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_261
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 672
+      y: 352
+      width: 32
+      height: 32
+    spriteID: f72469b0b00e9d94bae03d5efcb5d987
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_262
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 704
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 648c50880ebef27468fd1cead330f284
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_263
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 736
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 519da7f61d02513478f8014df9eb1280
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_264
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 320
+      width: 32
+      height: 32
+    spriteID: b2a5974c62c8a544a96b31ae27471b68
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_265
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 320
+      width: 32
+      height: 32
+    spriteID: dbd9c28020fa64149904ba2ddbbc34a6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_266
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 320
+      width: 32
+      height: 32
+    spriteID: c1a0eb944aeb10540a092da39eb2ee95
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_267
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 668c962caef0ac6449576e09dc155dcb
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_268
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 78919bbe9bd021f41b9d63dc3f2ab87e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_269
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 282989e0c100c5043b0c5dfd5b3e463b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_270
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 4be641c3e5492dd42b521e1918f123a2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_271
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 8a20361d017f0504da9261ec59be9a2a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_272
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 92cc900f122a21e48a008499764e0d8b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_273
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 327be5a88aaedcc4695cab1f131f3aa7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_274
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 04f28b566710bf947a37814894fa92f2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_275
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 18c620e9d1e29d842bbd236dd8112431
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_276
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 320
+      width: 32
+      height: 32
+    spriteID: a65e93a43333095468ecd9c2e577a98a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_277
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 6b07aad08931f1c41ac754619e0f91ab
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_278
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 320
+      width: 32
+      height: 32
+    spriteID: f562134fa7ec4ca48a75f7250f233d33
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_279
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 480
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 736fd09443d6332499debc1383d9d5ca
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_280
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 320
+      width: 32
+      height: 32
+    spriteID: b7402bd094d22464ea4461fc08ac822f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_281
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 544
+      y: 320
+      width: 32
+      height: 32
+    spriteID: b538be0e9e17a984fa1a3f5a818b6c66
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_282
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 576
+      y: 320
+      width: 32
+      height: 32
+    spriteID: c7d60787d33937f42996f62323bf970f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_283
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 608
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 64bb91bfd8bf18f4290d24a99b4172ba
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_284
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 0a59c5c3bc91a5b4cad357490ab647d9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_285
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 672
+      y: 320
+      width: 32
+      height: 32
+    spriteID: a941e477784121b4583d30683a7a5a17
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_286
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 704
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 872e1816b262b854481d28d84db9e80d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_287
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 736
+      y: 320
+      width: 32
+      height: 32
+    spriteID: a01e6079f7bdbde46bfba6c57fe6485f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_288
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 288
+      width: 32
+      height: 32
+    spriteID: b6a254e829489d64796e45f5dd45251f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_289
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 05812d97f5b02594d8b5307ca49f86f7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_290
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 24173715a03267f4199b4606dd2b31d8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_291
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 4230bf8b028c5b948a633815eeb0bcc7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_292
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 583f5b1b222725a4d8b5cc346ebe252d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_293
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 288
+      width: 32
+      height: 32
+    spriteID: e16c16a6a3d58c8498aaca18c0bbdd2c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_294
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 288
+      width: 32
+      height: 32
+    spriteID: b7b92ad638eef5841a1514bf51b45725
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_295
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 75d14d410d529854997c742171416472
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_296
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 5b8ec9d51408b1d4a91c83177b2a9ba5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_297
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 288
+      width: 32
+      height: 32
+    spriteID: b0809ec01388406419447e3708383a32
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_298
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 288
+      width: 32
+      height: 32
+    spriteID: fb13a02079b951f4aaa35ae9f835e3ce
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_299
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 5398c009e9181ec4fabc1bb827cb8fa6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_300
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 073463a58f38291459368a849d01d713
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_301
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 9edbea0d5401cb54781318214d0ad9a1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_302
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 288
+      width: 32
+      height: 32
+    spriteID: f6d88041c3c93f9468e8010483894250
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_303
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 480
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 9e8da5bd641f69c4f9b7de4a0b82e475
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_304
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 907cdff6af8a39f4a9f31da00c2759f4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_305
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 544
+      y: 288
+      width: 32
+      height: 32
+    spriteID: a1a50be29d057d2498b7dc0f5eba770d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_306
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 576
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 2c26f5d80ad2f2840bdc9a860bca6e27
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_307
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 608
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 8760efbeb4033e54a809de008e5af5f4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_308
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 3ea2eff5de85bb642ac5748b5d0428c7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_309
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 672
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 861ac87b7a599124a9145417c7e2ba45
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_310
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 704
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 3c056fe64406ce0489c03d32bef4f629
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_311
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 736
+      y: 288
+      width: 32
+      height: 32
+    spriteID: e49e012bb19528b48ac4830abdf66070
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_312
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 1264be00c8d53b14eb76070b9d8bab11
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_313
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 256
+      width: 32
+      height: 32
+    spriteID: e57b1d8073fbbaa448a4bbab31249885
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_314
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 7288e2f31ffdf2e408978accdaf99556
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_315
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 849a38a04e6aa1449a795ceacc541c02
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_316
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 256
+      width: 32
+      height: 32
+    spriteID: b59bb4fbbb5bf15499ca6b8fff469f5c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_317
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 256
+      width: 32
+      height: 32
+    spriteID: ecc164f5dc7f8734a961064cec840ab7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_318
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 256
+      width: 32
+      height: 32
+    spriteID: a9c3233ae450aff49b599ae7876e4479
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_319
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 256
+      width: 32
+      height: 32
+    spriteID: c0772a905886a9447a3813a10e8ea91c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_320
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 256
+      width: 32
+      height: 32
+    spriteID: d8efa81c46a997e45944b18fbd610c3d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_321
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 256
+      width: 32
+      height: 32
+    spriteID: bc11dff0bef15ec459b3e68098f7e8df
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_322
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 249811bb094fc754c91e5515c8be1a47
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_323
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 256
+      width: 32
+      height: 32
+    spriteID: b835a9cfbaf6e044591a3ce9d008c6c2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_324
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 256
+      width: 32
+      height: 32
+    spriteID: d86e26defdd9d7641bf553d9624686ba
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_325
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 856ef60090b7cd54aab169b8375f0cf0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_326
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 98339bcb04c74bf479d9ed9169aa2560
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_327
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 480
+      y: 256
+      width: 32
+      height: 32
+    spriteID: c4f6fb27e35a38c4cb075e90aee2418f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_328
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 4c30635804182c442ad1fd2622f52e53
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_329
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 544
+      y: 256
+      width: 32
+      height: 32
+    spriteID: ee6b9e373d74e9045976313732dd9ce7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_330
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 576
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 7262d42d12d415a40b63936bbd89216e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_331
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 608
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 812d8b87bd03fdd4bac27887bef38123
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_332
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 2087d3bac4150424d800d2f709620c2a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_333
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 672
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 7d9853bc723fa924aa977ba98b6f4f5b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_334
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 704
+      y: 256
+      width: 32
+      height: 32
+    spriteID: d52f56530a8df2c48aa92fd4eb2619d7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_335
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 736
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 3b90ed1acfd947345aee613be74023af
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_336
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 3e09abd36d57b914c905b9c90360bfed
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_337
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 224
+      width: 32
+      height: 32
+    spriteID: f1e823d0b519bc648854620aa0b159d6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_338
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 45f5a3d872680064dab4def3053de442
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_339
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 224
+      width: 32
+      height: 32
+    spriteID: ef4031e3b8c4a9244b1f1f0114a523fe
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_340
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 5794b87ef136a884e83ef1252bf2066c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_341
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 224
+      width: 32
+      height: 32
+    spriteID: d5bab96d6a9ddf144a8c3404a0beefb0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_342
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 224
+      width: 32
+      height: 32
+    spriteID: d5943d0628324b94e9272b03571b232f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_343
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 224
+      width: 32
+      height: 32
+    spriteID: b209f4c88cf3ae44bb77e546fd9bf953
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_344
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 224
+      width: 32
+      height: 32
+    spriteID: db12b130ad59972418f63c3ed06c89dd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_345
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 79da5f2836a3a084b9f8a3fb38adf703
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_346
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 224
+      width: 32
+      height: 32
+    spriteID: eee6eb2100b01654cbcef3eb10f6bc32
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_347
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 3195d7ddc66950a47afb154fd34beedf
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_348
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 909e18ea2035e1a4b93d60f8d560fad1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_349
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 224
+      width: 32
+      height: 32
+    spriteID: ba5c8f8ac1b236840833b28302439a43
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_350
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 2d3c753d795d89746addddd6745d715a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_351
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 480
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 4be3429a0b20a3d42b8a180e40261e16
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_352
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 126be0fdf498e5b45910bb0588916826
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_353
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 544
+      y: 224
+      width: 32
+      height: 32
+    spriteID: d46f1c5f506383842baa86d526d9f17f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_354
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 576
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 6772483c0bbc4724cafc227160080998
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_355
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 608
+      y: 224
+      width: 32
+      height: 32
+    spriteID: f62d6c1c6d696cf4cae46e80aa7a3571
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_356
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 224
+      width: 32
+      height: 32
+    spriteID: ff3b27a4abbbe0e42922924bdbb77fff
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_357
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 672
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 8e76100953565a24aa8b485026005504
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_358
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 704
+      y: 224
+      width: 32
+      height: 32
+    spriteID: da4970a4a167c7d41873b249447779f7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_359
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 736
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 89ea2353ae8f7b044bd6e975dc3c7cf8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_360
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 192
+      width: 32
+      height: 32
+    spriteID: fa18c2fad75931f42b05ac8441398a2a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_361
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 192
+      width: 32
+      height: 32
+    spriteID: c28d630231e0007478b22487d62219b6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_362
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 192
+      width: 32
+      height: 32
+    spriteID: a82c23ce41cc42f4abb9575e7cfc1f36
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_363
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 192
+      width: 32
+      height: 32
+    spriteID: caac84e65027d0b4f8c27fc1c3427625
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_364
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 291a8b912ddd3c5488f8ad23b4b6e156
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_365
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 69b13dcbb81505940b235b29fc68eeb0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_366
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 192
+      width: 32
+      height: 32
+    spriteID: b63ddf5999e157345b7d89b017b6b4e3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_367
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 7612c54a229aed840b770db2e2f0d7a3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_368
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 192
+      width: 32
+      height: 32
+    spriteID: e7a341ad7fbd7d94aa460b50d0dc3648
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_369
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 7ae853fb1850efa4781d0ccbbcd9a501
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_370
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 6873957284eb10343899a9cc44954c04
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_371
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 0fac0700d59ba314fa6ce76012472c42
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_372
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 671ff575aab35e5409d6dbe5ae4779a0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_373
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 1c1c94aef03faa645a0461c13065c976
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_374
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 192
+      width: 32
+      height: 32
+    spriteID: bed3d347f9c42ac46a2ba8db4566888a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_375
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 480
+      y: 192
+      width: 32
+      height: 32
+    spriteID: da376dbd32938604dbcf28e60d650054
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_376
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 192
+      width: 32
+      height: 32
+    spriteID: d3ea414fca5528e4890e016655643fe3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_377
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 544
+      y: 192
+      width: 32
+      height: 32
+    spriteID: a9d4899577db4a249906bf96eb85937d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_378
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 576
+      y: 192
+      width: 32
+      height: 32
+    spriteID: c56dc0dfc30fc6e4186ace636033bfd7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_379
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 608
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 67aaeab9e1d5010428e521fda1aeceff
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_380
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 192
+      width: 32
+      height: 32
+    spriteID: ca13fabd82654b641bef9a2308aa8933
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_381
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 672
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 82e6b274e88cd60449b04d682cbde347
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_382
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 704
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 088b50ca0d0a5da42833be3d1cb026b0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_383
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 736
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 4c0d0f95f439f3349bf1a704ee7a3cdd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_384
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 160
+      width: 32
+      height: 32
+    spriteID: ddeb9d788b4339a4aa0c0cacdfe60415
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_385
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 8aa63d6844c46ec44879b8023549d607
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_386
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 356e4c876641deb4585fe9fec7d3b797
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_387
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 27e0e9a49be978443826a9bab7eb6a27
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_388
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 160
+      width: 32
+      height: 32
+    spriteID: c261498c46839104180a88cc54b64220
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_389
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 81cb26b5cd036214fb04478f980fdc81
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_390
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 160
+      width: 32
+      height: 32
+    spriteID: e87a0db7de478744596a0bb5a55205e4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_391
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 0bce79c9f968e6243b591d9d53fdde7c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_392
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 5f627800d24700f418e322a9b9f9766a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_393
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 3ae0df1c87ec4884fb1da246a26c28a2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_394
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 0dddfc2c2c7cae942a6ad48621c642f2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_395
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 493aaea57997c1745b57c1dd80725243
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_396
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 3f5e952b947358f40b4c3a01b2ca9407
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_397
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 9074e651090873a4382190b17443defc
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_398
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 71319355de9d7c64fbb5af12e71b39c9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_399
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 480
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 85ddc535b83d6844e958765176b81f50
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_400
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 45201da6b8dc39b419c22a43a2cbdc63
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_401
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 544
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 75dfaee8c70e86744a565c141abd4f51
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_402
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 576
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 35517dee3b3db084a824b3cf06b5c204
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_403
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 608
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 55ed970c11f0207488b3ba6d9ad4f038
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_404
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 3f2bf080e42a3c548b0e21f47295cb35
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_405
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 672
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 242dfc632738ef148a62bcf895233342
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_406
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 704
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 8e2d6c18a18f48349b5b7fc5bf6bdcd6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_407
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 736
+      y: 160
+      width: 32
+      height: 32
+    spriteID: c5302aa210de97c4b946914ea6d496ed
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_408
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 4c56e93ba6add78428c423945d3d44b8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_409
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 903645f8a9ad3be49b8aae28678dfe26
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_410
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 128
+      width: 32
+      height: 32
+    spriteID: fc8ee8350b1ae254b974877449bbb304
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_411
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 14b4e5c7b4e516e45bbbcdb0126b2098
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_412
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 128
+      width: 32
+      height: 32
+    spriteID: b58df23aba1bef24d963ca504b99e5f2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_413
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 86ad008a2c64c9040a21d25346b47835
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_414
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 128
+      width: 32
+      height: 32
+    spriteID: f067b11cc2b0f414abd746dff5ce3da5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_415
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 128
+      width: 32
+      height: 32
+    spriteID: b465159d5aba31c458230fd9d4cd7151
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_416
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 78d3e65cbdd1ad9419959781d166d376
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_417
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 14be80ecfac0e8f4aafb478ef69fb2df
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_418
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 128
+      width: 32
+      height: 32
+    spriteID: d33e64f5d5c3c94489445a39ae922c3a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_419
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 403e0464a8a247b4680aef4a6a9e7dc3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_420
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 919e8ed835ec1384aa25a4a956de16de
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_421
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 128
+      width: 32
+      height: 32
+    spriteID: a8b3fd5f39207c741b95cb1a858d6821
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_422
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 128
+      width: 32
+      height: 32
+    spriteID: b4563ba47b781954982119d521759695
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_423
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 480
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 331ff4ac2f9c35d499d6a88655e35900
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_424
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 128
+      width: 32
+      height: 32
+    spriteID: a2b1060c09e79954e9f647425292ac1c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_425
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 544
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 99d59066803ea1c4e9c987e75e77c26f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_426
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 576
+      y: 128
+      width: 32
+      height: 32
+    spriteID: fe8d08fa3df4d1a498f02ae47367756c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_427
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 608
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 58db86964c094bd429fd707f6fec266e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_428
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 6c11d85ad2145f84ebd2f08b36940274
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_429
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 672
+      y: 128
+      width: 32
+      height: 32
+    spriteID: b5f371b94e20d6240ab0cff800939615
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_430
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 704
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 80e06501a2e3e414e9ddc40fe5dafd84
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_431
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 736
+      y: 128
+      width: 32
+      height: 32
+    spriteID: b0938776be3632a40966783bd61655af
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_432
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 435738996be50f04eb729c23e1a5ffa6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_433
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 83b6261a63456e14f81c1d0581976ae9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_434
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 96
+      width: 32
+      height: 32
+    spriteID: a5c21c8faa2bb71499e88a6cce72a3d9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_435
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 4633e6d9b5bf6b14abd9769b74d9a305
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_436
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 15840b6299873834e9e5a79d2b24d76c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_437
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 96
+      width: 32
+      height: 32
+    spriteID: fc36b4a12ec65ce46b3906bdf9bd9fe5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_438
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 96
+      width: 32
+      height: 32
+    spriteID: b8e6ae5c5ef659f4582783ae32013e2d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_439
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 96
+      width: 32
+      height: 32
+    spriteID: afe936d8188dbab48a864275daba69b4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_440
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 96
+      width: 32
+      height: 32
+    spriteID: aee2bb2c2c7862642ae8e80dd743cf85
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_441
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 8033df8643de5f34c92167ff1cc8861d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_442
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 96
+      width: 32
+      height: 32
+    spriteID: aa5a7abc88e28d64783826cb47aff766
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_443
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 96
+      width: 32
+      height: 32
+    spriteID: eb985972d4dbd50479ceffcce8983df0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_444
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 0d2259aa047233c4ba8ee89bc4bd30dd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_445
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 58d391bfd6ca81943af6ceb258c1c5d6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_446
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 96
+      width: 32
+      height: 32
+    spriteID: d3fde5d6667f69c4fb0ced7218b74055
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_447
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 480
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 467388f1625f48b49876dce9a36c6df9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_448
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 9284db7d343defc41b4522381be5e3a3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_449
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 544
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 28bdd2de95814e84f9cba97b7cc17c1b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_450
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 576
+      y: 96
+      width: 32
+      height: 32
+    spriteID: d92684528903eb147bc56f2f5c57d883
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_451
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 608
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 8876149ebd307824b9f5588f19cef6b9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_452
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 3b89be059c5ebb64aaa6f31354c0eee8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_453
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 672
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 5395886561aea624fbaab6da1e37161c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_454
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 704
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 4bb224959c7dada48a17fbbcf142579f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_455
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 736
+      y: 96
+      width: 32
+      height: 32
+    spriteID: acb9f908a77018944b84625f1c5ddc1e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_456
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 64
+      width: 32
+      height: 32
+    spriteID: b0ccc87d0d7108042aa40ba6c574c1f1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_457
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 879a0fd93366fc143a72c3d621bf9dd2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_458
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 64
+      width: 32
+      height: 32
+    spriteID: e77ff339ec2f9be479887b878d5dbb91
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_459
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 64
+      width: 32
+      height: 32
+    spriteID: db31b8df0f0719c44b1517bceec25033
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_460
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 5f1f7f59b6ce3954da5a7704b6089dca
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_461
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 7b529377fddab5f42b855b12394e894d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_462
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 64
+      width: 32
+      height: 32
+    spriteID: f5f6d19f45103bf4da955ca62e24f72b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_463
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 64
+      width: 32
+      height: 32
+    spriteID: e626a2b887878974e9676fa770c9c1c3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_464
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 6faebf841d732e940a83dcf542408e40
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_465
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 74c8867f45365bf47a31c9ef2504e991
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_466
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 9ac15244cf96b09458f212dc80668e6b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_467
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 3ab60b74cdcedd64baac1f4993c2bc7c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_468
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 6104a431d2ca13745893fc15dd077203
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_469
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 1e85a66d594ffbe4fbdf4a3334c37a94
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_470
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 00e48f4229989dc44a063d101dec7a8d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_471
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 480
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 45c2312beee5d8a40adb96ebf71f27ca
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_472
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 64
+      width: 32
+      height: 32
+    spriteID: c828355664712ec41b8ab3b6a0b3682d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_473
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 544
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 920fababbc999c44d87831dac63afc75
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_474
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 576
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 8c0e859c1a6917442a54d8a3fab89b36
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_475
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 608
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 92c13f5bc81e0b24ea1f8e72c2b9254e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_476
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 47440c8cc00f1d646ac16c8bc0262d2a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_477
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 672
+      y: 64
+      width: 32
+      height: 32
+    spriteID: f55f9543b82375b40918792de2c9125f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_478
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 704
+      y: 64
+      width: 32
+      height: 32
+    spriteID: fc5252ad9560589438476ca5ecd602a7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_479
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 736
+      y: 64
+      width: 32
+      height: 32
+    spriteID: b013d7c1cc52c2a4a89d34dee2859885
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_480
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 32
+      width: 32
+      height: 32
+    spriteID: a9a79cd2b9301564180b8ab3e34ca95c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_481
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 25092fbad9ce6c0479964c28b0af4dec
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_482
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 32
+      width: 32
+      height: 32
+    spriteID: ab9896a3d7b749a428cf020b1564dbb3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_483
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 32
+      width: 32
+      height: 32
+    spriteID: b0f45255f681894419607192145df4ab
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_484
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 246da49379b950b4abca83ab1b2ec2a1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_485
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 38a2cde076a71e847b674619642e8599
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_486
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 32
+      width: 32
+      height: 32
+    spriteID: e1563260a1f1b334293773ff12b45f4b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_487
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 060067f997130b54898f905becbc982d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_488
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 014d0ce8c58346d45a12bdf05d0b8ae8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_489
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 18271c8bca99b394b921f9055dc25e94
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_490
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 3ba45a6c788c1084a9a6cc739703bf71
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_491
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 1a8fdd4284febb94f8c8874a5525e37c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_492
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 32
+      width: 32
+      height: 32
+    spriteID: fae8e1a8bebc59648b9ff020deeb8d4c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_493
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 96c0f42fab7e89e4db909adafb26e995
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_494
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 908b457103906a44980e29b1d67544db
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_495
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 480
+      y: 32
+      width: 32
+      height: 32
+    spriteID: a5a8cf54e6860284ea3ceaeb514f65ad
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_496
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 32
+      width: 32
+      height: 32
+    spriteID: d5f566344800d2046b777a5f860fa236
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_497
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 544
+      y: 32
+      width: 32
+      height: 32
+    spriteID: f48de664fba05f3459775a64c18c9940
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_498
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 576
+      y: 32
+      width: 32
+      height: 32
+    spriteID: c8348cff78014854fadfe1004df8cb4a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_499
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 608
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 1f1e62beca5659243a4f717228cc4a17
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_500
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 97ab1711127f8834d8200b4fa423d887
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_501
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 672
+      y: 32
+      width: 32
+      height: 32
+    spriteID: c88a48f2266685348a7322153320b7b5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_502
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 704
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 4d0c83f212e5a104194150bdcceb46bc
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_503
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 736
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 0791875ee9cf991438dc118617ecb422
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_504
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 32
+      height: 32
+    spriteID: f03f4aedee7f2d442a018e241bb61288
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_505
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 0
+      width: 32
+      height: 32
+    spriteID: a9037cd3fee67ce49ba37660b539b512
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_506
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 793155ced0652a240a389ff533b860e2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_507
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 2628e24bdfb10464193ebba06a25bb81
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_508
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 5a5ee8f5e8baeed45b95056341bbc78b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_509
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 3761a0553fc9cea4c8408c16a6557092
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_510
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 24cdd946131d40a4cb33d748391cbb07
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_511
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 0
+      width: 32
+      height: 32
+    spriteID: d5324cbd7e7e73446a3b34d16886c523
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_512
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 84262e0e2ca0bcd429049664c7877afd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_513
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 3bc381d722da86048bab77de5f81bfad
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_514
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 4bd038f03dace2049a613ae782a6cf1a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_515
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 0
+      width: 32
+      height: 32
+    spriteID: c6f3ef0e2f74a384cb3e20cad46626b8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_516
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 97dc8da4c28f2734a98ea3ed4e4b085b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_517
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 0
+      width: 32
+      height: 32
+    spriteID: b41b31597aabe9b4d9b942da59a3dcec
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_518
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 0
+      width: 32
+      height: 32
+    spriteID: feaef0325ce5ac14d93a938bc1cbf34b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_519
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 480
+      y: 0
+      width: 32
+      height: 32
+    spriteID: c2ebc475b06c8bc4f915fdde9126ba94
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_520
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 24aa11b55dbb02f4ba940e5372a9abf3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_521
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 544
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 87ca1dfd9ddad004398ac1ed222a0b94
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_522
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 576
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 7b6b3b67c966aa74dbf9505acb19140e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_523
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 608
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 9de5017e34cdd474eb2471882a013379
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_524
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 96402edf2724a9e4b9f5c852dbe0b997
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_525
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 672
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 7ccd77486ca5f6d449afb34e46480cdc
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_526
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 704
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 241b3462e62b31948950acb21c47d0ae
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Props_and_items_x1_527
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 736
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 44f1d7a9d85beea4a91b83458e843cf8
+    spriteOutline: []
+    tessellationDetail: 0
+  _secondaryTextures: []
+  _artifacts: {instanceID: 0}
