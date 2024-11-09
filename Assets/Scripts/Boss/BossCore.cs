@@ -1,6 +1,7 @@
+using Unity.Netcode;
 using UnityEngine;
 
-public abstract class BossCore : MonoBehaviour
+public abstract class BossCore : NetworkBehaviour
 {
     public GameObject target;
     public Rigidbody2D body;

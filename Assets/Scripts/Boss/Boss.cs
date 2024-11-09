@@ -1,3 +1,4 @@
+using Unity.Netcode;
 using UnityEngine;
 
 public class Boss : BossCore
@@ -40,6 +41,10 @@ public class Boss : BossCore
 
     private void Update()
     {
+        if (target == null)
+        {
+            target = GameObject.FindGameObjectWithTag("Player");
+        }
         UpdateSprite();
 
         if (health.CurrentHealth <= 50f)
