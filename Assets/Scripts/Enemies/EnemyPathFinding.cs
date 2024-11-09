@@ -1,4 +1,3 @@
-using JetBrains.Rider.Unity.Editor;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,21 +8,20 @@ public class EnemyPathFinding : MonoBehaviour
     private Vector2 moveDir;
     private Rigidbody2D rb;
     private KnockBack knockBack;
+    private EnemyHealth health;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         knockBack = GetComponent<KnockBack>();
+        health = GetComponent<EnemyHealth>();
     }
     private void FixedUpdate()
     {
-        if (knockBack.GetKnockBack) {
-            Debug.Log("not move");
+        if (knockBack.GetKnockBack||health.isDead.Value) {
             return; 
         }
         rb.MovePosition(rb.position+moveDir.normalized*moveSpeed*Time.deltaTime);
-         //rb.AddForce(moveDir.normalized * moveSpeed );
-       // rb.velocity = moveDir.normalized * moveSpeed ;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

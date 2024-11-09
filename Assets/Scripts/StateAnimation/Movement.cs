@@ -13,9 +13,10 @@ public class Movement : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (SlashManagerCombo.instance.canAttack)
+        var slashManager = animator.GetComponent<SlashManagerCombo>();
+        if (slashManager != null && slashManager.canAttack.Value)
         {
-            SlashManagerCombo.instance.animator.Play("Attack1");
+            slashManager.animator.Play("Attack1");
         }
     }
 

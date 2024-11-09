@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-public class KnockBack : MonoBehaviour
+public class KnockBack :  NetworkBehaviour
 {
     public bool GetKnockBack {  get; private set; }
     private Rigidbody2D rb;
@@ -18,6 +19,7 @@ public class KnockBack : MonoBehaviour
     {
         GetKnockBack = true;
         Vector2 direction_knockBack = (-damageSoure.position + transform.position).normalized * knockbackThrust * rb.mass;
+        Debug.Log(direction_knockBack);
         rb.AddForce(direction_knockBack, ForceMode2D.Impulse);
         StartCoroutine(DoneKnockBack());
     }

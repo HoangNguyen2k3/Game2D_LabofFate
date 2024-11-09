@@ -1,9 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : NetworkBehaviour
 {
     private Rigidbody2D rb;
     private Vector2 moveInput;
@@ -14,66 +13,111 @@ public class PlayerController : MonoBehaviour
     private bool isDashing = false;
     private bool canDash = false;
     private Animator animator;
+    private Vector3 otherPos;
+    private PlayerHealth health;
+    private KnockBack knockBack;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        health = GetComponent<PlayerHealth>();
+        knockBack = GetComponent<KnockBack>();
     }
-    private void Start()
-    {
-        
-    }
+
     private void Update()
     {
-        moveInput.x = Input.GetAxisRaw("Horizontal");
-        moveInput.y = Input.GetAxisRaw("Vertical");
-        if (moveInput != Vector2.zero)
+        if (health.isDead.Value) return;
+
+        if (IsOwner)
         {
-            animator.SetBool("isWalk", true);
+            moveInput.x = Input.GetAxisRaw("Horizontal");
+            moveInput.y = Input.GetAxisRaw("Vertical");
+
+            animator.SetBool("isWalk", moveInput != Vector2.zero);
+
+            if (Input.GetKey(KeyCode.Space))
+            {
+                if (dashDirection == Vector2.zero)
+                {
+                    dashDirection = moveInput.normalized;
+                }
+                Dash();
+            }
+
+            SyncPlayerPosServerRpc(transform.position);
         }
         else
         {
-            animator.SetBool("isWalk", false);
-        }
-        if (Input.GetKey(KeyCode.Space))
-        {
-            if (dashDirection == Vector2.zero)
-            {
-                dashDirection = moveInput.normalized;
-            }           
-            Dash();
+            transform.position = otherPos;
         }
     }
+
     private void FixedUpdate()
     {
-        if (canDash)
+        if (IsOwner)
         {
-            rb.MovePosition(rb.position + dashDirection * speed * Time.deltaTime);
-            return;
+            if (knockBack.GetKnockBack) return;
+
+            if (canDash)
+            {
+                rb.MovePosition(rb.position + dashDirection * speed * Time.deltaTime);
+                return;
+            }
+
+            rb.MovePosition(rb.position + moveInput.normalized * speed * Time.deltaTime);
         }
-        rb.MovePosition(rb.position +moveInput.normalized*speed*Time.deltaTime);
     }
+
     private void Dash()
     {
         if (!isDashing)
         {
             canDash = true;
             isDashing = true;
+            health.canTakeDamage = false;
             speed += dashSpeed;
-            playerTrailRenderer.emitting = true;
+
+            // B?t TrailRenderer trên t?t c? các client
+            ToggleTrailRendererServerRpc(true);
+
             StartCoroutine(EndDashing());
         }
     }
+
     private IEnumerator EndDashing()
     {
         float dashTime = 0.25f;
         yield return new WaitForSeconds(dashTime);
+
         canDash = false;
-        dashDirection=Vector2.zero;
+        health.canTakeDamage = true;
+        dashDirection = Vector2.zero;
         speed -= dashSpeed;
-        playerTrailRenderer.emitting = false;
+
+        // T?t TrailRenderer trên t?t c? các client
+        ToggleTrailRendererServerRpc(false);
+
         float dashCD = 0.7f;
         yield return new WaitForSeconds(dashCD);
         isDashing = false;
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    private void SyncPlayerPosServerRpc(Vector3 pos)
+    {
+        otherPos = pos;
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    private void ToggleTrailRendererServerRpc(bool isActive)
+    {
+        ToggleTrailRendererClientRpc(isActive);
+    }
+
+    [ClientRpc]
+    private void ToggleTrailRendererClientRpc(bool isActive)
+    {
+        playerTrailRenderer.emitting = isActive;
     }
 }

@@ -1,15 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-public class TakedDamageToEnemies : MonoBehaviour
+public class TakedDamageToEnemies : NetworkBehaviour
 {
     [SerializeField] private float damageToEnemy = 1f;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<EnemyHealth>())
+        if (!IsServer) return; 
+
+        EnemyHealth enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
+        if (enemyHealth != null)
         {
-            collision.gameObject.GetComponent<EnemyHealth>().TakedDamage(damageToEnemy);
+            enemyHealth.TakeDamageServerRpc(damageToEnemy);
         }
     }
 }

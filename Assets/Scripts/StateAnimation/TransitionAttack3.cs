@@ -7,8 +7,12 @@ public class TransitionAttack3 : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        SlashManagerCombo.instance.canAttack = false;
-        SlashManagerCombo.instance.canCombo = false;
+        var slashManager = animator.GetComponent<SlashManagerCombo>();
+        if (slashManager != null)
+        {
+            slashManager.canAttack.Value = false;
+            slashManager.canCombo.Value = false;
+        }
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

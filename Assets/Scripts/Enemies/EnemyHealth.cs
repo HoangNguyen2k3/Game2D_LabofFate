@@ -1,55 +1,109 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
-using Unity.VisualScripting;
+using Unity.Netcode;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Timeline.Actions.MenuPriority;
 
-public class EnemyHealth : MonoBehaviour
+public class EnemyHealth : NetworkBehaviour
 {
     KnockBack knockback;
     [SerializeField] private float StartingHealth;
-    [SerializeField] private float currentHealth;
-    private bool isDead=false;
+    [SerializeField] private NetworkVariable<float> currentHealth = new NetworkVariable<float>(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     private GameObject player;
     [SerializeField] private float knockBackThrust = 15f;
     private Animator animator;
     private EnemyAI enemyAI;
     [SerializeField] private Slider healthBar;
+    [SerializeField] private GameObject healthBarObject;
     [SerializeField] private GameObject deathVFXPrefab;
-    // Start is called before the first frame update
+    [SerializeField] private TextMeshProUGUI numCurrentHealth;
+    [SerializeField] private TextMeshProUGUI name_enemy;
+    public NetworkVariable<bool> isDead = new NetworkVariable<bool>(false);
+    private Flash flash;
+
+    [SerializeField] private float addTimeAnim=1f;
+
     void Start()
     {
-        enemyAI=GetComponent<EnemyAI>();
+        flash = GetComponent<Flash>();
+        enemyAI = GetComponent<EnemyAI>();
         player = GameObject.FindGameObjectWithTag("Player");
-        currentHealth = StartingHealth;
+        currentHealth.Value = StartingHealth;
         knockback = GetComponent<KnockBack>();
         animator = GetComponent<Animator>();
+
         healthBar.maxValue = StartingHealth;
-        healthBar.value = currentHealth;
+        healthBar.value = currentHealth.Value;
+        numCurrentHealth.text = currentHealth.Value.ToString();
+
+        // Subscribe to the OnValueChanged event to sync health across clients
+        currentHealth.OnValueChanged += OnHealthChanged;
+    }
+
+/*    private void OnDestroy()
+    {
+        currentHealth.OnValueChanged -= OnHealthChanged;
+    }*/
+
+    private void OnHealthChanged(float oldHealth, float newHealth)
+    {
+        healthBar.value = newHealth;
+        numCurrentHealth.text = newHealth.ToString();
+    }
+
+    private void Update()
+    {
+        if (!IsServer) { return; }
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
+        if (isDead.Value)
+        {
+            healthBarObject.SetActive(false);
+            numCurrentHealth.text = "";
+            name_enemy.text = "";
+        }
+    }
+
+    [ServerRpc]
+    public void TakeDamageServerRpc(float damage)
+    {
+        TakedDamage(damage);
     }
 
     public void TakedDamage(float damage)
     {
-        currentHealth -= damage;
-        healthBar.value = currentHealth;
-        knockback.GettingKnockBack(player.transform, knockBackThrust);
+        if (!knockback.GetKnockBack)
+        {
+            currentHealth.Value -= damage;
+            knockback.GettingKnockBack(player.transform, knockBackThrust);
+            flash.TriggerFlashServerRpc();
+        }
+
         DetectDeath();
     }
+
     private void DetectDeath()
     {
-        if (currentHealth <= 0)
+        if (currentHealth.Value <= 0)
         {
-            //StartCoroutine(PlayDeathAnimationEnemy());
-            Instantiate(deathVFXPrefab, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            isDead.Value = true;
+            StartCoroutine(PlayDeathAnimationEnemy());
+          //  PlayDeathVFXClientRpc();
         }
     }
-    /*private IEnumerator PlayDeathAnimationEnemy()
+
+    private IEnumerator PlayDeathAnimationEnemy()
     {
-        // animator.SetTrigger("Death");
-        // yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
-        //Destroy(gameObject);
+        animator.SetTrigger("Death");
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length + addTimeAnim);
+        Destroy(gameObject);
+    }
+
+/*    [ClientRpc]
+    public void PlayDeathVFXClientRpc()
+    {
+        Instantiate(deathVFXPrefab, transform.position, Quaternion.identity);
     }*/
 }

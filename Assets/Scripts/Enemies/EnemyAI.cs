@@ -1,109 +1,148 @@
 using System.Collections;
+using Unity.Netcode;
 using UnityEngine;
 using Pathfinding;
 
-public class EnemyAI : MonoBehaviour
+public class EnemyAI : NetworkBehaviour
 {
     [Header("A* Pathfinding")]
     public Seeker seeker;
     public Transform target;
-    public Path path;
-    public float nextWPDistance = 2f;  // Distance to the next waypoint
-    private Rigidbody2D rb;
-    private float updatePathInterval = 0.5f; // Frequency of path recalculation
+    private Path path;
+    public float nextWPDistance = 2f;
+    private float updatePathInterval = 0.5f;
     private float pathUpdateTimer;
-    private bool isPathCalculating = false;  // Avoid concurrent path calculations
+    private bool isPathCalculating = false;
     private int currentWP = 0;
     private float stuckTime = 0f;
     private float stuckTimeMax = 1.5f;
-    private Vector2 randomizedTargetOffset=Vector2.zero;
+    private Vector2 randomizedTargetOffset = Vector2.zero;
 
     [Header("EnemyAI")]
     [SerializeField] private float roamChangeDirFloat = 2f;
-    private State state;
+    private NetworkVariable<State> state = new NetworkVariable<State>(State.Roaming, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     private EnemyPathFinding enemyPathFinding;
     private float timeRoaming = 0f;
-    private Vector2 roamPosition;
-    private float rangeFollow = 20f;
+    private NetworkVariable<Vector2> roamPosition = new NetworkVariable<Vector2>();
+   [SerializeField] private float rangeFollow = 8f;
     private KnockBack knockBack;
+    private EnemyHealth health;
+    private Collider2D col;
+    private Rigidbody2D rb;
+
     private enum State
     {
         Roaming,
-        FollowPlayer
+        FollowPlayer,
+        AttackPlayer
     }
 
     private void Awake()
     {
         knockBack = GetComponent<KnockBack>();
         enemyPathFinding = GetComponent<EnemyPathFinding>();
-        roamPosition = GetRoamingPosition();
-        state = State.Roaming;
+        roamPosition.Value = GetRoamingPosition();
         rb = GetComponent<Rigidbody2D>();
+        health = GetComponent<EnemyHealth>();
+        col = GetComponent<Collider2D>();
     }
 
-    void Start()
+    public override void OnNetworkSpawn()
     {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        if (IsServer && target == null)
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player)
+            {
+                target = player.transform;
+            }
+        }
     }
 
     void Update()
     {
+
+        if (!IsServer) return;
+        if (target == null)
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player)
+            {
+                target = player.transform;
+            }
+        }
+        if (health.isDead.Value)
+        {
+            col.enabled = false;
+            return;
+        }
+
         if (knockBack.GetKnockBack)
         {
             return;
         }
+
         MovementStateControl();
         pathUpdateTimer += Time.deltaTime;
     }
+
     private void MovementStateControl()
     {
-        switch (state)
+        switch (state.Value)
         {
             case State.Roaming:
                 Roaming();
                 break;
             case State.FollowPlayer:
+                if (target == null) { state.Value = State.Roaming; break; }
                 FollowingPlayer();
+                break;
+            case State.AttackPlayer:
+                AttackPlayer();
                 break;
         }
     }
+
     private void Roaming()
     {
         timeRoaming += Time.deltaTime;
         enemyPathFinding.moveSpeed = 2f;
-        enemyPathFinding.MoveTo(roamPosition);
+        enemyPathFinding.MoveTo(roamPosition.Value);
 
-        if (target && Vector2.SqrMagnitude(transform.position- target.transform.position) <= rangeFollow*rangeFollow)
+        if (target && Vector2.SqrMagnitude((Vector2)transform.position - (Vector2)target.position) <= rangeFollow * rangeFollow)
         {
-            state = State.FollowPlayer;
+            state.Value = State.FollowPlayer;
         }
 
         if (timeRoaming > roamChangeDirFloat)
         {
-            roamPosition = GetRoamingPosition();
-            timeRoaming = 0f; 
+            roamPosition.Value = GetRoamingPosition();
+            timeRoaming = 0f;
         }
     }
 
     private void FollowingPlayer()
     {
-        if (!target || Vector2.Distance(transform.position, target.transform.position) > rangeFollow)
+        if (target == null || Vector2.Distance(transform.position, target.position) > rangeFollow)
         {
-            state = State.Roaming;
+            state.Value = State.Roaming;
             return;
         }
-         //Update path if timer allows and we are not already calculating it
-         if (pathUpdateTimer >= updatePathInterval && !isPathCalculating)
-         {
-        CalculatePath();
-       }
-    }
 
+        if (pathUpdateTimer >= updatePathInterval && !isPathCalculating)
+        {
+            CalculatePath();
+        }
+    }
+    private void AttackPlayer()
+    {
+
+    }
     void CalculatePath()
     {
         isPathCalculating = true;
         pathUpdateTimer = 0f;
-        seeker.StartPath(transform.position + (Vector3)randomizedTargetOffset.normalized, target.position , OnPathCallBack);
+        seeker.StartPath(transform.position + (Vector3)randomizedTargetOffset.normalized, target.position, OnPathCallBack);
         randomizedTargetOffset = Vector2.zero;
     }
 
@@ -112,10 +151,10 @@ public class EnemyAI : MonoBehaviour
         if (!p.error)
         {
             path = p;
-            currentWP = 0;  // Reset waypoint index when new path is calculated
+            currentWP = 0;
             MoveToTarget();
         }
-        isPathCalculating = false;  // Path calculation finished
+        isPathCalculating = false;
     }
 
     private Vector2 GetRoamingPosition()
@@ -147,24 +186,25 @@ public class EnemyAI : MonoBehaviour
                 currentWP++;
             }
 
-            if (Vector2.Distance(transform.position, target.transform.position) > rangeFollow)
+            if (target != null && Vector2.Distance(transform.position, target.position) > rangeFollow)
             {
-                state = State.Roaming;
+                state.Value = State.Roaming;
                 break;
             }
 
             yield return null;
         }
     }
+
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if(collision.gameObject.layer == 6)
+        if (collision.gameObject.layer == 6)
         {
             stuckTime += Time.deltaTime;
         }
         if (stuckTime >= stuckTimeMax)
         {
-            randomizedTargetOffset = transform.position- collision.transform.position;
+            randomizedTargetOffset = (Vector2)transform.position - (Vector2)collision.transform.position;
             stuckTime = 0f;
         }
     }

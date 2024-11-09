@@ -13,10 +13,14 @@ public class Attack3 : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        SlashManagerCombo.instance.canAttack = true;
-        if (Input.GetMouseButtonDown(0))
+        var slashManager = animator.GetComponent<SlashManagerCombo>();
+        if (slashManager != null)
         {
-            SlashManagerCombo.instance.canCombo = true;
+            slashManager.canAttack.Value = true;
+            if (Input.GetMouseButtonDown(0))
+            {
+                slashManager.canCombo.Value = true;
+            }
         }
     }
 

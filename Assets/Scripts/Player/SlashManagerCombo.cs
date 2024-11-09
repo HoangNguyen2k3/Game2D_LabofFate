@@ -1,46 +1,81 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-public class SlashManagerCombo : MonoBehaviour
+public class SlashManagerCombo : NetworkBehaviour
 {
-    public static SlashManagerCombo instance;
-    public bool canAttack;
-    public bool canCombo;
+    public NetworkVariable<bool> canAttack = new NetworkVariable<bool>(false, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+    public NetworkVariable<bool> canCombo = new NetworkVariable<bool>(false, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
     public Animator animator;
     [SerializeField] private GameObject slashRange;
 
     private void Awake()
     {
-        instance = this;
         animator = GetComponent<Animator>();
     }
+
     private void Update()
     {
+        if (!IsOwner) return;
+
         Vector3 mousePos = Input.mousePosition;
         Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(transform.position);
-        if (mousePos.x > playerScreenPoint.x)
+
+        // G?i ServerRpc ?? yêu c?u c?p nh?t h??ng quay c?a nhân v?t
+        bool facingRight = mousePos.x > playerScreenPoint.x;
+        SetDirectionServerRpc(facingRight);
+
+        slashRange.SetActive(canAttack.Value);
+
+        if (Input.GetMouseButtonDown(0) && !canCombo.Value && IsOwner)
         {
-            transform.localScale = new Vector3(1, 1, 0);
-            transform.localScale *= 1.2f;
-        }
-        else
-        {
-            transform.localScale = new Vector3(-1, 1, 0);
-            transform.localScale *= 1.2f;
-        }
-        if (canAttack)
-        {
-            slashRange.SetActive(true);
-        }
-        else
-        {
-            slashRange.SetActive(false);
-        }
-        if (Input.GetMouseButtonDown(0))
-        {
-            canAttack = true;
+            canAttack.Value = true;
+            TriggerAttackServerRpc();
         }
     }
 
+    [ServerRpc]
+    private void TriggerAttackServerRpc()
+    {
+        canAttack.Value = true;
+        UpdateSlashRangeClientRpc(true);
+    }
+
+    [ClientRpc]
+    private void UpdateSlashRangeClientRpc(bool active)
+    {
+        slashRange.SetActive(active);
+    }
+
+    [ServerRpc]
+    private void SetDirectionServerRpc(bool facingRight)
+    {
+        // Server g?i ClientRpc ?? c?p nh?t h??ng quay trên t?t c? các client
+        SetDirectionClientRpc(facingRight);
+    }
+
+    [ClientRpc]
+    private void SetDirectionClientRpc(bool facingRight)
+    {
+        transform.localScale = facingRight ? new Vector3(1.2f, 1.2f, 1f) : new Vector3(-1.2f, 1.2f, 1f);
+    }
+
+    public void FinalAttack()
+    {
+        if (IsOwner)
+        {
+            ScreenShakeManager.instance.ShakeScreen();
+            FinalAttackClientRpc();
+        }
+    }
+
+    [ClientRpc]
+    private void FinalAttackClientRpc()
+    {
+        if (!IsOwner)
+        {
+            ScreenShakeManager.instance.ShakeScreen();
+        }
+    }
 }

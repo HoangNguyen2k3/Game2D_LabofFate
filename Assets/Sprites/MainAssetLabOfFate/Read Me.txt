@@ -1,0 +1,22 @@
+INCLUDED
+- Tileset (32x32)
+- Animated Props and Items
+- Game UI
+- 8 Animated Projectiles Including collision.
+- 2 Players (32x32) 4 Styles, Blue, Red, Green and Grey.
+- NPC (32x32)
+- 5 Enemy Types (32x32)
+- 1 Boss (64x64) Legs, body and outlines are separate for best application.
+
+ANIMATIONS
+- Players: Idle/Talk/Reload/Run/Shoot/Death
+- NPC: Idle1/Idle2/Talk
+- Enemies: Idle1/Idle2/Activate/Run/Shoot/Death/Spawn Idle/Spawn Death
+- Boss: Idle/Talk/Run/Shoot1/Shoot2/Shoot3/Death
+
+PNG image format. Original size and x2/x3​. Information on cell dimensions are included in the download.
+
+LICENCE: This asset pack can be used in both free and commercial projects. You can modify it to suit your own needs. You may not redistribute or resell it.
+If you come across issues or need help, please contact me. Thanks! :)
+
+https://trevor-pupkin.itch.io/
