@@ -5,75 +5,64 @@ using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    private Vector2 moveInput;
-    private Vector2 dashDirection;
-    [SerializeField] private float speed = 5f;
-    [SerializeField] private float dashSpeed = 10f;
-    [SerializeField] private TrailRenderer playerTrailRenderer;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private TrailRenderer tr;
+
+    [Header("Movement settings")]
+    [SerializeField] private float moveSpeed = 5f;
+
+    [Header("Dash settings")]
+    [SerializeField] private float dashSpeed = 20f;
+    [SerializeField] private float dashDuration = 0.2f;
+    [SerializeField] private float dashCooldown = 0.8f;
+
+    private Vector2 direction;
     private bool isDashing = false;
-    private bool canDash = false;
-    private Animator animator;
+    private bool canDash = true;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        tr = GetComponent<TrailRenderer>();
     }
+
     private void Start()
     {
-
+        tr.time = 0.3f;
     }
+
     private void Update()
     {
-        moveInput.x = Input.GetAxisRaw("Horizontal");
-        moveInput.y = Input.GetAxisRaw("Vertical");
-        if (moveInput != Vector2.zero)
+        if (isDashing) return; // No input while dashing
+        direction.x = Input.GetAxisRaw("Horizontal");
+        direction.y = Input.GetAxisRaw("Vertical");
+        direction.Normalize();
+
+        if (Input.GetKeyDown(KeyCode.Space) && canDash)
         {
-            animator.SetBool("isWalk", true);
-        }
-        else
-        {
-            animator.SetBool("isWalk", false);
-        }
-        if (Input.GetKey(KeyCode.Space))
-        {
-            if (dashDirection == Vector2.zero)
-            {
-                dashDirection = moveInput.normalized;
-            }
-            Dash();
+            StartCoroutine(Dash());
         }
     }
     private void FixedUpdate()
     {
-        if (canDash)
-        {
-            rb.MovePosition(rb.position + dashDirection * speed * Time.deltaTime);
-            return;
-        }
-        rb.MovePosition(rb.position +moveInput.normalized*speed*Time.deltaTime);
+        if (isDashing) return;
+        rb.velocity = new Vector2(direction.x * moveSpeed, direction.y * moveSpeed);
     }
-    private void Dash()
+
+    private IEnumerator Dash()
     {
-        if (!isDashing)
-        {
-            canDash = true;
-            isDashing = true;
-            speed += dashSpeed;
-            playerTrailRenderer.emitting = true;
-            StartCoroutine(EndDashing());
-        }
-    }
-    private IEnumerator EndDashing()
-    {
-        float dashTime = 0.25f;
-        yield return new WaitForSeconds(dashTime);
         canDash = false;
-        dashDirection=Vector2.zero;
-        speed -= dashSpeed;
-        playerTrailRenderer.emitting = false;
-        float dashCD = 0.7f;
-        yield return new WaitForSeconds(dashCD);
+        isDashing = true;
+        Vector2 dashDir = direction;
+
+        rb.velocity = new Vector2(dashDir.x * dashSpeed, dashDir.y * dashSpeed);
+        tr.emitting = true;
+
+        yield return new WaitForSeconds(dashDuration);
+        tr.emitting = false;
         isDashing = false;
+
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
     }
 }
