@@ -25,10 +25,14 @@ public class EnemyAI : NetworkBehaviour
     private float timeRoaming = 0f;
     private NetworkVariable<Vector2> roamPosition = new NetworkVariable<Vector2>();
    [SerializeField] private float rangeFollow = 8f;
+    [SerializeField] private float rangeAttack = 1f;
     private KnockBack knockBack;
     private EnemyHealth health;
     private Collider2D col;
     private Rigidbody2D rb;
+    [SerializeField] private MonoBehaviour enemyType;
+    private bool canAttack = true;
+    [SerializeField] private float attackCooldown = 0.5f;
 
     private enum State
     {
@@ -109,9 +113,18 @@ public class EnemyAI : NetworkBehaviour
         enemyPathFinding.moveSpeed = 2f;
         enemyPathFinding.MoveTo(roamPosition.Value);
 
-        if (target && Vector2.SqrMagnitude((Vector2)transform.position - (Vector2)target.position) <= rangeFollow * rangeFollow)
+//        if (target && CaculateDistancePosition(transform.position,target.position,rangeFollow) && !CaculateDistancePosition(transform.position,target.position,rangeAttack))
+            if (target && Vector2.Distance(transform.position,target.position)<=rangeFollow
+            && Vector2.Distance(transform.position,target.position)>rangeAttack)
+
+            {
+                state.Value = State.FollowPlayer;
+        }
+        //else if(target&& CaculateDistancePosition(transform.position, target.position, rangeAttack))
+        else if (target && Vector2.Distance(transform.position,target.position)<=rangeAttack)
         {
-            state.Value = State.FollowPlayer;
+            state.Value = State.AttackPlayer;
+        
         }
 
         if (timeRoaming > roamChangeDirFloat)
@@ -123,9 +136,13 @@ public class EnemyAI : NetworkBehaviour
 
     private void FollowingPlayer()
     {
-        if (target == null || Vector2.Distance(transform.position, target.position) > rangeFollow)
+        if (target == null || (Vector2.Distance(transform.position, target.position) > rangeFollow))
         {
             state.Value = State.Roaming;
+            return;
+        }else if (target!=null&&Vector2.Distance(transform.position, target.position) <= rangeAttack)
+        {
+            state.Value = State.AttackPlayer;
             return;
         }
 
@@ -136,7 +153,28 @@ public class EnemyAI : NetworkBehaviour
     }
     private void AttackPlayer()
     {
-
+        if (!canAttack)
+        {
+            state.Value = State.FollowPlayer;
+        }
+        Debug.Log("Attack");
+        if (target == null || (Vector2.Distance(transform.position, target.position) > rangeFollow))
+        {
+            state.Value = State.Roaming;
+            return;
+        }
+        else if (target != null && Vector2.Distance(transform.position, target.position) > rangeAttack&&Vector2.Distance(transform.position, target.position) <= rangeAttack)
+        {
+            state.Value = State.FollowPlayer;
+            return;
+        }
+        if (canAttack)
+        {
+            Debug.Log("Attack done");
+            canAttack = false;
+            (enemyType as IEnemy).Attack();
+            StartCoroutine(AttackCooldownRoutine());
+        }
     }
     void CalculatePath()
     {
@@ -207,5 +245,20 @@ public class EnemyAI : NetworkBehaviour
             randomizedTargetOffset = (Vector2)transform.position - (Vector2)collision.transform.position;
             stuckTime = 0f;
         }
+    }
+    private IEnumerator AttackCooldownRoutine()
+    {
+
+        yield return new WaitForSeconds(attackCooldown);
+        canAttack = true;
+    }
+    private bool CaculateDistancePosition(Vector3 start,Vector3 stop,float distance)
+    {
+        if(Vector2.SqrMagnitude((Vector2)start - (Vector2)stop) <= distance * distance)
+        {
+            return true;
+        }
+        return false;
+        
     }
 }

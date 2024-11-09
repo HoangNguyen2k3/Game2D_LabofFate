@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 3048079338
+  GlobalObjectIdHash: 2713414694
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
   ActiveSceneSynchronization: 0
@@ -468,7 +468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1385055299
+  GlobalObjectIdHash: 4205814839
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
   ActiveSceneSynchronization: 0
@@ -499,8 +499,9 @@ GameObject:
   - component: {fileID: 7018522266963632704}
   - component: {fileID: 1880952672105253950}
   - component: {fileID: 1988818680942052776}
+  - component: {fileID: -6468030290830972631}
   m_Layer: 0
-  m_Name: Enemies1
+  m_Name: FlyerEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -641,7 +642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2538325824
+  GlobalObjectIdHash: 3436940703
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
   ActiveSceneSynchronization: 0
@@ -665,7 +666,10 @@ MonoBehaviour:
   target: {fileID: 0}
   nextWPDistance: 0.5
   roamChangeDirFloat: 2.5
-  rangeFollow: 10
+  rangeFollow: 12
+  rangeAttack: 3
+  enemyType: {fileID: -6468030290830972631}
+  attackCooldown: 1
 --- !u!114 &6505016199227056230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -814,7 +818,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d0727d5ae3244e3b569694d3912374, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TransitionStateInfoList: []
+  TransitionStateInfoList:
+  - IsCrossFadeExit: 0
+    Layer: 0
+    OriginatingState: -186804745
+    DestinationState: 1080829965
+    TransitionDuration: 0
+    TriggerNameHash: 1080829965
+    TransitionIndex: 0
   m_Animator: {fileID: 1980068674877456291}
 --- !u!114 &1880952672105253950
 MonoBehaviour:
@@ -845,6 +856,19 @@ MonoBehaviour:
   distanceDetect: 10
   flipXState:
     m_InternalValue: 0
+--- !u!114 &-6468030290830972631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6080449585654408573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c5bf6e8d1f80d4fb53b5276fc480a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Mine: {fileID: 6505309234951290759, guid: 2094afa95ca8685459e416e02b14567f, type: 3}
 --- !u!1 &7687796048873759703
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,7 +967,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &6881896639627983597
 MonoBehaviour:

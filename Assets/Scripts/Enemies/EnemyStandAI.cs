@@ -14,7 +14,6 @@ public class EnemyStandAI : NetworkBehaviour
     [SerializeField] private MonoBehaviour enemyType;
     [SerializeField] private float attackCooldown=1f;
     private bool canAttack = true;
-    private Animator animator;
     private enum State
     {
         Idle,
@@ -26,7 +25,6 @@ public class EnemyStandAI : NetworkBehaviour
         knockBack = GetComponent<KnockBack>();
         health = GetComponent<EnemyHealth>();
         col = GetComponent<Collider2D>();
-        animator=GetComponent<Animator>();
     }
     void Update()
     {
