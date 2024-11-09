@@ -1,0 +1,1836 @@
+fileFormatVersion: 2
+guid: 4d1fdb8461c5ea5428c89df748a16f4a
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: f3268c876daf4890b6af6cd462063137, type: 3}
+  _reimportOnDependencyChange: 1
+  _pixelsPerUnit: 32
+  _overrideTexture: {instanceID: 0}
+  _sprites:
+  - name: Players_blue_x1_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 6f04cc8cab9449146b1feb44db441f83
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 42bd94a1fd7838b48956221f7aecdaa1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 6ec3c371826714a4c92567f8675c3874
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 384
+      width: 32
+      height: 32
+    spriteID: a873320b064336d4badc5dedd1fd324e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 6ef920bb916950f4fadcf75dffae3e01
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 66a0f643fa864e54fa9089ad8dfc8640
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 3e95f57dbef03064399f7a760765f637
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 694aee5675081424b80acf57ec030fe9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 384
+      width: 32
+      height: 32
+    spriteID: fc0ee6f55ac6fd44bb21d627e319b3da
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 384
+      width: 32
+      height: 32
+    spriteID: b4474494301a8bb4a89f56f43e028f7e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_10
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 352
+      width: 32
+      height: 32
+    spriteID: f508f10c9bb134b4f9f3e1fa2edb87c4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_11
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 446c8c199a8abe741b7f97671a299de8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_12
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 3fca50abb4b5a474d8e94732ae5ed3e3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_13
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 352
+      width: 32
+      height: 32
+    spriteID: ac776adeee2096b4f822728ed101d0c3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_14
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 272cfb9dda829414ead103c6440abdbb
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_15
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 6d5b26a6712845f4a88db759e3778fdd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_16
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 352
+      width: 32
+      height: 32
+    spriteID: da87d0aaf59984444bcf118fc0d10772
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_17
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 352
+      width: 32
+      height: 32
+    spriteID: ed36af606846b124eadfb4ceda0c71bd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_18
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 62a65e2fead88b040aa5f68cbdf0ed44
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_19
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 56d456b00558112448148468dbfc1447
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_20
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 320
+      width: 32
+      height: 32
+    spriteID: d092a97734978c44ca9b2feb6f7b12c9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_21
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 320
+      width: 32
+      height: 32
+    spriteID: e81461b0817f3564ab96679ffc222176
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_22
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 320
+      width: 32
+      height: 32
+    spriteID: dfa324edc96b777428ce4274e729175b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_23
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 320
+      width: 32
+      height: 32
+    spriteID: faf08825c84e74249b092b19cf1d578b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_24
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 2801849466f9b9b43a4d76f5e917a075
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_25
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 320
+      width: 32
+      height: 32
+    spriteID: a1a03d550b6448741b9609205a6fff23
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_26
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 382219866d2f08447a9557318c6cf747
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_27
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 320
+      width: 32
+      height: 32
+    spriteID: e55cf2f45c9755448b59cd11ed9497e2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_28
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 1bc66c28132a054459584ea19a431d3f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_29
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 5abb82b427503a6428c8f8f94ce64910
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_30
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 9ee5985cf76d73a4cbd49890ea752683
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_31
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 288
+      width: 32
+      height: 32
+    spriteID: a683b929cc46ad4468ec968501df5b87
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_32
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 3261cca4086bb9545a5902528fbf124d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_33
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 84d8df86b4f37f64e8363ec944e31ef9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_34
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 288
+      width: 32
+      height: 32
+    spriteID: da5c709eabf69064890bf5e385710e60
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_35
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 9f3f06cbf4fa4c242b0ab675e9a7b123
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_36
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 9dce00311590ada46a6b1dc25f305631
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_37
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 099e7b535eb35894aaacff41bf0caf61
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_38
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 71f034c7ce559bc4aa157f0a8f646d9e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_39
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 18d4b4a1d6c2cd94ca332af1847a90b3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_40
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 256
+      width: 32
+      height: 32
+    spriteID: edc5b30671f704b4e973988840d9d9dd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_41
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 256
+      width: 32
+      height: 32
+    spriteID: e00cd88282f920149833496658a8aa8b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_42
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 256
+      width: 32
+      height: 32
+    spriteID: e399c11f156f67d4abd568590fa1f280
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_43
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 256
+      width: 32
+      height: 32
+    spriteID: a31db186a9b862441ba2acb2983f5de0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_44
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 256
+      width: 32
+      height: 32
+    spriteID: bc275f587db5b814b91677b41ef48c87
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_45
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 256
+      width: 32
+      height: 32
+    spriteID: d1151caaeba87464a891401b91d881e5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_46
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 06f577e70c5d6fa43827928c3adc1165
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_47
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 3cf849df7a12c1c419877a947c3a2566
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_48
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 256
+      width: 32
+      height: 32
+    spriteID: c745b43cc6f6c854aba674f5394f371f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_49
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 00b880ba183445544a7991a474129cf2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_50
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 8114385c3c5616041ac9281962e89213
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_51
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 224
+      width: 32
+      height: 32
+    spriteID: fbc5f478b2adeca4fae1c08d7a8a1274
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_52
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 56cd5f7fe9ffc954aafed12fd8f0c3ac
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_53
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 224
+      width: 32
+      height: 32
+    spriteID: fc3b47e8696ac3d498d8b8ad2d201438
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_54
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 07dc88b8019896f49ba128ba0f6369d6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_55
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 224
+      width: 32
+      height: 32
+    spriteID: e4c0cf0123d670740af9e750dba0c92d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_56
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 92a97e6d50a56f049bcddf40c3d95ce3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_57
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 68b31b4590da80e4b8949e7435db6de4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_58
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 224
+      width: 32
+      height: 32
+    spriteID: e21de8f2288b5b14bb806e08f76513aa
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_59
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 224
+      width: 32
+      height: 32
+    spriteID: aa61475c606349442ba03a8f22e9953c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_60
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 2e67ba39568106a4ca0fe07ded53deff
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_61
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 192
+      width: 32
+      height: 32
+    spriteID: e8e5e063b9ddf954090d20f01f578a03
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_62
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 554c491c5c1f5bd45a19f8b9aa3372f7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_63
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 3c93220bb76ed6f47803c979b1ac1eda
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_64
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 192
+      width: 32
+      height: 32
+    spriteID: e89175198cb9d6b41b45dca70da893e7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_65
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 2865876493bddb840a4c1e28c9a1812e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_66
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 192
+      width: 32
+      height: 32
+    spriteID: bd67baf7bc38dbc4788a2844bd42a3a8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_67
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 192
+      width: 32
+      height: 32
+    spriteID: fe427935748e36c42b3b3a001bf1d39c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_68
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 436dc013a72fec948a1bf760334f06c5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_69
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 192
+      width: 32
+      height: 32
+    spriteID: aa08a94e87d9fab4b955f0a0541242be
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_70
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 6583c8b47933c15488487b23aadddf5d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_71
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 160
+      width: 32
+      height: 32
+    spriteID: fc01ff060f9a4aa4c9ab2eab69f84c62
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_72
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 47f484481a189e444a75b8514c56788e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_73
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 160
+      width: 32
+      height: 32
+    spriteID: f3df9d57361a7254da7807fe542f1510
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_74
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 160
+      width: 32
+      height: 32
+    spriteID: ee3a19001e942dc4b97653d4a595794d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_75
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 160
+      width: 32
+      height: 32
+    spriteID: a3b40fe8132c8804895eb0bb4777fd2a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_76
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 160
+      width: 32
+      height: 32
+    spriteID: e02fc5c8fe9ae6b428e3f4da253784f0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_77
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 554176fc8137ed341b7f383e14ebc935
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_78
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 30fb7272dd139cf42a168d541605e85d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_79
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 861a905061fbdb845985347f422fecf3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_80
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 47b00e9d68efaee498585c845253366f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_81
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 05b04159359dffb4a89ba2794d6f5aa5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_82
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 63c5055ef98054c4fb46972cb0fb24c8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_83
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 169ff6161539abf40a7519ecfbd09023
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_84
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 128
+      width: 32
+      height: 32
+    spriteID: ee6e3a0f58077f34a8b05c90a07c1d06
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_85
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 128
+      width: 32
+      height: 32
+    spriteID: ff57164b2ee44d346832cefddb155f37
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_86
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 91bf1f47552d38a4aabb490dc9b954ef
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_87
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 152619ca95c2f01428659135cc913699
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_88
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 128
+      width: 32
+      height: 32
+    spriteID: f66b8f17e263b7b4ebe806674c6bd197
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_89
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 128
+      width: 32
+      height: 32
+    spriteID: eb8d8b44da0bd9746b5298782218d1c6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_90
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 1e8f9bf1e3966114e9b0f9c62e346602
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_91
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 6d227ca4c43373647bec68aa13b8a3ab
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_92
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 96
+      width: 32
+      height: 32
+    spriteID: c6288542045754d4e816a6463a3e3c90
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_93
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 84d11813d7c492445a96aed1a86677c3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_94
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 35b039b3966cac341bb343f8f3df5a8e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_95
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 672718520bfafd540854e4968f03faaf
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_96
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 7bd1ab0f2cae0af4d997c89bebb5d942
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_97
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 816d27d32676c5643af395313e779670
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_98
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 96
+      width: 32
+      height: 32
+    spriteID: b1f8a196ba4ffea4eb3250ea61245dd4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_99
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 56c960b766f5a7142a6e06eb3ed9118f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_100
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 64
+      width: 32
+      height: 32
+    spriteID: b9d5cab78cc1a8646bc568055916c2a0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_101
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 64
+      width: 32
+      height: 32
+    spriteID: fed6c043ebd5a5646a72095c8bd5df46
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_102
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 04fdd8675434f47439defa082fefa78a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_103
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 2ec801374b040fe42afa8034953ad8c5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_104
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 64
+      width: 32
+      height: 32
+    spriteID: a7aba93d7cdc1304f946359b46e3f0e9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_105
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 789f0c12092df86409ef50a6378c2618
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_106
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 12f4438af6ffa6e418c564929dfe8533
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_107
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 64
+      width: 32
+      height: 32
+    spriteID: af02f1f5d07ece7499f2e0e274581f44
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_108
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 64
+      width: 32
+      height: 32
+    spriteID: ae26f8397b4dfeb49b4853cae0af3760
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_109
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 64
+      width: 32
+      height: 32
+    spriteID: ea87d12ef22777a4c91126e7eeb95e52
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_110
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 53fc5a5ed8b427e438f530f941610a7f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_111
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 30c6c2543ed34d749a6d4566c63246de
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_112
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 2265b53f224292f4c94889bcf75e25e7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_113
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 7b25826b7eefbc545a46981bc89e91bc
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_114
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 3d4eb9546e775754ca05af2f31b66ff2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_115
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 690f4ab6c8c0d0d4db0f6bab5e0f4ee5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_116
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 2e86775310b415941bf906e612ba7fb2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_117
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 32
+      width: 32
+      height: 32
+    spriteID: bb992d976f0466d498ee589e3da67aee
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_118
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 28fd92c7c015db049b893a8bdc5603b0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_119
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 6e298499a313cb74ebd8775dc60062f4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_120
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 2898275e5c6a5a5428ed7996c08fb407
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_121
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 0
+      width: 32
+      height: 32
+    spriteID: aeb4603c16114be4492745b690053a91
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_122
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 7b1fe5d9f48043645b528a722d7886ef
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_123
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 015e0a1ac84dfa247b5c95c9bd91cb06
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_124
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 1842260492a51c741bc0e76961cb3cbf
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_125
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 0
+      width: 32
+      height: 32
+    spriteID: a1fda10e049cb4b40b050a8b0f0d23ac
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_126
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 6a1fa19f249cfc644a2c1e2ea92e8010
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_127
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 6da90eaed4c87a74da6b573a69cc3ea0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_128
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 682c8b43f9a743e44bda424465133c0c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Players_blue_x1_129
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 506649121108b3344b4d8fabe392113d
+    spriteOutline: []
+    tessellationDetail: 0
+  _secondaryTextures: []
+  _artifacts: {instanceID: 0}
