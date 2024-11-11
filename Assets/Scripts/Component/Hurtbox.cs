@@ -2,18 +2,18 @@ using UnityEngine;
 
 public class Hurtbox : MonoBehaviour
 {
-    [field: SerializeField] public Health Health {get; private set;}
+    [field: SerializeField] public EnemyHealth Health {get; private set;}
     [SerializeField] private bool canBeKnockback = false;
     
 
     private void Awake()
     {   
-        Health = GetComponentInParent<Health>();
+        Health = GetComponentInParent<EnemyHealth>();
     }
 
     public void TakeDamage(float damageAmount)
     {
-        Health.TakeDamage(damageAmount);
+        Health.TakeDamageServerRpc(damageAmount);
     }
 
     public void TakeKnockback(Transform knockbackForce, float knockbackAmount)

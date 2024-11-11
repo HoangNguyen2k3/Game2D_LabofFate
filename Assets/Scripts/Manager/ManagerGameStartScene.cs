@@ -1,29 +1,14 @@
 using System.Collections.Generic;
-using TMPro;
 using Unity.Netcode;
 using UnityEngine;
 
 public class ManagerGameStartScene : MonoBehaviour
 {
-    public static string PlayerName { get; set; } // Static player name accessible from other scripts
+    public static string PlayerName { get; set; }
 
-    [SerializeField] private List<Transform> positionSpawn;
+    [SerializeField] private List<Transform> playerSpawnPositions; // List of predefined player spawn positions
     [SerializeField] private List<GameObject> typeEnemySpawn;
-
-    private void OnGUI()
-    {
-        GUILayout.BeginArea(new Rect(10, 10, 300, 300));
-        if (NetworkManager.Singleton.IsClient && !NetworkManager.Singleton.IsServer)
-            StatusLabels();
-        GUILayout.EndArea();
-    }
-
-    static void StatusLabels()
-    {
-        var mode = NetworkManager.Singleton.IsHost ? "Host" : NetworkManager.Singleton.IsServer ? "Server" : "Client";
-        GUILayout.Label("Transport: " + NetworkManager.Singleton.NetworkConfig.NetworkTransport.GetType().Name);
-        GUILayout.Label("Mode: " + mode);
-    }
+    [SerializeField] private List<Transform> positionSpawn;
 
     public void SpawnEnemies()
     {
@@ -32,5 +17,11 @@ public class ManagerGameStartScene : MonoBehaviour
             GameObject spawnEnemy = Instantiate(typeEnemySpawn[i], positionSpawn[i].position, Quaternion.identity);
             spawnEnemy.GetComponent<NetworkObject>().Spawn();
         }
+    }
+
+    public Vector3 GetPlayerSpawnPosition(int playerIndex)
+    {
+        // Make sure to handle the case where there are fewer spawn points than players
+        return playerSpawnPositions[playerIndex % playerSpawnPositions.Count].position;
     }
 }

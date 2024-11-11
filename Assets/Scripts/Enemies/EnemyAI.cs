@@ -33,6 +33,8 @@ public class EnemyAI : NetworkBehaviour
     [SerializeField] private MonoBehaviour enemyType;
     private bool canAttack = true;
     [SerializeField] private float attackCooldown = 0.5f;
+    [SerializeField] private float speedRoaming = 2f;
+    [SerializeField] private float speedFollow = 4f;
 
     private enum State
     {
@@ -110,7 +112,7 @@ public class EnemyAI : NetworkBehaviour
     private void Roaming()
     {
         timeRoaming += Time.deltaTime;
-        enemyPathFinding.moveSpeed = 2f;
+        enemyPathFinding.moveSpeed = speedRoaming;
         enemyPathFinding.MoveTo(roamPosition.Value);
 
 //        if (target && CaculateDistancePosition(transform.position,target.position,rangeFollow) && !CaculateDistancePosition(transform.position,target.position,rangeAttack))
@@ -153,11 +155,16 @@ public class EnemyAI : NetworkBehaviour
     }
     private void AttackPlayer()
     {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player==null)
+        {
+            state.Value = State.Roaming;
+            return;
+        }
         if (!canAttack)
         {
             state.Value = State.FollowPlayer;
         }
-        Debug.Log("Attack");
         if (target == null || (Vector2.Distance(transform.position, target.position) > rangeFollow))
         {
             state.Value = State.Roaming;
@@ -214,7 +221,7 @@ public class EnemyAI : NetworkBehaviour
         while (currentWP < path.vectorPath.Count)
         {
             Vector2 direction = ((Vector2)path.vectorPath[currentWP] - rb.position).normalized;
-            enemyPathFinding.moveSpeed = 6f;
+            enemyPathFinding.moveSpeed = speedFollow;
             enemyPathFinding.MoveTo(direction);
 
             float distanceToWaypoint = Vector2.Distance(rb.position, path.vectorPath[currentWP]);
@@ -236,7 +243,7 @@ public class EnemyAI : NetworkBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 6)
+        if (collision.gameObject.layer == 3)
         {
             stuckTime += Time.deltaTime;
         }

@@ -6,7 +6,14 @@ public class UINetworkMenu : MonoBehaviour
 {
     [SerializeField] private TMP_InputField inputFieldNamePlayer;
     [SerializeField] private ManagerGameStartScene managerGameStartScene; // Reference to ManagerGameStartScene
+    [SerializeField] private GameObject map;
+    [SerializeField] private GameObject UIPLayer;
 
+    private void Start()
+    {
+        map.SetActive(false);
+        UIPLayer.SetActive(false);
+    }
     public void StartHost()
     {
         SettingInputName();
@@ -14,6 +21,8 @@ public class UINetworkMenu : MonoBehaviour
 
         // Spawn enemies when hosting
         managerGameStartScene.SpawnEnemies();
+        map.SetActive(true);
+        UIPLayer.SetActive(true);
 
         gameObject.SetActive(false);
     }
