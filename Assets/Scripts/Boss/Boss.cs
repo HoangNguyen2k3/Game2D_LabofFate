@@ -21,11 +21,11 @@ public class Boss : BossCore
     public enum Phase {PHASE1, PHASE2}
     private Phase currentPhase;
 
-    private Health health;
+    private EnemyHealth health;
 
     private void Awake()
     {
-        health = GetComponent<Health>();
+        health = GetComponent<EnemyHealth>();
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player");
@@ -47,7 +47,7 @@ public class Boss : BossCore
         }
         UpdateSprite();
 
-        if (health.CurrentHealth <= 50f)
+        if (health.currentHealth.Value <= 50f)
         {
             SetPhase(Phase.PHASE2);
         }

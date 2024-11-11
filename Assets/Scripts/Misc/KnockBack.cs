@@ -19,7 +19,6 @@ public class KnockBack :  NetworkBehaviour
     {
         GetKnockBack = true;
         Vector2 direction_knockBack = (-damageSoure.position + transform.position).normalized * knockbackThrust * rb.mass;
-        Debug.Log(direction_knockBack);
         rb.AddForce(direction_knockBack, ForceMode2D.Impulse);
         StartCoroutine(DoneKnockBack());
     }

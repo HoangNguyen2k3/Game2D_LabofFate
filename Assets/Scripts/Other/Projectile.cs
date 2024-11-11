@@ -34,7 +34,8 @@ public class Projectile : MonoBehaviour
         EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
         Indestructive indestructible = other.gameObject.GetComponent<Indestructive>();
         PlayerHealth player = other.gameObject.GetComponent<PlayerHealth>();
-        if (!other.isTrigger && (indestructible||player))
+        
+        if (!other.isTrigger && (indestructible|| other.gameObject.layer == LayerMask.NameToLayer("Obstacles")))
         {
             Instantiate(particalOnHitPrefabVFX, transform.position, transform.rotation);
             Destroy(gameObject);

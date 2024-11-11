@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 6fd9f74f13d3d5b42b08bbb1be66f936
+timeCreated: 1514094246
+licenseType: Store
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Lemon
+  fontNames:
+  - Lemon
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

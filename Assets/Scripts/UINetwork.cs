@@ -7,7 +7,7 @@ using TMPro;
 public class UINetwork : MonoBehaviour
 {
     public TMP_InputField inputNamePlayer;
-    public string playerNameInput = ""; // Bi?n t?m ?? l?u tên ng??i ch?i
+    public string playerNameInput = "";
     [SerializeField] private List<Transform> positionSpawn;
     [SerializeField] private List<GameObject> typeEnemySpawn;
     private void OnGUI()
@@ -18,16 +18,18 @@ public class UINetwork : MonoBehaviour
             StartButtons();
         }
         else
-        {
-            StatusLabels();
-        }
+                {
+  StatusLabels();
+                }
+          
+
         GUILayout.EndArea();
     }
 
     void StartButtons()
     {
         GUILayout.Label("Enter Player Name:");
-        playerNameInput = GUILayout.TextField(playerNameInput, 25); 
+        playerNameInput = GUILayout.TextField(playerNameInput, 25);
         if (inputNamePlayer != null)
         {
             inputNamePlayer.text = playerNameInput;

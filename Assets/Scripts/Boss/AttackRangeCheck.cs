@@ -14,7 +14,13 @@ public class AttackRangeCheck : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         boss = GetComponentInParent<Boss>();
     }
-
+    private void Update()
+    {
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
+    }
     private void OnTriggerEnter2D(Collider2D other) 
     {
         if (other.gameObject == player)
