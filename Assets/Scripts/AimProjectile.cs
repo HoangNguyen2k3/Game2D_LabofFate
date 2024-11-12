@@ -19,6 +19,7 @@ public class AimProjectile : NetworkBehaviour
 
     private void Update()
     {
+     
         MoveProjectile(Time.deltaTime);
         DetectFireDistance();
     }

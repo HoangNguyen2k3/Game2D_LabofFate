@@ -16,8 +16,8 @@ public class EnemyHealth : NetworkBehaviour
     [SerializeField] private Slider healthBar;
     [SerializeField] private GameObject healthBarObject;
     [SerializeField] private GameObject deathVFXPrefab;
-    [SerializeField] private TextMeshProUGUI numCurrentHealth;
-    [SerializeField] private TextMeshProUGUI name_enemy;
+  //  [SerializeField] private TextMeshProUGUI numCurrentHealth;
+  //  [SerializeField] private TextMeshProUGUI name_enemy;
     public NetworkVariable<bool> isDead = new NetworkVariable<bool>(false);
     private Flash flash;
 
@@ -34,7 +34,7 @@ public class EnemyHealth : NetworkBehaviour
 
         healthBar.maxValue = StartingHealth;
         healthBar.value = currentHealth.Value;
-        numCurrentHealth.text = currentHealth.Value.ToString();
+    //    numCurrentHealth.text = currentHealth.Value.ToString();
 
         // Subscribe to the OnValueChanged event to sync health across clients
         currentHealth.OnValueChanged += OnHealthChanged;
@@ -48,7 +48,7 @@ public class EnemyHealth : NetworkBehaviour
     private void OnHealthChanged(float oldHealth, float newHealth)
     {
         healthBar.value = newHealth;
-        numCurrentHealth.text = newHealth.ToString();
+      //  numCurrentHealth.text = newHealth.ToString();
     }
 
     private void Update()
@@ -61,8 +61,8 @@ public class EnemyHealth : NetworkBehaviour
         if (isDead.Value)
         {
             healthBarObject.SetActive(false);
-            numCurrentHealth.text = "";
-            name_enemy.text = "";
+          //  numCurrentHealth.text = "";
+           // name_enemy.text = "";
         }
     }
 

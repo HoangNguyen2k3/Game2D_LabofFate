@@ -9,7 +9,8 @@ public class SlashManagerCombo : NetworkBehaviour
     public NetworkVariable<bool> canCombo = new NetworkVariable<bool>(false, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
     public Animator animator;
     [SerializeField] private GameObject slashRange;
-
+    private ActiveWeapon weapon;
+    [SerializeField] private GameObject arpalet;
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -21,11 +22,26 @@ public class SlashManagerCombo : NetworkBehaviour
 
         Vector3 mousePos = Input.mousePosition;
         Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(transform.position);
-
-        // G?i ServerRpc ?? yêu c?u c?p nh?t h??ng quay c?a nhân v?t
         bool facingRight = mousePos.x > playerScreenPoint.x;
         SetDirectionServerRpc(facingRight);
+        if (weapon == null)
+        {
+            weapon = FindFirstObjectByType<ActiveWeapon>();
+        }
+        if (weapon.usingArbalet.Value)
+        {
+            if (arpalet.activeSelf == false)
+            {
+                arpalet.SetActive(true);
+            }
 
+            return;
+        }
+        else
+        {
+            if(arpalet.activeSelf == true)
+            arpalet.SetActive(false);
+        }
         slashRange.SetActive(canAttack.Value);
 
         if (Input.GetMouseButtonDown(0) && !canCombo.Value && IsOwner)
@@ -51,14 +67,13 @@ public class SlashManagerCombo : NetworkBehaviour
     [ServerRpc]
     private void SetDirectionServerRpc(bool facingRight)
     {
-        // Server g?i ClientRpc ?? c?p nh?t h??ng quay trên t?t c? các client
         SetDirectionClientRpc(facingRight);
     }
 
     [ClientRpc]
     private void SetDirectionClientRpc(bool facingRight)
     {
-        transform.localScale = facingRight ? new Vector3(1.2f, 1.2f, 1f) : new Vector3(-1.2f, 1.2f, 1f);
+        transform.localScale = facingRight ? new Vector3(1f, 1f, 1f) : new Vector3(-1f, 1f, 1f);
     }
 
     public void FinalAttack()
