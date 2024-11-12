@@ -9,7 +9,8 @@ ScriptedImporter:
   assetBundleVariant: 
   script: {fileID: 11500000, guid: aaa16bfc62c086f4fb45da87b6acf9b1, type: 3}
   _reimportOnDependencyChange: 1
-  _jsonFile: {fileID: -164016180542632921, guid: acb9dd7a42736ac4a9902e9cabfcb4b2, type: 3}
+  _jsonFile: {fileID: -164016180542632921, guid: acb9dd7a42736ac4a9902e9cabfcb4b2,
+    type: 3}
   _pixelsPerUnit: 32
   _customLevelPrefab: {instanceID: 0}
   _intGridValueColorsVisible: 0
@@ -19,6 +20,10 @@ ScriptedImporter:
   _createLevelBoundsTrigger: 0
   _useParallax: 1
   _intGridValues:
+  - _key: Barrier_1
+    _asset: {instanceID: 0}
+  - _key: Barrier_2
+    _asset: {instanceID: 0}
   - _key: Wall_1
     _asset: {fileID: 11400000, guid: 739c57a74c5714f41a772403a33ab09a, type: 2}
   - _key: Wall_2
