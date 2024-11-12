@@ -1,36 +1,51 @@
-using System.Collections;
-using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-public class ActiveWeapon : MonoBehaviour
+public class ActiveWeapon : NetworkBehaviour
 {
     [SerializeField] private GameObject activeBow;
     [SerializeField] private GameObject activeSword;
-    public bool usingSword = false;
-    public bool usingArbalet = false;
-
+    public NetworkVariable<bool> usingArbalet = new NetworkVariable<bool>(false);
+    private void Awake()
+    {
+        activeBow = GameObject.FindGameObjectWithTag("activeFar");
+        activeSword= GameObject.FindGameObjectWithTag("activeClose");
+    }
     private void Start()
     {
-        activeSword.SetActive(true);
-        activeBow.SetActive(false);
-        usingSword = true; 
-        usingArbalet=false;
+        if (IsOwner)
+        {
+            Debug.Log("player");
+            activeSword.SetActive(true);
+            activeBow.SetActive(false);
+        }
+        usingArbalet.OnValueChanged += OnWeaponChanged;
     }
+
     private void Update()
     {
-        if(Input.GetKeyUp(KeyCode.Alpha1)) {
-            activeSword.SetActive(false);
-            activeBow.SetActive(true);
-            usingSword = false;
-            usingArbalet = true;
-        }
-        else if(Input.GetKeyUp(KeyCode.Alpha2))
+        if (activeBow==null && activeSword==null)
         {
-            activeSword.SetActive(true);
-            activeBow.SetActive(false);               
-            usingSword = true;
-            usingArbalet = false;
+            activeBow = GameObject.FindGameObjectWithTag("activeFar");
+            activeSword = GameObject.FindGameObjectWithTag("activeClose");
         }
+        if (!IsOwner) return; 
 
+        if (Input.GetKeyUp(KeyCode.Tab))
+        {
+            ToggleWeaponServerRpc();
+        }
+    }
+
+    private void OnWeaponChanged(bool oldValue, bool newValue)
+    {
+        activeSword.SetActive(!newValue);
+        activeBow.SetActive(newValue);
+    }
+
+    [ServerRpc]
+    private void ToggleWeaponServerRpc()
+    {
+        usingArbalet.Value = !usingArbalet.Value;
     }
 }

@@ -22,14 +22,13 @@ public class SlashManagerCombo : NetworkBehaviour
 
         Vector3 mousePos = Input.mousePosition;
         Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(transform.position);
-
         bool facingRight = mousePos.x > playerScreenPoint.x;
         SetDirectionServerRpc(facingRight);
         if (weapon == null)
         {
             weapon = FindFirstObjectByType<ActiveWeapon>();
         }
-        if (weapon.usingArbalet)
+        if (weapon.usingArbalet.Value)
         {
             if (arpalet.activeSelf == false)
             {
@@ -68,14 +67,13 @@ public class SlashManagerCombo : NetworkBehaviour
     [ServerRpc]
     private void SetDirectionServerRpc(bool facingRight)
     {
-        // Server g?i ClientRpc ?? c?p nh?t h??ng quay trên t?t c? các client
         SetDirectionClientRpc(facingRight);
     }
 
     [ClientRpc]
     private void SetDirectionClientRpc(bool facingRight)
     {
-        transform.localScale = facingRight ? new Vector3(1.2f, 1.2f, 1f) : new Vector3(-1.2f, 1.2f, 1f);
+        transform.localScale = facingRight ? new Vector3(1f, 1f, 1f) : new Vector3(-1f, 1f, 1f);
     }
 
     public void FinalAttack()

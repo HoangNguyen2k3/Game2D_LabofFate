@@ -53,7 +53,6 @@ public class ProjectilePlayerChildren : MonoBehaviour
             }
             else if (indestructible || other.gameObject.layer == LayerMask.NameToLayer("Obstacles"))
             {
-                Debug.Log("Hello");
                 Instantiate(particalOnHitPrefabVFX, transform.position, transform.rotation);
                 Destroy(gameObject);
             }
