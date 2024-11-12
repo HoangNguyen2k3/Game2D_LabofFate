@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class ProjectilePlayerChildren : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 22f;
     [SerializeField] private GameObject particalOnHitPrefabVFX;
-    [SerializeField] public bool isEnemyProjectile = false;
     [SerializeField] private float projectileRange = 10f;
+    [SerializeField] private int damageAttack = 1;
 
     private Vector3 startPosition;
+    private Vector3 moveDirection;
 
     private void Start()
     {
@@ -21,42 +22,47 @@ public class Projectile : MonoBehaviour
         MoveProjectile();
         DetectFireDistance();
     }
+
     public void UpdateProjectileRange(float projectileRange)
     {
         this.projectileRange = projectileRange;
     }
+
     public void UpdateMoveSpeed(float moveSpeed)
     {
         this.moveSpeed = moveSpeed;
     }
+
+    public void SetMoveDirection(Vector3 direction)
+    {
+        moveDirection = direction.normalized;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
         Indestructive indestructible = other.gameObject.GetComponent<Indestructive>();
-        PlayerHealth player = other.gameObject.GetComponent<PlayerHealth>();
-        
-        if (!other.isTrigger && (player||indestructible|| other.gameObject.layer == LayerMask.NameToLayer("Obstacles")))
-        {
-            Instantiate(particalOnHitPrefabVFX, transform.position, transform.rotation);
-            Destroy(gameObject);
-        }
-      /*  if (!other.isTrigger && (enemyHealth || indestructible || player))
-        {
-          *//*  if ((player && isEnemyProjectile) || (enemyHealth && !isEnemyProjectile))
-            {
 
-                player?.TakeDamage(1, transform);
+        if (!other.isTrigger && (enemyHealth || indestructible || other.gameObject.layer == LayerMask.NameToLayer("Obstacles")))
+        {
+            if (enemyHealth)
+            {
+                enemyHealth.TakedDamage(damageAttack);
                 Instantiate(particalOnHitPrefabVFX, transform.position, transform.rotation);
                 Destroy(gameObject);
-            }*//*
-            if (!other.isTrigger && indestructible)
+            }
+            else if (indestructible || other.gameObject.layer == LayerMask.NameToLayer("Obstacles"))
             {
-
-               // Instantiate(particalOnHitPrefabVFX, transform.position, transform.rotation);
+                Debug.Log("Hello");
+                Instantiate(particalOnHitPrefabVFX, transform.position, transform.rotation);
+                Destroy(gameObject);
+            }
+            else
+            {
+                Instantiate(particalOnHitPrefabVFX, transform.position, transform.rotation);
                 Destroy(gameObject);
             }
         }
-   */
     }
 
     private void DetectFireDistance()
@@ -66,8 +72,9 @@ public class Projectile : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     private void MoveProjectile()
     {
-        transform.Translate(Time.deltaTime * moveSpeed * Vector3.right);
+        transform.position += moveDirection * moveSpeed * Time.deltaTime;
     }
 }

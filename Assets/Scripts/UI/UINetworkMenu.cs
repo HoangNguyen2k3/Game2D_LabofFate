@@ -31,6 +31,8 @@ public class UINetworkMenu : MonoBehaviour
     {
         SettingInputName();
         NetworkManager.Singleton.StartClient();
+        map.SetActive(true);
+        UIPLayer.SetActive(true);
         gameObject.SetActive(false);
     }
 
