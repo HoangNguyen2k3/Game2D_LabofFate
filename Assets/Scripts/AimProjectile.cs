@@ -49,7 +49,9 @@ public class AimProjectile : NetworkBehaviour
     private void MoveProjectile(float delta)
     {
         Vector3 currentPosition = transform.position;
+        if (!GameObject.FindGameObjectWithTag("Player")) { return; }
         Vector3 targetPosition = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position;
+       
         Vector3 directionToPlayer = (targetPosition - currentPosition).normalized;
         float angle = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x);
         transform.rotation = Quaternion.Euler(0f, 0f, angle * Mathf.Rad2Deg - 180f + directStart);

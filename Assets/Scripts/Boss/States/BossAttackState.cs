@@ -1,12 +1,17 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BossAttackState : BossState
 {
     [field: SerializeField] public float TimeToComplete {get; private set;} = 0.7f;
 
+
     public override void Enter() 
     {
         animator.Play(anim.name);
+     
+
+
     }
 
     public override void FrameUpdate() 
@@ -25,8 +30,7 @@ public class BossAttackState : BossState
     
     public override void Exit() 
     {
+      
         IsComplete = true;            
     }
-
-
 }

@@ -11,6 +11,7 @@ public class SlashManagerCombo : NetworkBehaviour
     [SerializeField] private GameObject slashRange;
     private ActiveWeapon weapon;
     [SerializeField] private GameObject arpalet;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -24,24 +25,28 @@ public class SlashManagerCombo : NetworkBehaviour
         Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(transform.position);
         bool facingRight = mousePos.x > playerScreenPoint.x;
         SetDirectionServerRpc(facingRight);
+
         if (weapon == null)
         {
             weapon = FindFirstObjectByType<ActiveWeapon>();
         }
+
         if (weapon.usingArbalet.Value)
         {
-            if (arpalet.activeSelf == false)
+            if (!arpalet.activeSelf)
             {
-                arpalet.SetActive(true);
+                SetArpaletActiveServerRpc(true); // Notify the server to activate arpalet across all clients
             }
-
             return;
         }
         else
         {
-            if(arpalet.activeSelf == true)
-            arpalet.SetActive(false);
+            if (arpalet.activeSelf)
+            {
+                SetArpaletActiveServerRpc(false); // Notify the server to deactivate arpalet across all clients
+            }
         }
+
         slashRange.SetActive(canAttack.Value);
 
         if (Input.GetMouseButtonDown(0) && !canCombo.Value && IsOwner)
@@ -74,6 +79,18 @@ public class SlashManagerCombo : NetworkBehaviour
     private void SetDirectionClientRpc(bool facingRight)
     {
         transform.localScale = facingRight ? new Vector3(1f, 1f, 1f) : new Vector3(-1f, 1f, 1f);
+    }
+
+    [ServerRpc]
+    private void SetArpaletActiveServerRpc(bool isActive)
+    {
+        SetArpaletActiveClientRpc(isActive);
+    }
+
+    [ClientRpc]
+    private void SetArpaletActiveClientRpc(bool isActive)
+    {
+        arpalet.SetActive(isActive);
     }
 
     public void FinalAttack()

@@ -1,14 +1,23 @@
 using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.SceneManagement; // Thêm dòng này ?? s? d?ng SceneManager
 
-public class ManagerGameStartScene : MonoBehaviour
+public class ManagerGameStartScene : NetworkBehaviour
 {
     public static string PlayerName { get; set; }
 
-    [SerializeField] private List<Transform> playerSpawnPositions; // List of predefined player spawn positions
+    [SerializeField] private List<Transform> playerSpawnPositions;
     [SerializeField] private List<GameObject> typeEnemySpawn;
     [SerializeField] private List<Transform> positionSpawn;
+    [SerializeField] private GameObject winGame;
+    [SerializeField] private GameObject loseGame;
+
+    private void Start()
+    {
+        winGame.SetActive(false);
+        loseGame.SetActive(false);
+    }
 
     public void SpawnEnemies()
     {
@@ -21,7 +30,48 @@ public class ManagerGameStartScene : MonoBehaviour
 
     public Vector3 GetPlayerSpawnPosition(int playerIndex)
     {
-        // Make sure to handle the case where there are fewer spawn points than players
         return playerSpawnPositions[playerIndex % playerSpawnPositions.Count].position;
+    }
+
+    private void Update()
+    {
+        if (!IsServer) return;
+
+        bool hasEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length > 0;
+        bool hasPlayers = GameObject.FindGameObjectsWithTag("Player").Length > 0;
+
+        if (!hasEnemies)
+        {
+            ActivateWinScreenClientRpc();
+        }
+        else if (!hasPlayers)
+        {
+            ActivateLoseScreenClientRpc();
+        }
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+    [ClientRpc]
+    private void ActivateWinScreenClientRpc()
+    {
+        winGame.SetActive(true);
+    }
+
+    [ClientRpc]
+    private void ActivateLoseScreenClientRpc()
+    {
+        loseGame.SetActive(true);
+    }
+
+    public void ReturnToMenu()
+    {
+        // Kh?i ??ng l?i scene hi?n t?i
+        if (IsServer)
+        {
+            // Ch? server m?i th?c hi?n reset scene
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }
