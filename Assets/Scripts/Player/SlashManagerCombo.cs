@@ -5,7 +5,10 @@ using UnityEngine;
 
 public class SlashManagerCombo : NetworkBehaviour
 {
+    [field: SerializeField] public PlayerController PlayerController {get; protected set;}
+    [SerializeField] private float attackCooldown = 0.7f;
     public NetworkVariable<bool> canAttack = new NetworkVariable<bool>(false, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+    public NetworkVariable<bool> isAttacking = new NetworkVariable<bool>(false, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
     public NetworkVariable<bool> canCombo = new NetworkVariable<bool>(false, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
     public Animator animator;
     [SerializeField] private GameObject slashRange;
@@ -17,9 +20,17 @@ public class SlashManagerCombo : NetworkBehaviour
         animator = GetComponent<Animator>();
     }
 
+    private void Start()
+    {
+        canAttack.Value = true;
+        isAttacking.Value = false;
+        canCombo.Value = false;
+    }
+
     private void Update()
     {
-        if (!IsOwner) return;
+        // if (!IsOwner) return;
+        if (!canAttack.Value) return;
 
         Vector3 mousePos = Input.mousePosition;
         Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(transform.position);
@@ -49,17 +60,35 @@ public class SlashManagerCombo : NetworkBehaviour
 
         slashRange.SetActive(canAttack.Value);
 
-        if (Input.GetMouseButtonDown(0) && !canCombo.Value && IsOwner)
+        if (canAttack.Value && Input.GetMouseButtonDown(0))
         {
-            canAttack.Value = true;
+            canAttack.Value = false;
+            isAttacking.Value = true;
             TriggerAttackServerRpc();
         }
+    }
+
+    public string GetDirectionStr()
+    {
+        return PlayerController.DirectionStr;
+    }
+
+    public void StartAttackCooldown()
+    {
+        StartCoroutine(AttackCooldown(attackCooldown));
+    }
+
+    private IEnumerator AttackCooldown(float time)
+    {
+        canAttack.Value = false;
+        yield return new WaitForSeconds(time);
+        canAttack.Value = true;
     }
 
     [ServerRpc]
     private void TriggerAttackServerRpc()
     {
-        canAttack.Value = true;
+        isAttacking.Value = true;
         UpdateSlashRangeClientRpc(true);
     }
 

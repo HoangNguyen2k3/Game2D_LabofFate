@@ -1,26 +1,48 @@
 using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Unity.Netcode;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : NetworkBehaviour
 {
+    public bool playTest = false;
     private Rigidbody2D rb;
     private Vector2 moveInput;
-    private Vector2 dashDirection;
-    [SerializeField] private float speed = 5f;
-    [SerializeField] private float dashSpeed = 10f;
+    [SerializeField] private float speed = 6f;
+    [SerializeField] private float dashSpeed = 24f;
+    [SerializeField] private float dashDuration= 0.3f;
+    [SerializeField] private float dashCooldown = 0.7f;
     [SerializeField] private TrailRenderer playerTrailRenderer;
-    private bool isDashing = false;
-    private bool canDash = false;
+    public bool isDashing {get; private set;} = false;
+    private bool canDash = true;
     private Animator animator;
+    private SlashManagerCombo slashManagerCombo;
+    private bool isAttacking => slashManagerCombo.isAttacking.Value;
     private Vector3 otherPos;
     private PlayerHealth health;
     private KnockBack knockBack;
+    private readonly Dictionary<Vector2, string> directionDict = new()
+    {
+        { Vector2.down, "Down" },
+        { Vector2.up, "Up"},
+        { Vector2.left, "Left"},
+        { Vector2.right, "Left"},
+        { new Vector2(1,1).normalized, "Up"},
+        { new Vector2(-1,1).normalized, "Up"},
+        { new Vector2(1,-1).normalized, "Down"},
+        { new Vector2(-1,-1).normalized, "Down"},
+    };
+
+    public string DirectionStr {get; private set;} = "Down";
+
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        slashManagerCombo = GetComponent<SlashManagerCombo>();
         health = GetComponent<PlayerHealth>();
         knockBack = GetComponent<KnockBack>();
     }
@@ -29,22 +51,21 @@ public class PlayerController : NetworkBehaviour
     {
         if (health.isDead.Value) return;
 
-        if (IsOwner)
+        UpdateDirectionStr();
+        if(isDashing || isAttacking) return;
+        
+        if (IsOwner || playTest)
         {
             moveInput.x = Input.GetAxisRaw("Horizontal");
             moveInput.y = Input.GetAxisRaw("Vertical");
+            moveInput.Normalize();
 
-            animator.SetBool("isWalk", moveInput != Vector2.zero);
+            animator.SetBool("isMoving", moveInput != Vector2.zero);
 
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetKey(KeyCode.Space) && canDash)
             {
-                if (dashDirection == Vector2.zero)
-                {
-                    dashDirection = moveInput.normalized;
-                }
-                Dash();
+                StartCoroutine(Dash());
             }
-
             SyncPlayerPosServerRpc(transform.position);
         }
         else
@@ -55,52 +76,48 @@ public class PlayerController : NetworkBehaviour
 
     private void FixedUpdate()
     {
-        if (IsOwner)
+        if(isDashing) return;
+        if (IsOwner || playTest)
         {
             if (knockBack.GetKnockBack) return;
-
-            if (canDash)
+            if (isAttacking)
             {
-                rb.MovePosition(rb.position + dashDirection * speed * Time.deltaTime);
+                rb.velocity *= 0.8f * 50 * Time.deltaTime;
                 return;
             }
-
-            rb.MovePosition(rb.position + moveInput.normalized * speed * Time.deltaTime);
+            rb.velocity = new Vector2 (moveInput.x * speed, moveInput.y * speed);
         }
     }
 
-    private void Dash()
+    private IEnumerator Dash()
     {
-        if (!isDashing)
-        {
-            canDash = true;
-            isDashing = true;
-            health.canTakeDamage = false;
-            speed += dashSpeed;
-
-            // B?t TrailRenderer trên t?t c? các client
-            ToggleTrailRendererServerRpc(true);
-
-            StartCoroutine(EndDashing());
-        }
-    }
-
-    private IEnumerator EndDashing()
-    {
-        float dashTime = 0.25f;
-        yield return new WaitForSeconds(dashTime);
-
+        Vector2 dashDirection = moveInput;
         canDash = false;
-        health.canTakeDamage = true;
-        dashDirection = Vector2.zero;
-        speed -= dashSpeed;
+        isDashing = true;
+        health.canTakeDamage = false;
 
-        // T?t TrailRenderer trên t?t c? các client
-        ToggleTrailRendererServerRpc(false);
+        rb.velocity = new Vector2 (dashDirection.x * dashSpeed, dashDirection.y * dashSpeed);
+        ToggleTrailRendererServerRpc(true);
 
-        float dashCD = 0.7f;
-        yield return new WaitForSeconds(dashCD);
+        yield return new WaitForSeconds(dashDuration);
+        ToggleTrailRendererServerRpc(false); 
         isDashing = false;
+        health.canTakeDamage = true;
+
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;   
+    }
+
+    public Vector2 GetMoveInput()
+    {
+        return moveInput;
+    }
+
+    private void UpdateDirectionStr()
+    {
+        directionDict.TryGetValue(moveInput, out var _direction);
+        if (_direction == null) return;
+        DirectionStr = _direction;
     }
 
     [ServerRpc(RequireOwnership = false)]
