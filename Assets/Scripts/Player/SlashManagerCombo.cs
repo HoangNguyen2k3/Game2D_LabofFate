@@ -29,7 +29,7 @@ public class SlashManagerCombo : NetworkBehaviour
 
     private void Update()
     {
-        // if (!IsOwner) return;
+        if (!IsOwner && !PlayerController.playTest) return;
         if (!canAttack.Value) return;
 
         Vector3 mousePos = Input.mousePosition;

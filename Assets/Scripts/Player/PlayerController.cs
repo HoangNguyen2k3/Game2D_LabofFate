@@ -23,18 +23,6 @@ public class PlayerController : NetworkBehaviour
     private Vector3 otherPos;
     private PlayerHealth health;
     private KnockBack knockBack;
-    private readonly Dictionary<Vector2, string> directionDict = new()
-    {
-        { Vector2.down, "Down" },
-        { Vector2.up, "Up"},
-        { Vector2.left, "Left"},
-        { Vector2.right, "Left"},
-        { new Vector2(1,1).normalized, "Up"},
-        { new Vector2(-1,1).normalized, "Up"},
-        { new Vector2(1,-1).normalized, "Down"},
-        { new Vector2(-1,-1).normalized, "Down"},
-    };
-
     public string DirectionStr {get; private set;} = "Down";
 
 
@@ -115,9 +103,24 @@ public class PlayerController : NetworkBehaviour
 
     private void UpdateDirectionStr()
     {
-        directionDict.TryGetValue(moveInput, out var _direction);
-        if (_direction == null) return;
-        DirectionStr = _direction;
+        if (moveInput == Vector2.zero) return;
+        
+        // Get angle between (0,1) and moveInput to determine Sprite directions
+        float inputAngle = Vector2.SignedAngle(Vector2.right, moveInput); 
+
+        if ((-45f < inputAngle && inputAngle < 45f) || -135f > inputAngle || inputAngle > 135f) 
+        {
+            DirectionStr = "Left";
+            return;
+        }
+
+        if (45f <= inputAngle && inputAngle <= 135f) 
+        {
+            DirectionStr = "Up";
+            return;
+        }
+
+        DirectionStr = "Down";
     }
 
     [ServerRpc(RequireOwnership = false)]
