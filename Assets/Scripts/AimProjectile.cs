@@ -40,8 +40,9 @@ public class AimProjectile : NetworkBehaviour
 
     private void DetectFireDistance()
     {
-        if (Vector2.Distance(transform.position, startPosition) > projectileRange || moveSpeed <= 5)
+        if (Vector2.Distance(transform.position, startPosition) > projectileRange || moveSpeed <= 1)
         {
+            Instantiate(bloom, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
@@ -61,7 +62,7 @@ public class AimProjectile : NetworkBehaviour
 
         if (moveSpeed > 5)
         {
-            moveSpeed -= 0.01f;
+            moveSpeed *= 0.85f;
         }
     }
 }
