@@ -6,19 +6,19 @@ using UnityEngine;
 
 public class AimProjectile : NetworkBehaviour
 {
-    [SerializeField] private float initialSpeed = 20f;
-    [SerializeField] private float minSpeed = 4f;
-    [SerializeField] public float speedChange = 1f;
-    [SerializeField] public float degChange = 180f;
+    public float initialSpeed = 20f;
+    public float minSpeed = 4f;
+    public float speedChange = 1f;
+    public float degChange = 180f;
     [SerializeField] private GameObject bloom;
     
     private float moveSpeed;
 
-    [SerializeField] private float lifeTime = 5f;
-    [SerializeField] private float delayChaseTime = 0.5f;
+    public float lifeTime = 5f;
+    public float delayChaseTime = 0.5f;
     private float timer = 0;
 
-    [SerializeField] private Vector2 initialVelocity = Vector2.up;
+    public Vector2 initialVelocity = Vector2.up;
     private Vector2 moveVelocity;
 
     private void Start() {
@@ -85,7 +85,7 @@ public class AimProjectile : NetworkBehaviour
 
     private void Explode()
     {
-        Instantiate(bloom, transform.position, Quaternion.identity);
+        if (bloom) Instantiate(bloom, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
