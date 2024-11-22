@@ -25,6 +25,7 @@ public class PlayerHealth : NetworkBehaviour
     }
     public void TakedDamageToPlayer(int damage,Transform hitTranform)
     {
+        if (!IsOwner) return;
         if(isDead.Value||!canTakeDamage)
         {
             return;
@@ -37,9 +38,14 @@ public class PlayerHealth : NetworkBehaviour
         currentHealth-=damage;
         if (currentHealth <= 0)
         {
-            isDead.Value = true;
+            DeathPlayerServerRpc();
             DeathPlayer();
         }
+    }
+    [ServerRpc]
+    public void DeathPlayerServerRpc()
+    {
+        isDead.Value = true;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

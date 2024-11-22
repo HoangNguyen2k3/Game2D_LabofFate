@@ -47,7 +47,7 @@ public class Boss : BossCore
         }
         UpdateSprite();
 
-        if (health.currentHealth.Value <= 50f)
+        if (health.currentHealth.Value <= 25f)
         {
             SetPhase(Phase.PHASE2);
         }

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
-using UnityEngine.SceneManagement; // Thêm dòng này ?? s? d?ng SceneManager
+using UnityEngine.SceneManagement; 
 
 public class ManagerGameStartScene : NetworkBehaviour
 {
@@ -17,9 +17,11 @@ public class ManagerGameStartScene : NetworkBehaviour
     {
         winGame.SetActive(false);
         loseGame.SetActive(false);
+ SpawnEnemiesServerRpc();
+       
     }
-
-    public void SpawnEnemies()
+    [ServerRpc]
+    public void SpawnEnemiesServerRpc()
     {
         for (int i = 0; i < positionSpawn.Count; i++)
         {
@@ -67,10 +69,8 @@ public class ManagerGameStartScene : NetworkBehaviour
 
     public void ReturnToMenu()
     {
-        // Kh?i ??ng l?i scene hi?n t?i
         if (IsServer)
         {
-            // Ch? server m?i th?c hi?n reset scene
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }

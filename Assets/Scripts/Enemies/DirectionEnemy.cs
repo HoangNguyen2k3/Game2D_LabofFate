@@ -8,26 +8,49 @@ public class DirectionEnemy : NetworkBehaviour
 {    private SpriteRenderer bodyEnemy;
     private GameObject target;
     [SerializeField] private float distanceDetect;
+    [SerializeField] private bool reverse=true;
+    private EnemyAI enemyAI;
     // NetworkVariable to sync flipX state across the network
     public NetworkVariable<bool> flipXState = new NetworkVariable<bool>(false, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
     private void Start()
     {
         bodyEnemy = GetComponent<SpriteRenderer>();
+        enemyAI = GetComponent<EnemyAI>();
     }
     private void Update()
     {
         if (!IsOwner) return; // Ensure only the owner can change the flipX
+        
 
         if (target != null&&(Vector2.Distance(target.transform.position,transform.position)<=distanceDetect))
         {
-            if (target.transform.position.x > gameObject.transform.position.x)
+            if (enemyAI.target)
             {
-                SetFlipX(false);
+                target.transform.position=enemyAI.target.position;
+            }
+            if(reverse)
+            {
+                if (target.transform.position.x > gameObject.transform.position.x)
+                {
+                    SetFlipX(false);
+                }
+                else
+                {
+                    SetFlipX(true);
+                }
             }
             else
             {
-                SetFlipX(true);
+                if (target.transform.position.x > gameObject.transform.position.x)
+                {
+                    SetFlipX(true);
+                }
+                else
+                {
+                    SetFlipX(false);
+                }
             }
+
         }
         else
         {

@@ -17,7 +17,7 @@ public class Idle : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         var slashManager = animator.GetComponent<SlashManagerCombo>();
-        if (slashManager != null && slashManager.canAttack.Value)
+        if ( slashManager != null && slashManager.canAttack.Value    )
         {
             slashManager.animator.Play("Attack1");
         }

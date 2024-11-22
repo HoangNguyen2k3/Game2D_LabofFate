@@ -5,13 +5,12 @@ public class ActiveWeapon : NetworkBehaviour
 {
     [SerializeField] private GameObject activeBow;
     [SerializeField] private GameObject activeSword;
-    public NetworkVariable<bool> usingArbalet = new NetworkVariable<bool>(false, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
-    private void Awake()
-    {
-        activeBow = GameObject.FindGameObjectWithTag("activeFar");
-        activeSword = GameObject.FindGameObjectWithTag("activeClose");
-    }
+    public NetworkVariable<bool> usingArbalet = new NetworkVariable<bool>(
+        false,
+        NetworkVariableReadPermission.Everyone,
+        NetworkVariableWritePermission.Owner
+    );
 
     private void Start()
     {
@@ -19,25 +18,33 @@ public class ActiveWeapon : NetworkBehaviour
         {
             activeBow = GameObject.FindGameObjectWithTag("activeFar");
             activeSword = GameObject.FindGameObjectWithTag("activeClose");
-            activeSword.SetActive(true);
-            activeBow.SetActive(false);
+
+            if (activeSword != null) activeSword.SetActive(true);
+            if (activeBow != null) activeBow.SetActive(false);
+            usingArbalet.OnValueChanged += OnWeaponChanged;
         }
-        usingArbalet.OnValueChanged += OnWeaponChanged;
+
     }
 
     private void Update()
     {
-        if (!IsOwner) return;
-        if (activeBow==null || activeSword==null) {
-            activeBow = GameObject.FindGameObjectWithTag("activeFar");
-            activeSword = GameObject.FindGameObjectWithTag("activeClose");
-        }
-       
-        // Toggle weapon on pressing Tab
+        if (!IsOwner) return; 
+
         if (Input.GetKeyUp(KeyCode.Tab))
         {
-            ToggleWeaponServerRpc();
+            ToggleWeapon(); 
         }
+    }
+
+    private void ToggleWeapon()
+    {
+        usingArbalet.Value=!usingArbalet.Value;
+    }
+
+    [ServerRpc]
+    private void ToggleWeaponServerRpc(bool newValue)
+    {
+        usingArbalet.Value = newValue; 
     }
 
     private void OnWeaponChanged(bool oldValue, bool newValue)
@@ -47,12 +54,7 @@ public class ActiveWeapon : NetworkBehaviour
             activeBow = GameObject.FindGameObjectWithTag("activeFar");
             activeSword = GameObject.FindGameObjectWithTag("activeClose");
         }
-        activeSword.SetActive(!newValue);
-        activeBow.SetActive(newValue);
-    }
-    [ServerRpc]
-    private void ToggleWeaponServerRpc()
-    {
-        usingArbalet.Value = !usingArbalet.Value; // Syncs across clients
+        if (activeSword != null) activeSword.SetActive(!newValue);
+        if (activeBow != null) activeBow.SetActive(newValue);
     }
 }

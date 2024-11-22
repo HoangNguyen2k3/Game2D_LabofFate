@@ -7,7 +7,7 @@ public class TransistionAttack1 : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         var slashManager = animator.GetComponent<SlashManagerCombo>();
-        if (slashManager != null)
+        if (slashManager.IsOwner&&slashManager != null)
         {
             slashManager.canAttack.Value = false;
         }
@@ -25,7 +25,7 @@ public class TransistionAttack1 : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         var slashManager = animator.GetComponent<SlashManagerCombo>();
-        if (slashManager != null)
+        if (slashManager.IsOwner && slashManager != null)
         {
             slashManager.canCombo.Value = false;
             slashManager.canAttack.Value = false;
