@@ -1,36 +1,36 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BossAttackState : BossState
 {
-    [field: SerializeField] public float TimeToComplete {get; private set;} = 0.7f;
+    // [field: SerializeField] public float TimeToComplete {get; private set;} = 0.7f;
 
 
     public override void Enter() 
     {
         animator.Play(anim.name);
-     
-
-
     }
 
     public override void FrameUpdate() 
     {
-        if (!boss.isInAttackRange) 
-            // Exit();
-            StartCoroutine(DelayedExit(TimeToComplete));
+        if (!boss.isInAttackRange)
+        {
+            Exit();
+        }
     }
 
     public override void PhysicsUpdate() 
     {
-        // body.velocity = Vector2.zero;
         boss.ApplyStopFriction();
 
     }
     
     public override void Exit() 
     {
-      
-        IsComplete = true;            
+        if (!boss.isAttacking)
+        {
+            IsComplete = true;
+        }
     }
 }

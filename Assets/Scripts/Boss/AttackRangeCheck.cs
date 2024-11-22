@@ -7,12 +7,12 @@ using UnityEngine.AI;
 public class AttackRangeCheck : MonoBehaviour
 {
     private GameObject player;
-    private Boss boss;
+    private BossCore boss;
 
     private void Awake() 
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        boss = GetComponentInParent<Boss>();
+        boss = GetComponentInParent<BossCore>();
     }
     private void Update()
     {

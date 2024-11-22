@@ -3,15 +3,10 @@ using UnityEngine;
 
 public class Boss : BossCore
 {
-
     public SpriteRenderer sprite;
     public GameObject attackSprite;
     public Animator attackSpriteLowerAnim;
     public Animator attackSpriteUpperAnim;
-
-    [field: SerializeField] public float speed {get; private set;} = 500;
-    [field: SerializeField] public bool isInAttackRange {get; private set;} = false;
-    [field: SerializeField] public bool isAggro {get; private set;} = false;
 
     public BossIdleState idleState;
     public BossChaseState chaseState;
@@ -20,7 +15,6 @@ public class Boss : BossCore
 
     public enum Phase {PHASE1, PHASE2}
     private Phase currentPhase;
-
     private EnemyHealth health;
 
     private void Awake()
@@ -29,7 +23,6 @@ public class Boss : BossCore
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player");
-        boss = this;
     }
 
     private void Start()
@@ -45,6 +38,7 @@ public class Boss : BossCore
         {
             target = GameObject.FindGameObjectWithTag("Player");
         }
+
         UpdateSprite();
 
         if (health.currentHealth.Value <= 50f)
@@ -111,6 +105,7 @@ public class Boss : BossCore
 
     private void UpdateSprite()
     {
+        if (isAttacking) return; 
         if (GetDirToTarget().x < 0)
         {
             sprite.flipX = true;
@@ -135,25 +130,6 @@ public class Boss : BossCore
         }
     }
 
-    public Vector2 GetDirToTarget()
-    {
-        return target != null ? (target.transform.position - transform.position).normalized : Vector2.zero;
-    }
-
-    public void ApplyStopFriction(float slowRate = 0.9f)
-    {
-        slowRate = Mathf.Clamp(slowRate, 0f, 1f);
-        if (Mathf.Abs(body.velocity.x) > 0.1f 
-        || Mathf.Abs(body.velocity.y) > 0.1f) // Check if velocity is close to zero
-        {
-            body.velocity = slowRate * 50 * Time.deltaTime * body.velocity;
-        }
-        else 
-        {
-            body.velocity = Vector2.zero;
-        }
-    }
-
     public void SetPhase(Phase phase)
     {
         if (currentPhase == Phase.PHASE1 && phase == Phase.PHASE2)
@@ -163,15 +139,4 @@ public class Boss : BossCore
         currentPhase = phase;
 
     }
-
-    public void SetAttackRangeStatus(bool _isInAttackRange)
-    {
-        isInAttackRange = _isInAttackRange;
-    }
-
-    public void SetAggroRangeCheck(bool _isAggro)
-    {
-        isAggro = _isAggro;
-    }
-
 }
