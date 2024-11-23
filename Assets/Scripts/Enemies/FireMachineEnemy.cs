@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -10,13 +11,15 @@ public class FireMachineEnemy : NetworkBehaviour, IEnemy
     [SerializeField] private int burstCount;
     [SerializeField] private float timeBetweenBurst;
     [SerializeField] private float restTime = 1f;
-
+    
+    private EnemyStandAI enemyStandAI;
     private bool isShooting = false;
     private Animator animator;
-
+    private Transform target;
     private void Start()
     {
         animator = GetComponent<Animator>();
+        enemyStandAI = GetComponent<EnemyStandAI>();
     }
 
     public void Attack()
@@ -49,7 +52,15 @@ public class FireMachineEnemy : NetworkBehaviour, IEnemy
     private IEnumerator ShootRoutine()
     {
         isShooting = true;
-        Vector2 targetDirection = FindFirstObjectByType<PlayerController>().transform.position - transform.position;
+        if (enemyStandAI.target)
+        {
+            target=enemyStandAI.target;
+        }
+        else
+        {
+            target = FindFirstObjectByType<PlayerController>().transform;
+        }
+        Vector2 targetDirection = target.position - transform.position;
 
         for (int i = 0; i < burstCount; i++)
         {

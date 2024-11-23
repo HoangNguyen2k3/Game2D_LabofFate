@@ -14,7 +14,7 @@ public class Attack1 : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         var slashManager = animator.GetComponent<SlashManagerCombo>();
-        if (slashManager != null)
+        if (slashManager != null && slashManager.IsOwner)
         {
             slashManager.canAttack.Value = true;
             if (Input.GetMouseButtonDown(0))

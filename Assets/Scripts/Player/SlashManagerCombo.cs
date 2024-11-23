@@ -5,8 +5,12 @@ using UnityEngine;
 
 public class SlashManagerCombo : NetworkBehaviour
 {
+    [field: SerializeField] public PlayerController PlayerController {get; protected set;}
+    [SerializeField] private float attackCooldown = 0.7f;
     public NetworkVariable<bool> canAttack = new NetworkVariable<bool>(false, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+    public NetworkVariable<bool> isAttacking = new NetworkVariable<bool>(false, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
     public NetworkVariable<bool> canCombo = new NetworkVariable<bool>(false, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+    
     public Animator animator;
     [SerializeField] private GameObject slashRange;
     private ActiveWeapon weapon;
@@ -17,14 +21,22 @@ public class SlashManagerCombo : NetworkBehaviour
         animator = GetComponent<Animator>();
     }
 
+    private void Start()
+    {
+        canAttack.Value = true;
+        isAttacking.Value = false;
+        canCombo.Value = false;
+    }
+
     private void Update()
     {
-        if (!IsOwner) return;
+        if (!IsOwner && !PlayerController.playTest) return;
+        if (!canAttack.Value) return;
 
         Vector3 mousePos = Input.mousePosition;
         Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(transform.position);
         bool facingRight = mousePos.x > playerScreenPoint.x;
-        SetDirectionServerRpc(facingRight);
+        ChangeDirectionPlayerServerRpc(facingRight,OwnerClientId);
 
         if (weapon == null)
         {
@@ -35,7 +47,7 @@ public class SlashManagerCombo : NetworkBehaviour
         {
             if (!arpalet.activeSelf)
             {
-                SetArpaletActiveServerRpc(true); // Notify the server to activate arpalet across all clients
+                SetArpaletActiveServerRpc(true); 
             }
             return;
         }
@@ -43,43 +55,68 @@ public class SlashManagerCombo : NetworkBehaviour
         {
             if (arpalet.activeSelf)
             {
-                SetArpaletActiveServerRpc(false); // Notify the server to deactivate arpalet across all clients
+                SetArpaletActiveServerRpc(false); 
             }
         }
 
         slashRange.SetActive(canAttack.Value);
 
-        if (Input.GetMouseButtonDown(0) && !canCombo.Value && IsOwner)
+        if (canAttack.Value && Input.GetMouseButtonDown(0))
         {
-            canAttack.Value = true;
+            canAttack.Value = false;
+            isAttacking.Value = true;
             TriggerAttackServerRpc();
+        }
+    }
+
+    public string GetDirectionStr()
+    {
+        return PlayerController.DirectionStr;
+    }
+    public void StartAttackCooldown()
+    {
+        StartCoroutine(AttackCooldown(attackCooldown));
+    }
+    private IEnumerator AttackCooldown(float time)
+    {
+        canAttack.Value = false;
+        yield return new WaitForSeconds(time);
+        canAttack.Value = true;
+    }
+
+    [ServerRpc]
+    private void ChangeDirectionPlayerServerRpc(bool facingRight, ulong senderClientId)
+    {
+        ChangeDirectionPlayerClientRpc(facingRight, senderClientId);
+    }
+
+    [ClientRpc]
+    private void ChangeDirectionPlayerClientRpc(bool facingRight, ulong targetClientId)
+    {
+        if (OwnerClientId == targetClientId)
+        {
+            transform.localScale = facingRight ? new Vector3(1f, 1f, 1f) : new Vector3(-1f, 1f, 1f);
         }
     }
 
     [ServerRpc]
     private void TriggerAttackServerRpc()
     {
-        canAttack.Value = true;
+        //if (IsOwner) { canAttack.Value = true; }
+        isAttacking.Value = true;
         UpdateSlashRangeClientRpc(true);
     }
 
     [ClientRpc]
     private void UpdateSlashRangeClientRpc(bool active)
     {
-        slashRange.SetActive(active);
+        if (IsOwner)
+        {
+            canAttack.Value = true;
+            slashRange.SetActive(active);
+        }
     }
 
-    [ServerRpc]
-    private void SetDirectionServerRpc(bool facingRight)
-    {
-        SetDirectionClientRpc(facingRight);
-    }
-
-    [ClientRpc]
-    private void SetDirectionClientRpc(bool facingRight)
-    {
-        transform.localScale = facingRight ? new Vector3(1f, 1f, 1f) : new Vector3(-1f, 1f, 1f);
-    }
 
     [ServerRpc]
     private void SetArpaletActiveServerRpc(bool isActive)
@@ -98,16 +135,16 @@ public class SlashManagerCombo : NetworkBehaviour
         if (IsOwner)
         {
             ScreenShakeManager.instance.ShakeScreen();
-            FinalAttackClientRpc();
+         //   FinalAttackClientRpc();
         }
     }
 
-    [ClientRpc]
+/*    [ClientRpc]
     private void FinalAttackClientRpc()
     {
         if (!IsOwner)
         {
             ScreenShakeManager.instance.ShakeScreen();
         }
-    }
+    }*/
 }

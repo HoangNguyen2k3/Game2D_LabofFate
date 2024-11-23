@@ -8,7 +8,7 @@ public class TransitionAttack3 : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         var slashManager = animator.GetComponent<SlashManagerCombo>();
-        if (slashManager != null)
+        if (slashManager.IsOwner && slashManager != null)
         {
             slashManager.canAttack.Value = false;
             slashManager.canCombo.Value = false;

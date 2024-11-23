@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
@@ -6,40 +5,38 @@ using UnityEngine;
 
 public class AimProjectile : NetworkBehaviour
 {
-    public float initialSpeed = 20f;
-    public float minSpeed = 4f;
-    public float speedChange = 1f;
-    public float degChange = 180f;
+    [SerializeField] private float moveSpeed = 15f;
     [SerializeField] private GameObject bloom;
-    
-    private float moveSpeed;
+    [SerializeField] private float projectileRange = 10f;
+    private Vector3 startPosition;
+    [SerializeField] private float directStart = 0f;
+    public float speedChange = 3f;
 
-    public float lifeTime = 5f;
-    public float delayChaseTime = 0.5f;
-    private float timer = 0;
+    public GameObject playerFollow;
 
-    public Vector2 initialVelocity = Vector2.up;
-    private Vector2 moveVelocity;
-
-    private void Start() {
-        moveVelocity = initialVelocity;
-        moveSpeed = initialSpeed;
+    private void Start()
+    {
+        startPosition = transform.position;
+        if (!GameObject.FindGameObjectWithTag("Player")) { return; }
+        playerFollow = GameObject.FindGameObjectWithTag("Player");
+        GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
+        for (int i = 0; i < player.Length; i++)
+        {
+            if (Vector2.Distance(transform.position, player[i].transform.position) <
+                Vector2.Distance(transform.position, playerFollow.transform.position))
+            {
+                playerFollow = player[i];
+            }
+        }
+        
     }
 
     private void Update()
     {
-        timer += Time.deltaTime;
-        if (timer >= lifeTime)
-        {
-            Explode();
-        }
 
-        if (moveSpeed > minSpeed)
-        {
-            moveSpeed -= speedChange;
-        }
-        transform.right = -moveVelocity;
-        MoveProjectile();
+        if (playerFollow == null) return;
+        MoveProjectile(Time.deltaTime);
+        DetectFireDistance();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -49,43 +46,35 @@ public class AimProjectile : NetworkBehaviour
         Indestructive indestructible = other.gameObject.GetComponent<Indestructive>();
         PlayerHealth player = other.gameObject.GetComponent<PlayerHealth>();
 
-        // if (!other.isTrigger && (indestructible || other.gameObject.layer == LayerMask.NameToLayer("Obstacles")||player))
-        // {
-        //     Explode();
-        // }
-        if (player)
+        if (!other.isTrigger && (indestructible || other.gameObject.layer == LayerMask.NameToLayer("Obstacles")||player))
         {
-            Explode();
+            Instantiate(bloom, transform.position, Quaternion.identity);
+            Destroy(gameObject);
         }
     }
 
-    private void MoveProjectile()
+    private void DetectFireDistance()
     {
-        Vector2 currentPosition = transform.position;
-        if (timer > delayChaseTime && GameObject.FindGameObjectWithTag("Player")) 
+        if (Vector2.Distance(transform.position, startPosition) > projectileRange || moveSpeed <= 5)
         {
-            Vector2 targetPosition = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position;
-            Vector2 directionToPlayer = (targetPosition - currentPosition).normalized;
-            
-            float angle = Vector2.SignedAngle(moveVelocity, directionToPlayer);
-
-            moveVelocity = rotate(moveVelocity, ((angle > 0f) ? 1f:-1f) * degChange * Time.deltaTime);
+            Destroy(gameObject);
         }
-
-        transform.Translate(Time.deltaTime * moveSpeed * moveVelocity, Space.World);
     }
 
-    private Vector2 rotate(Vector2 v, float delta) {
-        delta *= Mathf.Deg2Rad;
-        return new Vector2(
-            v.x * Mathf.Cos(delta) - v.y * Mathf.Sin(delta),
-            v.x * Mathf.Sin(delta) + v.y * Mathf.Cos(delta)
-        );
-    }
-
-    private void Explode()
+    private void MoveProjectile(float delta)
     {
-        if (bloom) Instantiate(bloom, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        Vector3 currentPosition = transform.position;
+        Vector3 targetPosition =playerFollow.transform.position;
+        Vector3 directionToPlayer = (targetPosition - currentPosition).normalized;
+        float angle = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x);
+        transform.rotation = Quaternion.Euler(0f, 0f, angle * Mathf.Rad2Deg - 180f + directStart);
+
+
+        transform.Translate(delta * moveSpeed * directionToPlayer, Space.World);
+
+        if (moveSpeed > 5)
+        {
+            moveSpeed -= 0.01f;
+        }
     }
 }

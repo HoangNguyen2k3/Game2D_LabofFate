@@ -6,21 +6,40 @@ using UnityEngine;
 public class PlayerSetting : NetworkBehaviour
 {
     [SerializeField] private TextMeshPro playerName;
-    private NetworkVariable<FixedString32Bytes> networkPlayerName = new NetworkVariable<FixedString32Bytes>("Unknown");
+    public NetworkVariable<FixedString32Bytes> networkPlayerName = new NetworkVariable<FixedString32Bytes>("Unknown");
     private NetworkVariable<Vector3> playerPosition = new NetworkVariable<Vector3>();
 
+    public static PlayerSetting Instance;
+    private void Start()
+    {
+        Instance = this;
+    }
     public override void OnNetworkSpawn()
     {
         if (IsOwner)
         {
+            if (EditPlayerName.Instance)
+            {
+                networkPlayerName.Value = EditPlayerName.Instance.GetPlayerName();
+            }
+            
+            Debug.Log("KKK");
             // Set the player's name
-            string playerNameInput = ManagerGameStartScene.PlayerName;
-            SetPlayerNameServerRpc(playerNameInput);
+/*            string playerNameInput = ManagerGameStartScene.PlayerName;
+            SetPlayerNameServerRpc(playerNameInput);*/
+            if (IsHost)
+            {
+                Vector3 spawnPosition =new Vector3(-4,-30,0);
+                SetPlayerPositionServerRpc(spawnPosition);
+            }
+            else
+            {
+                Vector3 spawnPosition = GameObject.FindObjectOfType<ManagerGameStartScene>().GetPlayerSpawnPosition((int)OwnerClientId);
+                SetPlayerPositionServerRpc(spawnPosition);
+            }
+           
 
-            // Set player position based on player index
-            Vector3 spawnPosition = GameObject.FindObjectOfType<ManagerGameStartScene>().GetPlayerSpawnPosition((int)OwnerClientId);
-
-            SetPlayerPositionServerRpc(spawnPosition);
+           
         }
 
         playerName.text = networkPlayerName.Value.ToString();

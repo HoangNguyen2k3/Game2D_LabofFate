@@ -121,15 +121,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Title
     originalName: 
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.46715328, y: -1.0357143}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 0
-      height: 0
+      width: 274
+      height: 84
     spriteID: f823ef4299010914987c1ac372fc7c67
     spriteBone: []
     spriteOutline: []
@@ -138,7 +138,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -316, y: -176}
+    uvTransform: {x: 4, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -151,10 +151,10 @@ ScriptedImporter:
     - name: Title
       frameIndex: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 320
-        height: 180
+        x: 32
+        y: 87
+        width: 274
+        height: 84
       spriteId: f823ef4299010914987c1ac372fc7c67
     linkedCells: []
     parentIndex: -1

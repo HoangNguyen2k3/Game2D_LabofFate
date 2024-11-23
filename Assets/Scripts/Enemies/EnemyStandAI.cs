@@ -14,6 +14,9 @@ public class EnemyStandAI : NetworkBehaviour
     [SerializeField] private MonoBehaviour enemyType;
     [SerializeField] private float attackCooldown=1f;
     private bool canAttack = true;
+    [SerializeField] private float timeChangeTarget = 1f;
+    private float timeChange = 0f;
+    public Transform target;
     private enum State
     {
         Idle,
@@ -26,10 +29,27 @@ public class EnemyStandAI : NetworkBehaviour
         health = GetComponent<EnemyHealth>();
         col = GetComponent<Collider2D>();
     }
+    private void Start()
+    {
+        if (target == null)
+        {
+            target = GameObject.FindGameObjectWithTag("Player").transform;
+        }
+    }
     void Update()
     {
 
+
         if (!IsServer) return;
+        if (timeChange < timeChangeTarget)
+        {
+            timeChange += Time.deltaTime;
+        }
+        else
+        {
+            timeChange = 0f;
+            target = UpdateTargetPlayer();
+        }
         if (health.isDead.Value)
         {
             col.enabled = false;
@@ -40,6 +60,7 @@ public class EnemyStandAI : NetworkBehaviour
         {
             return;
         }
+
         StateControl();
 
     }
@@ -57,12 +78,13 @@ public class EnemyStandAI : NetworkBehaviour
     }
     private void IdleState()
     {
-        GameObject player = null;
+/*        GameObject player = null;
         if (FindFirstObjectByType<PlayerController>())
         {
             player = FindFirstObjectByType<PlayerController>().gameObject;
-        }
-        if (player != null&&Vector2.Distance( player.transform.position,transform.position)<distanceAttack)
+        }*/
+    if(target == null) { return; }
+        if (Vector2.Distance(target.position,transform.position)<distanceAttack)
         {
             state.Value= State.AttackPlayer;
         }
@@ -72,12 +94,8 @@ public class EnemyStandAI : NetworkBehaviour
     public void AttackPlayer()
     {
 
-        GameObject player = null;
-        if (FindFirstObjectByType<PlayerController>())
-        {
-            player = FindFirstObjectByType<PlayerController>().gameObject;
-        }        
-        if (player != null && Vector2.Distance(player.transform.position, transform.position) < distanceAttack)
+        if (!target) return;
+        if (Vector2.Distance(target.position, transform.position) < distanceAttack)
         {
             if (canAttack)
             {
@@ -99,4 +117,29 @@ public class EnemyStandAI : NetworkBehaviour
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
     }
+    private Transform UpdateTargetPlayer()
+    {
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+
+        if (players.Length == 0)
+        {
+            return null; 
+        }
+
+        Transform closestTransform = null;
+        float shortestDistance = Mathf.Infinity;
+
+        foreach (GameObject player in players)
+        {
+            float distance = Vector2.Distance(transform.position, player.transform.position);
+            if (distance < shortestDistance)
+            {
+                shortestDistance = distance;
+                closestTransform = player.transform;
+            }
+        }
+
+        return closestTransform ?? target;
+    }
+
 }
