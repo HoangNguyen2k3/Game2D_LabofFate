@@ -29,6 +29,13 @@ public class AttackRangeCheck : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay2D(Collider2D other) {
+        if (other.gameObject == player)
+        {
+            boss.SetAttackRangeStatus(true);
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D other) {
         if (other.gameObject == player)
         {

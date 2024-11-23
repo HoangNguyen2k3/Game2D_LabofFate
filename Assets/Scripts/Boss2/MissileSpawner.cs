@@ -6,8 +6,8 @@ public class MissileSpawner : MonoBehaviour
 {
     public bool isActive = false;
     public bool isAuto = true;
-    public AimProjectile missile;
-    private AimProjectile spawnedMissle;
+    public HomingMissile missile;
+    private HomingMissile spawnedMissle;
 
     public int maxMissilePerSpray = 6;
     private int missileCount = 0;
@@ -16,6 +16,13 @@ public class MissileSpawner : MonoBehaviour
     [SerializeField] private float firingRate = 0.5f;
     [SerializeField] private float cooldown = 2f;
     private float fireTimer = 0f;
+
+    [SerializeField] private float missileInitSpeed = 50f;
+    [SerializeField] private float missileMinSpeed = 5f;
+    [SerializeField] private float missileSpeedChange = 5f;
+    [SerializeField] private float missileDegChange = 180f;
+
+
 
     void Update()
     {
@@ -37,13 +44,16 @@ public class MissileSpawner : MonoBehaviour
         }
     }
 
-    private void Shoot() {
+    public void Shoot() {
         if(missile)
         {  
             spawnedMissle = Instantiate(missile, transform.position, Quaternion.identity);
-            spawnedMissle.GetComponent<AimProjectile>().initialVelocity = Random.insideUnitCircle.normalized;
-            spawnedMissle.GetComponent<AimProjectile>().initialSpeed = Random.Range(20f, 30f);
-        } 
+            spawnedMissle.GetComponent<HomingMissile>().initialVelocity = new Vector2(Random.insideUnitCircle.x, Mathf.Abs(Random.insideUnitCircle.y)).normalized;
+            spawnedMissle.GetComponent<HomingMissile>().initialSpeed = missileInitSpeed + Random.Range(-10,10);
+            spawnedMissle.GetComponent<HomingMissile>().minSpeed = missileMinSpeed + Random.Range(-2,2);
+            spawnedMissle.GetComponent<HomingMissile>().speedChange = missileSpeedChange;
+            spawnedMissle.GetComponent<HomingMissile>().degChange = missileDegChange;
+        }
         
     }
 
