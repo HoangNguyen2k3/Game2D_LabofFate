@@ -12,14 +12,29 @@ public class AimProjectile : NetworkBehaviour
     [SerializeField] private float directStart = 0f;
     public float speedChange = 3f;
 
+    public GameObject playerFollow;
+
     private void Start()
     {
         startPosition = transform.position;
+        if (!GameObject.FindGameObjectWithTag("Player")) { return; }
+        playerFollow = GameObject.FindGameObjectWithTag("Player");
+        GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
+        for (int i = 0; i < player.Length; i++)
+        {
+            if (Vector2.Distance(transform.position, player[i].transform.position) <
+                Vector2.Distance(transform.position, playerFollow.transform.position))
+            {
+                playerFollow = player[i];
+            }
+        }
+        
     }
 
     private void Update()
     {
-     
+
+        if (playerFollow == null) return;
         MoveProjectile(Time.deltaTime);
         DetectFireDistance();
     }
@@ -49,9 +64,7 @@ public class AimProjectile : NetworkBehaviour
     private void MoveProjectile(float delta)
     {
         Vector3 currentPosition = transform.position;
-        if (!GameObject.FindGameObjectWithTag("Player")) { return; }
-        Vector3 targetPosition = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position;
-       
+        Vector3 targetPosition =playerFollow.transform.position;
         Vector3 directionToPlayer = (targetPosition - currentPosition).normalized;
         float angle = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x);
         transform.rotation = Quaternion.Euler(0f, 0f, angle * Mathf.Rad2Deg - 180f + directStart);

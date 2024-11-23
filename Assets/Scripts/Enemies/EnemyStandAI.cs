@@ -83,6 +83,7 @@ public class EnemyStandAI : NetworkBehaviour
         {
             player = FindFirstObjectByType<PlayerController>().gameObject;
         }*/
+    if(target == null) { return; }
         if (Vector2.Distance(target.position,transform.position)<distanceAttack)
         {
             state.Value= State.AttackPlayer;

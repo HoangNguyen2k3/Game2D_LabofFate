@@ -74,7 +74,7 @@ public class EnemyHealth : NetworkBehaviour
         if (!knockback.GetKnockBack)
         {
             currentHealth.Value -= damage;
-            if (enemyAI.target)
+            if (enemyAI)
             {
                 knockback.GettingKnockBack(enemyAI.target.transform, knockBackThrust);
             }
