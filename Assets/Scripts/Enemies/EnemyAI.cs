@@ -35,6 +35,8 @@ public class EnemyAI : NetworkBehaviour
     [SerializeField] private float attackCooldown = 0.5f;
     [SerializeField] private float speedRoaming = 2f;
     [SerializeField] private float speedFollow = 4f;
+    [SerializeField] private float timeChangeTarget=1f;
+    private float timeChange = 0f;
 
     private enum State
     {
@@ -77,6 +79,16 @@ public class EnemyAI : NetworkBehaviour
                 target = player.transform;
             }
         }
+      
+        if (timeChange < timeChangeTarget)
+        {
+            timeChange += Time.deltaTime;
+        }
+        else
+        {
+            timeChange = 0f;
+            target = UpdateTargetPlayer();
+        }
         if (health.isDead.Value)
         {
             col.enabled = false;
@@ -91,7 +103,23 @@ public class EnemyAI : NetworkBehaviour
         MovementStateControl();
         pathUpdateTimer += Time.deltaTime;
     }
-
+    private Transform UpdateTargetPlayer(){
+        if (target != null)
+        {
+            Transform newTranform = target;
+            GameObject[] player = GameObject.FindGameObjectsWithTag("Player"); 
+            for(int i = 0;i < player.Length; i++)
+            {
+                if (Vector2.Distance(transform.position, player[i].transform.position) < 
+                    Vector2.Distance(transform.position, newTranform.position))
+                {
+                    newTranform = player[i].transform;
+                }
+            }
+           return newTranform;
+        }
+        return target;
+    }
     private void MovementStateControl()
     {
         switch (state.Value)

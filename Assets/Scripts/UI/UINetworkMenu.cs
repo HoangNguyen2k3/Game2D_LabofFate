@@ -20,7 +20,6 @@ public class UINetworkMenu : MonoBehaviour
         NetworkManager.Singleton.StartHost();
 
         // Spawn enemies when hosting
-        managerGameStartScene.SpawnEnemies();
         map.SetActive(true);
         UIPLayer.SetActive(true);
 

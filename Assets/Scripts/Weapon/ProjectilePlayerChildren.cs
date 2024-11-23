@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-public class ProjectilePlayerChildren : MonoBehaviour
+public class ProjectilePlayerChildren : NetworkBehaviour
 {
     [SerializeField] private float moveSpeed = 22f;
     [SerializeField] private GameObject particalOnHitPrefabVFX;
@@ -49,17 +50,17 @@ public class ProjectilePlayerChildren : MonoBehaviour
             {
                 enemyHealth.TakedDamage(damageAttack);
                 Instantiate(particalOnHitPrefabVFX, transform.position, transform.rotation);
-                Destroy(gameObject);
+                gameObject.GetComponent<NetworkObject>().Despawn(); Destroy(gameObject);
             }
             else if (indestructible || other.gameObject.layer == LayerMask.NameToLayer("Obstacles"))
             {
                 Instantiate(particalOnHitPrefabVFX, transform.position, transform.rotation);
-                Destroy(gameObject);
+                gameObject.GetComponent<NetworkObject>().Despawn();
             }
             else
             {
                 Instantiate(particalOnHitPrefabVFX, transform.position, transform.rotation);
-                Destroy(gameObject);
+                gameObject.GetComponent<NetworkObject>().Despawn();
             }
         }
     }
@@ -68,7 +69,7 @@ public class ProjectilePlayerChildren : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, startPosition) > projectileRange)
         {
-            Destroy(gameObject);
+            gameObject.GetComponent<NetworkObject>().Despawn();
         }
     }
 
