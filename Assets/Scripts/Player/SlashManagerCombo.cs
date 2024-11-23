@@ -69,6 +69,21 @@ public class SlashManagerCombo : NetworkBehaviour
         }
     }
 
+    public string GetDirectionStr()
+    {
+        return PlayerController.DirectionStr;
+    }
+    public void StartAttackCooldown()
+    {
+        StartCoroutine(AttackCooldown(attackCooldown));
+    }
+    private IEnumerator AttackCooldown(float time)
+    {
+        canAttack.Value = false;
+        yield return new WaitForSeconds(time);
+        canAttack.Value = true;
+    }
+
     [ServerRpc]
     private void ChangeDirectionPlayerServerRpc(bool facingRight, ulong senderClientId)
     {
@@ -88,6 +103,7 @@ public class SlashManagerCombo : NetworkBehaviour
     private void TriggerAttackServerRpc()
     {
         //if (IsOwner) { canAttack.Value = true; }
+        isAttacking.Value = true;
         UpdateSlashRangeClientRpc(true);
     }
 
