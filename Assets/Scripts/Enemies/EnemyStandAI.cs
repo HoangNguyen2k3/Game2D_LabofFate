@@ -39,6 +39,8 @@ public class EnemyStandAI : NetworkBehaviour
     void Update()
     {
 
+
+        if (!IsServer) return;
         if (timeChange < timeChangeTarget)
         {
             timeChange += Time.deltaTime;
@@ -48,7 +50,6 @@ public class EnemyStandAI : NetworkBehaviour
             timeChange = 0f;
             target = UpdateTargetPlayer();
         }
-        if (!IsServer) return;
         if (health.isDead.Value)
         {
             col.enabled = false;
@@ -77,12 +78,12 @@ public class EnemyStandAI : NetworkBehaviour
     }
     private void IdleState()
     {
-        GameObject player = null;
+/*        GameObject player = null;
         if (FindFirstObjectByType<PlayerController>())
         {
             player = FindFirstObjectByType<PlayerController>().gameObject;
-        }
-        if (player != null&&Vector2.Distance( player.transform.position,transform.position)<distanceAttack)
+        }*/
+        if (Vector2.Distance(target.position,transform.position)<distanceAttack)
         {
             state.Value= State.AttackPlayer;
         }
@@ -92,12 +93,8 @@ public class EnemyStandAI : NetworkBehaviour
     public void AttackPlayer()
     {
 
-        GameObject player = null;
-        if (FindFirstObjectByType<PlayerController>())
-        {
-            player = FindFirstObjectByType<PlayerController>().gameObject;
-        }        
-        if (player != null && Vector2.Distance(target.position, transform.position) < distanceAttack)
+        if (!target) return;
+        if (Vector2.Distance(target.position, transform.position) < distanceAttack)
         {
             if (canAttack)
             {
@@ -121,16 +118,27 @@ public class EnemyStandAI : NetworkBehaviour
     }
     private Transform UpdateTargetPlayer()
     {
-            Transform newTranform = target;
-            GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
-            for (int i = 0; i < player.Length; i++)
-            {
-                if (Vector2.Distance(transform.position, player[i].transform.position) <
-                    Vector2.Distance(transform.position, newTranform.position))
-                {
-                    newTranform = player[i].transform;
-                }
-            }
-            return newTranform;
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+
+        if (players.Length == 0)
+        {
+            return null; 
         }
+
+        Transform closestTransform = null;
+        float shortestDistance = Mathf.Infinity;
+
+        foreach (GameObject player in players)
+        {
+            float distance = Vector2.Distance(transform.position, player.transform.position);
+            if (distance < shortestDistance)
+            {
+                shortestDistance = distance;
+                closestTransform = player.transform;
+            }
+        }
+
+        return closestTransform ?? target;
+    }
+
 }

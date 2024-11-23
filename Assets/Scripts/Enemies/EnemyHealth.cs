@@ -58,12 +58,6 @@ public class EnemyHealth : NetworkBehaviour
         {
             player = GameObject.FindGameObjectWithTag("Player");
         }
-        if (isDead.Value)
-        {
-            healthBarObject.SetActive(false);
-          //  numCurrentHealth.text = "";
-           // name_enemy.text = "";
-        }
     }
 
     [ServerRpc]
@@ -73,15 +67,26 @@ public class EnemyHealth : NetworkBehaviour
     }
 
     public void TakedDamage(float damage)
-    {
+    {      DetectDeath();
+        if (isDead.Value) {
+            Destroy(healthBarObject);
+            return; }
         if (!knockback.GetKnockBack)
         {
             currentHealth.Value -= damage;
-            knockback.GettingKnockBack(player.transform, knockBackThrust);
+            if (enemyAI.target)
+            {
+                knockback.GettingKnockBack(enemyAI.target.transform, knockBackThrust);
+            }
+            else
+            {
+                knockback.GettingKnockBack(player.transform, knockBackThrust);
+            }
+           
             flash.TriggerFlashServerRpc();
         }
 
-        DetectDeath();
+
     }
 
     private void DetectDeath()

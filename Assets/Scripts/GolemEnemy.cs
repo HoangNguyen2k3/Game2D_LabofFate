@@ -54,7 +54,7 @@ public class GolemEnemy : MonoBehaviour, IEnemy
             yield return null;
         }
 
-        transform.position = targetPosition;
+     //   transform.position = targetPosition;
       
        
         yield return null;
