@@ -59,8 +59,6 @@ public class SlashManagerCombo : NetworkBehaviour
             }
         }
 
-        slashRange.SetActive(canAttack.Value);
-
         if (canAttack.Value && Input.GetMouseButtonDown(0))
         {
             canAttack.Value = false;
