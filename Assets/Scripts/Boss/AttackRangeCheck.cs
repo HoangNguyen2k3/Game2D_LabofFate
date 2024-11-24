@@ -7,12 +7,12 @@ using UnityEngine.AI;
 public class AttackRangeCheck : MonoBehaviour
 {
     private GameObject player;
-    private Boss boss;
+    private BossCore boss;
 
     private void Awake() 
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        boss = GetComponentInParent<Boss>();
+        boss = GetComponentInParent<BossCore>();
     }
     private void Update()
     {
@@ -23,6 +23,13 @@ public class AttackRangeCheck : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other) 
     {
+        if (other.gameObject == player)
+        {
+            boss.SetAttackRangeStatus(true);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other) {
         if (other.gameObject == player)
         {
             boss.SetAttackRangeStatus(true);

@@ -1,7 +1,9 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class BossIdleState : BossState
 {
+
     public override void Enter() { 
         animator.Play(anim.name);
     }
@@ -14,7 +16,6 @@ public class BossIdleState : BossState
     }
 
     public override void PhysicsUpdate() {
-        // body.velocity = Vector2.zero;
         boss.ApplyStopFriction();
     }
 

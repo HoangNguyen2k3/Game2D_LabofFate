@@ -17,7 +17,7 @@ public abstract class State : MonoBehaviour
     public virtual void FrameUpdate() {}
     public virtual void PhysicsUpdate() {}
     public virtual void Exit() {}
-    public IEnumerator DelayedExit(float _time)
+    public virtual IEnumerator DelayedExit(float _time)
     {
         yield return new WaitForSeconds(_time);
         Exit();
