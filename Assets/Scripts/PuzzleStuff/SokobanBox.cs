@@ -11,6 +11,7 @@ public class SokobanBox : MonoBehaviour
     public bool isMoving {get; private set;}
     private Vector2 originalPos, targetPos; // pos to move the box
     public float timeToMove = 0.5f;
+    public bool canMove = true;
 
     private Vector2 startingPos;
 
@@ -22,7 +23,7 @@ public class SokobanBox : MonoBehaviour
     public IEnumerator Move(Vector2 _direction)
     {
 
-        if (CheckObstacle(_direction))
+        if (CheckObstacle(_direction) || !canMove)
         {
             yield break;
         }
@@ -76,7 +77,6 @@ public class SokobanBox : MonoBehaviour
         {
             animator.Play("SokobanBoxDisappear");
         }
-        
     }
 
     public void BackToStartingPos()
