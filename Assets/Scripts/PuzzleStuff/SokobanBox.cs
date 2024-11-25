@@ -29,7 +29,7 @@ public class SokobanBox : MonoBehaviour
 
         isMoving = true;
         collision.enabled = false;
-        hitbox.enabled = false;
+        DisableHitbox();
 
         float elapsedTime = 0;
         originalPos = transform.position;
@@ -44,7 +44,7 @@ public class SokobanBox : MonoBehaviour
 
         transform.position = targetPos;
         collision.enabled = true;
-        hitbox.enabled = true;
+        EnableHitbox();
         isMoving = false;
     }
 
@@ -63,6 +63,11 @@ public class SokobanBox : MonoBehaviour
     public void DisableHitbox()
     {
         hitbox.enabled = false;
+    }
+
+    public void EnableHitbox()
+    {
+        hitbox.enabled = true;
     }
 
     public void Reset()
