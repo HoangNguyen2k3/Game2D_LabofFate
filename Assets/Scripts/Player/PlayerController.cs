@@ -14,7 +14,7 @@ public class PlayerController : NetworkBehaviour
     [SerializeField] private float dashSpeed = 24f;
     [SerializeField] private float dashDuration= 0.3f;
     [SerializeField] private float dashCooldown = 0.7f;
-    [SerializeField] private TrailRenderer playerTrailRenderer;
+   // [SerializeField] private TrailRenderer playerTrailRenderer;
     public bool isDashing {get; private set;} = false;
     private bool canDash = true;
     private Animator animator;
@@ -85,10 +85,10 @@ public class PlayerController : NetworkBehaviour
         health.canTakeDamage = false;
 
         rb.velocity = new Vector2 (dashDirection.x * dashSpeed, dashDirection.y * dashSpeed);
-        ToggleTrailRendererServerRpc(true);
+     //   ToggleTrailRendererServerRpc(true);
 
         yield return new WaitForSeconds(dashDuration);
-        ToggleTrailRendererServerRpc(false); 
+        // ToggleTrailRendererServerRpc(false); 
         isDashing = false;
         health.canTakeDamage = true;
 
@@ -129,15 +129,15 @@ public class PlayerController : NetworkBehaviour
         otherPos = pos;
     }
 
-    [ServerRpc(RequireOwnership = false)]
+/*    [ServerRpc(RequireOwnership = false)]
     private void ToggleTrailRendererServerRpc(bool isActive)
     {
         ToggleTrailRendererClientRpc(isActive);
-    }
+    }*/
 
-    [ClientRpc]
+/*    [ClientRpc]
     private void ToggleTrailRendererClientRpc(bool isActive)
     {
         playerTrailRenderer.emitting = isActive;
-    }
+    }*/
 }

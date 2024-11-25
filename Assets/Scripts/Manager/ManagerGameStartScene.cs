@@ -17,7 +17,11 @@ public class ManagerGameStartScene : NetworkBehaviour
     {
         winGame.SetActive(false);
         loseGame.SetActive(false);
- SpawnEnemiesServerRpc();
+        if (IsServer)
+        {
+            SpawnEnemiesServerRpc();
+        }
+
        
     }
     [ServerRpc]

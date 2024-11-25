@@ -49,7 +49,7 @@ public class TestRelay : MonoBehaviour
             NetworkManager.Singleton.SceneManager.LoadScene("SampleScene", UnityEngine.SceneManagement.LoadSceneMode.Single);
             
             //Add code
-            
+           
             return joinCode;
         }
         catch (RelayServiceException e)

@@ -23,10 +23,13 @@ public class PlayerSlashTransition1 : StateMachineBehaviour
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (!SetSlashManager(animator)) return;
-        slashManager.canCombo.Value = false;
-        slashManager.isAttacking.Value = false;
-        slashManager.canAttack.Value = true;
+        var slashManager = animator.GetComponent<SlashManagerCombo>();
+        if(slashManager != null&&slashManager.IsOwner) {
+            slashManager.canCombo.Value = false;
+            slashManager.isAttacking.Value = false;
+            slashManager.canAttack.Value = true;
+
+        }
 
     }
 }
