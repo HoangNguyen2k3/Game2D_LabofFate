@@ -22,6 +22,10 @@ public class LaserTurret : MonoBehaviour
     }
     private void Update()
     {
+        if (target == null)
+        {
+            target = GameObject.FindGameObjectWithTag("Player").transform;
+        }
         if (ManagePuzzleRoom.Instance.current_crystal >= 4) { return; }
         if (canAttack&&Vector2.Distance(transform.position,target.position)< distanceAttack && ManagePuzzleRoom.Instance.PlayerInRange)
         {

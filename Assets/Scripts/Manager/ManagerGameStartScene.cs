@@ -12,7 +12,10 @@ public class ManagerGameStartScene : NetworkBehaviour
     [SerializeField] private List<Transform> positionSpawn;
     [SerializeField] private GameObject winGame;
     [SerializeField] private GameObject loseGame;
+    [SerializeField] private float time;
 
+    private bool istele = false;
+    private bool iswin = false;
     private void Start()
     {
         winGame.SetActive(false);
@@ -40,11 +43,32 @@ public class ManagerGameStartScene : NetworkBehaviour
     }
 
     private void Update()
-    {
+    {time += Time.deltaTime;
         if (!IsServer) return;
 
         bool hasEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length > 0;
         bool hasPlayers = GameObject.FindGameObjectsWithTag("Player").Length > 0;
+        if (time > 30)
+        {
+            Boss boss1 = FindObjectOfType<Boss>();
+            Boss2 boss2 = FindObjectOfType<Boss2>();
+            if (!boss1 && !iswin)
+            {
+                ActivateWinScreenClientRpc();
+                iswin = true;
+            }
+            if (!boss2 && !istele)
+            {
+                var players = GameObject.FindGameObjectsWithTag("Player");
+                foreach (var player in players)
+                {
+                    player.transform.position = new Vector3(-310, -17, 0);
+                }
+                istele = true;
+                LevelTimer.Instance.remainingTime.Value = 300;
+            }
+        }
+
 
         if (!hasEnemies)
         {

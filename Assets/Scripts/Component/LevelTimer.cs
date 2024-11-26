@@ -11,20 +11,22 @@ public class LevelTimer : NetworkBehaviour
     public TextMeshProUGUI timerText;
     [SerializeField] private GameObject gameOver;
     [SerializeField] private float totalTime;
-    private NetworkVariable<float> remainingTime = new NetworkVariable<float>();
+    public NetworkVariable<float> remainingTime = new NetworkVariable<float>();
 
     public Color neutralColor;
     public Color warningColor;
     public Color dangerColor;
-
+    public static LevelTimer Instance { get; private set; }
     [field: SerializeField] public bool isDone { get; private set; }
     private bool stopTimer;
 
     private void Start()
     {
+
         if (IsServer)
         {
             // Server initializes the timer
+            Instance = this;
             remainingTime.Value = totalTime;
             stopTimer = false;
         }
