@@ -29,7 +29,7 @@ public class PlayerSetting : NetworkBehaviour
             SetPlayerNameServerRpc(playerNameInput);*/
             if (IsHost)
             {
-                Vector3 spawnPosition =new Vector3(-4,-30,0);
+                Vector3 spawnPosition =new Vector3(-126, -116, 0);
                 SetPlayerPositionServerRpc(spawnPosition);
             }
             else

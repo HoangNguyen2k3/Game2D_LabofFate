@@ -12,7 +12,6 @@ public class SlashManagerCombo : NetworkBehaviour
     public NetworkVariable<bool> canCombo = new NetworkVariable<bool>(false, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
     
     public Animator animator;
-    [SerializeField] private GameObject slashRange;
     private ActiveWeapon weapon;
     [SerializeField] private GameObject arpalet;
 
@@ -119,7 +118,6 @@ public class SlashManagerCombo : NetworkBehaviour
         if (IsOwner)
         {
             canAttack.Value = true;
-            slashRange.SetActive(active);
         }
     }
 
