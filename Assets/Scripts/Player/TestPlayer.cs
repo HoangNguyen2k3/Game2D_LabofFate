@@ -26,7 +26,7 @@ public class TestPlayer : MonoBehaviour
             moveInput.x = Input.GetAxisRaw("Horizontal");
             moveInput.y = Input.GetAxisRaw("Vertical");
 
-            animator.SetBool("isWalk", moveInput != Vector2.zero);
+           // animator.SetBool("isWalk", moveInput != Vector2.zero);
 
             if (Input.GetKey(KeyCode.Space))
             {

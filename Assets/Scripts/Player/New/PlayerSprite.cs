@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 
-public class PlayerSprite : MonoBehaviour
+public class PlayerSprite : NetworkBehaviour
 {
     [SerializeField] private PlayerController playerController;
     [SerializeField] private SlashManagerCombo slashManagerCombo;
@@ -12,24 +12,44 @@ public class PlayerSprite : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    private PlayerHealth health;
 
     private Vector2 MoveInput => playerController.GetMoveInput();
     private string DirectionStr => playerController.DirectionStr;
     private bool IsDashing => playerController.isDashing;
     private bool IsAttacking => slashManagerCombo.isAttacking.Value;
 
+    private bool isDead = false;
+
+    // NetworkVariable for flipX
+    private NetworkVariable<bool> networkFlipX = new NetworkVariable<bool>(false);
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-
+        health = gameObject.GetComponent<PlayerHealth>();
     }
 
     private void Update()
     {
-        UpdateSprite();
+        isDead = health.isDead.Value;
+        if (IsOwner)
+        {
+            UpdateSprite();
+        }
+
+        // Apply the flipX state from the NetworkVariable to the SpriteRenderer
+        spriteRenderer.flipX = networkFlipX.Value;
+        if (spriteRenderer.flipX)
+        {
+            SlashHitboxes.transform.localScale = new Vector3(-1, 1);
+        }
+        else
+        {
+            SlashHitboxes.transform.localScale = new Vector3(1, 1);
+        }
     }
 
     private void UpdateSprite()
@@ -40,21 +60,26 @@ public class PlayerSprite : MonoBehaviour
 
     private void HandleSpriteFlip()
     {
-        if (!spriteRenderer.flipX && MoveInput.x < 0)
+        if (MoveInput.x < 0 && !spriteRenderer.flipX)
         {
-            spriteRenderer.flipX = true;
-            SlashHitboxes.transform.localScale = new Vector3(-1,1);
+            SetSpriteServerRpc(true);  // Flip sprite
         }
-        else if (spriteRenderer.flipX && MoveInput.x > 0)
+        else if (MoveInput.x > 0 && spriteRenderer.flipX)
         {
-            SlashHitboxes.transform.localScale = new Vector3(1,1);
-            spriteRenderer.flipX = false;
+            SetSpriteServerRpc(false);  // Unflip sprite
         }
+    }
+
+    [ServerRpc]
+    private void SetSpriteServerRpc(bool state)
+    {
+        // Update the NetworkVariable on the server
+        networkFlipX.Value = state;
     }
 
     private void SetAnimation()
     {
-        if (IsAttacking) return;
+        if (IsAttacking || isDead) return;
         if (MoveInput != Vector2.zero && DirectionStr != null)
         {
             if (IsDashing)

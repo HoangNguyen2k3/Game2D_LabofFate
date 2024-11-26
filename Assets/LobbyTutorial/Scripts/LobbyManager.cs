@@ -39,8 +39,8 @@ public class LobbyManager : MonoBehaviour {
 
 
     public enum GameMode {
-        CaptureTheFlag,
-        Conquest
+        Online,
+        Offline
     }
 
     public enum PlayerCharacter {
@@ -115,7 +115,7 @@ public class LobbyManager : MonoBehaviour {
         if (joinedLobby != null) {
             lobbyPollTimer -= Time.deltaTime;
             if (lobbyPollTimer < 0f) {
-                float lobbyPollTimerMax = 1.1f;
+                float lobbyPollTimerMax = 0.5f;
                 lobbyPollTimer = lobbyPollTimerMax;
 
                 joinedLobby = await LobbyService.Instance.GetLobbyAsync(joinedLobby.Id);
@@ -176,12 +176,12 @@ public class LobbyManager : MonoBehaviour {
 
             switch (gameMode) {
                 default:
-                case GameMode.CaptureTheFlag:
-                    gameMode = GameMode.Conquest;
+                case GameMode.Online:
+                    gameMode = GameMode.Online;
                     break;
-                case GameMode.Conquest:
-                    gameMode = GameMode.CaptureTheFlag;
-                    break;
+/*                case GameMode.Online:
+                    gameMode = GameMode.Online;
+                    break;*/
             }
 
             UpdateLobbyGameMode(gameMode);

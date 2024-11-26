@@ -34,7 +34,6 @@ public class PlayerHealth : NetworkBehaviour
         StartCoroutine(waitForTakeDamage());
         knockBack.GettingKnockBack(hitTranform, knockBackThrust);
         flash.TriggerFlashServerRpc();
-        Debug.Log("hi");
         currentHealth-=damage;
         if (currentHealth <= 0)
         {
@@ -56,7 +55,10 @@ public class PlayerHealth : NetworkBehaviour
     }
     private void DeathPlayer()
     {
-        animator.SetTrigger("isDeath");
+        /*        Debug.Log("death");animator.speed = 0;
+                animator.SetTrigger("isDeath");
+                animator.speed = 1;*/
+        animator.Play("Death");
     }
     public void DestroyPlayer()
     {

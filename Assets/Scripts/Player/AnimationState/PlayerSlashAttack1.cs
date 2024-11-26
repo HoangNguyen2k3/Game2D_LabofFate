@@ -14,11 +14,13 @@ public class PlayerSlashAttack1 : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (!SetSlashManager(animator)) return;
-        slashManager.isAttacking.Value = true;
-        if (Input.GetMouseButtonDown(0))
-        {
-            slashManager.canCombo.Value = true;
+        var slashManager = animator.GetComponent<SlashManagerCombo>();
+        if(slashManager != null&&slashManager.IsOwner) {
+            slashManager.isAttacking.Value = true;
+            if (Input.GetMouseButtonDown(0))
+            {
+                slashManager.canCombo.Value = true;
+            }
         }
     }
 }

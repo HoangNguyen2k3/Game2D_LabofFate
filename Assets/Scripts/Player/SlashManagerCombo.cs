@@ -23,20 +23,24 @@ public class SlashManagerCombo : NetworkBehaviour
 
     private void Start()
     {
-        canAttack.Value = true;
-        isAttacking.Value = false;
-        canCombo.Value = false;
+        if (IsOwner)
+        {
+            canAttack.Value = true;
+            isAttacking.Value = false;
+            canCombo.Value = false;
+        }
+
     }
 
     private void Update()
     {
-        if (!IsOwner && !PlayerController.playTest) return;
-        if (!canAttack.Value) return;
+        if (!IsOwner) return;
+    //    if (canAttack.Value) return;
 
         Vector3 mousePos = Input.mousePosition;
         Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(transform.position);
         bool facingRight = mousePos.x > playerScreenPoint.x;
-        ChangeDirectionPlayerServerRpc(facingRight,OwnerClientId);
+      //  ChangeDirectionPlayerServerRpc(facingRight,OwnerClientId);
 
         if (weapon == null)
         {
@@ -101,8 +105,12 @@ public class SlashManagerCombo : NetworkBehaviour
     private void TriggerAttackServerRpc()
     {
         //if (IsOwner) { canAttack.Value = true; }
+        if (IsOwner)
+        {
         isAttacking.Value = true;
         UpdateSlashRangeClientRpc(true);
+        }
+
     }
 
     [ClientRpc]
