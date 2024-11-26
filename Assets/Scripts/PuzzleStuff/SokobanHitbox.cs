@@ -5,7 +5,7 @@ using UnityEngine.Rendering.UI;
 
 public class SokobanHitbox : MonoBehaviour
 {
-    public SokobanBox sokobanBox; 
+    public SokobanBox sokobanBox;
 
     private void OnTriggerEnter2D(Collider2D other) {
 
@@ -19,8 +19,8 @@ public class SokobanHitbox : MonoBehaviour
     private Vector2 GetDirection(Transform _playerHitboxPos)
     {
         Vector2 vectorToPlayerHitbox = this.transform.position - _playerHitboxPos.position;
-        vectorToPlayerHitbox.Normalize();   
-        
+        vectorToPlayerHitbox.Normalize();
+
         Vector2[] directionVectors = {Vector2.up, Vector2.down, Vector2.left, Vector2.right};
 
         foreach (Vector2 v in directionVectors)

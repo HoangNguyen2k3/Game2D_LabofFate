@@ -22,12 +22,11 @@ public class SokobanBox : MonoBehaviour
 
     public IEnumerator Move(Vector2 _direction)
     {
-
         if (CheckObstacle(_direction) || !canMove)
         {
             yield break;
         }
-
+        Debug.Log("HEy");
         isMoving = true;
         collision.enabled = false;
         DisableHitbox();
@@ -53,7 +52,7 @@ public class SokobanBox : MonoBehaviour
     {
         RaycastHit2D rayInDir = Physics2D.Raycast((Vector2)this.transform.position + _direction , _direction, 0.1f, layerMask);
         RaycastHit2D rayInOppositeDir = Physics2D.Raycast((Vector2)this.transform.position - _direction , -_direction, 0.1f, layerMask);
-        
+
         if (rayInDir.collider || rayInOppositeDir.collider)
         {
             return true;

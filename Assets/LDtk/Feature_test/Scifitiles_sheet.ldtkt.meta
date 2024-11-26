@@ -1,0 +1,1192 @@
+fileFormatVersion: 2
+guid: 343ed8980649e5e488e58958e60427f4
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: f3268c876daf4890b6af6cd462063137, type: 3}
+  _reimportOnDependencyChange: 1
+  _pixelsPerUnit: 32
+  _overrideTexture: {instanceID: 0}
+  _sprites:
+  - name: Scifitiles_sheet_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 53c3abfba73788847a506c01c4f2c31a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 25dc2132530decd449009a257b442afd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 70908c63baa1f774592be599a5b1fa29
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 431166d2cf54e464f8a9f4777fc4300a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 46724fafcbe4f474f81954232ae753d6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 19f9ba29e55945f468e54909a5641c63
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 47d494322a5b36d47a8a32f2c495fd23
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 0c6ebad80d1835e41a02d59ef89368e7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 512ec88307f262447a1ae2b37c15bd55
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 88b8c70d9f2d6294aa4d2ed3c7091f95
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_10
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 65e221e964a82ec4a8f080c2acfb440e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_11
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 160
+      width: 32
+      height: 32
+    spriteID: c747782b92dcebd41a1ffca81398f819
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_12
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 9b5c8f34b6071dd4cae2a623f8f8931d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_13
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 55ddfd15c345f3d419d221c1e8842d00
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_14
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 128
+      width: 32
+      height: 32
+    spriteID: bfa770eb7a500c14cad9c66520f3f435
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_15
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 7e0ac91644d2f0246a321a29b752a41d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_16
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 084705d7216c77249a665c3d650bb3ae
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_17
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 02ff02320b235924296cc4e992995da5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_18
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 3a0bee55e5a7e6a47b04e88c701861b3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_19
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 128
+      width: 32
+      height: 32
+    spriteID: e5497bc0be155f3478e1fc8e76d9d742
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_20
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 3f342a562b68e4148bd9093a3faab890
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_21
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 128
+      width: 32
+      height: 32
+    spriteID: fee186efa90f44644969f0c9a4657e1f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_22
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 548c5bdb591af384e8d7724eea747d83
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_23
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 99f3e832bf0d10640b99986b1e4a180c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_24
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 157511b1bd9e14d46a46d548757fea43
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_25
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 0c022ba70e1b9f14faab6653840301e2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_26
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 128
+      width: 32
+      height: 32
+    spriteID: d5f3e5903f57ee44a80a4d01043aeb99
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_27
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 128
+      width: 32
+      height: 32
+    spriteID: e95ff94d697b6f74db3be051317b1070
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_28
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 9daa03e53bd7cfa4b9a158314cd8418c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_29
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 4335bbfb59d9b6c4bb6d48c8ad88dacb
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_30
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 96
+      width: 32
+      height: 32
+    spriteID: ff0a535bade93144bbc3c0281830f2d9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_31
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 96
+      width: 32
+      height: 32
+    spriteID: d9680b14373492c4ebf248903a293c39
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_32
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 38f25dc9e6d19ce4290381ba01dc60e8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_33
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 5d67b92b9e901a84b838996fb2e8031c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_34
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 96
+      width: 32
+      height: 32
+    spriteID: c676d440e2edd2e4cb39663f4c614d11
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_35
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 21d588298d35d5d4abe46e57466d6d25
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_36
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 96
+      width: 32
+      height: 32
+    spriteID: aaee097597b44a344a99cb2775848f14
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_37
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 0ee5a86cc7c75274ca37be035017190d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_38
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 6700c95ba0b2acc42baa1eb65c0ec1d6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_39
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 0da51febbe9af7847b582699d3aeea08
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_40
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 96
+      width: 32
+      height: 32
+    spriteID: bcf62078f6ebe1f4193ab5db2a3152eb
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_41
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 470ce650606a32c49b089f59059b2705
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_42
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 7fef8df4c1d318a4fb06d8c49fcc7efd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_43
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 5ca4918ed9a60b44bbc0cba3c2a5de03
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_44
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 64
+      width: 32
+      height: 32
+    spriteID: b8ccc78cb3ba0804d8f51e5651b94721
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_45
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 64
+      width: 32
+      height: 32
+    spriteID: bc7ec9d4f993f2b45a42567ecfa4e3f5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_46
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 1d807588d6a13e44e925c3a8fceab667
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_47
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 21db6bcb2cea4c24295aeaa0b2281f61
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_48
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 64
+      width: 32
+      height: 32
+    spriteID: ba259e2a8ca264e4c8dacdea58f20dac
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_49
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 64
+      width: 32
+      height: 32
+    spriteID: af9aaae490c653542985ed74ea32d1aa
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_50
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 64
+      width: 32
+      height: 32
+    spriteID: e870305c1836f9842a8bd3bcde1c85ec
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_51
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 64
+      width: 32
+      height: 32
+    spriteID: f1279a118f7bb1448a41df7951ad19c1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_52
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 3243541241a1e3e42ad741fdc7a5bd4d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_53
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 46383a49af36deb40836f68e98ef6f9c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_54
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 62eae544fb701a5428f0674fc703ff79
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_55
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 64
+      width: 32
+      height: 32
+    spriteID: bc56f4b23775c2c4ab3dc40b6de396af
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_56
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 12a674cea3da272488c34436f98e3af5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_57
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 32
+      width: 32
+      height: 32
+    spriteID: e09f43cdf26042a4e9b4b235339966d3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_58
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 1f763aec2e3e5c540a1196cc6965c022
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_59
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 373416b017a7ea24bbef0bff2706e5f9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_60
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 51d207901ca2da7448272689f9621f59
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_61
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 32
+      width: 32
+      height: 32
+    spriteID: dfa7abc58cd02a24e985aa95fde3ec09
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_62
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 306483baf88214440b93cc907b7a97cb
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_63
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 2cdfbab92797fc44f89ce199845237c4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_64
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 32
+      width: 32
+      height: 32
+    spriteID: e957adc75f29efd459d32e5ddc2a551a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_65
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 32
+      width: 32
+      height: 32
+    spriteID: b344b8f6266de1849a3511d105477bb1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_66
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 93b598cffe0121145bf3c57a61530eba
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_67
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 1d51e81fd4f44fc4cbaff7ef9356a950
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_68
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 96c02c59aa9327d4787ee2b17c554f4b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_69
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 69b11b90bf032224eb2c94a41a0ac73b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_70
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 32
+      height: 32
+    spriteID: c48d87da842733749ab55b7eb11f42d3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_71
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 0
+      width: 32
+      height: 32
+    spriteID: ee02df9af1c511d43ab97967e5df0bb3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_72
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 4e6349a4948f8ec449a4e70bc6aa9749
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_73
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 0
+      width: 32
+      height: 32
+    spriteID: e3afcbc9f0f6ab445a566132b6fff330
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_74
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 9068215169edced4b9b310400122420e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_75
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 0d0e3fbf1bafd9e4b815b4e1acfd7051
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_76
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 0
+      width: 32
+      height: 32
+    spriteID: af40ab5548ee49845a5ef870f2c1f76c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_77
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 290c3c69d61fa724d9cbca7a164c43b4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_78
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 681ec1a1ef3f71c42ae7e6a5bbe085c1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_79
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 2d4f002cd8dbce14683be65d27179ac6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_80
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 0
+      width: 32
+      height: 32
+    spriteID: ed3f0618b40ca2e4eb75d4f2bd7c6a72
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_81
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 0
+      width: 32
+      height: 32
+    spriteID: c40801dce4afd7d44839eb882e7c224f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_82
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 0de18d0442a9c694cb692d1065459a83
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Scifitiles_sheet_83
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 815a3ee1303e8614d935391613a6107e
+    spriteOutline: []
+    tessellationDetail: 0
+  _secondaryTextures: []
+  _artifacts: {instanceID: 0}

@@ -11,6 +11,7 @@ public class SokobanManager : MonoBehaviour
 
     [field: SerializeField] public SokobanBox[] sokobanBoxList;
     [field: SerializeField] public SokobanBoxArea[] sokobanBoxAreaList;
+    [field: SerializeField] public SokobanForceField[] sokobanForceFieldsLists;
 
     public int areaActiveCount = 0;
     private int maxAreaCount;
@@ -21,6 +22,7 @@ public class SokobanManager : MonoBehaviour
     {
         sokobanBoxList = GetComponentsInChildren<SokobanBox>();
         sokobanBoxAreaList = GetComponentsInChildren<SokobanBoxArea>();
+        sokobanForceFieldsLists = GetComponentsInChildren<SokobanForceField>();
     }
 
     private void Start()
@@ -45,6 +47,8 @@ public class SokobanManager : MonoBehaviour
             ActiveAllArea();
             return;
         }
+
+        ForceFieldCheck();
     }
 
     private void DisableBoxesCollision()
@@ -68,6 +72,18 @@ public class SokobanManager : MonoBehaviour
         foreach (SokobanBox s in sokobanBoxList)
         {
             s.Reset();
+        }
+    }
+
+    private void ForceFieldCheck()
+    {
+        foreach (SokobanForceField s in sokobanForceFieldsLists)
+        {
+            if(s.Triggered())
+            {
+                s.isTriggered = false;
+                Reset();
+            }
         }
     }
 
