@@ -9,7 +9,8 @@ ScriptedImporter:
   assetBundleVariant: 
   script: {fileID: 11500000, guid: aaa16bfc62c086f4fb45da87b6acf9b1, type: 3}
   _reimportOnDependencyChange: 1
-  _jsonFile: {fileID: -164016180542632921, guid: acb9dd7a42736ac4a9902e9cabfcb4b2, type: 3}
+  _jsonFile: {fileID: -164016180542632921, guid: acb9dd7a42736ac4a9902e9cabfcb4b2,
+    type: 3}
   _pixelsPerUnit: 32
   _customLevelPrefab: {instanceID: 0}
   _intGridValueColorsVisible: 0
@@ -25,6 +26,8 @@ ScriptedImporter:
     _asset: {fileID: 11400000, guid: 3a7e11e7fce6d474bae06ce88a099378, type: 2}
   - _key: Wall_3
     _asset: {fileID: 11400000, guid: e1c75f990ddf2224b89bc757f20c91ab, type: 2}
+  - _key: Wall_4
+    _asset: {instanceID: 0}
   _entities:
   - _key: Player
     _asset: {instanceID: 0}

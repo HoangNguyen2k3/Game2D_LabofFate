@@ -1,0 +1,46 @@
+{
+  "Rects": [
+    {
+      "x": 192,
+      "y": 0,
+      "w": 32,
+      "h": 32
+    },
+    {
+      "x": 192,
+      "y": 64,
+      "w": 32,
+      "h": 32
+    }
+  ],
+  "Def": {
+    "__cHei": 6,
+    "__cWid": 14,
+    "cachedPixelData": {
+      "opaqueTiles": "111111111111111111111111111100001111111111111111111111111110111111110011111111111100",
+      "averageColors": "f534f534f346f336fa66f645f545f646f345f445f655f656f545f545f534f535f223f223f645f545f345f545f445f345f656f656f545f545f334f33473457a66f656f646f546f656f445f445f445f445f745f745f334f335f346f955fd53f845f645f845f445f445f845f845f745f745f634f634f8357d53f845f645f557f645f445f445f845f84500000000f634f634f735fc44f845f845f645f845f445f445f445f44500000000"
+    },
+    "customData": [
+
+    ],
+    "embedAtlas": null,
+    "enumTags": [
+
+    ],
+    "identifier": "Scifitiles_sheet",
+    "padding": 0,
+    "pxHei": 192,
+    "pxWid": 448,
+    "relPath": "Extra_tiles/scifitiles-sheet.png",
+    "savedSelections": [
+
+    ],
+    "spacing": 0,
+    "tags": [
+
+    ],
+    "tagsSourceEnumUid": null,
+    "tileGridSize": 32,
+    "uid": 114
+  }
+}
