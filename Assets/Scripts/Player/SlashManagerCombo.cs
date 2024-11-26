@@ -23,15 +23,19 @@ public class SlashManagerCombo : NetworkBehaviour
 
     private void Start()
     {
-        canAttack.Value = true;
-        isAttacking.Value = false;
-        canCombo.Value = false;
+        if (IsOwner)
+        {
+            canAttack.Value = true;
+            isAttacking.Value = false;
+            canCombo.Value = false;
+        }
+
     }
 
     private void Update()
     {
         if (!IsOwner) return;
-        if (!canAttack.Value) return;
+    //    if (canAttack.Value) return;
 
         Vector3 mousePos = Input.mousePosition;
         Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(transform.position);
