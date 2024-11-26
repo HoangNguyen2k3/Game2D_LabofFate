@@ -19,8 +19,10 @@ public class PlayerSprite : NetworkBehaviour
     private bool IsDashing => playerController.isDashing;
     private bool IsAttacking => slashManagerCombo.isAttacking.Value;
 
-    private bool isDead=false;
+    private bool isDead = false;
 
+    // NetworkVariable for flipX
+    private NetworkVariable<bool> networkFlipX = new NetworkVariable<bool>(false);
 
     private void Awake()
     {
@@ -33,40 +35,51 @@ public class PlayerSprite : NetworkBehaviour
     private void Update()
     {
         isDead = health.isDead.Value;
-        if (!IsOwner)
-            return;
-        UpdateSprite();
-        
+        if (IsOwner)
+        {
+            UpdateSprite();
+        }
+
+        // Apply the flipX state from the NetworkVariable to the SpriteRenderer
+        spriteRenderer.flipX = networkFlipX.Value;
+        if (spriteRenderer.flipX)
+        {
+            SlashHitboxes.transform.localScale = new Vector3(-1, 1);
+        }
+        else
+        {
+            SlashHitboxes.transform.localScale = new Vector3(1, 1);
+        }
     }
 
     private void UpdateSprite()
     {
-
         HandleSpriteFlip();
         SetAnimation();
     }
-    
+
     private void HandleSpriteFlip()
     {
-        if (!spriteRenderer.flipX && MoveInput.x < 0)
+        if (MoveInput.x < 0 && !spriteRenderer.flipX)
         {
-            SetSpriteServerRpc(true);
-            SlashHitboxes.transform.localScale = new Vector3(-1,1);
+            SetSpriteServerRpc(true);  // Flip sprite
         }
-        else if (spriteRenderer.flipX && MoveInput.x > 0)
+        else if (MoveInput.x > 0 && spriteRenderer.flipX)
         {
-            SlashHitboxes.transform.localScale = new Vector3(1,1);
-            SetSpriteServerRpc(false);
+            SetSpriteServerRpc(false);  // Unflip sprite
         }
     }
+
     [ServerRpc]
     private void SetSpriteServerRpc(bool state)
     {
-            spriteRenderer.flipX = state;
+        // Update the NetworkVariable on the server
+        networkFlipX.Value = state;
     }
+
     private void SetAnimation()
     {
-        if (IsAttacking||isDead) return;
+        if (IsAttacking || isDead) return;
         if (MoveInput != Vector2.zero && DirectionStr != null)
         {
             if (IsDashing)

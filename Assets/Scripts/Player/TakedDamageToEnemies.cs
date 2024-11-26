@@ -9,7 +9,7 @@ public class TakedDamageToEnemies : NetworkBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-      //  if (!IsServer) return; 
+       if (!IsServer) return; 
 
         EnemyHealth enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
         if (enemyHealth != null)

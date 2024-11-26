@@ -43,6 +43,8 @@ public class TestRelay : MonoBehaviour
             RelayServerData relayServerData = new RelayServerData(allocation, "dtls");
             NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
 
+      //      await Task.Delay(5000);
+
             NetworkManager.Singleton.StartHost();
             //PlayerSetting.Instance.networkPlayerName.Value = EditPlayerName.Instance.GetPlayerName();
 

@@ -14,11 +14,11 @@ public class LaserBoss : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").transform;
         Vector3 direction = (-target.position + transform.position).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x);
-        transform.rotation = Quaternion.Euler(0f, 0f, angle * Mathf.Rad2Deg - 180f);
-        int temp = Random.Range(3, 10);
+        transform.rotation = Quaternion.Euler(0f, 0f, angle * Mathf.Rad2Deg);
+        int temp = Random.Range(4, 12);
         for(int i = 1; i <= temp; i++)
         {
-            Instantiate(laserNormal, transform.position, Quaternion.Euler(0f, 0f, angle * Mathf.Rad2Deg - 180f-(360/temp)*i));
+            Instantiate(laserNormal, transform.position, Quaternion.Euler(0f, 0f, angle * Mathf.Rad2Deg-(360/temp)*i));
         }
     }
 
