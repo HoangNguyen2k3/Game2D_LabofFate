@@ -1,4 +1,3 @@
-using System.Collections;
 using TMPro;
 using Unity.Netcode;
 using UnityEngine;
@@ -9,94 +8,108 @@ public class LevelTimer : NetworkBehaviour
     public Slider timerSlider;
     public Image timerSliderFillImage;
     public TextMeshProUGUI timerText;
-    [SerializeField] private GameObject gameOver;
-    [SerializeField] private float totalTime;
+
+    [SerializeField] private GameObject gameOverUI;
+    [SerializeField] public float totalTime;
     public NetworkVariable<float> remainingTime = new NetworkVariable<float>();
 
     public Color neutralColor;
     public Color warningColor;
     public Color dangerColor;
+
     public static LevelTimer Instance { get; private set; }
-    [field: SerializeField] public bool isDone { get; private set; }
-    private bool stopTimer;
+
+    private bool isTimerStopped;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
 
     private void Start()
     {
-
         if (IsServer)
         {
-            // Server initializes the timer
-            Instance = this;
             remainingTime.Value = totalTime;
-            stopTimer = false;
+            isTimerStopped = false;
         }
 
         timerSlider.maxValue = totalTime;
         timerSlider.value = totalTime;
+
+        remainingTime.OnValueChanged += OnRemainingTimeChanged;
     }
 
     private void Update()
     {
-        if (isDone) return;
-
-        if (IsServer)
+        if (IsServer && !isTimerStopped)
         {
             UpdateTimerOnServer();
         }
-
-        UpdateSliderColor();
-        UpdateTimerUI();
     }
 
     private void UpdateTimerOnServer()
     {
-        if (stopTimer)
-        {
-
-            isDone = true;
-            Instantiate(gameOver);
-            return;
-        }
-
         remainingTime.Value -= Time.deltaTime;
 
         if (remainingTime.Value <= 0)
         {
             remainingTime.Value = 0;
-            stopTimer = true;
+            isTimerStopped = true;
+            ShowGameOverUI();
         }
+    }
+
+    private void OnRemainingTimeChanged(float oldValue, float newValue)
+    {
+        UpdateTimerUI();
+        UpdateSliderColor();
     }
 
     private void UpdateTimerUI()
     {
-        float _time = remainingTime.Value;
+        float time = remainingTime.Value;
 
-        int minutes = Mathf.FloorToInt(_time / 60);
-        int seconds = Mathf.FloorToInt(_time - minutes * 60f);
+        int minutes = Mathf.FloorToInt(time / 60);
+        int seconds = Mathf.FloorToInt(time % 60);
 
-        string textTime = string.Format("{0:0}:{1:00}", minutes, seconds);
+        string formattedTime = $"{minutes:0}:{seconds:00}";
+        timerText.text = isTimerStopped ? "YOU ARE DOOMED!!!" : formattedTime;
 
-        if (stopTimer)
-        {
-            timerText.text = "YOU ARE DOOMED!!!";
-            return;
-        }
-
-        timerText.text = textTime;
-        timerSlider.value = _time;
+        timerSlider.value = time;
     }
 
     private void UpdateSliderColor()
     {
-        Color color = neutralColor;
-        if (timerSlider.value < totalTime * 0.6f)
+        float ratio = timerSlider.value / totalTime;
+
+        if (ratio > 0.6f)
+            timerSliderFillImage.color = neutralColor;
+        else if (ratio > 0.3f)
+            timerSliderFillImage.color = warningColor;
+        else
+            timerSliderFillImage.color = dangerColor;
+    }
+
+    public void ResetTimer()
+    {
+        if (IsServer)
         {
-            color = warningColor;
+            remainingTime.Value = 300;
+            isTimerStopped = false;
         }
-        if (timerSlider.value < totalTime * 0.3f)
+    }
+
+    private void ShowGameOverUI()
+    {
+        if (gameOverUI != null)
         {
-            color = dangerColor;
+            Instantiate(gameOverUI);
         }
-        timerSliderFillImage.color = color;
     }
 }

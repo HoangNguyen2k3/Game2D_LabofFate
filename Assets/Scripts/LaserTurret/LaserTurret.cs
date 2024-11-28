@@ -11,17 +11,23 @@ public class LaserTurret : MonoBehaviour
     [SerializeField] private float attackCooldown = 1f;
     private bool canAttack = true;
     [SerializeField] private GameObject laser;
-/*    [SerializeField] private float timeChangeTarget = 1f;
-    private float timeChange = 0f;*/
+    [SerializeField] private float timeChangeTarget = 1f;
+    private float timeChange = 0f;
     private void Start()
     {
-        if (target == null)
+/*        if (target == null)
         {
             target = GameObject.FindGameObjectWithTag("Player").transform;
-        }
+        }*/
     }
     private void Update()
     {
+        timeChange += Time.deltaTime;
+        if (timeChange >= timeChangeTarget)
+        {
+            target = UpdateTargetPlayer();
+            timeChange = 0f;
+        }
         if (target == null)
         {
             target = GameObject.FindGameObjectWithTag("Player").transform;
@@ -39,5 +45,23 @@ public class LaserTurret : MonoBehaviour
 
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
+    }
+    private Transform UpdateTargetPlayer()
+    {
+        if (target != null)
+        {
+            Transform newTranform = target;
+            GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
+            for (int i = 0; i < player.Length; i++)
+            {
+                if (Vector2.Distance(transform.position, player[i].transform.position) <
+                    Vector2.Distance(transform.position, newTranform.position))
+                {
+                    newTranform = player[i].transform;
+                }
+            }
+            return newTranform;
+        }
+        return target;
     }
 }

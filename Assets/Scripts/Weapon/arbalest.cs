@@ -45,4 +45,8 @@ public class Arbalest : NetworkBehaviour
         yield return new WaitForSeconds(timeDelayFireArbalest);
         canAttack = true;
     }
+    private void OnDisable()
+    {
+        canAttack = true;
+    }
 }
