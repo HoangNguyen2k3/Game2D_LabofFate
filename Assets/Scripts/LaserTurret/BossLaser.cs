@@ -56,6 +56,8 @@ public class BossLaser : MonoBehaviour
     {
         yield return new WaitForSeconds(30f);
         Instantiate(bloom, transform.position, Quaternion.identity);
+        GameObject puzzle = GameObject.FindGameObjectWithTag("StonePuzzle");
+        puzzle.GetComponent<Door>().isOpen.Value = true;
         Destroy(gameObject);
     }
 }

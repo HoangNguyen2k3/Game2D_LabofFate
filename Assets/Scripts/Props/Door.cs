@@ -16,21 +16,24 @@ public class Door : NetworkBehaviour
     private void Awake() {
         collider2d = GetComponent<Collider2D>();
     }
-    [ServerRpc]
-    public void OpenDoorServerRpc()
+    private void Update()
     {
-        if (isOpen.Value) return;
+        if (isOpen.Value)
+        {
+            OpenDoor();
+            isOpen.Value = false;
+        }
+    }
+    public void OpenDoor()
+    {
         animator.Play(openAnim.name);
         collider2d.enabled = false;
-        isOpen.Value = true;
     }
 
     public void CloseDoor()
     {
-        if (!isOpen.Value) return;
         animator.Play(closeAnim.name);
         collider2d.enabled = true;
-        isOpen.Value = false;
     }
 
 

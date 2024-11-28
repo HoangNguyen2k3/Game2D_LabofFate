@@ -31,7 +31,7 @@ public class RoomRangeManage : NetworkBehaviour
         }
         if (enemiesInRange.Count == 0 && !isOpenDoor)
         {
-                door.GetComponent<Door>().OpenDoorServerRpc();
+                door.GetComponent<Door>().isOpen.Value=true;
                 isOpenDoor = true;
            
         }

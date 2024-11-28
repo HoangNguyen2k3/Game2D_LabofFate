@@ -13,8 +13,8 @@ public class DoorManager : MonoBehaviour
 
         if (timer > 5)
         {
-            door1.OpenDoorServerRpc();
-            door2.OpenDoorServerRpc();
+            door1.OpenDoor();
+            door2.OpenDoor();
         }
     }
 
