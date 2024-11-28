@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 17e0e493cf95be444bb33b1729a5736c
+guid: 7936353b3f1ad60479c1c32f168021a7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,19 +72,6 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -123,169 +110,253 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CircleExplosion2_0
+      name: heart.rotate_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 3
+        y: 3
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e690e7db76d0584990b3d8543d89600
-      internalID: 1426368966
+      spriteID: b45944dcf7a3b484b8584f074fd55cc2
+      internalID: -790937397
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CircleExplosion2_1
+      name: heart.rotate_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 36
+        y: 3
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 391057cfef667c9438631fbf355f5329
-      internalID: -1647486291
+      spriteID: 343b465ee30770244a872d79d4365cbb
+      internalID: 565344864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CircleExplosion2_2
+      name: heart.rotate_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 69
+        y: 3
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94f66b3dc2c50b041a36e353af71a531
-      internalID: -1164020754
+      spriteID: 6304ae142296e1645aa98c58dda0284d
+      internalID: 935714024
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CircleExplosion2_3
+      name: heart.rotate_3
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 102
+        y: 3
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf706ab468d587740b01f83507cc4891
-      internalID: -1010332998
+      spriteID: 52e565a65d91d954693713bed9182656
+      internalID: 1875104663
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CircleExplosion2_4
+      name: heart.rotate_4
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 135
+        y: 3
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5aaf8a692914e040ad3da364201e9e4
-      internalID: -1150285437
+      spriteID: 6f39f77fb16206e4b9f7c2cb7e81216d
+      internalID: -817093099
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CircleExplosion2_5
+      name: heart.rotate_5
       rect:
         serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 168
+        y: 3
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21d9c595783787e45a0a39ca4d139f1e
-      internalID: 2131578728
+      spriteID: 7c76aabc586d33b47899e445cd035a18
+      internalID: -687099055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CircleExplosion2_6
+      name: heart.rotate_6
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 201
+        y: 3
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e7c2d120da2a00469cd4ee6841e1639
-      internalID: -866767892
+      spriteID: 51ee9e712654e3340b7d76ce6e5daaa5
+      internalID: 30081629
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CircleExplosion2_7
+      name: heart.rotate_7
       rect:
         serializedVersion: 2
-        x: 448
-        y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 232
+        y: 3
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8c9855338f50d84aba498778fba948a
-      internalID: 2094559853
+      spriteID: 8c8ceaae71438db4db010638484c9c08
+      internalID: 462522418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heart.rotate_8
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 3
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d02b23028bc7fe4f9cfd88d104fa598
+      internalID: 1177525315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heart.rotate_9
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 3
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f608a154e9e6eac4c9b828ec3636343d
+      internalID: 354963746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heart.rotate_10
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 3
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d465303f0e29447a0e3da8267b16e7
+      internalID: -495945456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heart.rotate_11
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 3
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e45fe0476c8c6d1438a06fe544203203
+      internalID: -227814509
       vertices: []
       indices: 
       edges: []
@@ -301,14 +372,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CircleExplosion2_0: 1426368966
-      CircleExplosion2_1: -1647486291
-      CircleExplosion2_2: -1164020754
-      CircleExplosion2_3: -1010332998
-      CircleExplosion2_4: -1150285437
-      CircleExplosion2_5: 2131578728
-      CircleExplosion2_6: -866767892
-      CircleExplosion2_7: 2094559853
+      heart.rotate_0: -790937397
+      heart.rotate_1: 565344864
+      heart.rotate_10: -495945456
+      heart.rotate_11: -227814509
+      heart.rotate_2: 935714024
+      heart.rotate_3: 1875104663
+      heart.rotate_4: -817093099
+      heart.rotate_5: -687099055
+      heart.rotate_6: 30081629
+      heart.rotate_7: 462522418
+      heart.rotate_8: 1177525315
+      heart.rotate_9: 354963746
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

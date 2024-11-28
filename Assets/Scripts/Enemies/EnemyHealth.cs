@@ -23,6 +23,10 @@ public class EnemyHealth : NetworkBehaviour
 
     [SerializeField] private float addTimeAnim=1f;
 
+    [SerializeField] private GameObject dropItems_small;
+    [SerializeField] private GameObject dropItems_medium;
+    [SerializeField] private GameObject dropItems_big;
+
     void Start()
     {
         flash = GetComponent<Flash>();
@@ -68,6 +72,7 @@ public class EnemyHealth : NetworkBehaviour
 
     public void TakedDamage(float damage)
     {      DetectDeath();
+       
         if (isDead.Value) {
             Destroy(healthBarObject);
             return; }
@@ -103,7 +108,28 @@ public class EnemyHealth : NetworkBehaviour
     {
         animator.SetTrigger("Death");
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length + addTimeAnim);
+        DropRandomItem();
         Destroy(gameObject);
+    }
+    private void DropRandomItem()
+    {
+        if (!IsServer) return;
+        int a=Random.Range(0, 15);
+        if (a >= 0 && a <= 5)
+        {
+          GameObject dropItem =  Instantiate(dropItems_small,gameObject.transform.position,Quaternion.identity);
+          dropItem.GetComponent<NetworkObject>().Spawn();
+        }
+        else if (a >= 6 && a <= 8)
+        {
+            GameObject dropItem= Instantiate(dropItems_medium, gameObject.transform.position, Quaternion.identity);
+            dropItem.GetComponent<NetworkObject>().Spawn();
+        }
+        else if(a>=9&&a<=10)
+        {
+            GameObject dropItem= Instantiate(dropItems_big, gameObject.transform.position, Quaternion.identity);
+            dropItem.GetComponent<NetworkObject>().Spawn();
+        }
     }
 
 /*    [ClientRpc]

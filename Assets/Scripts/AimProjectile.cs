@@ -57,6 +57,7 @@ public class AimProjectile : NetworkBehaviour
     {
         if (Vector2.Distance(transform.position, startPosition) > projectileRange || moveSpeed <= 5)
         {
+            Instantiate(bloom, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

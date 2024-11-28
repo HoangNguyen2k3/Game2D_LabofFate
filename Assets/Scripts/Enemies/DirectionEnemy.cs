@@ -29,6 +29,7 @@ public class DirectionEnemy : NetworkBehaviour
 
     private void HandleAI()
     {
+        if (!enemyAI.followPlayer) { return; }
         if (target != null && Vector2.Distance(target.transform.position, transform.position) <= distanceDetect)
         {
             if (enemyAI.target)

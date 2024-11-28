@@ -38,6 +38,8 @@ public class EnemyAI : NetworkBehaviour
     [SerializeField] private float timeChangeTarget=1f;
     private float timeChange = 0f;
 
+    public bool followPlayer = false;
+
     private enum State
     {
         Roaming,
@@ -71,6 +73,7 @@ public class EnemyAI : NetworkBehaviour
     {
 
         if (!IsServer) return;
+ 
         if (target == null)
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -101,6 +104,14 @@ public class EnemyAI : NetworkBehaviour
         }
 
         MovementStateControl();
+        if (state.Value == State.FollowPlayer || State.AttackPlayer == state.Value)
+        {
+            followPlayer = true;
+        }
+        else
+        {
+            followPlayer = false;
+        }
         pathUpdateTimer += Time.deltaTime;
     }
     private Transform UpdateTargetPlayer(){

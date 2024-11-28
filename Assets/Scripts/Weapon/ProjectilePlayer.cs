@@ -84,7 +84,6 @@ public class ProjectilePlayer : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     private void SpawnAdditionalBulletsServerRpc(float baseAngle)
     {
-        //SpawnAdditionalBulletsClientRpc(baseAngle);
         float angleOffset1 = baseAngle + 10f;
         float angleOffset2 = baseAngle - 10f;
 
@@ -99,21 +98,4 @@ public class ProjectilePlayer : NetworkBehaviour
         bullet2.GetComponent<NetworkObject>().Spawn(true);
 
     }
-/*    [ClientRpc]
-    private void SpawnAdditionalBulletsClientRpc(float baseAngle)
-    {
-        float angleOffset1 = baseAngle + 10f;
-        float angleOffset2 = baseAngle - 10f;
-
-        Vector3 direction1 = new Vector3(Mathf.Cos(angleOffset1 * Mathf.Deg2Rad), Mathf.Sin(angleOffset1 * Mathf.Deg2Rad), 0f).normalized;
-        Vector3 direction2 = new Vector3(Mathf.Cos(angleOffset2 * Mathf.Deg2Rad), Mathf.Sin(angleOffset2 * Mathf.Deg2Rad), 0f).normalized;
-
-        GameObject bullet1 = Instantiate(bullet, transform.position, Quaternion.Euler(0f, 0f, angleOffset1));
-        GameObject bullet2 = Instantiate(bullet, transform.position, Quaternion.Euler(0f, 0f, angleOffset2));
-        bullet1.GetComponent<ProjectilePlayerChildren>().SetMoveDirection(direction1);
-        bullet2.GetComponent<ProjectilePlayerChildren>().SetMoveDirection(direction2);
-        bullet1.GetComponent<NetworkObject>().Spawn(true);
-        bullet2.GetComponent<NetworkObject>().Spawn(true);
-
-    }*/
 }
