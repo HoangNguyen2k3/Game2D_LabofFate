@@ -107,8 +107,9 @@ public class EnemyHealth : NetworkBehaviour
     private IEnumerator PlayDeathAnimationEnemy()
     {
         animator.SetTrigger("Death");
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length + addTimeAnim);
         DropRandomItem();
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length + addTimeAnim);
+        
         Destroy(gameObject);
     }
     private void DropRandomItem()

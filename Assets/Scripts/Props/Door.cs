@@ -1,34 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-public class Door : MonoBehaviour
+public class Door : NetworkBehaviour
 {
     public Animator animator;
     public AnimationClip openAnim;
     public AnimationClip closeAnim;
-    private Collider2D collider;
+    private Collider2D collider2d;
 
-    public bool isOpen;
+
+    public NetworkVariable<bool> isOpen=new NetworkVariable<bool>(false,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Server);
 
     private void Awake() {
-        collider = GetComponent<Collider2D>();
+        collider2d = GetComponent<Collider2D>();
     }
-
-    public void OpenDoor()
+    [ServerRpc]
+    public void OpenDoorServerRpc()
     {
-        if (isOpen) return;
+        if (isOpen.Value) return;
         animator.Play(openAnim.name);
-        collider.enabled = false;
-        isOpen = true;
+        collider2d.enabled = false;
+        isOpen.Value = true;
     }
 
     public void CloseDoor()
     {
-        if (!isOpen) return;
+        if (!isOpen.Value) return;
         animator.Play(closeAnim.name);
-        collider.enabled = true;
-        isOpen = false;
+        collider2d.enabled = true;
+        isOpen.Value = false;
     }
 
 

@@ -30,7 +30,7 @@ public class DirectionEnemy : NetworkBehaviour
     private void HandleAI()
     {
         if (!enemyAI.followPlayer) { return; }
-        if (target != null && Vector2.Distance(target.transform.position, transform.position) <= distanceDetect)
+        if (target != null)
         {
             if (enemyAI.target)
             {
@@ -60,7 +60,7 @@ public class DirectionEnemy : NetworkBehaviour
         }
     }
 
-    [ServerRpc(RequireOwnership = false)]
+    [ServerRpc]
     private void RequestFlipXStateServerRpc(bool flip)
     {
         flipXState.Value = flip;
