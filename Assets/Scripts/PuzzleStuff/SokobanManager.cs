@@ -15,6 +15,8 @@ public class SokobanManager : MonoBehaviour
     public int areaActiveCount = 0;
     public int maxAreaCount;
     private float time=0f;
+
+    [SerializeField] private string levelSokoban="Sokoban1";
     [field: SerializeField] public bool AllAreaActive {get; private set;}
 
     private void Awake()
@@ -26,26 +28,23 @@ public class SokobanManager : MonoBehaviour
 
     private void Start()
     {
-        
         maxAreaCount = sokobanBoxAreaList.Length;
     }
 
     private void Update()
     {
+        Debug.Log("wtf");
+        Debug.Log(areaActiveCount);
+        Debug.Log(maxAreaCount);
         time += Time.deltaTime;
-        if (time < 10f) { return; }
+        if (time < 120f) { return; }
         if (AllAreaActive) return;
-
-        if (Input.GetKey(KeyCode.R))
-        {
-            Reset();
-        }
 
         if (areaActiveCount == maxAreaCount)
         {
             AllAreaActive = true;
             Debug.Log("You win");
-            GameObject puzzle = GameObject.FindGameObjectWithTag("Sokoban1");
+            GameObject puzzle = GameObject.FindGameObjectWithTag(levelSokoban);
             puzzle.GetComponent<Door>().isOpen.Value = true;
             DisableBoxesCollision();
             ActiveAllArea();
