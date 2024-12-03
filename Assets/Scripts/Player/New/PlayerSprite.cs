@@ -68,6 +68,18 @@ public class PlayerSprite : NetworkBehaviour
         {
             SetSpriteServerRpc(false);  // Unflip sprite
         }
+        
+        if (IsAttacking)
+        {
+            if (slashManagerCombo.MousePositionToUnitVector() == Vector2.left)
+            {
+                SetSpriteServerRpc(true);  // Flip sprite
+            }
+            else if (slashManagerCombo.MousePositionToUnitVector() == Vector2.right)
+            {
+                SetSpriteServerRpc(false);  // Unflip sprite
+            }
+        }
     }
 
     [ServerRpc]

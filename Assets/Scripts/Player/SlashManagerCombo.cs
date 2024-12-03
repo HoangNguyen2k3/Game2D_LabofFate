@@ -70,8 +70,35 @@ public class SlashManagerCombo : NetworkBehaviour
         }
     }
 
+    public Vector2 MousePositionToUnitVector()
+    {
+        Vector3 mousePos = Input.mousePosition;
+        Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(transform.position);
+        Vector2 dirToMouse = (mousePos - playerScreenPoint).normalized;
+        Vector2[] directionVectors = {Vector2.up, Vector2.down, Vector2.left, Vector2.right};
+
+        foreach (Vector2 v in directionVectors)
+        {
+            float delta = Vector2.Dot(dirToMouse, v);
+            if (delta >= Mathf.Sqrt(2)/ 2)
+            {
+                return v;
+            }
+        }
+        return Vector2.down;
+    }
+
     public string GetDirectionStr()
     {
+        Dictionary<Vector2,string> vectorStrDict = new Dictionary<Vector2,string> {
+            {Vector2.up, "Up"},
+            {Vector2.down, "Down"},
+            {Vector2.left, "Left"},
+            {Vector2.right, "Left"},
+        };
+
+        vectorStrDict.TryGetValue(MousePositionToUnitVector(), out string str);
+        if (str != null) return str;
         return PlayerController.DirectionStr;
     }
     public void StartAttackCooldown()
