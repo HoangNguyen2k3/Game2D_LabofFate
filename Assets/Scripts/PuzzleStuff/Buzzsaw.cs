@@ -20,6 +20,7 @@ public class Buzzsaw : MonoBehaviour
 
     private void Awake() {
         body = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void Start() 

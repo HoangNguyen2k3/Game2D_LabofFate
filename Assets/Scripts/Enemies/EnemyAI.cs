@@ -38,6 +38,9 @@ public class EnemyAI : NetworkBehaviour
     [SerializeField] private float timeChangeTarget=1f;
     private float timeChange = 0f;
 
+    private DirectionEnemy directionEnemy;
+
+
     public bool followPlayer = false;
 
     private enum State
@@ -55,6 +58,7 @@ public class EnemyAI : NetworkBehaviour
         rb = GetComponent<Rigidbody2D>();
         health = GetComponent<EnemyHealth>();
         col = GetComponent<Collider2D>();
+        directionEnemy = GetComponent<DirectionEnemy>();
     }
 
     public override void OnNetworkSpawn()
@@ -92,17 +96,20 @@ public class EnemyAI : NetworkBehaviour
             timeChange = 0f;
             target = UpdateTargetPlayer();
         }
-        if (health.isDead.Value)
+        if (health)
         {
-            col.enabled = false;
-            return;
+            if (health.isDead.Value)
+            {
+                col.enabled = false;
+                return;
+            }
         }
+
 
         if (knockBack.GetKnockBack)
         {
             return;
         }
-
         MovementStateControl();
         if (state.Value == State.FollowPlayer || State.AttackPlayer == state.Value)
         {
@@ -171,6 +178,42 @@ public class EnemyAI : NetworkBehaviour
         if (timeRoaming > roamChangeDirFloat)
         {
             roamPosition.Value = GetRoamingPosition();
+            if (IsServer)
+            {
+                if (roamPosition.Value.x > transform.position.x)
+                {
+                    /*                    if (directionEnemy.reverse)
+                                        {
+                                            Debug.Log(1);
+                                            directionEnemy.SetFlipX(false);
+                                        }
+                                        else
+                                        {
+                                            Debug.Log(2);
+                                            directionEnemy.SetFlipX(true);
+                                        }*/
+                    Debug.Log(43);
+                    directionEnemy.SetFlipX(true);
+                }
+                else
+                {
+                    /*                    if (directionEnemy.reverse)
+                                        {
+                                            Debug.Log(3);
+                                            directionEnemy.SetFlipX(true);
+                                        }
+                                        else
+                                        {
+                                            Debug.Log(4);
+                                            directionEnemy.SetFlipX(false);
+                                        }*/
+                    Debug.Log(44);
+                    directionEnemy.SetFlipX(false);
+
+                }
+            }
+      
+
             timeRoaming = 0f;
         }
     }
@@ -218,6 +261,10 @@ public class EnemyAI : NetworkBehaviour
         {
             Debug.Log("Attack done");
             canAttack = false;
+            if(!enemyType) {
+                state.Value = State.FollowPlayer;
+                return;
+            }
             (enemyType as IEnemy).Attack();
             StartCoroutine(AttackCooldownRoutine());
         }

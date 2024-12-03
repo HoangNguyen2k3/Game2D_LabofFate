@@ -7,7 +7,7 @@ public class DirectionEnemy : NetworkBehaviour
     private SpriteRenderer bodyEnemy;
     private GameObject target;
     [SerializeField] private float distanceDetect;
-    [SerializeField] private bool reverse = true;
+    [SerializeField] public bool reverse = true;
     private EnemyAI enemyAI;
 
     // NetworkVariable to sync flipX state across the network
@@ -52,7 +52,7 @@ public class DirectionEnemy : NetworkBehaviour
         }
     }
 
-    private void SetFlipX(bool flip)
+    public void SetFlipX(bool flip)
     {
         if (flipXState.Value != flip)
         {

@@ -33,11 +33,8 @@ public class SokobanManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("wtf");
-        Debug.Log(areaActiveCount);
-        Debug.Log(maxAreaCount);
         time += Time.deltaTime;
-        if (time < 120f) { return; }
+        if (time < 10f) { return; }
         if (AllAreaActive) return;
 
         if (areaActiveCount == maxAreaCount)
