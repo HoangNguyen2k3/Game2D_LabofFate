@@ -16,7 +16,6 @@ public class SokobanForceField : MonoBehaviour
 
     public bool Triggered()
     {
-        if(isTriggered) return true;
-        else return false;
+        return isTriggered;
     }
 }

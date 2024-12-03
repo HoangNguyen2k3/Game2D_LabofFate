@@ -11,8 +11,12 @@ public class SokobanHitbox : MonoBehaviour
 
         if (other.CompareTag("PlayerSlash") && !sokobanBox.isMoving)
         {
-            Vector2 direction = GetDirection(other.transform.parent.transform);
-            StartCoroutine(sokobanBox.Move(direction));
+            if(sokobanBox.canMove)
+            {
+                Vector2 direction = GetDirection(other.transform.parent.transform);
+                StartCoroutine(sokobanBox.Move(direction));
+            }
+            else StartCoroutine(sokobanBox.Emit());
         }
     }
 

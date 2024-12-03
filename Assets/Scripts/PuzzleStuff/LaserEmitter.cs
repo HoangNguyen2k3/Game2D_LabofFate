@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Mono.CSharp;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
@@ -11,32 +12,57 @@ public class LaserEmitter : MonoBehaviour
     public LineRenderer line;
     private Transform endPoint;
     public LayerMask layerMask;
-    public Vector2 direction = Vector2.right;
+    public Vector2 direction;
+    public Vector3 position;
     public float distance = 10;
     public bool active = false;
+    public bool source = false;
 
+    private void Awake()
+    {
+        line.useWorldSpace = true;
+    }
     private void Update()
     {
-        if(active)
+        if(active&&source)
         {
             Emitting();
+            return;
         }
-        else line.enabled = false;
-
+        line.enabled = false;
+        if(source)
+        {
+            StopEmitting();
+        }
     }
-
-    private void Emitting()
+    public void Emitting()
     {
+        active = true;
         line.enabled = true;
         RaycastHit2D ray = Physics2D.Raycast(this.transform.position, direction, Mathf.Infinity , layerMask);
         line.SetPosition(0, transform.position);
-        Debug.Log(ray.point);
-        if (ray)
+        // Debug.Log(ray.point);
+        line.SetPosition(1, (Vector2) this.transform.position + (direction * distance));
+        if (ray.collider)
         {
             line.SetPosition(1, ray.point);
-            return;
+            if(ray.collider.GetComponentInChildren<LaserEmitter>())
+            {
+                ray.collider.GetComponentInChildren<LaserEmitter>().Emitting();
+            }
         }
-        line.SetPosition(1, (Vector2) this.transform.position + (direction * distance));
     }
-
+    public void StopEmitting()
+    {
+        RaycastHit2D ray = Physics2D.Raycast(this.transform.position, direction, Mathf.Infinity , layerMask);
+        if (ray.collider)
+        {
+            active = false;
+            if (ray.collider.GetComponentInChildren<LaserEmitter>())
+            {
+                ray.collider.GetComponentInChildren<LaserEmitter>().active = false;
+                ray.collider.GetComponentInChildren<LaserEmitter>().StopEmitting();
+            }
+        }
+    }
 }
