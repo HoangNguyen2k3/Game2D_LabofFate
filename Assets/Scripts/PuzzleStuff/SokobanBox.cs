@@ -30,6 +30,7 @@ public class SokobanBox : MonoBehaviour
             directionSprite = GetComponentInChildren<DirectionSprite>();
         }
     }
+
     private void Start()
     {
         if(isLaser)
@@ -145,6 +146,7 @@ public class SokobanBox : MonoBehaviour
     {
         transform.position = startingPos;
     }
+
     public void Active_check()
     {
         if(emitter.active) directionSprite.Active();

@@ -20,6 +20,7 @@ public class DirectionSprite : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
+
     void Start()
     {
         spriteRenderer.sprite = inactiveSprite;

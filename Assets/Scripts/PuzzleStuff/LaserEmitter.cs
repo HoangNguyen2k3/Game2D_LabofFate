@@ -22,6 +22,7 @@ public class LaserEmitter : MonoBehaviour
     {
         line.useWorldSpace = true;
     }
+
     private void Update()
     {
         if(active&&source)
@@ -35,6 +36,7 @@ public class LaserEmitter : MonoBehaviour
             StopEmitting();
         }
     }
+
     public void Emitting()
     {
         active = true;
@@ -52,6 +54,7 @@ public class LaserEmitter : MonoBehaviour
             }
         }
     }
+
     public void StopEmitting()
     {
         RaycastHit2D ray = Physics2D.Raycast(this.transform.position, direction, Mathf.Infinity , layerMask);
@@ -62,6 +65,11 @@ public class LaserEmitter : MonoBehaviour
             {
                 ray.collider.GetComponentInChildren<LaserEmitter>().active = false;
                 ray.collider.GetComponentInChildren<LaserEmitter>().StopEmitting();
+            }
+
+            if(ray.collider.GetComponent<TargetBox>())
+            {
+                ray.collider.GetComponent<TargetBox>().active = true;
             }
         }
     }
