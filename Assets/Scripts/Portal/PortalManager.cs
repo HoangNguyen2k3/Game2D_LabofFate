@@ -5,28 +5,36 @@ using UnityEngine;
 
 public class PortalManager : NetworkBehaviour
 {
-    public bool isActive=false;
-    [SerializeField] private GameObject enemy;
+    public bool isActive = false;
+    [SerializeField] private GameObject enemyPrefab; 
     [SerializeField] private float timeSpawn = 1f;
     public bool isSpawning = false;
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
-        if (!isActive&&!isSpawning)
+        if (IsServer && !isActive && !isSpawning)
         {
-            SpawnEnemy();
+            StartCoroutine(SpawnEnemy());
         }
     }
+
     private IEnumerator SpawnEnemy()
     {
         isSpawning = true;
-        Instantiate(enemy, transform.position, Quaternion.identity);
+
+        GameObject enemyInstance = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+        NetworkObject networkObject = enemyInstance.GetComponent<NetworkObject>();
+
+        if (networkObject != null)
+        {
+            networkObject.Spawn(); 
+        }
+        else
+        {
+            Debug.LogError("Prefab c?a quái v?t không có NetworkObject!");
+        }
+
         yield return new WaitForSeconds(timeSpawn);
-        isSpawning=false;
+        isSpawning = false;
     }
 }

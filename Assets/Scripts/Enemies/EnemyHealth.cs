@@ -93,7 +93,21 @@ public class EnemyHealth : NetworkBehaviour
 
 
     }
+    public void TakedDamageNotInPlayer(float damage,Transform transform_new)    {
+        DetectDeath();
 
+        if (isDead.Value)
+        {
+            Destroy(healthBarObject);
+            return;
+        }
+        if (!knockback.GetKnockBack)
+        {
+            currentHealth.Value -= damage;
+            knockback.GettingKnockBack(transform_new, knockBackThrust);
+            flash.TriggerFlashServerRpc();
+        }
+    }
     private void DetectDeath()
     {
         if (currentHealth.Value <= 0)

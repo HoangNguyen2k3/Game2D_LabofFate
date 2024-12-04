@@ -72,7 +72,17 @@ public class EnemyAI : NetworkBehaviour
             }
         }
     }
-
+/*    private void Start()
+    {
+        if(target == null)
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player)
+            {
+                target = player.transform;
+            }
+        }
+    }*/
     void Update()
     {
 

@@ -9,6 +9,7 @@ public class ProjectilePlayerChildren : NetworkBehaviour
     [SerializeField] private GameObject particalOnHitPrefabVFX;
     [SerializeField] private float projectileRange = 10f;
     [SerializeField] private int damageAttack = 1;
+    [SerializeField] private GameObject addObject;
 
     private Vector3 startPosition;
     private Vector3 moveDirection;
@@ -50,6 +51,7 @@ public class ProjectilePlayerChildren : NetworkBehaviour
             {
                 enemyHealth.TakedDamage(damageAttack);
                 Instantiate(particalOnHitPrefabVFX, transform.position, transform.rotation);
+                Instantiate(addObject, transform.position, transform.rotation);
                 gameObject.GetComponent<NetworkObject>().Despawn(); Destroy(gameObject);
             }
             else if (indestructible || other.gameObject.layer == LayerMask.NameToLayer("Obstacles"))

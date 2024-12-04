@@ -10,7 +10,7 @@ public class ProjectilePlayer : NetworkBehaviour
     [SerializeField] private float projectileRange = 10f;
     [SerializeField] private int damageAttack = 1;
     [SerializeField] private GameObject bullet;
-
+    [SerializeField] private GameObject addObject;
     private Vector3 startPosition;
     private Vector3 moveDirection;
 
@@ -22,7 +22,7 @@ public class ProjectilePlayer : NetworkBehaviour
         moveDirection = (mousePos - startPosition).normalized;
         float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
-        SpawnAdditionalBulletsServerRpc(angle);
+       // SpawnAdditionalBulletsServerRpc(angle);
     }
 
     private void Update()
@@ -63,6 +63,7 @@ public class ProjectilePlayer : NetworkBehaviour
             {
                 enemyHealth.TakedDamage(damageAttack);
                 Instantiate(particalOnHitPrefabVFX, transform.position, transform.rotation);
+                Instantiate(addObject, transform.position,Quaternion.identity);
             }
             else if (other.gameObject.layer == LayerMask.NameToLayer("Obstacles"))
             {
