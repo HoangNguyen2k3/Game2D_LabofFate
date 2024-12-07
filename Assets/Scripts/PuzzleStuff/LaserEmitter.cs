@@ -13,63 +13,99 @@ public class LaserEmitter : MonoBehaviour
     private Transform endPoint;
     public LayerMask layerMask;
     public Vector2 direction;
-    public Vector3 position;
+
+    public Dictionary<Vector2, List<Sprite>> dict = new Dictionary<Vector2, List<Sprite>>();
+    [field: SerializeField] DirectionSprite directionSprite;
     public float distance = 10;
-    public bool active = false;
+    // public bool active = false;
     public bool source = false;
+    public bool attached = false;
 
     private void Awake()
     {
         line.useWorldSpace = true;
+
+        if (directionSprite)
+        {
+            dict.Add(Vector2.up, new List<Sprite>() {directionSprite.inactiveSpriteUp, directionSprite.activeSpriteUp});
+            dict.Add(Vector2.down, new List<Sprite>() {directionSprite.inactiveSpriteDown, directionSprite.activeSpriteDown});
+            dict.Add(Vector2.left, new List<Sprite>() {directionSprite.inactiveSpriteLeft, directionSprite.activeSpriteLeft});
+            dict.Add(Vector2.right, new List<Sprite>() {directionSprite.inactiveSpriteRight, directionSprite.activeSpriteRight});
+
+            directionSprite.inactiveSprite = dict[direction][0];
+            directionSprite.activeSprite = dict[direction][1];
+        }
+    }
+
+    private void Start()
+    {
+        //
     }
 
     private void Update()
     {
-        if(active&&source)
+        if (source)
         {
             Emitting();
             return;
         }
-        line.enabled = false;
-        if(source)
-        {
-            StopEmitting();
-        }
+
+        // if (!source)
+        // {
+        //     StopEmitting();
+        // }
     }
 
     public void Emitting()
     {
-        active = true;
+        // active = true;
+        if(directionSprite)
+        {
+            directionSprite.Active();
+        }
         line.enabled = true;
         RaycastHit2D ray = Physics2D.Raycast(this.transform.position, direction, Mathf.Infinity , layerMask);
         line.SetPosition(0, transform.position);
-        // Debug.Log(ray.point);
         line.SetPosition(1, (Vector2) this.transform.position + (direction * distance));
+
         if (ray.collider)
         {
+            TargetBox t = ray.collider.GetComponent<TargetBox>();
+            LaserEmitter l =  ray.collider.GetComponentInChildren<LaserEmitter>();
             line.SetPosition(1, ray.point);
-            if(ray.collider.GetComponentInChildren<LaserEmitter>())
+            if (l)
             {
-                ray.collider.GetComponentInChildren<LaserEmitter>().Emitting();
+                // l.directionSprite.Active();
+                l.Emitting();
+            }
+            if (t)
+            {
+                t.Active();
             }
         }
     }
 
     public void StopEmitting()
     {
+        // active = false;
+        if(directionSprite)
+        {
+            directionSprite.InActive();
+        }
+        line.enabled = false;
         RaycastHit2D ray = Physics2D.Raycast(this.transform.position, direction, Mathf.Infinity , layerMask);
         if (ray.collider)
         {
-            active = false;
-            if (ray.collider.GetComponentInChildren<LaserEmitter>())
+            LaserEmitter l =  ray.collider.GetComponentInChildren<LaserEmitter>();
+            TargetBox t = ray.collider.GetComponent<TargetBox>();
+            if (l)
             {
-                ray.collider.GetComponentInChildren<LaserEmitter>().active = false;
-                ray.collider.GetComponentInChildren<LaserEmitter>().StopEmitting();
+                // l.directionSprite.InActive();
+                l.StopEmitting();
             }
-
-            if(ray.collider.GetComponent<TargetBox>())
+            if (t)
             {
-                ray.collider.GetComponent<TargetBox>().active = true;
+                t.Inactive();
             }
         }
     }

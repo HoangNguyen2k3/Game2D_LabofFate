@@ -8,67 +8,22 @@ public class SokobanBox : MonoBehaviour
     [SerializeField] private LayerMask layerMask;
     public Collider2D collision;
     public Collider2D hitbox;
-    [field:SerializeField] DirectionSprite directionSprite;
-    [field:SerializeField] public LaserEmitter emitter;
-    enum Direction
-    {up,down,left,right}
-    [SerializeField] Direction direction;
+    [field: SerializeField] LaserEmitter emitter;
     public bool isMoving {get; private set;}
     private Vector2 originalPos, targetPos; // pos to move the box
     public float timeToMove = 0.5f;
     public float emittingTime = 1.0f;
     public bool canMove = true;
-    public bool isLaser = false;
 
     private Vector2 startingPos;
 
-    private void Awake()
-    {
-        if(isLaser)
-        {
-            emitter = GetComponentInChildren<LaserEmitter>();
-            directionSprite = GetComponentInChildren<DirectionSprite>();
-        }
-    }
-
     private void Start()
     {
-        if(isLaser)
-        {
-            if((int)direction == 0)
-            {
-                directionSprite.inactiveSprite = directionSprite.inactiveSpriteUp;
-                directionSprite.activeSprite = directionSprite.activeSpriteUp;
-                emitter.direction = Vector2.up;
-            }
-            if((int)direction == 1)
-            {
-                directionSprite.inactiveSprite = directionSprite.inactiveSpriteDown;
-                directionSprite.activeSprite = directionSprite.activeSpriteDown;
-                emitter.direction = Vector2.down;
-            }
-            if((int)direction == 2)
-            {
-                directionSprite.inactiveSprite = directionSprite.inactiveSpriteLeft;
-                directionSprite.activeSprite = directionSprite.activeSpriteLeft;
-                emitter.direction = Vector2.left;
-            }
-            if((int)direction == 3)
-            {
-                directionSprite.inactiveSprite = directionSprite.inactiveSpriteRight;
-                directionSprite.activeSprite = directionSprite.activeSpriteRight;
-                emitter.direction = Vector2.right;
-            }
-        }
         startingPos = this.transform.position;
-        emitter.position = this.transform.position;
-    }
-
-    private void Update()
-    {
-        if(isLaser)
+        if(emitter)
         {
-            Active_check();
+            emitter.transform.position = this.transform.position;
+            emitter.attached = true;
         }
     }
 
@@ -78,7 +33,6 @@ public class SokobanBox : MonoBehaviour
         {
             yield break;
         }
-        Debug.Log("HEy");
         isMoving = true;
         collision.enabled = false;
         DisableHitbox();
@@ -86,6 +40,11 @@ public class SokobanBox : MonoBehaviour
         float elapsedTime = 0;
         originalPos = transform.position;
         targetPos = originalPos + _direction;
+
+        if (emitter)
+        {
+            emitter.StopEmitting();
+        }
 
         while (elapsedTime < timeToMove)
         {
@@ -104,9 +63,9 @@ public class SokobanBox : MonoBehaviour
     {
         DisableHitbox();
 
-        emitter.active = true;
+        emitter.Emitting();
         yield return new WaitForSeconds(emittingTime);
-        emitter.active = false;
+        emitter.StopEmitting();
 
         collision.enabled = true;
         EnableHitbox();
@@ -147,9 +106,4 @@ public class SokobanBox : MonoBehaviour
         transform.position = startingPos;
     }
 
-    public void Active_check()
-    {
-        if(emitter.active) directionSprite.Active();
-        else directionSprite.InActive();
-    }
 }
