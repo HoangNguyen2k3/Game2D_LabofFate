@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Runtime.CompilerServices;
 using TreeEditor;
 using UnityEngine;
 
@@ -7,27 +8,33 @@ public class Boss3Arm : MonoBehaviour
     public GameObject pivot;
     public GameObject target;
     public Animator animator;
+    public Sprite closedFistSprite;
+    public Sprite openFistSprite;
+    public SpriteRenderer spriteRenderer;
+    private Collider2D collider2d;
+    private Boss3ArmLaserBeam laserBeam;
 
     public float angularSpeed = 1f;
     public float circleRad = 1f;
     private float currentAngle;
 
-    private Vector2 originalPos;
-    private Vector2 targetPos;
-    [SerializeField] private float attackSpeed = 0.3f;
-    [SerializeField] private AnimationCurve attackCurve;
-
+    [SerializeField] private AnimationCurve moveCurve;
     private Vector2 defaultRotation;
 
-    public bool isDonePunching = false;
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        collider2d = GetComponent<Collider2D>();
+        laserBeam = GetComponentInChildren<Boss3ArmLaserBeam>();
     }
 
     private void Start()
     {
-        defaultRotation = this.transform.right;
+        defaultRotation = (transform.localScale.x == 1) ? Vector2.down: Vector2.up;
+        transform.right = defaultRotation;
+        spriteRenderer.sprite = closedFistSprite;
+        DisableHitbox();
     }
 
     public void Idle()
@@ -38,43 +45,56 @@ public class Boss3Arm : MonoBehaviour
         transform.position = (Vector2)pivot.transform.position + offset;
     }
 
-    public IEnumerator PunchTarget()
+    public void ShootLaser()
     {
-        isDonePunching = false;
-        
-        originalPos = transform.position;
-        var target = GetComponentInParent<Boss3>().target;
-        if (!target)
-        {
-            yield break;
-        }
+        laserBeam.Enable();
+        OpenFist();
+    }
 
-        targetPos = target.transform.position;
-        this.transform.right = transform.localScale.x == 1 ? targetPos - originalPos : -(targetPos - originalPos);
-        
-        // Move to target position
+    public void StopShootLaser()
+    {
+        laserBeam.Disable();
+        ClosedFist();
+    }
+
+    public IEnumerator Move(Vector2 _from, Vector2 _to, float _time, bool useCurve = true)
+    {
+        transform.position = _from;
         float elapsedTime = 0;
-        while (elapsedTime < attackSpeed)
+        while (elapsedTime < _time)
         {
-            transform.position = Vector2.Lerp(originalPos, targetPos, attackCurve.Evaluate(elapsedTime / attackSpeed));
+            transform.position = Vector2.Lerp(_from, _to, useCurve ? moveCurve.Evaluate(elapsedTime / _time) : elapsedTime / _time);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        this.transform.position = targetPos;
+        this.transform.position = _to;
+    }
 
-        yield return new WaitForSeconds(1);
-        this.transform.right = defaultRotation;
+    public void MoveBackToOrg()
+    {
+        StartCoroutine(Move(transform.position, (Vector2)pivot.transform.position, 1f));
+        ClosedFist();
+        transform.right = defaultRotation;
+    }
 
-        // Move back to original position
-        elapsedTime = 0;
-        while (elapsedTime < attackSpeed)
-        {
-            transform.position = Vector2.Lerp(targetPos, originalPos, attackCurve.Evaluate(elapsedTime / attackSpeed));
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-        this.transform.position = originalPos;
-        isDonePunching = true;
+    public void EnableHitbox()
+    {
+        collider2d.enabled = true;
+    }
+
+    public void DisableHitbox()
+    {
+        collider2d.enabled = false;
+    }
+
+    public void OpenFist()
+    {
+        spriteRenderer.sprite = openFistSprite;
+    }
+
+    public void ClosedFist()
+    {
+        spriteRenderer.sprite = closedFistSprite;
     }
 
 }

@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class Boss3IdleState : BossState
 {
-    public Boss3 boss3;
+    private Boss3 boss3;
+
+    private void Awake()
+    {
+        boss3 = GetComponentInParent<Boss3>(); 
+    }
 
     public override void Enter() { 
-        animator.Play(anim.name);
+
     }
 
     public override void FrameUpdate() {
         boss3.leftArm.Idle();
         boss3.rightArm.Idle();
-        if (boss.isAggro || boss.isInAttackRange)
+        if (boss.isAggro)
         {
             Exit();   
         }
