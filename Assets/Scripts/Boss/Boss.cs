@@ -17,6 +17,9 @@ public class Boss : BossCore
     private Phase currentPhase;
     private EnemyHealth health;
 
+    public SpriteRenderer attackUpperBody;
+    public SpriteRenderer attackLowerBody;
+
     private void Awake()
     {
         health = GetComponent<EnemyHealth>();
@@ -41,7 +44,7 @@ public class Boss : BossCore
 
         UpdateSprite();
 
-        if (health.currentHealth.Value <= 25f)
+        if (health.currentHealth.Value <= 15f)
         {
             SetPhase(Phase.PHASE2);
         }
@@ -105,6 +108,8 @@ public class Boss : BossCore
 
     private void UpdateSprite()
     {
+        attackUpperBody.material = sprite.material;
+        attackLowerBody.material = sprite.material;
         if (isAttacking) return; 
         if (GetDirToTarget().x < 0)
         {
