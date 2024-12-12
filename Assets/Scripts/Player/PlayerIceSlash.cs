@@ -1,9 +1,8 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerFireSlash : MonoBehaviour
+public class PlayerIceSlash : MonoBehaviour
 {
     private Animator animator;
     public AnimationClip anim;

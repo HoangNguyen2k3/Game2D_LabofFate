@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
@@ -15,12 +16,25 @@ public class SlashManagerCombo : NetworkBehaviour
     private ActiveWeapon weapon;
     [SerializeField] private GameObject arpalet;
 
+    public enum Element 
+    {
+        None,
+        Lighting,
+        Fire,
+        Ice
+    }
+
+    public Element currentElement;
     public PlayerFireSlash fireSlash;
+    public PlayerLightningSlash lightningSlash;
+    public PlayerIceSlash iceSlash;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
         fireSlash = GetComponentInChildren<PlayerFireSlash>();
+        lightningSlash = GetComponentInChildren<PlayerLightningSlash>();
+        iceSlash = GetComponentInChildren<PlayerIceSlash>();
     }
 
     private void Start()
