@@ -15,10 +15,14 @@ public class ManagerGameStartScene : NetworkBehaviour
 
     private bool isTeleported = false;
     private bool isWinTriggered = false;
-    private float timer;
+    public float timer;
 
     private void Start()
     {
+        if(!IsServer)
+        {
+            Destroy(gameObject);
+        }
         winGame.SetActive(false);
         loseGame.SetActive(false);
 
@@ -47,29 +51,27 @@ public class ManagerGameStartScene : NetworkBehaviour
     {
         if (!IsServer) return;
 
-        timer += Time.deltaTime;
-
-        // Check for enemies and players
         bool hasEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length > 0;
         bool hasPlayers = GameObject.FindGameObjectsWithTag("Player").Length > 0;
 
-        // Handle boss defeat and teleport logic
-        if (timer > 30)
+      //  timer += Time.deltaTime;
+
+/*        if (timer > 0)
         {
             Boss boss1 = FindObjectOfType<Boss>();
             Boss2 boss2 = FindObjectOfType<Boss2>();
-
-            if (boss1 == null && !isWinTriggered)
+            if (boss1 == null && !isTeleported)
+            {
+                TeleportPlayers(new Vector3(210, -110, 0));
+                ResetTimerOnServerRpc();
+            }
+            if (boss2 == null && !isWinTriggered)
             {
                 TriggerWinCondition();
             }
 
-            if (boss2 == null && !isTeleported)
-            {
-                TeleportPlayers(new Vector3(-310, -17, 0));
-                ResetTimerOnServerRpc();
-            }
-        }
+
+        }*/
 
         if (!hasEnemies && !isWinTriggered)
         {
@@ -81,7 +83,7 @@ public class ManagerGameStartScene : NetworkBehaviour
         }
     }
 
-    private void TriggerWinCondition()
+    public void TriggerWinCondition()
     {
         isWinTriggered = true;
         ActivateWinScreenClientRpc();
@@ -105,16 +107,18 @@ public class ManagerGameStartScene : NetworkBehaviour
     }
 
     [ServerRpc(RequireOwnership = false)]
-    private void ResetTimerOnServerRpc()
+    public void ResetTimerOnServerRpc()
     {
         LevelTimer.Instance?.ResetTimer();
     }
 
-    private void TeleportPlayers(Vector3 newPosition)
+    public void TeleportPlayers(Vector3 newPosition)
     {
         TeleportPlayersClientRpc(newPosition);
         isTeleported = true;
     }
+
+
 
     [ClientRpc]
     private void TeleportPlayersClientRpc(Vector3 newPosition)
@@ -135,7 +139,12 @@ public class ManagerGameStartScene : NetworkBehaviour
     {
         if (IsServer)
         {
-            SceneManager.LoadScene("LobbyTutorial_Done");
+            if (GameObject.Find("NetworkManager"))
+            {
+                Destroy(GameObject.Find("NetworkManager"));
+            }
+            SceneManager.LoadScene("UpdatedLobbyTutorial_Done");
+
         }
     }
 }

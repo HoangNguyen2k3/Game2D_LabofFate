@@ -40,6 +40,8 @@ public class EnemyAI : NetworkBehaviour
 
     private DirectionEnemy directionEnemy;
 
+    public bool isActive = true;
+
 
     public bool followPlayer = false;
 
@@ -87,7 +89,7 @@ public class EnemyAI : NetworkBehaviour
     {
 
         if (!IsServer) return;
- 
+        if(!isActive) { return; }
         if (target == null)
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -202,7 +204,7 @@ public class EnemyAI : NetworkBehaviour
                                             Debug.Log(2);
                                             directionEnemy.SetFlipX(true);
                                         }*/
-                    Debug.Log(43);
+                //    Debug.Log(43);
                     directionEnemy.SetFlipX(true);
                 }
                 else
@@ -217,7 +219,7 @@ public class EnemyAI : NetworkBehaviour
                                             Debug.Log(4);
                                             directionEnemy.SetFlipX(false);
                                         }*/
-                    Debug.Log(44);
+                 //   Debug.Log(44);
                     directionEnemy.SetFlipX(false);
 
                 }

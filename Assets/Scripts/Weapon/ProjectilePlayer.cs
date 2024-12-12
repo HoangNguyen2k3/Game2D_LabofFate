@@ -10,9 +10,18 @@ public class ProjectilePlayer : NetworkBehaviour
     [SerializeField] private float projectileRange = 10f;
     [SerializeField] private int damageAttack = 1;
     [SerializeField] private GameObject bullet;
-    [SerializeField] private GameObject addObject;
+    
     private Vector3 startPosition;
     private Vector3 moveDirection;
+    [SerializeField] private bool isFireBullet = false;
+    [SerializeField] private bool isIceBullet=false;
+    [SerializeField] private bool isThunderBullet = false;
+    [Header("Fire Bullet")]
+    [SerializeField] private GameObject addObject;
+    [Header("Thunder Bullet")]
+    [SerializeField] private GameObject thunderAdd;
+    [Header("Ice Bullet")]
+    [SerializeField] private GameObject IceAdd;
 
     private void Start()
     {
@@ -59,11 +68,25 @@ public class ProjectilePlayer : NetworkBehaviour
 
         if (!other.isTrigger && (enemyHealth || other.gameObject.layer == LayerMask.NameToLayer("Obstacles")))
         {
-            if (enemyHealth)
+            if (enemyHealth&&isFireBullet)
             {
                 enemyHealth.TakedDamage(damageAttack);
                 Instantiate(particalOnHitPrefabVFX, transform.position, transform.rotation);
                 Instantiate(addObject, transform.position,Quaternion.identity);
+            }
+            else if (enemyHealth&&isIceBullet)
+            {
+                enemyHealth.TakedDamageInIceBullet(damageAttack);
+                Instantiate(particalOnHitPrefabVFX, transform.position, transform.rotation);
+                Vector2 newPos = enemyHealth.transform.position;
+                newPos.y = enemyHealth.transform.position.y-1.2f;
+                Instantiate(IceAdd, newPos, Quaternion.identity);
+            }
+            else if (enemyHealth && isThunderBullet)
+            {
+                enemyHealth.TakedDamage(damageAttack);
+                Instantiate(particalOnHitPrefabVFX, transform.position, transform.rotation);
+                Instantiate(thunderAdd, transform.position, Quaternion.identity);
             }
             else if (other.gameObject.layer == LayerMask.NameToLayer("Obstacles"))
             {

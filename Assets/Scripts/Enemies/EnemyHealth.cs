@@ -3,6 +3,7 @@ using Unity.Netcode;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Rendering;
 
 public class EnemyHealth : NetworkBehaviour
 {
@@ -13,6 +14,8 @@ public class EnemyHealth : NetworkBehaviour
     [SerializeField] private float knockBackThrust = 15f;
     private Animator animator;
     private EnemyAI enemyAI;
+    private EnemyStandAI enemyStand;
+    private EnemyPathFinding enemyPathFinding;
     [SerializeField] private Slider healthBar;
     [SerializeField] private GameObject healthBarObject;
     [SerializeField] private GameObject deathVFXPrefab;
@@ -29,8 +32,17 @@ public class EnemyHealth : NetworkBehaviour
 
     void Start()
     {
+        enemyPathFinding = GetComponent<EnemyPathFinding>();
         flash = GetComponent<Flash>();
-        enemyAI = GetComponent<EnemyAI>();
+        if (GetComponent<EnemyAI>())
+        {enemyAI = GetComponent<EnemyAI>();
+
+        }else if (GetComponent<EnemyStandAI>())
+        {
+            enemyStand= GetComponent<EnemyStandAI>();
+        }
+        
+        
         player = GameObject.FindGameObjectWithTag("Player");
         currentHealth.Value = StartingHealth;
         knockback = GetComponent<KnockBack>();
@@ -76,6 +88,7 @@ public class EnemyHealth : NetworkBehaviour
         if (isDead.Value) {
             Destroy(healthBarObject);
             return; }
+        Debug.Log("nc112c");
         if (!knockback.GetKnockBack)
         {
             currentHealth.Value -= damage;
@@ -92,6 +105,33 @@ public class EnemyHealth : NetworkBehaviour
         }
 
 
+    }
+    public void TakedDamageInIceBullet(float damage)
+    {
+        DetectDeath();
+        if (isDead.Value)
+        {
+            Destroy(healthBarObject);
+            return;
+        }
+        if (enemyAI)
+        {
+            enemyAI.isActive = false;
+        }else if (enemyStand)
+        {
+            enemyStand.isActive = false;
+        }
+       
+        enemyPathFinding.isIceFreeze = true;
+        StartCoroutine(FreezeTime());
+        currentHealth.Value -= damage;
+        flash.TriggerFlashServerRpc();
+    }
+    private IEnumerator FreezeTime()
+    {
+        yield return new WaitForSeconds(2f);
+        enemyPathFinding.isIceFreeze = false;
+        enemyAI.isActive = true;
     }
     public void TakedDamageNotInPlayer(float damage,Transform transform_new)    {
         DetectDeath();
