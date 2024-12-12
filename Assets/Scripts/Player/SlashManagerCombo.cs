@@ -15,9 +15,12 @@ public class SlashManagerCombo : NetworkBehaviour
     private ActiveWeapon weapon;
     [SerializeField] private GameObject arpalet;
 
+    public PlayerFireSlash fireSlash;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        fireSlash = GetComponentInChildren<PlayerFireSlash>();
     }
 
     private void Start()
