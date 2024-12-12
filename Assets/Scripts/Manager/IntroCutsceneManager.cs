@@ -13,7 +13,7 @@ public class IntroCutsceneManager : MonoBehaviour
         cutsceneTime -= Time.deltaTime;
         if (cutsceneTime <= 0 || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene("LobbyTutorial_Done");
+            SceneManager.LoadScene("UpdatedLobbyTutorial_Done");
         }
     }
 }

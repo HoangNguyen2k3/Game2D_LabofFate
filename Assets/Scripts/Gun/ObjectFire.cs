@@ -7,10 +7,12 @@ public class ObjectFire : MonoBehaviour
     [SerializeField] private float damageAttack;
     [SerializeField] private float timeend = 3f;
     bool canDamage = true;
+    public bool isIce = false;
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (canDamage)
+        if (canDamage&&!isIce)
         {
+            Debug.Log("asd");
             EnemyHealth enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
             if (enemyHealth)
             {
