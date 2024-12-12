@@ -67,7 +67,7 @@ public class Boss2 : BossCore
 
     private void SelectState()
     {
-        if (!isInPhaseTwo && health && health.currentHealth.Value <= maxHeath / 2f)
+        if (!isInPhaseTwo && health && health.currentHealth.Value <= 25f)
         {
             stateMachine.SetState(transitionState);
             isInPhaseTwo = true;
