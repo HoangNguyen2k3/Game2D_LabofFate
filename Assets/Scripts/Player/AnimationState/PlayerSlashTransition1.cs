@@ -18,6 +18,21 @@ public class PlayerSlashTransition1 : StateMachineBehaviour
         if (Input.GetMouseButtonDown(0) || slashManager.canCombo.Value)
         {
             slashManager.animator.Play("Slash2" + slashManager.GetDirectionStr());
+            switch (slashManager.currentElement)
+            {
+                case SlashManagerCombo.Element.None:
+                    break;
+                case SlashManagerCombo.Element.Fire:
+                    slashManager.fireSlash.Active(slashManager.MousePositionToUnitVector());
+                    break;
+                case SlashManagerCombo.Element.Lighting:
+                    slashManager.lightningSlash.Active(slashManager.MousePositionToUnitVector());
+                    break;
+                case SlashManagerCombo.Element.Ice:
+                    slashManager.iceSlash.Active(slashManager.MousePositionToUnitVector());
+                    break;
+            }
+            
         }
     }
 
