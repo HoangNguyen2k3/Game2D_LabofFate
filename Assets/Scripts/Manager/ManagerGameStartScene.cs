@@ -135,7 +135,7 @@ public class ManagerGameStartScene : NetworkBehaviour
     {
         if (IsServer)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene("LobbyTutorial_Done");
         }
     }
 }

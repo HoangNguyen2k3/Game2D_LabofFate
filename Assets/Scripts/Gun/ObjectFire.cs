@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectFire : MonoBehaviour
 {
     [SerializeField] private float damageAttack;
-    private float timeend = 5f;
+    [SerializeField] private float timeend = 3f;
     bool canDamage = true;
     private void OnTriggerStay2D(Collider2D collision)
     {
