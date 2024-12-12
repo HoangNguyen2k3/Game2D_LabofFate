@@ -41,7 +41,8 @@ public class Boss2 : BossCore
 
     private void Update()
     {
-    
+        if (health.isDead.Value) return;
+
         if (target == null)
         {
             target = GameObject.FindGameObjectWithTag("Player");

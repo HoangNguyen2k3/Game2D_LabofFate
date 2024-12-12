@@ -31,7 +31,7 @@ public class Boss2TransitionState : BossState
         
         circleBulletSpawner.isActive = true;
         circleBulletSpawner.numberOfProjectile = 3;
-        circleBulletSpawner.rotateDeg = 10;
+        circleBulletSpawner.rotateDeg = 5;
         circleBulletSpawner.shootCooldown = 0.05f;
         circleBulletSpawner.numberOfBurst = 100;
         
