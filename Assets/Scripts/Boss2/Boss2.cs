@@ -41,7 +41,8 @@ public class Boss2 : BossCore
 
     private void Update()
     {
-    
+        if (health.isDead.Value) return;
+
         if (target == null)
         {
             target = GameObject.FindGameObjectWithTag("Player");
@@ -67,7 +68,7 @@ public class Boss2 : BossCore
 
     private void SelectState()
     {
-        if (!isInPhaseTwo && health && health.currentHealth.Value <= maxHeath / 2f)
+        if (!isInPhaseTwo && health && health.currentHealth.Value <= 25f)
         {
             stateMachine.SetState(transitionState);
             isInPhaseTwo = true;
