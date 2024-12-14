@@ -83,7 +83,11 @@ public class Boss3 : BossCore
 
     private void Update() 
     {
-        if (health.currentHealth.Value <= 0) return;
+        if (target == null)
+        {
+            target = GameObject.FindGameObjectWithTag("Player");
+        }
+        
         if (currentPhase == Phase.PhaseOne && health.currentHealth.Value <= 65f)
         {
             currentPhase = Phase.PhaseTwo;
@@ -173,6 +177,7 @@ public class Boss3 : BossCore
 
     public Vector2 GetTargetPosition()
     {
+        Debug.Log(GetDirToTarget());
         return target != null ? target.transform.position : Vector2.zero;
     }
 }
