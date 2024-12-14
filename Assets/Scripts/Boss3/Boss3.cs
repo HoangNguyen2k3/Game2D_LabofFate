@@ -17,6 +17,10 @@ public class Boss3 : BossCore
     public BossState armSmashState;
     public BossState armLaserState;
     public BossState spinAttackState;
+    public BossState swordSwingState;
+
+    public Boss3Arm l2arm;
+    public Boss3Arm r2arm;
 
     public Vector2 movePosition;
     public float angularSpeed = 15f;
@@ -26,17 +30,20 @@ public class Boss3 : BossCore
     private BossState[] phaseOneStates;
     private BossState[] phaseTwoStates;
     private BossState[] phaseThreeStates;
+    private BossState[] phaseFourStates;
 
     public enum Phase {
         PhaseOne,
         PhaseTwo,
-        PhaseThree
+        PhaseThree,
+        PhaseFour
     }
 
     public Phase currentPhase;
     
     private bool enterPhaseTwo;
     private bool enterPhaseThree;
+    private bool enterPhaseFour;
 
     private void Awake()
     {
@@ -65,18 +72,31 @@ public class Boss3 : BossCore
             chaseState, armSmashState, armSmashState, armLaserState, armLaserState
         };
 
+        phaseFourStates = new BossState[] {
+            swordSwingState, armSmashState, armLaserState
+        };
+
         currentPhase = Phase.PhaseOne;
+        l2arm.gameObject.SetActive(false);
+        r2arm.gameObject.SetActive(false);
     }
 
     private void Update() 
     {
-        if (currentPhase == Phase.PhaseOne && health.currentHealth.Value <= 45f)
+        if (health.currentHealth.Value <= 0) return;
+        if (currentPhase == Phase.PhaseOne && health.currentHealth.Value <= 65f)
         {
             currentPhase = Phase.PhaseTwo;
         }
-        if (currentPhase == Phase.PhaseTwo && health.currentHealth.Value <= 20f)
+        if (currentPhase == Phase.PhaseTwo && health.currentHealth.Value <= 40f)
         {
             currentPhase = Phase.PhaseThree;
+        }
+        if (currentPhase == Phase.PhaseThree && health.currentHealth.Value<= 20f)
+        {
+            l2arm.gameObject.SetActive(true);
+            r2arm.gameObject.SetActive(true);
+            currentPhase = Phase.PhaseFour;
         }
 
         if (state.IsComplete)
@@ -128,6 +148,16 @@ public class Boss3 : BossCore
                 }
                 choice = Random.Range(0, phaseThreeStates.Length);
                 selectedState = phaseThreeStates[choice];
+                break;
+            case Phase.PhaseFour:
+                if (!enterPhaseFour)
+                {
+                    enterPhaseFour = true;
+                    selectedState = swordSwingState;
+                    break;
+                }
+                choice = Random.Range(0, phaseFourStates.Length);
+                selectedState = phaseFourStates[choice];
                 break;
         }
         stateMachine.SetState(selectedState, true);
