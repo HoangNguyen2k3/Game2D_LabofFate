@@ -29,15 +29,21 @@ public class ManagerLevelGame : NetworkBehaviour
         {
             Boss boss1 = FindObjectOfType<Boss>();
             Boss2 boss2 = FindObjectOfType<Boss2>();
+            Boss3 boss3=FindObjectOfType<Boss3>();
             if (boss1 == null && !isTeleported1)
             {
                 TeleportPlayers(new Vector3(210, -110, 0));
                 gameStartScene.ResetTimerOnServerRpc();
                 current_map_element.Value = 'i';
-                Debug.Log(current_map_element.Value);
             }
-            
-            if (boss2 == null && !isWinTriggered)
+            if(boss2 == null && !isTeleported2 &&isTeleported1)
+            {
+                TeleportPlayerFinal(new Vector3(-118,5,0));
+                gameStartScene.ResetTimerOnServerRpc();
+                current_map_element.Value = 't';
+
+            }
+            if (boss3 == null && !isWinTriggered)
             {
                 gameStartScene.TriggerWinCondition();
             }
@@ -51,7 +57,11 @@ public class ManagerLevelGame : NetworkBehaviour
         isTeleported1 = true;
     }
 
-
+    public void TeleportPlayerFinal(Vector3 newPosition)
+    {
+        TeleportPlayersClientRpc(newPosition);
+        isTeleported2 = true;
+    }
 
     [ClientRpc]
     private void TeleportPlayersClientRpc(Vector3 newPosition)

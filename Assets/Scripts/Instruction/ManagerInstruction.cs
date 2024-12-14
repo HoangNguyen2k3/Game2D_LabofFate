@@ -5,6 +5,7 @@ using UnityEngine;
 public class ManagerInstruction : MonoBehaviour
 {
     [SerializeField] private GameObject instruction;
+    private float timeIntruction = 16f;
     private bool onlyOneTimeActive = false;
     private void Awake()
     {
@@ -25,8 +26,19 @@ public class ManagerInstruction : MonoBehaviour
         if (collision.CompareTag("Player")&&instruction.activeSelf==false)
         {
             instruction.SetActive(true);
+            StartCoroutine(stopPlayer(collision.gameObject));
+
         }
        
+    }
+    private IEnumerator stopPlayer(GameObject player)
+    {
+        player.GetComponent<PlayerController>().stopMovingInstruction = true;
+        yield return new WaitForSeconds(timeIntruction);
+        player.GetComponent<PlayerController>().stopMovingInstruction = false;
+        onlyOneTimeActive = true;
+        instruction.SetActive(false);
+
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

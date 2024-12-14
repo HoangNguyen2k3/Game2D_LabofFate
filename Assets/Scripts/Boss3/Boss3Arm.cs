@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Runtime.CompilerServices;
-using TreeEditor;
 using UnityEngine;
 
 public class Boss3Arm : MonoBehaviour

@@ -24,7 +24,7 @@ public class PlayerController : NetworkBehaviour
     private PlayerHealth health;
     private KnockBack knockBack;
     public string DirectionStr {get; private set;} = "Down";
-
+    public bool stopMovingInstruction = false;
 
     private void Awake()
     {
@@ -40,10 +40,14 @@ public class PlayerController : NetworkBehaviour
         if (health.isDead.Value) return;
 
         UpdateDirectionStr();
-        if(isDashing || isAttacking) return;
+        if (stopMovingInstruction) {
+            rb.velocity = Vector2.zero;
+            return; }
+        if (isDashing || isAttacking) return;
         
         if (IsOwner || playTest)
         {
+           
             moveInput.x = Input.GetAxisRaw("Horizontal");
             moveInput.y = Input.GetAxisRaw("Vertical");
             moveInput.Normalize();
@@ -64,9 +68,14 @@ public class PlayerController : NetworkBehaviour
 
     private void FixedUpdate()
     {
-        if(isDashing) return;
-        if (IsOwner || playTest)
+        
+        if (IsOwner)
         {
+            if (stopMovingInstruction
+                ) {
+                rb.velocity = Vector2.zero;
+                moveInput = Vector2.zero; return; }
+            if (isDashing) return;
             if (knockBack.GetKnockBack) return;
             if (isAttacking)
             {

@@ -13,7 +13,6 @@ public class ManagerGameStartScene : NetworkBehaviour
     [SerializeField] private GameObject winGame;
     [SerializeField] private GameObject loseGame;
 
-    private bool isTeleported = false;
     private bool isWinTriggered = false;
     public float timer;
 
@@ -112,12 +111,12 @@ public class ManagerGameStartScene : NetworkBehaviour
         LevelTimer.Instance?.ResetTimer();
     }
 
-    public void TeleportPlayers(Vector3 newPosition)
+/*    public void TeleportPlayers(Vector3 newPosition)
     {
         TeleportPlayersClientRpc(newPosition);
         isTeleported = true;
     }
-
+*/
 
 
     [ClientRpc]

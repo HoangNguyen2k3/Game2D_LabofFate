@@ -23,7 +23,7 @@ public class ProjectilePlayer : NetworkBehaviour
     [Header("Ice Bullet")]
     [SerializeField] private GameObject IceAdd;
 
-    private void Start()
+/*    private void Start()
     {
         startPosition = transform.position;
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -31,13 +31,21 @@ public class ProjectilePlayer : NetworkBehaviour
         moveDirection = (mousePos - startPosition).normalized;
         float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
-       // SpawnAdditionalBulletsServerRpc(angle);
+    }*/
+    public void Initialize(Vector3 direction)
+    {
+        startPosition = transform.position;
+        moveDirection = direction.normalized;
+        float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0f, 0f, angle);
     }
-
     private void Update()
     {
-        MoveProjectile();
-        DetectFireDistance();
+        if (IsServer)
+        {
+            MoveProjectile();
+            DetectFireDistance();
+        }
     }
 
     public void UpdateProjectileRange(float projectileRange)
@@ -63,35 +71,52 @@ public class ProjectilePlayer : NetworkBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (!IsServer) { return; }
         EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
         Indestructive indestructible = other.gameObject.GetComponent<Indestructive>();
 
         if (!other.isTrigger && (enemyHealth || other.gameObject.layer == LayerMask.NameToLayer("Obstacles")))
         {
-            if (enemyHealth&&isFireBullet)
+            if (enemyHealth && isFireBullet)
             {
                 enemyHealth.TakedDamage(damageAttack);
                 Instantiate(particalOnHitPrefabVFX, transform.position, transform.rotation);
-                Instantiate(addObject, transform.position,Quaternion.identity);
+                GameObject instance = Instantiate(addObject, transform.position, Quaternion.identity);
+                NetworkObject networkObject1 = instance.GetComponent<NetworkObject>();
+                if (networkObject1 != null)
+                {
+                    networkObject1.Spawn(true);
+                }
             }
-            else if (enemyHealth&&isIceBullet)
+            else if (enemyHealth && isIceBullet)
             {
                 enemyHealth.TakedDamageInIceBullet(damageAttack);
                 Instantiate(particalOnHitPrefabVFX, transform.position, transform.rotation);
                 Vector2 newPos = enemyHealth.transform.position;
-                newPos.y = enemyHealth.transform.position.y-1.2f;
-                Instantiate(IceAdd, newPos, Quaternion.identity);
+                newPos.y -= 1.2f;
+                GameObject instance = Instantiate(IceAdd, newPos, Quaternion.identity);
+                NetworkObject networkObject1 = instance.GetComponent<NetworkObject>();
+                if (networkObject1 != null)
+                {
+                    networkObject1.Spawn(true);
+                }
             }
             else if (enemyHealth && isThunderBullet)
             {
                 enemyHealth.TakedDamage(damageAttack);
                 Instantiate(particalOnHitPrefabVFX, transform.position, transform.rotation);
-                Instantiate(thunderAdd, transform.position, Quaternion.identity);
+                GameObject instance = Instantiate(thunderAdd, transform.position, Quaternion.identity);
+                NetworkObject networkObject1 = instance.GetComponent<NetworkObject>();
+                if (networkObject1 != null)
+                {
+                    networkObject1.Spawn(true);
+                }
             }
             else if (other.gameObject.layer == LayerMask.NameToLayer("Obstacles"))
             {
                 Instantiate(particalOnHitPrefabVFX, transform.position, transform.rotation);
             }
+
 
             NetworkObject networkObject = gameObject.GetComponent<NetworkObject>();
             if (networkObject != null && networkObject.IsSpawned)
@@ -103,23 +128,8 @@ public class ProjectilePlayer : NetworkBehaviour
 
     private void MoveProjectile()
     {
-        transform.position += moveDirection * moveSpeed * Time.deltaTime;
-    }
-    [ServerRpc(RequireOwnership = false)]
-    private void SpawnAdditionalBulletsServerRpc(float baseAngle)
-    {
-        float angleOffset1 = baseAngle + 10f;
-        float angleOffset2 = baseAngle - 10f;
 
-        Vector3 direction1 = new Vector3(Mathf.Cos(angleOffset1 * Mathf.Deg2Rad), Mathf.Sin(angleOffset1 * Mathf.Deg2Rad), 0f).normalized;
-        Vector3 direction2 = new Vector3(Mathf.Cos(angleOffset2 * Mathf.Deg2Rad), Mathf.Sin(angleOffset2 * Mathf.Deg2Rad), 0f).normalized;
-
-        GameObject bullet1 = Instantiate(bullet, transform.position, Quaternion.Euler(0f, 0f, angleOffset1));
-        GameObject bullet2 = Instantiate(bullet, transform.position, Quaternion.Euler(0f, 0f, angleOffset2));
-        bullet1.GetComponent<ProjectilePlayerChildren>().SetMoveDirection(direction1);
-        bullet2.GetComponent<ProjectilePlayerChildren>().SetMoveDirection(direction2);
-        bullet1.GetComponent<NetworkObject>().Spawn(true);
-        bullet2.GetComponent<NetworkObject>().Spawn(true);
-
+            transform.position += moveDirection * moveSpeed * Time.deltaTime;
+     
     }
 }

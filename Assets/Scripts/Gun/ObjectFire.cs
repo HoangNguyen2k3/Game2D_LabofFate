@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-public class ObjectFire : MonoBehaviour
+public class ObjectFire : NetworkBehaviour
 {
     [SerializeField] private float damageAttack;
     [SerializeField] private float timeend = 3f;
@@ -10,25 +11,27 @@ public class ObjectFire : MonoBehaviour
     public bool isIce = false;
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (canDamage&&!isIce)
+        if (canDamage&&!isIce&&IsServer)
         {
-            Debug.Log("asd");
             EnemyHealth enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
             if (enemyHealth)
             {
                 enemyHealth.TakedDamageNotInPlayer(damageAttack, transform);
             }
-       //    StartCoroutine(CoolDown());
         }
     }
     private void Start()
     {
-        StartCoroutine(DestroyGameOjectCurrent());
+        if (IsServer)
+        {
+   StartCoroutine(DestroyGameOjectCurrent());
+        }
+     
     }
     private IEnumerator DestroyGameOjectCurrent()
     {
         yield return new WaitForSeconds(timeend);
-        Destroy(gameObject);
+        gameObject.GetComponent<NetworkObject>().Despawn();
     }
     private IEnumerator CoolDown()
     {
