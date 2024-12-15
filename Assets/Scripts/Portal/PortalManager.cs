@@ -9,10 +9,13 @@ public class PortalManager : NetworkBehaviour
     [SerializeField] private GameObject enemyPrefab; 
     [SerializeField] private float timeSpawn = 1f;
     public bool isSpawning = false;
-
+    [SerializeField] private int num_enemySpawnMin = 0;
+    [SerializeField] private int num_enemySpawnMax = 5;
+    public bool doneSolve = false;
     void Update()
     {
-        if (IsServer && !isActive && !isSpawning)
+        if (doneSolve) { return; }
+        if (IsServer && isActive && !isSpawning)
         {
             StartCoroutine(SpawnEnemy());
         }
@@ -20,19 +23,21 @@ public class PortalManager : NetworkBehaviour
 
     private IEnumerator SpawnEnemy()
     {
+       
         isSpawning = true;
 
-        GameObject enemyInstance = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
-        NetworkObject networkObject = enemyInstance.GetComponent<NetworkObject>();
+        int num_enemy = Random.Range(num_enemySpawnMin, num_enemySpawnMax);
+        for(int i=0; i<num_enemy; i++)
+        {
+            GameObject enemyInstance = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+            NetworkObject networkObject = enemyInstance.GetComponent<NetworkObject>();
 
-        if (networkObject != null)
-        {
-            networkObject.Spawn(); 
+            if (networkObject != null)
+            {
+                networkObject.Spawn();
+            }
         }
-        else
-        {
-            Debug.LogError("Prefab c?a quái v?t không có NetworkObject!");
-        }
+
 
         yield return new WaitForSeconds(timeSpawn);
         isSpawning = false;

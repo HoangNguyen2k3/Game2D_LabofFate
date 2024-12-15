@@ -19,6 +19,15 @@ public class ObjectFire : NetworkBehaviour
                 enemyHealth.TakedDamageNotInPlayer(damageAttack, transform);
             }
         }
+        if (isIce)
+        {
+
+            EnemyHealth enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
+            if (enemyHealth)
+            {
+                enemyHealth.TakedDamageInIceBullet(damageAttack);
+            }
+        }
     }
     private void Start()
     {

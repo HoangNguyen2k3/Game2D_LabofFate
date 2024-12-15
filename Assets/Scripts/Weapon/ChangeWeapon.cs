@@ -16,7 +16,6 @@ public class ChangeWeapon : MonoBehaviour
         fireWeapon.SetActive(true);
         iceWeapon.SetActive(false);
         thunderWeapon.SetActive(false);
-        Debug.Log("set thunder");
         TryInitializeManageLevel();
 
         if (manageLevel != null)

@@ -12,6 +12,7 @@ public class Door : NetworkBehaviour
 
 
     public NetworkVariable<bool> isOpen=new NetworkVariable<bool>(false,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Server);
+    public NetworkVariable<bool> isClose = new NetworkVariable<bool>(false, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
 
     private void Awake() {
         collider2d = GetComponent<Collider2D>();
@@ -22,6 +23,11 @@ public class Door : NetworkBehaviour
         {
             OpenDoor();
             isOpen.Value = false;
+        }
+        if(isClose.Value)
+        {
+            CloseDoor();
+            isClose.Value = false;
         }
     }
     public void OpenDoor()
