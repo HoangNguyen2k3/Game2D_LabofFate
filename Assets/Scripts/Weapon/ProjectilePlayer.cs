@@ -74,7 +74,16 @@ public class ProjectilePlayer : NetworkBehaviour
         if (!IsServer) { return; }
         EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
         Indestructive indestructible = other.gameObject.GetComponent<Indestructive>();
-
+        if (other.GetComponent<FireInPuzzle>()) {
+            Vector2 newPos = other.transform.position;
+            newPos.y -= 1.2f;
+            GameObject instance = Instantiate(IceAdd, newPos, Quaternion.identity);
+            NetworkObject networkObject1 = instance.GetComponent<NetworkObject>();
+            if (networkObject1 != null)
+            {
+                networkObject1.Spawn(true);
+            }
+        }
         if (!other.isTrigger && (enemyHealth || other.gameObject.layer == LayerMask.NameToLayer("Obstacles")))
         {
             if (enemyHealth && isFireBullet)
@@ -90,7 +99,7 @@ public class ProjectilePlayer : NetworkBehaviour
             }
             else if (enemyHealth && isIceBullet)
             {
-                enemyHealth.TakedDamageInIceBullet(damageAttack);
+               enemyHealth.IceBullet(damageAttack);
                 Instantiate(particalOnHitPrefabVFX, transform.position, transform.rotation);
                 Vector2 newPos = enemyHealth.transform.position;
                 newPos.y -= 1.2f;

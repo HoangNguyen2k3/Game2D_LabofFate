@@ -24,7 +24,7 @@ public class SlashManagerCombo : NetworkBehaviour
         Ice
     }
 
-    public Element currentElement;
+    public NetworkVariable< Element> currentElement = new NetworkVariable<Element>(Element.Fire,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Server);
     public PlayerFireSlash fireSlash;
     public PlayerLightningSlash lightningSlash;
     public PlayerIceSlash iceSlash;

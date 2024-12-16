@@ -14,14 +14,14 @@ public class BossLaser : MonoBehaviour
     
     private void Start()
     {
-        if (target == null)
+        if (target == null&& GameObject.FindGameObjectWithTag("Player"))
         {
             target = GameObject.FindGameObjectWithTag("Player").transform;
         }
     }
     private void Update()
     {
-        if (target == null)
+        if (target == null&& GameObject.FindGameObjectWithTag("Player"))
         {
             target = GameObject.FindGameObjectWithTag("Player").transform;
         }

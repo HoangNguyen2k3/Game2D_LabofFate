@@ -16,6 +16,7 @@ public class ManagerLevelGame : NetworkBehaviour
         if(!FindObjectOfType<ManagerGameStartScene>())
         gameStartScene = FindObjectOfType<ManagerGameStartScene>();
         current_map_element.Value = 'f';
+
     }
     private void Update()
     {
@@ -35,20 +36,34 @@ public class ManagerLevelGame : NetworkBehaviour
                 TeleportPlayers(new Vector3(210, -110, 0));
                 gameStartScene.ResetTimerOnServerRpc();
                 current_map_element.Value = 'i';
+                GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
+                if (IsServer)
+                {
+                    for (int i = 0; i < player.Length; i++)
+                    {
+                        player[i].GetComponent<SlashManagerCombo>().currentElement.Value = SlashManagerCombo.Element.Ice;
+                    }      
+                }
             }
             if(boss2 == null && !isTeleported2 &&isTeleported1)
             {
                 TeleportPlayerFinal(new Vector3(-118,5,0));
                 gameStartScene.ResetTimerOnServerRpc();
                 current_map_element.Value = 't';
+                GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
+                if (IsServer)
+                {
+                    for (int i = 0; i < player.Length; i++)
+                    {
+                        player[i].GetComponent<SlashManagerCombo>().currentElement.Value = SlashManagerCombo.Element.Lighting;
+                    }
+                }
 
             }
             if (boss3 == null && !isWinTriggered)
             {
                 gameStartScene.TriggerWinCondition();
             }
-
-
         }
     }
     public void TeleportPlayers(Vector3 newPosition)

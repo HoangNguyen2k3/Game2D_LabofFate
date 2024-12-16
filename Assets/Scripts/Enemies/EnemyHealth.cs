@@ -88,7 +88,6 @@ public class EnemyHealth : NetworkBehaviour
         if (isDead.Value) {
             Destroy(healthBarObject);
             return; }
-        Debug.Log("nc112c");
         if (!knockback.GetKnockBack)
         {
             currentHealth.Value -= damage;
@@ -114,22 +113,31 @@ public class EnemyHealth : NetworkBehaviour
             Destroy(healthBarObject);
             return;
         }
+        enemyPathFinding.isIceFreeze = true;
+     //   StartCoroutine(FreezeTime());
+        if (!flash.takedDamage)
+        {
+            currentHealth.Value -= damage;
+            flash.TriggerFlashServerRpc();
+        }
+        
+    }
+    public void IceBullet(float damage)
+    {
         if (enemyAI)
         {
             enemyAI.isActive = false;
-        }else if (enemyStand)
+        }
+        else if (enemyStand)
         {
             enemyStand.isActive = false;
         }
-       
         enemyPathFinding.isIceFreeze = true;
         StartCoroutine(FreezeTime());
-        currentHealth.Value -= damage;
-        flash.TriggerFlashServerRpc();
     }
     private IEnumerator FreezeTime()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         enemyPathFinding.isIceFreeze = false;
         enemyAI.isActive = true;
     }
@@ -150,7 +158,7 @@ public class EnemyHealth : NetworkBehaviour
     }
     private void DetectDeath()
     {
-        if (currentHealth.Value <= 0)
+        if (currentHealth.Value <= 0&&isDead.Value==false)
         {
             isDead.Value = true;
             StartCoroutine(PlayDeathAnimationEnemy());
@@ -161,7 +169,10 @@ public class EnemyHealth : NetworkBehaviour
     private IEnumerator PlayDeathAnimationEnemy()
     {
         animator.SetTrigger("Death");
-        DropRandomItem();
+        if (dropItems_big && dropItems_medium && dropItems_small)
+        {
+            DropRandomItem();
+        }
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length + addTimeAnim);
         
         Destroy(gameObject);
