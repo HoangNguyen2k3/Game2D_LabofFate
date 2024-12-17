@@ -25,7 +25,6 @@ public class PlayerController : NetworkBehaviour
     private KnockBack knockBack;
     public string DirectionStr {get; private set;} = "Down";
     public bool stopMovingInstruction = false;
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -92,11 +91,12 @@ public class PlayerController : NetworkBehaviour
         canDash = false;
         isDashing = true;
         health.canTakeDamage = false;
-
+        
         rb.velocity = new Vector2 (dashDirection.x * dashSpeed, dashDirection.y * dashSpeed);
      //   ToggleTrailRendererServerRpc(true);
-
+        knockBack.canBeKnockback = false;
         yield return new WaitForSeconds(dashDuration);
+        knockBack.canBeKnockback = true;
         // ToggleTrailRendererServerRpc(false); 
         isDashing = false;
         health.canTakeDamage = true;

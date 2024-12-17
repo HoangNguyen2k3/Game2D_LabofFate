@@ -31,8 +31,10 @@ public class PlayerHealth : NetworkBehaviour
             return;
         }
         canTakeDamage = false ;
+        
         StartCoroutine(waitForTakeDamage());
         knockBack.GettingKnockBack(hitTranform, knockBackThrust);
+        knockBack.canBeKnockback = false;
         flash.TriggerFlashServerRpc();
         currentHealth-=damage;
         if (currentHealth <= 0)
@@ -83,6 +85,7 @@ public class PlayerHealth : NetworkBehaviour
     private IEnumerator waitForTakeDamage()
     {
         yield return new WaitForSeconds(0.5f);
+        knockBack.canBeKnockback = true;
         canTakeDamage = true;
     }
     private void Update()

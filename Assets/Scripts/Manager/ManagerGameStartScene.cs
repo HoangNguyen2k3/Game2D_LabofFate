@@ -37,7 +37,11 @@ public class ManagerGameStartScene : NetworkBehaviour
         for (int i = 0; i < positionSpawn.Count; i++)
         {
             GameObject spawnEnemy = Instantiate(typeEnemySpawn[i], positionSpawn[i].position, Quaternion.identity);
-            spawnEnemy.GetComponent<NetworkObject>().Spawn();
+            if (spawnEnemy.GetComponent<NetworkObject>())
+            {
+                spawnEnemy.GetComponent<NetworkObject>().Spawn();
+            }
+            
         }
     }
 

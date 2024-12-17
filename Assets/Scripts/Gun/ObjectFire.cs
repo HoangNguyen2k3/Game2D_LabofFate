@@ -18,8 +18,9 @@ public class ObjectFire : NetworkBehaviour
             {
                 enemyHealth.TakedDamageNotInPlayer(damageAttack, transform);
             }
+            StartCoroutine(CoolDown());
         }
-        if (isIce)
+        if (canDamage &&isIce)
         {
 
             EnemyHealth enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
@@ -27,6 +28,7 @@ public class ObjectFire : NetworkBehaviour
             {
                 enemyHealth.TakedDamageInIceBullet(damageAttack);
             }
+            StartCoroutine(CoolDown());
         }
     }
     private void Start()
@@ -45,7 +47,7 @@ public class ObjectFire : NetworkBehaviour
     private IEnumerator CoolDown()
     {
         canDamage = false;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         canDamage = true;
         
     }

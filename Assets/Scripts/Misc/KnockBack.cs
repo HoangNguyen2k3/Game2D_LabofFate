@@ -9,6 +9,7 @@ public class KnockBack :  NetworkBehaviour
     private Rigidbody2D rb;
     [SerializeField] public float timeKnockBack = 0.2f;
     
+    public bool canBeKnockback = true;
     
     void Start()
     {
@@ -17,6 +18,7 @@ public class KnockBack :  NetworkBehaviour
 
     public void GettingKnockBack(Transform damageSoure,float knockbackThrust)
     {
+        if (!canBeKnockback) return;
         GetKnockBack = true;
         Vector2 direction_knockBack = (-damageSoure.position + transform.position).normalized * knockbackThrust * rb.mass;
         rb.AddForce(direction_knockBack, ForceMode2D.Impulse);
