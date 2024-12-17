@@ -11,7 +11,7 @@ public class MapEnterPortalPuzzle : NetworkBehaviour
     [SerializeField] private string name_portal;
     [SerializeField] private GameObject fire;
     private bool openPuzzle = false;
-    private bool donePuzzle = false;
+    public bool donePuzzle = false;
     private bool begin_portal=false;
     private void Start()
     {

@@ -25,7 +25,7 @@ public class FireInPuzzle : NetworkBehaviour
         {
             StartCoroutine(ChangePos());
         }
-        if (player_1 == null)
+        if (player_1 == null&& FindFirstObjectByType<PlayerController>())
         {
             player_1 = FindFirstObjectByType<PlayerController>().gameObject;
             GameObject[] player = GameObject.FindGameObjectsWithTag("Player");

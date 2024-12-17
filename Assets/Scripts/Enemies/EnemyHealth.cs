@@ -23,6 +23,9 @@ public class EnemyHealth : NetworkBehaviour
   //  [SerializeField] private TextMeshProUGUI name_enemy;
     public NetworkVariable<bool> isDead = new NetworkVariable<bool>(false);
     private Flash flash;
+    private Collider2D collider_enemy;
+
+    public bool isInteractive = true;
 
     [SerializeField] private float addTimeAnim=1f;
 
@@ -34,6 +37,7 @@ public class EnemyHealth : NetworkBehaviour
     {
         enemyPathFinding = GetComponent<EnemyPathFinding>();
         flash = GetComponent<Flash>();
+        collider_enemy = GetComponent<Collider2D>();
         if (GetComponent<EnemyAI>())
         {enemyAI = GetComponent<EnemyAI>();
 
@@ -83,7 +87,9 @@ public class EnemyHealth : NetworkBehaviour
     }
 
     public void TakedDamage(float damage)
-    {      DetectDeath();
+    {
+        if (!isInteractive) { return; }
+        DetectDeath();
        
         if (isDead.Value) {
             Destroy(healthBarObject);
@@ -113,7 +119,11 @@ public class EnemyHealth : NetworkBehaviour
             Destroy(healthBarObject);
             return;
         }
+        if (enemyPathFinding)
+        {
         enemyPathFinding.isIceFreeze = true;
+        }
+
      //   StartCoroutine(FreezeTime());
         if (!flash.takedDamage)
         {
@@ -132,7 +142,11 @@ public class EnemyHealth : NetworkBehaviour
         {
             enemyStand.isActive = false;
         }
-        enemyPathFinding.isIceFreeze = true;
+        if (enemyPathFinding)
+        {
+            enemyPathFinding.isIceFreeze = true;
+        }
+
         StartCoroutine(FreezeTime());
     }
     private IEnumerator FreezeTime()
@@ -160,6 +174,7 @@ public class EnemyHealth : NetworkBehaviour
     {
         if (currentHealth.Value <= 0&&isDead.Value==false)
         {
+            collider_enemy.enabled = false;
             isDead.Value = true;
             StartCoroutine(PlayDeathAnimationEnemy());
           //  PlayDeathVFXClientRpc();
