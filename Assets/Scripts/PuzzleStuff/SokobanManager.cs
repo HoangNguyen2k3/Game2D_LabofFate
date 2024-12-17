@@ -11,9 +11,12 @@ public class SokobanManager : MonoBehaviour
     [field: SerializeField] public SokobanBox[] sokobanBoxList;
     [field: SerializeField] public SokobanBoxArea[] sokobanBoxAreaList;
     [field: SerializeField] public SokobanForceField[] sokobanForceFieldsLists;
+    [field: SerializeField] public TargetBox[] targetBoxList;
 
     public int areaActiveCount = 0;
-    public int maxAreaCount;
+    private int maxAreaCount;
+    public int targetActiveCount = 0;
+    private int maxTargetCount;
     private float time=0f;
 
     [SerializeField] private string levelSokoban="Sokoban1";
@@ -24,11 +27,13 @@ public class SokobanManager : MonoBehaviour
         sokobanBoxList = GetComponentsInChildren<SokobanBox>();
         sokobanBoxAreaList = GetComponentsInChildren<SokobanBoxArea>();
         sokobanForceFieldsLists = GetComponentsInChildren<SokobanForceField>();
+        targetBoxList = GetComponentsInChildren<TargetBox>();
     }
 
     private void Start()
     {
         maxAreaCount = sokobanBoxAreaList.Length;
+        maxTargetCount = targetBoxList.Length;
     }
 
     private void Update()
@@ -37,7 +42,7 @@ public class SokobanManager : MonoBehaviour
         if (time < 10f) { return; }
         if (AllAreaActive) return;
 
-        if (areaActiveCount == maxAreaCount)
+        if (areaActiveCount == maxAreaCount && targetActiveCount == maxTargetCount)
         {
             AllAreaActive = true;
             Debug.Log("You win");
@@ -49,6 +54,7 @@ public class SokobanManager : MonoBehaviour
         }
 
         ForceFieldCheck();
+        TargetCheck();
     }
 
     private void DisableBoxesCollision()
@@ -86,6 +92,19 @@ public class SokobanManager : MonoBehaviour
             }
         }
     }
-   
+
+
+    public void TargetCheck()
+    {
+        targetActiveCount = 0;
+
+        foreach (TargetBox t in targetBoxList)
+        {
+            if(t.active)
+            {
+                targetActiveCount ++;
+            }
+        }
+    }
 
 }

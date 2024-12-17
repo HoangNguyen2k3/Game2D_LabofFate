@@ -8,9 +8,11 @@ public class SokobanBox : MonoBehaviour
     [SerializeField] private LayerMask layerMask;
     public Collider2D collision;
     public Collider2D hitbox;
+    [field: SerializeField] LaserEmitter emitter;
     public bool isMoving {get; private set;}
     private Vector2 originalPos, targetPos; // pos to move the box
     public float timeToMove = 0.5f;
+    public float emittingTime = 1.0f;
     public bool canMove = true;
 
     private Vector2 startingPos;
@@ -18,6 +20,11 @@ public class SokobanBox : MonoBehaviour
     private void Start()
     {
         startingPos = this.transform.position;
+        if(emitter)
+        {
+            emitter.transform.position = this.transform.position;
+            emitter.attached = true;
+        }
     }
 
     public IEnumerator Move(Vector2 _direction)
@@ -26,7 +33,6 @@ public class SokobanBox : MonoBehaviour
         {
             yield break;
         }
-        Debug.Log("HEy");
         isMoving = true;
         collision.enabled = false;
         DisableHitbox();
@@ -34,6 +40,11 @@ public class SokobanBox : MonoBehaviour
         float elapsedTime = 0;
         originalPos = transform.position;
         targetPos = originalPos + _direction;
+
+        if (emitter)
+        {
+            emitter.StopEmitting();
+        }
 
         while (elapsedTime < timeToMove)
         {
@@ -46,6 +57,18 @@ public class SokobanBox : MonoBehaviour
         collision.enabled = true;
         EnableHitbox();
         isMoving = false;
+    }
+
+    public IEnumerator Emit()
+    {
+        DisableHitbox();
+
+        emitter.Emitting();
+        yield return new WaitForSeconds(emittingTime);
+        emitter.StopEmitting();
+
+        collision.enabled = true;
+        EnableHitbox();
     }
 
     private bool CheckObstacle(Vector2 _direction)
@@ -82,4 +105,5 @@ public class SokobanBox : MonoBehaviour
     {
         transform.position = startingPos;
     }
+
 }
