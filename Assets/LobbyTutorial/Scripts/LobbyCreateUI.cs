@@ -98,7 +98,7 @@ public class LobbyCreateUI : MonoBehaviour {
 
         lobbyName = "MyLobby";
         isPrivate = false;
-        maxPlayers = 4;
+        maxPlayers = 3;
         gameMode = LobbyManager.GameMode.Online ;
 
         UpdateText();

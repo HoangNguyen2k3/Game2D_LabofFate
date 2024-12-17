@@ -9,8 +9,8 @@ public class Laser : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         target = GameObject.FindGameObjectWithTag("Player").transform;
+        target = UpdateTargetPlayer();
         Vector3 direction = (-target.position + transform.position).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x);
         transform.rotation = Quaternion.Euler(0f, 0f, angle * Mathf.Rad2Deg - 180f);
@@ -33,5 +33,23 @@ public class Laser : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f);
         player.transform.position = ManagePuzzleRoom.Instance.returnPlayer.position;
+    }
+    private Transform UpdateTargetPlayer()
+    {
+        if (target != null)
+        {
+            Transform newTranform = target;
+            GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
+            for (int i = 0; i < player.Length; i++)
+            {
+                if (Vector2.Distance(transform.position, player[i].transform.position) <
+                    Vector2.Distance(transform.position, newTranform.position))
+                {
+                    newTranform = player[i].transform;
+                }
+            }
+            return newTranform;
+        }
+        return target;
     }
 }

@@ -20,6 +20,10 @@ ScriptedImporter:
   _createLevelBoundsTrigger: 0
   _useParallax: 1
   _intGridValues:
+  - _key: SokobanBarrier_1
+    _asset: {instanceID: 0}
+  - _key: SokobanBarrier_2
+    _asset: {instanceID: 0}
   - _key: Wall_1
     _asset: {fileID: 11400000, guid: 739c57a74c5714f41a772403a33ab09a, type: 2}
   - _key: Wall_2

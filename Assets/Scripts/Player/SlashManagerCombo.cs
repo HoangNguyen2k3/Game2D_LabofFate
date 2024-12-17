@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
@@ -15,9 +16,25 @@ public class SlashManagerCombo : NetworkBehaviour
     private ActiveWeapon weapon;
     [SerializeField] private GameObject arpalet;
 
+    public enum Element 
+    {
+        None,
+        Lighting,
+        Fire,
+        Ice
+    }
+
+    public NetworkVariable< Element> currentElement = new NetworkVariable<Element>(Element.Fire,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Server);
+    public PlayerFireSlash fireSlash;
+    public PlayerLightningSlash lightningSlash;
+    public PlayerIceSlash iceSlash;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        fireSlash = GetComponentInChildren<PlayerFireSlash>();
+        lightningSlash = GetComponentInChildren<PlayerLightningSlash>();
+        iceSlash = GetComponentInChildren<PlayerIceSlash>();
     }
 
     private void Start()
@@ -70,8 +87,35 @@ public class SlashManagerCombo : NetworkBehaviour
         }
     }
 
+    public Vector2 MousePositionToUnitVector()
+    {
+        Vector3 mousePos = Input.mousePosition;
+        Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(transform.position);
+        Vector2 dirToMouse = (mousePos - playerScreenPoint).normalized;
+        Vector2[] directionVectors = {Vector2.up, Vector2.down, Vector2.left, Vector2.right};
+
+        foreach (Vector2 v in directionVectors)
+        {
+            float delta = Vector2.Dot(dirToMouse, v);
+            if (delta >= Mathf.Sqrt(2)/ 2)
+            {
+                return v;
+            }
+        }
+        return Vector2.down;
+    }
+
     public string GetDirectionStr()
     {
+        Dictionary<Vector2,string> vectorStrDict = new Dictionary<Vector2,string> {
+            {Vector2.up, "Up"},
+            {Vector2.down, "Down"},
+            {Vector2.left, "Left"},
+            {Vector2.right, "Left"},
+        };
+
+        vectorStrDict.TryGetValue(MousePositionToUnitVector(), out string str);
+        if (str != null) return str;
         return PlayerController.DirectionStr;
     }
     public void StartAttackCooldown()

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
-using UnityEngine.SceneManagement; 
+using UnityEngine.SceneManagement;
 
 public class ManagerGameStartScene : NetworkBehaviour
 {
@@ -12,21 +12,25 @@ public class ManagerGameStartScene : NetworkBehaviour
     [SerializeField] private List<Transform> positionSpawn;
     [SerializeField] private GameObject winGame;
     [SerializeField] private GameObject loseGame;
-    [SerializeField] private float time;
 
-    private bool istele = false;
-    private bool iswin = false;
+    private bool isWinTriggered = false;
+    public float timer;
+
     private void Start()
     {
+        if(!IsServer)
+        {
+            Destroy(gameObject);
+        }
         winGame.SetActive(false);
         loseGame.SetActive(false);
+
         if (IsServer)
         {
             SpawnEnemiesServerRpc();
         }
-
-       
     }
+
     [ServerRpc]
     public void SpawnEnemiesServerRpc()
     {
@@ -43,46 +47,52 @@ public class ManagerGameStartScene : NetworkBehaviour
     }
 
     private void Update()
-    {time += Time.deltaTime;
+    {
         if (!IsServer) return;
 
         bool hasEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length > 0;
         bool hasPlayers = GameObject.FindGameObjectsWithTag("Player").Length > 0;
-        if (time > 30)
+
+      //  timer += Time.deltaTime;
+
+/*        if (timer > 0)
         {
             Boss boss1 = FindObjectOfType<Boss>();
             Boss2 boss2 = FindObjectOfType<Boss2>();
-            if (!boss1 && !iswin)
+            if (boss1 == null && !isTeleported)
             {
-                ActivateWinScreenClientRpc();
-                iswin = true;
+                TeleportPlayers(new Vector3(210, -110, 0));
+                ResetTimerOnServerRpc();
             }
-            if (!boss2 && !istele)
+            if (boss2 == null && !isWinTriggered)
             {
-                var players = GameObject.FindGameObjectsWithTag("Player");
-                foreach (var player in players)
-                {
-                    player.transform.position = new Vector3(-310, -17, 0);
-                }
-                istele = true;
-                LevelTimer.Instance.remainingTime.Value = 300;
+                TriggerWinCondition();
             }
-        }
 
 
-        if (!hasEnemies)
+        }*/
+
+        if (!hasEnemies && !isWinTriggered)
         {
-            ActivateWinScreenClientRpc();
+            TriggerWinCondition();
         }
         else if (!hasPlayers)
         {
-            ActivateLoseScreenClientRpc();
+            TriggerLoseCondition();
         }
     }
-    public void QuitGame()
+
+    public void TriggerWinCondition()
     {
-        Application.Quit();
+        isWinTriggered = true;
+        ActivateWinScreenClientRpc();
     }
+
+    private void TriggerLoseCondition()
+    {
+        ActivateLoseScreenClientRpc();
+    }
+
     [ClientRpc]
     private void ActivateWinScreenClientRpc()
     {
@@ -95,11 +105,45 @@ public class ManagerGameStartScene : NetworkBehaviour
         loseGame.SetActive(true);
     }
 
+    [ServerRpc(RequireOwnership = false)]
+    public void ResetTimerOnServerRpc()
+    {
+        LevelTimer.Instance?.ResetTimer();
+    }
+
+/*    public void TeleportPlayers(Vector3 newPosition)
+    {
+        TeleportPlayersClientRpc(newPosition);
+        isTeleported = true;
+    }
+*/
+
+
+    [ClientRpc]
+    private void TeleportPlayersClientRpc(Vector3 newPosition)
+    {
+        var players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (var player in players)
+        {
+            player.transform.position = newPosition;
+        }
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
     public void ReturnToMenu()
     {
         if (IsServer)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            if (GameObject.Find("NetworkManager"))
+            {
+                Destroy(GameObject.Find("NetworkManager"));
+            }
+            SceneManager.LoadScene("UpdatedLobbyTutorial_Done");
+
         }
     }
 }

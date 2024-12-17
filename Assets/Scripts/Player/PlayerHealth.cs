@@ -41,6 +41,22 @@ public class PlayerHealth : NetworkBehaviour
             DeathPlayer();
         }
     }
+    public void HealingPlayerHealth(int numHealth)
+    {
+        if (!IsOwner) return;
+        if (isDead.Value || !canTakeDamage)
+        {
+            return;
+        }
+        if (currentHealth + numHealth > startingHealth)
+        {
+            currentHealth = startingHealth;
+        }
+        else
+        {
+            currentHealth += numHealth;
+        }
+    }
     [ServerRpc]
     public void DeathPlayerServerRpc()
     {

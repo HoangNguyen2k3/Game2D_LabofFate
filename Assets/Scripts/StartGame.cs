@@ -7,6 +7,6 @@ public class StartGame : MonoBehaviour
 {
     public void StartGame1()
     {
-        SceneManager.LoadScene("LobbyTutorial_Done");
+        SceneManager.LoadScene("UpdatedLobbyTutorial_Done");
     }
 }

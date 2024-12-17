@@ -17,6 +17,8 @@ public class EnemyStandAI : NetworkBehaviour
     [SerializeField] private float timeChangeTarget = 1f;
     private float timeChange = 0f;
     public Transform target;
+
+    public bool isActive = true;
     private enum State
     {
         Idle,
@@ -41,6 +43,7 @@ public class EnemyStandAI : NetworkBehaviour
 
 
         if (!IsServer) return;
+        if (!isActive) return;
         if (timeChange < timeChangeTarget)
         {
             timeChange += Time.deltaTime;

@@ -14,14 +14,14 @@ public class BossLaser : MonoBehaviour
     
     private void Start()
     {
-        if (target == null)
+        if (target == null&& GameObject.FindGameObjectWithTag("Player"))
         {
             target = GameObject.FindGameObjectWithTag("Player").transform;
         }
     }
     private void Update()
     {
-        if (target == null)
+        if (target == null&& GameObject.FindGameObjectWithTag("Player"))
         {
             target = GameObject.FindGameObjectWithTag("Player").transform;
         }
@@ -56,6 +56,8 @@ public class BossLaser : MonoBehaviour
     {
         yield return new WaitForSeconds(30f);
         Instantiate(bloom, transform.position, Quaternion.identity);
+        GameObject puzzle = GameObject.FindGameObjectWithTag("StonePuzzle");
+        puzzle.GetComponent<Door>().isOpen.Value = true;
         Destroy(gameObject);
     }
 }

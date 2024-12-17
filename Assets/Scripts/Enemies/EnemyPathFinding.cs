@@ -9,6 +9,7 @@ public class EnemyPathFinding : MonoBehaviour
     private Rigidbody2D rb;
     private KnockBack knockBack;
     private EnemyHealth health;
+    public bool isIceFreeze=false;
 
     private void Awake()
     {
@@ -18,7 +19,7 @@ public class EnemyPathFinding : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (knockBack.GetKnockBack||health.isDead.Value) {
+        if (knockBack.GetKnockBack || health.isDead.Value||isIceFreeze) {
             return; 
         }
         rb.MovePosition(rb.position+moveDir.normalized*moveSpeed*Time.deltaTime);

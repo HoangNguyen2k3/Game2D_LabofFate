@@ -7,7 +7,7 @@ public class DirectionEnemy : NetworkBehaviour
     private SpriteRenderer bodyEnemy;
     private GameObject target;
     [SerializeField] private float distanceDetect;
-    [SerializeField] private bool reverse = true;
+    [SerializeField] public bool reverse = true;
     private EnemyAI enemyAI;
 
     // NetworkVariable to sync flipX state across the network
@@ -29,7 +29,8 @@ public class DirectionEnemy : NetworkBehaviour
 
     private void HandleAI()
     {
-        if (target != null && Vector2.Distance(target.transform.position, transform.position) <= distanceDetect)
+        if (!enemyAI.followPlayer) { return; }
+        if (target != null)
         {
             if (enemyAI.target)
             {
@@ -51,7 +52,7 @@ public class DirectionEnemy : NetworkBehaviour
         }
     }
 
-    private void SetFlipX(bool flip)
+    public void SetFlipX(bool flip)
     {
         if (flipXState.Value != flip)
         {
@@ -59,7 +60,7 @@ public class DirectionEnemy : NetworkBehaviour
         }
     }
 
-    [ServerRpc(RequireOwnership = false)]
+    [ServerRpc]
     private void RequestFlipXStateServerRpc(bool flip)
     {
         flipXState.Value = flip;
