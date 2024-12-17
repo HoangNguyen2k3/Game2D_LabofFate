@@ -48,7 +48,7 @@ public class ManagerLevelGame : NetworkBehaviour
             if(boss2 == null && !isTeleported2 &&isTeleported1)
             {
                 TeleportPlayerFinal(new Vector3(-118,5,0));
-                gameStartScene.ResetTimerOnServerRpc();
+                gameStartScene.ResetTimerSecondOnServerRpc();
                 current_map_element.Value = 't';
                 GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
                 if (IsServer)

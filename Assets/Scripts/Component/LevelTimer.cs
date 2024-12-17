@@ -96,15 +96,22 @@ public class LevelTimer : NetworkBehaviour
             timerSliderFillImage.color = dangerColor;
     }
 
-    public void ResetTimer()
+    public void ResetTimerFirst()
     {
         if (IsServer)
         {
-            remainingTime.Value = 300;
+            remainingTime.Value = 600;
             isTimerStopped = false;
         }
     }
-
+    public void ResetTimerSecond()
+    {
+        if (IsServer)
+        {
+            remainingTime.Value = 600;
+            isTimerStopped = false;
+        }
+    }
     private void ShowGameOverUI()
     {
         if (gameOverUI != null)

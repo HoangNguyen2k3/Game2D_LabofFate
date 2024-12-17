@@ -108,15 +108,19 @@ public class ManagerGameStartScene : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     public void ResetTimerOnServerRpc()
     {
-        LevelTimer.Instance?.ResetTimer();
+        LevelTimer.Instance?.ResetTimerFirst();
     }
-
-/*    public void TeleportPlayers(Vector3 newPosition)
+    [ServerRpc(RequireOwnership = false)]
+    public void ResetTimerSecondOnServerRpc()
     {
-        TeleportPlayersClientRpc(newPosition);
-        isTeleported = true;
+        LevelTimer.Instance?.ResetTimerSecond();
     }
-*/
+    /*    public void TeleportPlayers(Vector3 newPosition)
+        {
+            TeleportPlayersClientRpc(newPosition);
+            isTeleported = true;
+        }
+    */
 
 
     [ClientRpc]

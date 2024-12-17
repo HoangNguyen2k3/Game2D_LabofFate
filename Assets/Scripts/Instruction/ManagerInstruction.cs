@@ -5,7 +5,7 @@ using UnityEngine;
 public class ManagerInstruction : MonoBehaviour
 {
     [SerializeField] private GameObject instruction;
-    private float timeIntruction = 16f;
+    private float timeIntruction = 28f;
     private bool onlyOneTimeActive = false;
     private void Awake()
     {
