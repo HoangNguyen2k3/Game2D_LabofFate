@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SemiBoss : MonoBehaviour
+public class SemiBoss : MonoBehaviour,IEnemy
 {
     private Animator animator;
-   // [SerializeField] private GameObject Mine;
+   [SerializeField] private GameObject Bullet;
     private Rigidbody2D rigidbody2D_1;
     void Start()
     {
@@ -23,7 +23,7 @@ public class SemiBoss : MonoBehaviour
     }
     public void SpawnBoom()
     {
-    //    Instantiate(Mine, transform.position, Quaternion.identity);
+      Instantiate(Bullet, transform.position, Quaternion.identity);
     }
     public void Frezze()
     {
