@@ -10,7 +10,7 @@ public class MapBegin : MonoBehaviour
     [SerializeField] private GameObject door_1;
     [SerializeField] private GameObject door_2;
     [SerializeField] private GameObject door_3;
-    [SerializeField] private GameObject door_4;
+  //  [SerializeField] private GameObject door_4;
     [SerializeField] private GameObject fire_red;
     [SerializeField] private GameObject fire_purple;
     private bool openPuzzle = false;
@@ -24,7 +24,7 @@ public class MapBegin : MonoBehaviour
         door_1.GetComponent<Door>().isOpen.Value = true;
         door_2.GetComponent<Door>().isOpen.Value = true;
         door_3.GetComponent<Door>().isOpen.Value = true;
-        door_4.GetComponent<Door>().isOpen.Value = true;
+   //     door_4.GetComponent<Door>().isOpen.Value = true;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -35,7 +35,7 @@ public class MapBegin : MonoBehaviour
             door_1.GetComponent<Door>().isClose.Value = true;
             door_2.GetComponent<Door>().isClose.Value = true;
             door_3.GetComponent<Door>().isClose.Value = true;
-            door_4.GetComponent<Door>().isClose.Value = true;
+         //   door_4.GetComponent<Door>().isClose.Value = true;
             openPuzzle = true;
         }     
     }
@@ -73,7 +73,7 @@ public class MapBegin : MonoBehaviour
             door_1.GetComponent<Door>().isOpen.Value = true;
             door_2.GetComponent<Door>().isOpen.Value = true;
             door_3.GetComponent<Door>().isOpen.Value = true;
-            door_4.GetComponent<Door>().isOpen.Value = true;
+        //    door_4.GetComponent<Door>().isOpen.Value = true;
             done_map_begin = true;
         }
     }
