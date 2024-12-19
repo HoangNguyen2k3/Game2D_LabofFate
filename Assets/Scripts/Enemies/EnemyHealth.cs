@@ -8,7 +8,7 @@ using UnityEngine.Rendering;
 public class EnemyHealth : NetworkBehaviour
 {
     KnockBack knockback;
-    [SerializeField] private float StartingHealth;
+    public float StartingHealth;
     public NetworkVariable<float> currentHealth = new NetworkVariable<float>(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     private GameObject player;
     [SerializeField] private float knockBackThrust = 15f;

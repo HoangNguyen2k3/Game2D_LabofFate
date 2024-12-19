@@ -38,6 +38,8 @@ public class EnemyAI : NetworkBehaviour
     [SerializeField] private float timeChangeTarget=1f;
     private float timeChange = 0f;
 
+    [SerializeField] private bool dontMoveWhenAttack = false;
+
     private DirectionEnemy directionEnemy;
 
     public bool isActive = true;
@@ -353,9 +355,17 @@ public class EnemyAI : NetworkBehaviour
     }
     private IEnumerator AttackCooldownRoutine()
     {
+        if (dontMoveWhenAttack)
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
 
+        }
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
+        if (dontMoveWhenAttack)
+        {
+            rb.constraints=RigidbodyConstraints2D.FreezeRotation;
+        }
     }
     private bool CaculateDistancePosition(Vector3 start,Vector3 stop,float distance)
     {

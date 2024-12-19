@@ -46,7 +46,7 @@ public class PlayerHealth : NetworkBehaviour
     public void HealingPlayerHealth(int numHealth)
     {
         if (!IsOwner) return;
-        if (isDead.Value || !canTakeDamage)
+        if (isDead.Value )
         {
             return;
         }
