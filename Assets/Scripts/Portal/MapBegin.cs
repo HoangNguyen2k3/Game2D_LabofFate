@@ -41,13 +41,13 @@ public class MapBegin : MonoBehaviour
     }
     private void Update()
     {
-        if (portal_Red == null && !begin_portal_red)
+        if (portal_Red == null && !begin_portal_red && GameObject.Find("Portal_Red(Clone)"))
         {
         
             portal_Red = GameObject.Find("Portal_Red(Clone)").GetComponent<PortalManager>();
             begin_portal_red = true;
         }
-        if (portal_Purple == null && !begin_portal_purple)
+        if (portal_Purple == null && !begin_portal_purple && GameObject.Find("PortalPurple(Clone)"))
         {
             portal_Purple = GameObject.Find("PortalPurple(Clone)").GetComponent<PortalManager>();
             begin_portal_purple = true;

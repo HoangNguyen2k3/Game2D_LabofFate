@@ -34,10 +34,9 @@ public class RoomRangeManage : NetworkBehaviour
         }
         if (enemiesInRange.Count <= 0 && !isOpenDoor)
         {
-                door.GetComponent<Door>().isOpen.Value=true;
-                isOpenDoor = true;
+            door.GetComponent<Door>().isOpen.Value=true;
+            isOpenDoor = true;
             done_room = true;
-           
         }
     }
     private void Update()

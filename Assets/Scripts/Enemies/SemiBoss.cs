@@ -39,56 +39,41 @@ public class SemiBoss : NetworkBehaviour,IEnemy
     }
     public void SpawnBoom()
     {
-        if (!isSmallSemi)
+        if (!isSmallSemi && IsServer)
         {
-            if (enemyHealth.currentHealth.Value == 35f && !firstTimeSpawn)
+            if (enemyHealth.currentHealth.Value <= 35f && !firstTimeSpawn)
             {
                 Vector2 temp = transform.position;
                 temp.x -= 5f;
                 GameObject gameObject =  Instantiate(small_SemiBoss, temp, Quaternion.identity);
-                if (IsServer)
-                {
-                    gameObject.GetComponent<NetworkObject>().Spawn();
-                }
+                gameObject.GetComponent<NetworkObject>().Spawn();
+
                 
                 temp.x += 10f;
                 GameObject gameObject2 = Instantiate(small_SemiBoss, temp, Quaternion.identity);
-                if (IsServer)
-                {
-                    gameObject2.GetComponent<NetworkObject>().Spawn();
-                }
+                gameObject2.GetComponent<NetworkObject>().Spawn();
                 temp.x -= 5f;
                 temp.y += 5f;
                 GameObject gameObject3 = Instantiate(small_SemiBoss, temp, Quaternion.identity);
-                if (IsServer)
-                {
-                    gameObject3.GetComponent<NetworkObject>().Spawn();
-                }
+                gameObject3.GetComponent<NetworkObject>().Spawn();
                 firstTimeSpawn = true;
             }
-            if (enemyHealth.currentHealth.Value == 15f && !secondTimeSpawn)
+            if (enemyHealth.currentHealth.Value <= 15f && !secondTimeSpawn)
             {
                 Vector2 temp = transform.position;
                 temp.x -= 5f;
                 GameObject gameObject = Instantiate(small_SemiBoss, temp, Quaternion.identity);
-                if (IsServer)
-                {
-                    gameObject.GetComponent<NetworkObject>().Spawn();
-                }
+                gameObject.GetComponent<NetworkObject>().Spawn();
 
                 temp.x += 10f;
                 GameObject gameObject2 = Instantiate(small_SemiBoss, temp, Quaternion.identity);
-                if (IsServer)
-                {
-                    gameObject2.GetComponent<NetworkObject>().Spawn();
-                }
+                gameObject2.GetComponent<NetworkObject>().Spawn();
+
                 temp.x -= 5f;
                 temp.y += 5f;
                 GameObject gameObject3 = Instantiate(small_SemiBoss, temp, Quaternion.identity);
-                if (IsServer)
-                {
-                    gameObject3.GetComponent<NetworkObject>().Spawn();
-                }
+                gameObject3.GetComponent<NetworkObject>().Spawn();
+
                 secondTimeSpawn = true;
             }
         }
