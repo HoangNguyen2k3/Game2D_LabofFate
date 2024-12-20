@@ -20,7 +20,6 @@ public class ManagerGameStartScene : NetworkBehaviour
 
     private void Start()
     {
-        gameObject.SetActive(false);
         if(!IsServer)
         {
             Destroy(gameObject);
