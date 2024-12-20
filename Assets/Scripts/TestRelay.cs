@@ -40,7 +40,7 @@ public class TestRelay : MonoBehaviour
             string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
             Debug.Log("Relay join code: " + joinCode);
 
-            RelayServerData relayServerData = new RelayServerData(allocation, "dtls");
+            RelayServerData relayServerData = new RelayServerData(allocation, "wss");
             NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
 
       //      await Task.Delay(5000);
@@ -70,7 +70,7 @@ public class TestRelay : MonoBehaviour
 
             JoinAllocation joinAllocation = await RelayService.Instance.JoinAllocationAsync(joinCode);
 
-            RelayServerData relayServerData = new RelayServerData(joinAllocation, "dtls");
+            RelayServerData relayServerData = new RelayServerData(joinAllocation, "wss");
             NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
 
             NetworkManager.Singleton.StartClient();

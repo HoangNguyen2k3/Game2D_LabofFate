@@ -13,6 +13,8 @@ public class SokobanManager : MonoBehaviour
     [field: SerializeField] public SokobanForceField[] sokobanForceFieldsLists;
     [field: SerializeField] public TargetBox[] targetBoxList;
 
+    [SerializeField] private GameObject informPlayerDone;
+
     public int areaActiveCount = 0;
     private int maxAreaCount;
     public int targetActiveCount = 0;
@@ -23,7 +25,8 @@ public class SokobanManager : MonoBehaviour
     [field: SerializeField] public bool AllAreaActive {get; private set;}
 
     private void Awake()
-    {
+    {   
+        informPlayerDone.SetActive(false);
         sokobanBoxList = GetComponentsInChildren<SokobanBox>();
         sokobanBoxAreaList = GetComponentsInChildren<SokobanBoxArea>();
         sokobanForceFieldsLists = GetComponentsInChildren<SokobanForceField>();
@@ -46,6 +49,7 @@ public class SokobanManager : MonoBehaviour
         {
             AllAreaActive = true;
             Debug.Log("You win");
+            informPlayerDone.SetActive(true);
             GameObject puzzle = GameObject.FindGameObjectWithTag(levelSokoban);
             puzzle.GetComponent<Door>().isOpen.Value = true;
             DisableBoxesCollision();

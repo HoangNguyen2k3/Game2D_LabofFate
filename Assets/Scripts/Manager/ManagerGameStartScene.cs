@@ -13,11 +13,14 @@ public class ManagerGameStartScene : NetworkBehaviour
     [SerializeField] private GameObject winGame;
     [SerializeField] private GameObject loseGame;
 
+
+
     private bool isWinTriggered = false;
     public float timer;
 
     private void Start()
     {
+        gameObject.SetActive(false);
         if(!IsServer)
         {
             Destroy(gameObject);
@@ -154,4 +157,5 @@ public class ManagerGameStartScene : NetworkBehaviour
 
         }
     }
+
 }

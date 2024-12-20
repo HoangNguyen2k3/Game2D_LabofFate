@@ -22,6 +22,7 @@ public class SemiBoss : NetworkBehaviour,IEnemy
         col = GetComponent<Collider2D>();
         enemyHealth = GetComponent<EnemyHealth>();
     }
+    
     void Update()
     {
     }
@@ -90,11 +91,27 @@ public class SemiBoss : NetworkBehaviour,IEnemy
     }
     public void Frezze()
     {
+        if (rigidbody2D_1 == null)
+        {
+            Debug.Log("Loi roi");
+            animator = GetComponent<Animator>();
+            rigidbody2D_1 = GetComponent<Rigidbody2D>();
+            col = GetComponent<Collider2D>();
+            enemyHealth = GetComponent<EnemyHealth>();
+        }
         rigidbody2D_1.constraints = RigidbodyConstraints2D.FreezeAll;
         col.enabled = false;
     }
     public void UnFrezze()
     {
+        if (rigidbody2D_1 == null)
+        {
+            Debug.Log("Loi roi");
+            animator = GetComponent<Animator>();
+            rigidbody2D_1 = GetComponent<Rigidbody2D>();
+            col = GetComponent<Collider2D>();
+            enemyHealth = GetComponent<EnemyHealth>();
+        }
         rigidbody2D_1.constraints = RigidbodyConstraints2D.FreezeRotation;
         col.enabled = true;
     }

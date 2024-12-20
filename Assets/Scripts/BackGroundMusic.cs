@@ -3,7 +3,8 @@ using Unity.Netcode;
 
 public class BackgroundMusic : NetworkBehaviour
 {
-    private static BackgroundMusic instance;
+    public static BackgroundMusic instance;
+    public float num_Sound = 1f;
 
     private void Awake()
     {
@@ -13,7 +14,11 @@ public class BackgroundMusic : NetworkBehaviour
             return;
         }
         instance = this;
-        DontDestroyOnLoad(gameObject);
+        if (PlayerPrefs.HasKey("musicVolume"))
+        {
+            AudioListener.volume = PlayerPrefs.GetFloat("musicVolume");
+        }
+            DontDestroyOnLoad(gameObject);
     }
 
     public override void OnNetworkSpawn()
