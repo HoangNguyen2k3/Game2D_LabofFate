@@ -20,12 +20,12 @@ public class BatEnemy : NetworkBehaviour,IEnemy
     }
     public void Attack()
     {
-        int temp = Random.Range(1, 2);
+        int temp = Random.Range(1, 3);
         if (temp == 2)
         {
             animator.SetTrigger("Attack");
         }
-        else
+        else if(temp==1)
         {
             animator.SetTrigger("Attack2");
         }

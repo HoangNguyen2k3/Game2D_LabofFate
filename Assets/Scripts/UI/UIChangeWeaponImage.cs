@@ -37,6 +37,11 @@ public class UIChangeWeaponImage : MonoBehaviour
             fire.SetActive(false);
             ice.SetActive(true);
             thunder.SetActive(false);
+        }else if (player.transform.position.x <= -162)
+        {
+            fire.SetActive(true);
+            ice.SetActive(false);
+            thunder.SetActive(false);
         }
     }
 }

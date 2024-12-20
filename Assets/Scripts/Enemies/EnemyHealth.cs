@@ -24,6 +24,7 @@ public class EnemyHealth : NetworkBehaviour
     public NetworkVariable<bool> isDead = new NetworkVariable<bool>(false);
     private Flash flash;
     private Collider2D collider_enemy;
+    private Rigidbody2D rb2D;
 
     public bool isInteractive = true;
 
@@ -38,6 +39,7 @@ public class EnemyHealth : NetworkBehaviour
         enemyPathFinding = GetComponent<EnemyPathFinding>();
         flash = GetComponent<Flash>();
         collider_enemy = GetComponent<Collider2D>();
+        rb2D = GetComponent<Rigidbody2D>();
         if (GetComponent<EnemyAI>())
         {enemyAI = GetComponent<EnemyAI>();
 
@@ -51,6 +53,7 @@ public class EnemyHealth : NetworkBehaviour
         currentHealth.Value = StartingHealth;
         knockback = GetComponent<KnockBack>();
         animator = GetComponent<Animator>();
+
 
         healthBar.maxValue = StartingHealth;
         healthBar.value = currentHealth.Value;
@@ -151,7 +154,9 @@ public class EnemyHealth : NetworkBehaviour
     }
     private IEnumerator FreezeTime()
     {
+        rb2D.constraints = RigidbodyConstraints2D.FreezeAll;
         yield return new WaitForSeconds(3f);
+        rb2D.constraints = RigidbodyConstraints2D.FreezeRotation;
         enemyPathFinding.isIceFreeze = false;
         enemyAI.isActive = true;
     }
