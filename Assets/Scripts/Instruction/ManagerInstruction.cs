@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Services.Lobbies.Models;
 using UnityEngine;
 
 public class ManagerInstruction : MonoBehaviour
@@ -7,6 +8,7 @@ public class ManagerInstruction : MonoBehaviour
     [SerializeField] private GameObject instruction;
     private float timeIntruction = 28f;
     private bool onlyOneTimeActive = false;
+    private GameObject player_current;
     private void Awake()
     {
         instruction.SetActive(false);
@@ -25,6 +27,7 @@ public class ManagerInstruction : MonoBehaviour
         if(onlyOneTimeActive) { return; }
         if (collision.CompareTag("Player")&&instruction.activeSelf==false)
         {
+            player_current = collision.gameObject;
             instruction.SetActive(true);
             StartCoroutine(stopPlayer(collision.gameObject));
 
@@ -44,5 +47,12 @@ public class ManagerInstruction : MonoBehaviour
     {
         onlyOneTimeActive = true;
        // instruction.SetActive(false);
+    }
+
+    public void NextIntroduction()
+    {
+        instruction.SetActive(false);
+        onlyOneTimeActive = true;
+        player_current.GetComponent<PlayerController>().stopMovingInstruction = false;
     }
 }

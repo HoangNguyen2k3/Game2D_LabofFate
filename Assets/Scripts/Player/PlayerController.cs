@@ -53,7 +53,7 @@ public class PlayerController : NetworkBehaviour
 
             animator.SetBool("isMoving", moveInput != Vector2.zero);
 
-            if ((Input.GetMouseButtonDown(1) || Input.GetKey(KeyCode.Space)) && canDash)
+            if ((Input.GetMouseButtonDown(1) || Input.GetKey(KeyCode.Space)||Input.GetKey(KeyCode.LeftShift)) && canDash)
             {
                 StartCoroutine(Dash());
             }

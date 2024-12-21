@@ -20,15 +20,26 @@ public class ObjectFire : NetworkBehaviour
             }
             StartCoroutine(CoolDown());
         }
-        if (canDamage &&isIce)
+        if (canDamage && isIce && IsServer)
         {
 
-            EnemyHealth enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
+/*            EnemyHealth enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
             if (enemyHealth)
             {
-                enemyHealth.TakedDamageInIceBullet(damageAttack);
+                enemyHealth.TakedDamageNotInPlayer(damageAttack, transform);
+
             }
-            StartCoroutine(CoolDown());
+            StartCoroutine(CoolDown());*/
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!isIce) { return; }
+        EnemyHealth enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
+        if (enemyHealth)
+        {
+            enemyHealth.TakedDamageInIceBullet(damageAttack);
+            enemyHealth.IceBullet(damageAttack);
         }
     }
     private void Start()

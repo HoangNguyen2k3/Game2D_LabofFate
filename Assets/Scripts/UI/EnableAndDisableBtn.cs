@@ -27,4 +27,8 @@ public class EnableAndDisableBtn : MonoBehaviour
     {
         boxIntroduce.SetActive(true);
     }
+    private void OnDisable()
+    {
+        isActive = false;
+    }
 }

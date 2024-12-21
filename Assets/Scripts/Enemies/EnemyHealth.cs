@@ -122,10 +122,10 @@ public class EnemyHealth : NetworkBehaviour
             Destroy(healthBarObject);
             return;
         }
-        if (enemyPathFinding)
+/*        if (enemyPathFinding)
         {
         enemyPathFinding.isIceFreeze = true;
-        }
+        }*/
 
      //   StartCoroutine(FreezeTime());
         if (!flash.takedDamage)
