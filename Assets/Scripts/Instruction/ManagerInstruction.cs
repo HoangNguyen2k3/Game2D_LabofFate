@@ -9,13 +9,16 @@ public class ManagerInstruction : MonoBehaviour
     private float timeIntruction = 28f;
     private bool onlyOneTimeActive = false;
     private GameObject player_current;
+    [SerializeField] private GameObject camera_2d;
     private void Awake()
     {
+        camera_2d.SetActive(false);
         instruction.SetActive(false);
     }
     void Start()
     {
         instruction.SetActive(false);
+        camera_2d.SetActive(false);
     }
 
     void Update()
@@ -28,6 +31,7 @@ public class ManagerInstruction : MonoBehaviour
         if (collision.CompareTag("Player")&&instruction.activeSelf==false)
         {
             player_current = collision.gameObject;
+            camera_2d.SetActive(true);
             instruction.SetActive(true);
             StartCoroutine(stopPlayer(collision.gameObject));
 
@@ -41,6 +45,7 @@ public class ManagerInstruction : MonoBehaviour
         player.GetComponent<PlayerController>().stopMovingInstruction = false;
         onlyOneTimeActive = true;
         instruction.SetActive(false);
+        camera_2d.SetActive(false);
 
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -52,6 +57,7 @@ public class ManagerInstruction : MonoBehaviour
     public void NextIntroduction()
     {
         instruction.SetActive(false);
+        camera_2d.SetActive(false);
         onlyOneTimeActive = true;
         player_current.GetComponent<PlayerController>().stopMovingInstruction = false;
     }

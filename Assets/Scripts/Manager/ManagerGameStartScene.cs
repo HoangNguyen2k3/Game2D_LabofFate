@@ -6,10 +6,19 @@ using UnityEngine.SceneManagement;
 public class ManagerGameStartScene : NetworkBehaviour
 {
     public static string PlayerName { get; set; }
-
+    
     [SerializeField] private List<Transform> playerSpawnPositions;
+    [Header("1st Floor")]
     [SerializeField] private List<GameObject> typeEnemySpawn;
     [SerializeField] private List<Transform> positionSpawn;
+    [Header("2nd Floor")]
+    [SerializeField] private List<GameObject> typeEnemySpawn_map2;
+    [SerializeField] private List<Transform> positionSpawn_map2;
+    [Header("3rd Floor")]
+    [SerializeField] private List<GameObject> typeEnemySpawn_map3;
+    [SerializeField] private List<Transform> positionSpawn_map3;
+
+
     [SerializeField] private GameObject winGame;
     [SerializeField] private GameObject loseGame;
 
@@ -20,19 +29,23 @@ public class ManagerGameStartScene : NetworkBehaviour
 
     private void Start()
     {
-        if(!IsServer)
-        {
-            Destroy(gameObject);
-        }
+        if (!IsServer) { gameObject.SetActive(false); }
         winGame.SetActive(false);
         loseGame.SetActive(false);
-
+       
+/*        if (IsServer)
+        {
+            SpawnEnemiesServerRpc();
+        }*/
+    }
+    public override void OnNetworkSpawn()
+    {
+        base.OnNetworkSpawn();
         if (IsServer)
         {
             SpawnEnemiesServerRpc();
         }
     }
-
     [ServerRpc]
     public void SpawnEnemiesServerRpc()
     {
@@ -46,7 +59,32 @@ public class ManagerGameStartScene : NetworkBehaviour
             
         }
     }
+    [ServerRpc]
+    public void SpawnEnemiesMap2ServerRpc()
+    {
+        for (int i = 0; i < positionSpawn_map2.Count; i++)
+        {
+            GameObject spawnEnemy = Instantiate(typeEnemySpawn_map2[i], positionSpawn_map2[i].position, Quaternion.identity);
+            if (spawnEnemy.GetComponent<NetworkObject>())
+            {
+                spawnEnemy.GetComponent<NetworkObject>().Spawn();
+            }
 
+        }
+    }
+    [ServerRpc]
+    public void SpawnEnemiesMap3ServerRpc()
+    {
+        for (int i = 0; i < positionSpawn_map3.Count; i++)
+        {
+            GameObject spawnEnemy = Instantiate(typeEnemySpawn_map3[i], positionSpawn_map3[i].position, Quaternion.identity);
+            if (spawnEnemy.GetComponent<NetworkObject>())
+            {
+                spawnEnemy.GetComponent<NetworkObject>().Spawn();
+            }
+
+        }
+    }
     public Vector3 GetPlayerSpawnPosition(int playerIndex)
     {
         return playerSpawnPositions[playerIndex % playerSpawnPositions.Count].position;

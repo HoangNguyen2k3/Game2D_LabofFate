@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -7,6 +8,7 @@ using UnityEngine;
 
 public class PlayerController : NetworkBehaviour
 {
+    PlayerController instance;
     public bool playTest = false;
     private Rigidbody2D rb;
     private Vector2 moveInput;
@@ -25,15 +27,32 @@ public class PlayerController : NetworkBehaviour
     private KnockBack knockBack;
     public string DirectionStr {get; private set;} = "Down";
     public bool stopMovingInstruction = false;
-    private void Awake()
+
+    [SerializeField] private CinemachineVirtualCamera vc;
+    [SerializeField] private AudioListener listener;
+
+     private void Awake()
     {
+        //   base.Awake();
+
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         slashManagerCombo = GetComponent<SlashManagerCombo>();
         health = GetComponent<PlayerHealth>();
         knockBack = GetComponent<KnockBack>();
     }
-
+    public override void OnNetworkSpawn()
+    {
+        if (IsOwner)
+        {
+            listener.enabled = true;
+            vc.Priority = 1;
+        }
+        else
+        {
+            vc.Priority = 0;
+        }
+    }
     private void Update()
     {
         if (health.isDead.Value) return;

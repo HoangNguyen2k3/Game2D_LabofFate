@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class HealthPlayerBar : MonoBehaviour
 {
-    private PlayerHealth playerHealth;
+    public PlayerHealth playerHealth;
     private bool havePlayer=false;
     [SerializeField] private TextMeshProUGUI textHealth;
     // Start is called before the first frame update
@@ -14,7 +14,7 @@ public class HealthPlayerBar : MonoBehaviour
     {
         if(FindFirstObjectByType<PlayerController>()&&havePlayer==false)
         {
-            playerHealth = FindFirstObjectByType<PlayerController>().gameObject.GetComponent<PlayerHealth>();
+          //  playerHealth = FindFirstObjectByType<PlayerController>().gameObject.GetComponent<PlayerHealth>();
             transform.GetComponent<Slider>().maxValue = playerHealth.startingHealth;
             transform.GetComponent<Slider>().value = playerHealth.startingHealth;
             textHealth.text = playerHealth.startingHealth.ToString();
@@ -27,7 +27,7 @@ public class HealthPlayerBar : MonoBehaviour
     {
         if (FindFirstObjectByType<PlayerController>() && havePlayer == false)
         {
-            playerHealth = FindFirstObjectByType<PlayerController>().gameObject.GetComponent<PlayerHealth>();
+           // playerHealth = FindFirstObjectByType<PlayerController>().gameObject.GetComponent<PlayerHealth>();
             transform.GetComponent<Slider>().maxValue = playerHealth.startingHealth;
             transform.GetComponent<Slider>().value = playerHealth.startingHealth;
             textHealth.text = playerHealth.startingHealth.ToString();
@@ -35,8 +35,8 @@ public class HealthPlayerBar : MonoBehaviour
         }
         if (playerHealth != null)
         {
-            transform.GetComponent<Slider>().value = playerHealth.currentHealth;
-            textHealth.text = playerHealth.currentHealth.ToString() + "/" + playerHealth.startingHealth.ToString();
+            transform.GetComponent<Slider>().value = playerHealth.currentHealth.Value;
+            textHealth.text = playerHealth.currentHealth.Value.ToString() + "/" + playerHealth.startingHealth.ToString();
         }
     }
 }

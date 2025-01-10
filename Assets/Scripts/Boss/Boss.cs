@@ -20,12 +20,14 @@ public class Boss : BossCore
     public SpriteRenderer attackUpperBody;
     public SpriteRenderer attackLowerBody;
 
+    private TargetChange targetChange;
     private void Awake()
     {
         health = GetComponent<EnemyHealth>();
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player");
+        targetChange=GetComponent<TargetChange>();
     }
 
     private void Start()
@@ -33,17 +35,36 @@ public class Boss : BossCore
         SetupInstances();
         stateMachine.SetState(idleState);
         SetPhase(Phase.PHASE1);
+        if (targetChange != null)
+        {
+            if (target == null)
+            {
+                target = GameObject.FindGameObjectWithTag("Player");
+            }
+            targetChange.OnTargetChanged += UpdateTarget;
+        }
+        else
+        {
+            if (target == null)
+            {
+                target = GameObject.FindGameObjectWithTag("Player");
+            }
+        }
+    }
+    private void UpdateTarget(GameObject newTarget)
+    {
+        target = newTarget;
     }
 
     private void Update()
     {
         if (health.isDead.Value) return;
 
-        if (target == null)
+/*        if (target == null)
         {
             target = GameObject.FindGameObjectWithTag("Player");
         }
-
+        target = targetChange.target;*/
         UpdateSprite();
 
         if (health.currentHealth.Value <= 15f)

@@ -1,13 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseButton : MonoBehaviour
+public class PauseButton : NetworkBehaviour
 {
     [SerializeField] private GameObject PauseMenuWindow;
     [SerializeField] private GameObject openSound;
     [SerializeField] private GameObject closeSound;
+/*
+    [SerializeField] private GameObject map1;
+    [SerializeField] private GameObject map2;
+    [SerializeField] private GameObject map3;*/
+
+   // [SerializeField] private GameObject manager_level;
+    private bool change_first = false;
+    private bool change_last = false;
+    public override void OnNetworkSpawn()
+    {
+     /*   map2.SetActive(false);
+        map3.SetActive(false);*/
+        if (!IsOwner) { 
+           gameObject.SetActive(false);
+        }
+    }
     private void Start()
     {
         PauseMenuWindow.SetActive(false);
@@ -48,5 +65,28 @@ public class PauseButton : MonoBehaviour
             SceneManager.LoadScene("UpdatedLobbyTutorial_Done");
 
         
+    }
+    private void Update()
+    {
+      /*  if (manager_level.gameObject == null&& FindFirstObjectByType<ManagerLevelGame>())
+        {
+            manager_level = FindFirstObjectByType<ManagerLevelGame>().gameObject;
+        }
+        else
+        {
+            if (manager_level && manager_level.GetComponent<ManagerLevelGame>().current_map == 2 && !change_first)
+            {
+                change_first = true;
+                map1.SetActive(false);
+                map2.SetActive(true);
+            }
+            if (manager_level && manager_level.GetComponent<ManagerLevelGame>().current_map == 3 && !change_last)
+            {
+                change_last = true;
+                map2.SetActive(false);
+                map3.SetActive(true);
+            }
+        }*/
+
     }
 }

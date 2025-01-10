@@ -21,6 +21,8 @@ public class Boss2 : BossCore
     private bool isInPhaseTwo;
     private bool isInTransition;
 
+    private TargetChange targetChange;
+
     private void Awake()
     {
         sprite = GetComponent<SpriteRenderer>();
@@ -30,6 +32,7 @@ public class Boss2 : BossCore
         target = GameObject.FindGameObjectWithTag("Player");
         missileSpawner = GetComponentInChildren<MissileSpawner>();
         circleBulletSpawner = GetComponentInChildren<CircleBulletSpawner>();
+        targetChange = GetComponent<TargetChange>();
     }
 
     private void Start()
@@ -43,9 +46,20 @@ public class Boss2 : BossCore
     {
         if (health.isDead.Value) return;
 
-        if (target == null)
+        if (targetChange != null)
         {
-            target = GameObject.FindGameObjectWithTag("Player");
+            if (target == null)
+            {
+                target = GameObject.FindGameObjectWithTag("Player");
+            }
+            targetChange.OnTargetChanged += UpdateTarget;
+        }
+        else
+        {
+            if (target == null)
+            {
+                target = GameObject.FindGameObjectWithTag("Player");
+            }
         }
 
         UpdateSprite();
@@ -60,7 +74,10 @@ public class Boss2 : BossCore
         }
         state.FrameUpdate();
     }
-
+    private void UpdateTarget(GameObject newTarget)
+    {
+        target = newTarget;
+    }
     private void FixedUpdate() 
     {
         state.PhysicsUpdate();

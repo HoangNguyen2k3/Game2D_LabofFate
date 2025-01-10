@@ -6,13 +6,17 @@ public class AggroRangeCheck : MonoBehaviour
 {
     private GameObject player;
     private BossCore boss;
-
+    [SerializeField] private TargetChange targetChange;
     private void Awake() 
     {
         player = GameObject.FindGameObjectWithTag("Player");
         boss = GetComponentInParent<BossCore>();
+        targetChange.OnTargetChanged += UpdateTarget;
     }
-
+    private void UpdateTarget(GameObject newTarget)
+    {
+        player = newTarget;
+    }
     private void Update()
     {
         if (player == null)

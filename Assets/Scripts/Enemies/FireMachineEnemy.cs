@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class FireMachineEnemy : NetworkBehaviour, IEnemy
 {
-    [SerializeField] private GameObject bulletPrefab;
+ // [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float bulletMoveSpeed;
     [SerializeField] private int burstCount;
     [SerializeField] private float timeBetweenBurst;
@@ -16,10 +16,14 @@ public class FireMachineEnemy : NetworkBehaviour, IEnemy
     private bool isShooting = false;
     private Animator animator;
     private Transform target;
+
+    private ObjectPoolingManager poolingManager;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
         enemyStandAI = GetComponent<EnemyStandAI>();
+        poolingManager = GetComponent<ObjectPoolingManager>();
     }
 
     public void Attack()
@@ -52,19 +56,30 @@ public class FireMachineEnemy : NetworkBehaviour, IEnemy
     private IEnumerator ShootRoutine()
     {
         isShooting = true;
+
         if (enemyStandAI.target)
         {
-            target=enemyStandAI.target;
+            target = enemyStandAI.target;
         }
         else
         {
-            target = FindFirstObjectByType<PlayerController>().transform;
+            var player = FindFirstObjectByType<PlayerController>();
+            if (player != null)
+            {
+                target = player.transform;
+            }
+            else
+            {
+                isShooting = false;
+                yield break;
+            }
         }
+
         Vector2 targetDirection = target.position - transform.position;
 
         for (int i = 0; i < burstCount; i++)
         {
-            SpawnBulletClientRpc(targetDirection); 
+            SpawnBulletServerRpc(targetDirection);
             yield return new WaitForSeconds(timeBetweenBurst);
         }
 
@@ -72,14 +87,30 @@ public class FireMachineEnemy : NetworkBehaviour, IEnemy
         isShooting = false;
     }
 
-    [ClientRpc]
-    private void SpawnBulletClientRpc(Vector2 direction)
+    [ServerRpc]
+    private void SpawnBulletServerRpc(Vector2 direction)
     {
-        GameObject newBullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        GameObject newBullet = poolingManager.GetBullet();
+        newBullet.transform.position = transform.position;
         newBullet.transform.right = direction;
+
         if (newBullet.TryGetComponent(out Projectile projectile))
         {
             projectile.UpdateMoveSpeed(bulletMoveSpeed);
         }
+
+        SpawnBulletClientRpc(newBullet.GetComponent<NetworkObject>().NetworkObjectId, direction);
     }
+
+    [ClientRpc]
+    private void SpawnBulletClientRpc(ulong bulletId, Vector2 direction)
+    {
+        if (!NetworkManager.SpawnManager.SpawnedObjects.TryGetValue(bulletId, out var netObj))
+            return;
+
+        GameObject newBullet = netObj.gameObject;
+        newBullet.transform.position = transform.position;
+        newBullet.transform.right = direction;
+    }
+
 }

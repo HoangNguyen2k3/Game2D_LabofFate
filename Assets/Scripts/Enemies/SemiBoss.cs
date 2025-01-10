@@ -15,14 +15,17 @@ public class SemiBoss : NetworkBehaviour,IEnemy
     bool firstTimeSpawn = false;
     bool secondTimeSpawn = false;
     [SerializeField] bool isSmallSemi = false;
+    private SpawnAround spawnAround;
+    private Rigidbody2D rb2d;
     void Start()
     {
         animator = GetComponent<Animator>();
         rigidbody2D_1 = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
         enemyHealth = GetComponent<EnemyHealth>();
+        spawnAround = GetComponent<SpawnAround>();
+        rb2d= GetComponent<Rigidbody2D>();
     }
-    
     void Update()
     {
     }
@@ -32,11 +35,14 @@ public class SemiBoss : NetworkBehaviour,IEnemy
     }
     private IEnumerator AttackMulti()
     {
+        rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
         animator.SetTrigger("Attack");
         yield return new WaitForSeconds(1f);
         animator.SetTrigger("Attack");
         yield return new WaitForSeconds(1f);
         animator.SetTrigger("Attack");
+        yield return new WaitForSeconds(1f);
+        rb2d.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
     public void SpawnBoom()
     {
@@ -44,24 +50,26 @@ public class SemiBoss : NetworkBehaviour,IEnemy
         {
             if (enemyHealth.currentHealth.Value <= 35f && !firstTimeSpawn)
             {
-                Vector2 temp = transform.position;
-                temp.x -= 5f;
-                GameObject gameObject =  Instantiate(small_SemiBoss, temp, Quaternion.identity);
-                gameObject.GetComponent<NetworkObject>().Spawn();
+                /*  Vector2 temp = transform.position;
+                  temp.x -= 5f;
+                  GameObject gameObject =  Instantiate(small_SemiBoss, temp, Quaternion.identity);
+                  gameObject.GetComponent<NetworkObject>().Spawn();
 
-                
-                temp.x += 10f;
-                GameObject gameObject2 = Instantiate(small_SemiBoss, temp, Quaternion.identity);
-                gameObject2.GetComponent<NetworkObject>().Spawn();
-                temp.x -= 5f;
-                temp.y += 5f;
-                GameObject gameObject3 = Instantiate(small_SemiBoss, temp, Quaternion.identity);
-                gameObject3.GetComponent<NetworkObject>().Spawn();
+
+                  temp.x += 10f;
+                  GameObject gameObject2 = Instantiate(small_SemiBoss, temp, Quaternion.identity);
+                  gameObject2.GetComponent<NetworkObject>().Spawn();
+                  temp.x -= 5f;
+                  temp.y += 5f;
+                  GameObject gameObject3 = Instantiate(small_SemiBoss, temp, Quaternion.identity);
+                  gameObject3.GetComponent<NetworkObject>().Spawn();
+                  firstTimeSpawn = true;*/
+                spawnAround.SpawnEnemies(3);
                 firstTimeSpawn = true;
             }
             if (enemyHealth.currentHealth.Value <= 15f && !secondTimeSpawn)
             {
-                Vector2 temp = transform.position;
+                /*Vector2 temp = transform.position;
                 temp.x -= 5f;
                 GameObject gameObject = Instantiate(small_SemiBoss, temp, Quaternion.identity);
                 gameObject.GetComponent<NetworkObject>().Spawn();
@@ -73,8 +81,8 @@ public class SemiBoss : NetworkBehaviour,IEnemy
                 temp.x -= 5f;
                 temp.y += 5f;
                 GameObject gameObject3 = Instantiate(small_SemiBoss, temp, Quaternion.identity);
-                gameObject3.GetComponent<NetworkObject>().Spawn();
-
+                gameObject3.GetComponent<NetworkObject>().Spawn();*/
+                spawnAround.SpawnEnemies(3);
                 secondTimeSpawn = true;
             }
         }
@@ -102,6 +110,19 @@ public class SemiBoss : NetworkBehaviour,IEnemy
         rigidbody2D_1.constraints = RigidbodyConstraints2D.FreezeAll;
         col.enabled = false;
     }
+    public void FrezzeWaiting()
+    {
+        if (rigidbody2D_1 == null)
+        {
+            Debug.Log("Loi roi");
+            animator = GetComponent<Animator>();
+            rigidbody2D_1 = GetComponent<Rigidbody2D>();
+            col = GetComponent<Collider2D>();
+            enemyHealth = GetComponent<EnemyHealth>();
+        }
+        rigidbody2D_1.constraints = RigidbodyConstraints2D.FreezeAll;
+      //  col.enabled = false;
+    }
     public void UnFrezze()
     {
         if (rigidbody2D_1 == null)
@@ -115,4 +136,5 @@ public class SemiBoss : NetworkBehaviour,IEnemy
         rigidbody2D_1.constraints = RigidbodyConstraints2D.FreezeRotation;
         col.enabled = true;
     }
+
 }

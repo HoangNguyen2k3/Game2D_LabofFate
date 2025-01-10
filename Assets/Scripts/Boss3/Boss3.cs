@@ -31,7 +31,7 @@ public class Boss3 : BossCore
     private BossState[] phaseTwoStates;
     private BossState[] phaseThreeStates;
     private BossState[] phaseFourStates;
-
+    private TargetChange targetChange;
     public enum Phase {
         PhaseOne,
         PhaseTwo,
@@ -51,6 +51,7 @@ public class Boss3 : BossCore
         health = GetComponent<EnemyHealth>();
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        targetChange = GetComponent<TargetChange>();
     }
 
     private void Start()
@@ -83,11 +84,21 @@ public class Boss3 : BossCore
 
     private void Update() 
     {
-        if (target == null)
+        if (targetChange != null)
         {
-            target = GameObject.FindGameObjectWithTag("Player");
+            if (target == null)
+            {
+                target = GameObject.FindGameObjectWithTag("Player");
+            }
+            targetChange.OnTargetChanged += UpdateTarget;
         }
-        
+        else
+        {
+            if (target == null)
+            {
+                target = GameObject.FindGameObjectWithTag("Player");
+            }
+        }
         if (currentPhase == Phase.PhaseOne && health.currentHealth.Value <= 65f)
         {
             currentPhase = Phase.PhaseTwo;
@@ -109,7 +120,10 @@ public class Boss3 : BossCore
         }
         state.FrameUpdate();  
     }
-
+    private void UpdateTarget(GameObject newTarget)
+    {
+        target = newTarget;
+    }
     private void FixedUpdate()
     {
         state.PhysicsUpdate();

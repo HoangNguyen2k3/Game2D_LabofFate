@@ -4,7 +4,7 @@ using Unity.Netcode;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class LaserTurret : MonoBehaviour
+public class LaserTurret : NetworkBehaviour
 {
     [SerializeField] private float distanceAttack = 5f;
     private Transform target;
@@ -40,11 +40,12 @@ public class LaserTurret : MonoBehaviour
             
             
         }
-        if (ManagePuzzleRoom.Instance.current_crystal >= 4) { return; }
-        if (canAttack&&Vector2.Distance(transform.position,target.position)< distanceAttack && ManagePuzzleRoom.Instance.PlayerInRange)
+        if (ManagePuzzleRoom.Instance.current_crystal.Value >= 4) { return; }
+        if (canAttack&&Vector2.Distance(transform.position,target.position)< distanceAttack && ManagePuzzleRoom.Instance.PlayerInRange&&IsServer)
         {
             canAttack = false;
-            Instantiate(laser, transform.position, Quaternion.identity);
+            GameObject laser1= Instantiate(laser, transform.position, Quaternion.identity);
+            laser1.GetComponent<NetworkObject>().Spawn();
             StartCoroutine(AttackCooldownRoutine());
         }
     }

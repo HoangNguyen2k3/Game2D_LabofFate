@@ -8,7 +8,7 @@ public class ObjectIce : NetworkBehaviour
     [SerializeField] private float damageAttack = 1f;
     [SerializeField] private float timeend = 3f;
     [SerializeField] private GameObject addIceObject;
-    bool canDamage = true;
+   // bool canDamage = true;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -48,11 +48,11 @@ public class ObjectIce : NetworkBehaviour
         yield return new WaitForSeconds(timeend);
         gameObject.GetComponent<NetworkObject>().Despawn();
     }
-    private IEnumerator CoolDown()
+/*    private IEnumerator CoolDown()
     {
         canDamage = false;
         yield return new WaitForSeconds(0.5f);
         canDamage = true;
 
-    }
+    }*/
 }

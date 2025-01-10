@@ -40,18 +40,19 @@ public class TestRelay : MonoBehaviour
             string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
             Debug.Log("Relay join code: " + joinCode);
 
-            RelayServerData relayServerData = new RelayServerData(allocation, "wss");
+         //   RelayServerData relayServerData = new RelayServerData(allocation, "wss");
+            RelayServerData relayServerData = new RelayServerData(allocation, "dtls");
             NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
 
-      //      await Task.Delay(5000);
+     
 
             NetworkManager.Singleton.StartHost();
             //PlayerSetting.Instance.networkPlayerName.Value = EditPlayerName.Instance.GetPlayerName();
-
-            NetworkManager.Singleton.SceneManager.LoadScene("SampleScene", UnityEngine.SceneManagement.LoadSceneMode.Single);
-            
+              await Task.Delay(3000);
+              NetworkManager.Singleton.SceneManager.LoadScene("SampleScene", UnityEngine.SceneManagement.LoadSceneMode.Single);
+       //   NetworkManager.Singleton.SceneManager.LoadScene("RoomWaitLobby", UnityEngine.SceneManagement.LoadSceneMode.Single);
             //Add code
-           
+
             return joinCode;
         }
         catch (RelayServiceException e)
@@ -70,7 +71,8 @@ public class TestRelay : MonoBehaviour
 
             JoinAllocation joinAllocation = await RelayService.Instance.JoinAllocationAsync(joinCode);
 
-            RelayServerData relayServerData = new RelayServerData(joinAllocation, "wss");
+            //  RelayServerData relayServerData = new RelayServerData(joinAllocation, "wss");
+            RelayServerData relayServerData = new RelayServerData(joinAllocation, "dtls");
             NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
 
             NetworkManager.Singleton.StartClient();

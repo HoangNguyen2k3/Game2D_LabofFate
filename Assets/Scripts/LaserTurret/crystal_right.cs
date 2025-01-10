@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-public class crystal_right : MonoBehaviour
+public class crystal_right : NetworkBehaviour
 {
     [SerializeField] private Transform targetPosition;
     [SerializeField] private Transform beginPosition;
@@ -13,15 +14,24 @@ public class crystal_right : MonoBehaviour
 
     void Update()
     {
+        if (ManagePuzzleRoom.Instance.current_crystal.Value == 3)
+        {
+            Destroy(gameObject);
+        }
         if (isMoving)
         {
             transform.position = Vector2.MoveTowards(transform.position, targetPosition.position, speed * Time.deltaTime);
-            if (Vector2.Distance(transform.position, targetPosition.position) < 0.01f)
+            if (Vector2.Distance(transform.position, targetPosition.position) < 0.5f)
             {
-                if (ManagePuzzleRoom.Instance.current_crystal == 2)
+                Debug.Log(ManagePuzzleRoom.Instance.current_crystal.Value);
+                if (ManagePuzzleRoom.Instance.current_crystal.Value == 2)
                 {
-                    ManagePuzzleRoom.Instance.current_crystal++;
-                    Destroy(gameObject);
+                    if (IsServer)
+                    {
+                        ManagePuzzleRoom.Instance.current_crystal.Value = 3;
+                       
+                    }
+                   
                 }
                 else
                 {
@@ -47,5 +57,10 @@ public class crystal_right : MonoBehaviour
         {
             isMoving = true;
         }
+    }
+    [ClientRpc]
+    public void DestroyClientRpc()
+    {
+        Destroy(gameObject);
     }
 }

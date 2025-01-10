@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-public class MouseFollow : MonoBehaviour
+public class MouseFollow : NetworkBehaviour
 {
     private void Update()
     {
@@ -11,6 +12,7 @@ public class MouseFollow : MonoBehaviour
 
     private void FaceMouse()
     {
+        if (!IsOwner) return;
         Vector3 mousePosition = Input.mousePosition;
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
 

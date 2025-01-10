@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class FireInPuzzle : NetworkBehaviour
 {
-    [SerializeField] private List<Transform> trans;
+    public List<Transform> trans;
     public bool isActive = false;
     private GameObject player_1;
     public int current_pos = 0;
@@ -45,7 +45,7 @@ public class FireInPuzzle : NetworkBehaviour
                 int temp;
                 do
                 {
-                    temp = Random.Range(0, trans.Count - 1);
+                    temp = Random.Range(0, trans.Count);
                 } while (temp == current_pos);
                 current_pos = temp;
                 transform.position = trans[temp].position;
@@ -60,7 +60,7 @@ public class FireInPuzzle : NetworkBehaviour
         int temp;
         do
         {
-            temp = Random.Range(0, trans.Count-1);
+            temp = Random.Range(0, trans.Count);
         } while (temp == current_pos);
         current_pos = temp;
         transform.position = trans[temp].position;
@@ -89,7 +89,12 @@ public class FireInPuzzle : NetworkBehaviour
     {
         if (collision.gameObject.GetComponent<PlayerController>())
         {
-            Destroy(gameObject);
+            DoneDestroyServerRpc();
         }
+    }
+    [ServerRpc(RequireOwnership =false)]
+    public void DoneDestroyServerRpc()
+    {
+        gameObject.GetComponent<NetworkObject>().Despawn();
     }
 }

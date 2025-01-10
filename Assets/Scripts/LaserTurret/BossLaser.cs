@@ -1,42 +1,53 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-public class BossLaser : MonoBehaviour
+public class BossLaser : NetworkBehaviour
 {
     [SerializeField] private float distanceAttack = 10f;
-    private Transform target;
+    private GameObject target;
     [SerializeField] private float attackCooldown = 1f;
     private bool canAttack = true;
     [SerializeField] private GameObject laser;
     private bool startPharse=false;
     [SerializeField] private GameObject bloom;
+    private TargetChange targetChange;
     
     private void Start()
     {
-        if (target == null&& GameObject.FindGameObjectWithTag("Player"))
+        targetChange = GetComponent<TargetChange>();
+        targetChange.OnTargetChanged += UpdateTarget;
+        if (GameObject.FindGameObjectWithTag("Player"))
         {
-            target = GameObject.FindGameObjectWithTag("Player").transform;
+            target = GameObject.FindGameObjectWithTag("Player");
         }
+    }
+    private void UpdateTarget(GameObject newTarget)
+    {
+        target = newTarget;
     }
     private void Update()
     {
-        if (target == null&& GameObject.FindGameObjectWithTag("Player"))
-        {
-            target = GameObject.FindGameObjectWithTag("Player").transform;
-        }
-        if (ManagePuzzleRoom.Instance.current_crystal < 4)
+
+        if (ManagePuzzleRoom.Instance.current_crystal.Value < 4)
         {
             return;
         }
-        if (canAttack && Vector2.Distance(transform.position, target.position) < distanceAttack && ManagePuzzleRoom.Instance.PlayerInRange)
+        if (canAttack && Vector2.Distance(transform.position, target.transform.position) < distanceAttack && ManagePuzzleRoom.Instance.PlayerInRange)
         {
             canAttack = false;
-            Instantiate(laser, transform.position, Quaternion.identity);
+
+            if (IsServer)
+            {
+ GameObject laser_new = Instantiate(laser, transform.position, Quaternion.identity);
+            laser_new.GetComponent<NetworkObject>().Spawn();
+            }
+           
             StartCoroutine(AttackCooldownRoutine());
         }
         if (startPharse) { return; }
-        if (ManagePuzzleRoom.Instance.current_crystal >= 4) { 
+        if (ManagePuzzleRoom.Instance.current_crystal.Value >= 4) { 
 
             startPharse = true;
 
@@ -60,4 +71,5 @@ public class BossLaser : MonoBehaviour
         puzzle.GetComponent<Door>().isOpen.Value = true;
         Destroy(gameObject);
     }
+
 }

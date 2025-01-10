@@ -4,12 +4,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Rendering;
+using Unity.VisualScripting;
 
 public class EnemyHealth : NetworkBehaviour
 {
     KnockBack knockback;
     public float StartingHealth;
-    public NetworkVariable<float> currentHealth = new NetworkVariable<float>(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
+    public NetworkVariable<float> currentHealth = new NetworkVariable<float>(10, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     private GameObject player;
     [SerializeField] private float knockBackThrust = 15f;
     private Animator animator;
@@ -33,6 +34,9 @@ public class EnemyHealth : NetworkBehaviour
     [SerializeField] private GameObject dropItems_small;
     [SerializeField] private GameObject dropItems_medium;
     [SerializeField] private GameObject dropItems_big;
+    private bool isStart = false;
+
+    [SerializeField] private bool isUsingObjectPool = false;
 
     void Start()
     {
@@ -41,28 +45,34 @@ public class EnemyHealth : NetworkBehaviour
         collider_enemy = GetComponent<Collider2D>();
         rb2D = GetComponent<Rigidbody2D>();
         if (GetComponent<EnemyAI>())
-        {enemyAI = GetComponent<EnemyAI>();
-
-        }else if (GetComponent<EnemyStandAI>())
         {
-            enemyStand= GetComponent<EnemyStandAI>();
+            enemyAI = GetComponent<EnemyAI>();
+
         }
-        
-        
-        player = GameObject.FindGameObjectWithTag("Player");
-        currentHealth.Value = StartingHealth;
+        else if (GetComponent<EnemyStandAI>())
+        {
+            enemyStand = GetComponent<EnemyStandAI>();
+        }
+
         knockback = GetComponent<KnockBack>();
         animator = GetComponent<Animator>();
 
 
         healthBar.maxValue = StartingHealth;
-        healthBar.value = currentHealth.Value;
-    //    numCurrentHealth.text = currentHealth.Value.ToString();
+        healthBar.value = StartingHealth;
+        player = GameObject.FindGameObjectWithTag("Player");
 
-        // Subscribe to the OnValueChanged event to sync health across clients
+        
+    //    numCurrentHealth.text = currentHealth.Value.ToString();
         currentHealth.OnValueChanged += OnHealthChanged;
     }
-
+    public override void OnNetworkSpawn()
+    {
+        if (IsServer)
+        {
+            currentHealth.Value = StartingHealth;
+        }
+    }
 /*    private void OnDestroy()
     {
         currentHealth.OnValueChanged -= OnHealthChanged;
@@ -73,17 +83,29 @@ public class EnemyHealth : NetworkBehaviour
         healthBar.value = newHealth;
       //  numCurrentHealth.text = newHealth.ToString();
     }
-
+    
     private void Update()
     {
-        if (!IsServer) { return; }
+        if (isStart == false&&currentHealth.Value>0)
+        {
+            isStart = true;
+        }
         if (player == null)
         {
             player = GameObject.FindGameObjectWithTag("Player");
         }
+        if (currentHealth.Value <= 0 && isDead.Value == false&&isStart)
+        {
+            collider_enemy.enabled = false;
+            if (IsServer)
+            {
+                DetectDeathServerRpc();
+            }
+            
+        }
     }
 
-    [ServerRpc]
+    [ServerRpc(RequireOwnership = false)]
     public void TakeDamageServerRpc(float damage)
     {
         TakedDamage(damage);
@@ -92,7 +114,7 @@ public class EnemyHealth : NetworkBehaviour
     public void TakedDamage(float damage)
     {
         if (!isInteractive) { return; }
-        DetectDeath();
+      //  DetectDeath();
        
         if (isDead.Value) {
             Destroy(healthBarObject);
@@ -116,7 +138,7 @@ public class EnemyHealth : NetworkBehaviour
     }
     public void TakedDamageInIceBullet(float damage)
     {
-        DetectDeath();
+       // DetectDeath();
         if (isDead.Value)
         {
             Destroy(healthBarObject);
@@ -161,7 +183,7 @@ public class EnemyHealth : NetworkBehaviour
         enemyAI.isActive = true;
     }
     public void TakedDamageNotInPlayer(float damage,Transform transform_new)    {
-        DetectDeath();
+      //  DetectDeath();
 
         if (isDead.Value)
         {
@@ -175,31 +197,57 @@ public class EnemyHealth : NetworkBehaviour
             flash.TriggerFlashServerRpc();
         }
     }
-    private void DetectDeath()
+    [ServerRpc]
+    private void DetectDeathServerRpc()
     {
-        if (currentHealth.Value <= 0&&isDead.Value==false)
-        {
-            collider_enemy.enabled = false;
+            
             isDead.Value = true;
+        DetectDeathClientRpc();
             StartCoroutine(PlayDeathAnimationEnemy());
           //  PlayDeathVFXClientRpc();
-        }
     }
-
+    [ClientRpc]
+    private void DetectDeathClientRpc()
+    {
+       
+        if(healthBarObject)
+        Destroy(healthBarObject);
+    }
     private IEnumerator PlayDeathAnimationEnemy()
     {
         animator.SetTrigger("Death");
+        if (IsServer)
+        {
         if (dropItems_big && dropItems_medium && dropItems_small)
         {
             DropRandomItem();
         }
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length + addTimeAnim);
-        
-        Destroy(gameObject);
+
+            //Destroy(gameObject);
+            if (isUsingObjectPool)
+            {
+                foreach (Transform child in transform)
+                {
+                    if (child.GetComponent<Projectile>())
+                    {
+                        if (child.TryGetComponent(out NetworkObject networkObject))
+                        {
+                            networkObject.Despawn();
+                        }
+                        else
+                        {
+                            Destroy(child.gameObject);
+                        }
+                    }
+                }
+            }
+        gameObject.GetComponent<NetworkObject>().Despawn();
+        }
+
     }
     private void DropRandomItem()
     {
-        if (!IsServer) return;
         int a=Random.Range(0, 15);
         if (a >= 0 && a <= 5)
         {
@@ -217,6 +265,7 @@ public class EnemyHealth : NetworkBehaviour
             dropItem.GetComponent<NetworkObject>().Spawn();
         }
     }
+    
 
 /*    [ClientRpc]
     public void PlayDeathVFXClientRpc()

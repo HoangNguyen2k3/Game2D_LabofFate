@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class GiveDamageToPlayer : NetworkBehaviour
 {
-    [SerializeField] private int damage=1;
+    [SerializeField] private int damage = 1;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<PlayerHealth>().TakedDamageToPlayer(damage,transform);
+            collision.GetComponent<PlayerHealth>().TakedDamageToPlayer(damage, transform);
         }
     }
 }

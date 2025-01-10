@@ -22,12 +22,13 @@ public class Door : NetworkBehaviour
         if (isOpen.Value)
         {
             OpenDoor();
-            isOpen.Value = false;
+            isOpen.Value = false; 
+           
         }
-        if(isClose.Value)
+        if (isClose.Value)
         {
             CloseDoor();
-            isClose.Value = false;
+             isClose.Value= false;
         }
     }
     public void OpenDoor()

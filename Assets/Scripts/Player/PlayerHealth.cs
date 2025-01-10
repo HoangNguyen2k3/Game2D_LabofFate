@@ -8,8 +8,9 @@ using UnityEngine.UIElements;
 public class PlayerHealth : NetworkBehaviour
 {
     public int startingHealth = 10;
-    public int currentHealth;
-   // public bool isDead=false;
+//    public int currentHealth;
+    public NetworkVariable<int> currentHealth = new NetworkVariable<int>(10,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Server);
+    // public bool isDead=false;
     public NetworkVariable<bool> isDead = new NetworkVariable<bool>(false);
     private Animator animator;
     private Flash flash;
@@ -20,48 +21,62 @@ public class PlayerHealth : NetworkBehaviour
     {
         knockBack = GetComponent<KnockBack>();
         flash = GetComponent<Flash>();
-        currentHealth = startingHealth;
+        currentHealth.Value = startingHealth;
         animator = GetComponent<Animator>();
     }
-    public void TakedDamageToPlayer(int damage,Transform hitTranform)
+    public void TakedDamageToPlayer(int damage, Transform hitTransform)
     {
-        if (!IsOwner) return;
-        if(isDead.Value||!canTakeDamage)
+        if (isDead.Value || !canTakeDamage)
         {
             return;
         }
-        canTakeDamage = false ;
-        
+
+        canTakeDamage = false;
         StartCoroutine(waitForTakeDamage());
-        knockBack.GettingKnockBack(hitTranform, knockBackThrust);
+        knockBack.GettingKnockBack(hitTransform, knockBackThrust);
         knockBack.canBeKnockback = false;
+        if(IsOwner)
         flash.TriggerFlashServerRpc();
-        currentHealth-=damage;
-        if (currentHealth <= 0)
+
+        TakeDamageServerRpc(damage);
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    private void TakeDamageServerRpc(int damage)
+    {
+        if (isDead.Value) return;
+
+        currentHealth.Value -= damage;
+
+        if (currentHealth.Value <= 0)
         {
             DeathPlayerServerRpc();
-            DeathPlayer();
         }
     }
-    public void HealingPlayerHealth(int numHealth)
+
+    [ServerRpc(RequireOwnership = false)]
+    public void HealingPlayerHealthServerRpc(int numHealth)
     {
-        if (!IsOwner) return;
+     //   if (!IsServer) return;
+        Debug.Log("Add hp");
         if (isDead.Value )
         {
             return;
         }
-        if (currentHealth + numHealth > startingHealth)
+        if (currentHealth.Value + numHealth > startingHealth)
         {
-            currentHealth = startingHealth;
+            currentHealth.Value = startingHealth;
         }
         else
         {
-            currentHealth += numHealth;
+            currentHealth.Value += numHealth;
         }
     }
     [ServerRpc]
     public void DeathPlayerServerRpc()
     {
+        DeathPlayer();
+        Destroy(gameObject);
         isDead.Value = true;
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -80,6 +95,7 @@ public class PlayerHealth : NetworkBehaviour
     }
     public void DestroyPlayer()
     {
+        Debug.Log("destroy player");
         Destroy(gameObject);
     }
     private IEnumerator waitForTakeDamage()

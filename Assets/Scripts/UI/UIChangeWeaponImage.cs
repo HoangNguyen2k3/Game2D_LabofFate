@@ -27,17 +27,17 @@ public class UIChangeWeaponImage : MonoBehaviour
                 return;
             }
         }
-        if(player.transform.position.x > -162&&player.transform.position.x<90)
+        if(player.transform.position.x > 138&&player.transform.position.x<390)
         {
             fire.SetActive(false);
             ice.SetActive(false);
             thunder.SetActive(true);
-        }else if (player.transform.position.x >= 90)
+        }else if (player.transform.position.x >= 390)
         {
             fire.SetActive(false);
             ice.SetActive(true);
             thunder.SetActive(false);
-        }else if (player.transform.position.x <= -162)
+        }else if (player.transform.position.x <= 138)
         {
             fire.SetActive(true);
             ice.SetActive(false);

@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class Projectile : NetworkBehaviour
 {
     [SerializeField] private float moveSpeed = 22f;
     [SerializeField] private GameObject particalOnHitPrefabVFX;
@@ -10,6 +11,8 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float projectileRange = 10f;
 
     private Vector3 startPosition;
+
+    public bool usingPoolObject = false;
 
     private void Start()
     {
@@ -29,18 +32,36 @@ public class Projectile : MonoBehaviour
     {
         this.moveSpeed = moveSpeed;
     }
-    private void OnTriggerEnter2D(Collider2D other)
+  /*  private void OnTriggerEnter2D(Collider2D other)
     {
         EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
         Indestructive indestructible = other.gameObject.GetComponent<Indestructive>();
         PlayerHealth player = other.gameObject.GetComponent<PlayerHealth>();
-        
-        if (!other.isTrigger && (player||indestructible|| other.gameObject.layer == LayerMask.NameToLayer("Obstacles")))
+
+        if (!other.isTrigger && (player || indestructible || other.gameObject.layer == LayerMask.NameToLayer("Obstacles")))
         {
             Instantiate(particalOnHitPrefabVFX, transform.position, transform.rotation);
-            Destroy(gameObject);
+
+           if (IsServer)
+            {
+                if (usingPoolObject)
+                {
+                    GetComponentInParent<ObjectPoolingManager>().ReturnObject(gameObject);
+                    //  FindObjectOfType<ObjectPoolingManager>().ReturnObject(gameObject);
+                }
+                else
+                {
+                    Destroy(gameObject);
+                }
+            }
+            else
+            {
+                gameObject.SetActive(false);
+                GetComponentInParent<ObjectPoolingManager>().ReturnObject(gameObject);
+            }
+
         }
-      /*  if (!other.isTrigger && (enemyHealth || indestructible || player))
+      *//*  if (!other.isTrigger && (enemyHealth || indestructible || player))
         {
           *//*  if ((player && isEnemyProjectile) || (enemyHealth && !isEnemyProjectile))
             {
@@ -56,14 +77,51 @@ public class Projectile : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-   */
+   *//*
+    }
+*/
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!other.isTrigger && (other.gameObject.GetComponent<PlayerHealth>() ||
+                                 other.gameObject.GetComponent<Indestructive>() ||
+                                 other.gameObject.layer == LayerMask.NameToLayer("Obstacles")))
+        {
+            Instantiate(particalOnHitPrefabVFX, transform.position, transform.rotation);
+            PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakedDamageToPlayer(1, transform);
+            }
+            if (IsServer)
+            {
+
+                if (usingPoolObject)
+                {
+                    GetComponentInParent<ObjectPoolingManager>().ReturnObject(gameObject);
+                }
+                else
+                {
+                    Destroy(gameObject);
+                }
+            }
+        }
     }
 
     private void DetectFireDistance()
     {
         if (Vector3.Distance(transform.position, startPosition) > projectileRange)
         {
-            Destroy(gameObject);
+            if (IsServer)
+            {
+                if (usingPoolObject)
+                {
+                    GetComponentInParent<ObjectPoolingManager>().ReturnObject(gameObject);
+                }
+                else
+                {
+                    Destroy(gameObject);
+                }
+            }
         }
     }
     private void MoveProjectile()

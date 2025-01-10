@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-public class ManagePuzzleRoom : MonoBehaviour
+public class ManagePuzzleRoom : NetworkBehaviour
 {
     public Transform returnPlayer;
     
     public static ManagePuzzleRoom Instance { get; private set; }
     public int num_crystal = 4;
-    public int current_crystal = 0;
+    public NetworkVariable<int> current_crystal = new NetworkVariable<int>(0,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Server);
     public bool PlayerInRange;
 
     private void Start()

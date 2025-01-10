@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-public class DropItem : MonoBehaviour
+public class DropItem : NetworkBehaviour
 {
     private Transform target;
     [SerializeField] private int numAddHealth=1;
@@ -12,8 +13,13 @@ public class DropItem : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             GameObject player = UpdateTargetPlayer();
-            player.GetComponent<PlayerHealth>().HealingPlayerHealth(numAddHealth);
-            Destroy(gameObject);
+            player.GetComponent<PlayerHealth>().HealingPlayerHealthServerRpc(numAddHealth);           
+            if (IsServer)
+            {
+                gameObject.GetComponent<NetworkObject>().Despawn();
+            }
+            else { Destroy(gameObject); }
+            
         }
 
     }

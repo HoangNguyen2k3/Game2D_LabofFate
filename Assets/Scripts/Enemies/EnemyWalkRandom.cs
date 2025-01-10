@@ -39,7 +39,7 @@ public class EnemyWalkRandom : NetworkBehaviour
             }
             else
             {
-                spriteRenderer.flipY = true;
+                spriteRenderer.flipX = true;
             }
         }
     }

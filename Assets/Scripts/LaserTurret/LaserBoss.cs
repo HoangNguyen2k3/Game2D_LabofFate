@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-public class LaserBoss : MonoBehaviour
+public class LaserBoss : NetworkBehaviour
 {
     public Transform target;
     [SerializeField] private GameObject bloom;
@@ -16,9 +17,16 @@ public class LaserBoss : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x);
         transform.rotation = Quaternion.Euler(0f, 0f, angle * Mathf.Rad2Deg);
         int temp = Random.Range(4, 12);
+
         for(int i = 1; i <= temp; i++)
         {
-            Instantiate(laserNormal, transform.position, Quaternion.Euler(0f, 0f, angle * Mathf.Rad2Deg-(360/temp)*i));
+            
+            if (IsServer)
+            {
+                GameObject laser1= Instantiate(laserNormal, transform.position, Quaternion.Euler(0f, 0f, angle * Mathf.Rad2Deg - (360 / temp) * i));
+                laser1.GetComponent<NetworkObject>().Spawn();
+            }
+            
         }
     }
     void Update()

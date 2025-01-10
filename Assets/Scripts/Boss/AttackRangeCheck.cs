@@ -8,11 +8,12 @@ public class AttackRangeCheck : MonoBehaviour
 {
     private GameObject player;
     private BossCore boss;
-
+    [SerializeField] private TargetChange targetChange;
     private void Awake() 
     {
         player = GameObject.FindGameObjectWithTag("Player");
         boss = GetComponentInParent<BossCore>();
+        targetChange.OnTargetChanged += UpdateTarget;
     }
     private void Update()
     {
@@ -28,7 +29,10 @@ public class AttackRangeCheck : MonoBehaviour
             boss.SetAttackRangeStatus(true);
         }
     }
-
+    private void UpdateTarget(GameObject newTarget)
+    {
+        player = newTarget;
+    }
     private void OnTriggerStay2D(Collider2D other) {
         if (other.gameObject == player)
         {

@@ -114,6 +114,7 @@ public class EnemyAI : NetworkBehaviour
         {
             if (health.isDead.Value)
             {
+                Debug.Log("col bi set false 1");
                 col.enabled = false;
                 return;
             }
