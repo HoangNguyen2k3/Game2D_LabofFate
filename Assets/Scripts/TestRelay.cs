@@ -40,17 +40,20 @@ public class TestRelay : MonoBehaviour
             string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
             Debug.Log("Relay join code: " + joinCode);
 
-         //   RelayServerData relayServerData = new RelayServerData(allocation, "wss");
-            RelayServerData relayServerData = new RelayServerData(allocation, "dtls");
+            RelayServerData relayServerData = new RelayServerData(allocation, "wss");
+           // RelayServerData relayServerData = new RelayServerData(allocation, "dtls");
             NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
 
-     
 
+            Debug.Log("VCL1");
             NetworkManager.Singleton.StartHost();
+            Debug.Log("VCL");
             //PlayerSetting.Instance.networkPlayerName.Value = EditPlayerName.Instance.GetPlayerName();
-              await Task.Delay(3000);
-              NetworkManager.Singleton.SceneManager.LoadScene("SampleScene", UnityEngine.SceneManagement.LoadSceneMode.Single);
-       //   NetworkManager.Singleton.SceneManager.LoadScene("RoomWaitLobby", UnityEngine.SceneManagement.LoadSceneMode.Single);
+            //  await Task.Delay(2000);
+            //   NetworkManager.Singleton.SceneManager.LoadScene("SampleScene", UnityEngine.SceneManagement.LoadSceneMode.Single);
+                Debug.Log("Host is starting...");
+                NetworkManager.Singleton.SceneManager.LoadScene("RoomWaitLobby", UnityEngine.SceneManagement.LoadSceneMode.Single);
+                Debug.Log("Scene Load Triggered");
             //Add code
 
             return joinCode;
@@ -71,12 +74,12 @@ public class TestRelay : MonoBehaviour
 
             JoinAllocation joinAllocation = await RelayService.Instance.JoinAllocationAsync(joinCode);
 
-            //  RelayServerData relayServerData = new RelayServerData(joinAllocation, "wss");
-            RelayServerData relayServerData = new RelayServerData(joinAllocation, "dtls");
+              RelayServerData relayServerData = new RelayServerData(joinAllocation, "wss");
+          //  RelayServerData relayServerData = new RelayServerData(joinAllocation, "dtls");
             NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
 
             NetworkManager.Singleton.StartClient();
-        //    PlayerSetting.Instance.networkPlayerName.Value = EditPlayerName.Instance.GetPlayerName();
+          // PlayerSetting.Instance.networkPlayerName.Value = EditPlayerName.Instance.GetPlayerName();
             //Add code
         }
         catch (RelayServiceException e)

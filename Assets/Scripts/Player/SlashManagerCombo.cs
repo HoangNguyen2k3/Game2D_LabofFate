@@ -44,8 +44,9 @@ public class SlashManagerCombo : NetworkBehaviour
             canAttack.Value = true;
             isAttacking.Value = false;
             canCombo.Value = false;
+           // arpalet.SetActive(false);
         }
-
+        arpalet.SetActive(false);
     }
 
     private void Update()

@@ -16,8 +16,8 @@ public class ActiveWeapon : NetworkBehaviour
     {
         if (IsOwner)
         {
-            activeBow = GameObject.FindGameObjectWithTag("activeFar");
-            activeSword = GameObject.FindGameObjectWithTag("activeClose");
+          //  activeBow = GameObject.FindGameObjectWithTag("activeFar");
+          //  activeSword = GameObject.FindGameObjectWithTag("activeClose");
 
             if (activeSword != null) activeSword.SetActive(true);
             if (activeBow != null) activeBow.SetActive(false);
@@ -49,11 +49,11 @@ public class ActiveWeapon : NetworkBehaviour
 
     private void OnWeaponChanged(bool oldValue, bool newValue)
     {
-        if (activeBow == null || activeSword == null)
+/*        if (activeBow == null || activeSword == null)
         {
             activeBow = GameObject.FindGameObjectWithTag("activeFar");
             activeSword = GameObject.FindGameObjectWithTag("activeClose");
-        }
+        }*/
         if (activeSword != null) activeSword.SetActive(!newValue);
         if (activeBow != null) activeBow.SetActive(newValue);
     }

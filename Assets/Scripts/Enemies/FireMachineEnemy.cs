@@ -11,7 +11,9 @@ public class FireMachineEnemy : NetworkBehaviour, IEnemy
     [SerializeField] private int burstCount;
     [SerializeField] private float timeBetweenBurst;
     [SerializeField] private float restTime = 1f;
+    [SerializeField] private GameObject client_bullet;    
     
+
     private EnemyStandAI enemyStandAI;
     private bool isShooting = false;
     private Animator animator;
@@ -79,7 +81,15 @@ public class FireMachineEnemy : NetworkBehaviour, IEnemy
 
         for (int i = 0; i < burstCount; i++)
         {
-            SpawnBulletServerRpc(targetDirection);
+            if (!IsServer)
+            {
+                GameObject bullet_client = Instantiate(client_bullet, transform.position, Quaternion.identity);
+                bullet_client.transform.right = targetDirection;
+            }
+            else {
+                SpawnBulletServerRpc(targetDirection);
+            }
+            
             yield return new WaitForSeconds(timeBetweenBurst);
         }
 
@@ -105,6 +115,12 @@ public class FireMachineEnemy : NetworkBehaviour, IEnemy
     [ClientRpc]
     private void SpawnBulletClientRpc(ulong bulletId, Vector2 direction)
     {
+/*        if (IsClient)
+        {
+            GameObject bullet_client = Instantiate(client_bullet, transform.position, Quaternion.identity);
+            bullet_client.transform.right = direction;
+        }*/
+       
         if (!NetworkManager.SpawnManager.SpawnedObjects.TryGetValue(bulletId, out var netObj))
             return;
 

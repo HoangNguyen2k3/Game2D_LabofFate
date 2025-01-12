@@ -19,11 +19,10 @@ public class PauseButton : NetworkBehaviour
     private bool change_last = false;
     public override void OnNetworkSpawn()
     {
-     /*   map2.SetActive(false);
-        map3.SetActive(false);*/
-        if (!IsOwner) { 
-           gameObject.SetActive(false);
-        }
+/*        if (!IsOwner)
+        {
+            gameObject.SetActive(false);
+        }*/
     }
     private void Start()
     {

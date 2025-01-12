@@ -58,7 +58,7 @@ public class EnemyAI : NetworkBehaviour
     {
         knockBack = GetComponent<KnockBack>();
         enemyPathFinding = GetComponent<EnemyPathFinding>();
-        roamPosition.Value = GetRoamingPosition();
+       
         rb = GetComponent<Rigidbody2D>();
         health = GetComponent<EnemyHealth>();
         col = GetComponent<Collider2D>();
@@ -67,6 +67,7 @@ public class EnemyAI : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
+        roamPosition.Value = GetRoamingPosition();
         if (IsServer && target == null)
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");

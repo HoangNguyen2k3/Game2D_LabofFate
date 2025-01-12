@@ -24,6 +24,14 @@ public class KnockBack :  NetworkBehaviour
         rb.AddForce(direction_knockBack, ForceMode2D.Impulse);
         StartCoroutine(DoneKnockBack());
     }
+    public void GettingKnockBack2(Vector3 damageSoure, float knockbackThrust)
+    {
+        if (!canBeKnockback) return;
+        GetKnockBack = true;
+        Vector2 direction_knockBack = (-damageSoure + transform.position).normalized * knockbackThrust * rb.mass;
+        rb.AddForce(direction_knockBack, ForceMode2D.Impulse);
+        StartCoroutine(DoneKnockBack());
+    }
     private IEnumerator DoneKnockBack()
     {
         yield return new WaitForSeconds(timeKnockBack);
