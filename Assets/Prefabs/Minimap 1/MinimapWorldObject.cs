@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class MinimapWorldObject : MonoBehaviour
 {
-    [SerializeField]
-    private bool followObject = false;
+  /*  [SerializeField]
+    private bool followObject = false;*/
     [SerializeField]
     private Sprite minimapIcon;
     public Sprite MinimapIcon => minimapIcon;
@@ -11,8 +11,8 @@ public class MinimapWorldObject : MonoBehaviour
     [SerializeField] private GameObject minimap1;
     [SerializeField] private GameObject minimap2;
     [SerializeField] private GameObject minimap3;
-    private bool change_first = false;
-    private bool change_last = false;
+  //  private bool change_first = false;
+ //   private bool change_last = false;
     private void Start()
     {
 /*        if (!isRegisterMinimapWorld && MinimapController.Instance)

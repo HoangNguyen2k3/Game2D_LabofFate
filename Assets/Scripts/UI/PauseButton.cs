@@ -15,8 +15,8 @@ public class PauseButton : NetworkBehaviour
     [SerializeField] private GameObject map3;*/
 
    // [SerializeField] private GameObject manager_level;
-    private bool change_first = false;
-    private bool change_last = false;
+ //   private bool change_first = false;
+  //  private bool change_last = false;
     public override void OnNetworkSpawn()
     {
 /*        if (!IsOwner)
@@ -27,6 +27,7 @@ public class PauseButton : NetworkBehaviour
     private void Start()
     {
         PauseMenuWindow.SetActive(false);
+     //   DontDestroyOnLoad(gameObject);
     }
     public void ContinueGame()
     {
