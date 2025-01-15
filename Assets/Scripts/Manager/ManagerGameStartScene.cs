@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
@@ -8,7 +9,8 @@ public class ManagerGameStartScene : NetworkBehaviour
     public static string PlayerName { get; set; }
 
     public string player_names = "";
-    
+    private bool only_onetime = true;
+
     [SerializeField] private List<Transform> playerSpawnPositions;
     [Header("1st Floor")]
     [SerializeField] private List<GameObject> typeEnemySpawn;
@@ -49,9 +51,20 @@ public class ManagerGameStartScene : NetworkBehaviour
             GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
             foreach (var item in player)
             {
-                player_names += item.GetComponent<PlayerSetting>().playerName.text + " ";
+                int temp = item.GetComponent<PlayerSetting>().playerName.text.Length;
+                if ( temp> 5) {
+                    player_names += item.GetComponent<PlayerSetting>().playerName.text.Substring(0,5) + "-";
+                }
+                else if(temp <= 5&&temp>=1)
+                {
+                    player_names += item.GetComponent<PlayerSetting>().playerName.text + "-";
+                }
+                else
+                {
+                    player_names += "Anony";
+                }
             }
-            player_names.Substring(0,player_names.Length-1);
+            player_names= player_names.Substring(0,player_names.Length-1);
             SpawnEnemiesServerRpc();
         }
     }
@@ -138,12 +151,31 @@ public class ManagerGameStartScene : NetworkBehaviour
     public void TriggerWinCondition()
     {
         isWinTriggered = true;
-        int temp = (int)LevelTimer.Instance.total_time.Value;
-        ScoreManager.instance.SubmitScore(player_names,(1800-temp));
-      
+        if (only_onetime)
+        {
+            only_onetime = false;
+            int temp = (int)LevelTimer.Instance.total_time.Value;
+            ScoreManager.instance.SubmitScore(player_names, (1800 - temp));
+        }
+
+        StartCoroutine(waitToEnd());
+        
+    }
+    public IEnumerator waitToEnd()
+    {
+        yield return new WaitForSeconds(2f);
+        ResetLeaderBoardClientRpc();
         ActivateWinScreenClientRpc();
     }
+    [ClientRpc]
+    private void ResetLeaderBoardClientRpc()
+    {
+        if (!IsServer)
+        {
+            LeaderBoard.instance.GetLeaderboard();
+        }
 
+    }
     private void TriggerLoseCondition()
     {
         ActivateLoseScreenClientRpc();
@@ -203,8 +235,14 @@ public class ManagerGameStartScene : NetworkBehaviour
                 Destroy(GameObject.Find("NetworkManager"));
             }
             SceneManager.LoadScene("UpdatedLobbyTutorial_Done");
-
         }
     }
-
+    public void ReturnToMenuSecond()
+    {
+        if (GameObject.Find("NetworkManager"))
+        {
+            Destroy(GameObject.Find("NetworkManager"));
+        }
+        SceneManager.LoadScene("UpdatedLobbyTutorial_Done");
+    }
 }

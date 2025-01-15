@@ -24,7 +24,7 @@ public class EditPlayerName : MonoBehaviour {
         Instance = this;
 
         GetComponent<Button>().onClick.AddListener(() => {
-            UI_InputWindow.Show_Static("Player Name", playerName, "abcdefghijklmnopqrstuvxywzABCDEFGHIJKLMNOPQRSTUVXYWZ .,-", 20,
+            UI_InputWindow.Show_Static("Player Name", playerName, "abcdefghijklmnopqrstuvxywzABCDEFGHIJKLMNOPQRSTUVXYWZ0123456789", 10,
             () => {
                 // Cancel
             },

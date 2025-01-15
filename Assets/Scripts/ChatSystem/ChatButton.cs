@@ -1,32 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
-public class EnableAndDisableBtn : MonoBehaviour
+public class ChatButton : MonoBehaviour
 {
-    [SerializeField] private GameObject boxIntroduce;
-    private bool isActive = false;
+    [SerializeField] private GameObject chatbox;
+    public bool isActive = false;
+    [SerializeField] private GameObject noticeIcon;
     private void OnEnable()
     {
-        boxIntroduce.SetActive(false);
+        chatbox.SetActive(false);
     }
     public void ActiveBox()
     {
-        if(isActive)
+        if (isActive)
         {
-            boxIntroduce.SetActive(false);
+            chatbox.SetActive(false);
             isActive = false;
         }
         else
         {
-            boxIntroduce.SetActive(true);
+            noticeIcon.SetActive(false);
+            chatbox.SetActive(true);
             isActive = true;
         }
     }
     public void ActiveBoxAll()
     {
-        boxIntroduce.SetActive(true);
+        chatbox.SetActive(true);
     }
     private void OnDisable()
     {

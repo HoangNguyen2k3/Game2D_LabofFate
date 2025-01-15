@@ -91,7 +91,7 @@ public class UI_InputWindow : MonoBehaviour {
     }
 
     public static void Show_Static(string titleString, int defaultInt, Action onCancel, Action<int> onOk) {
-        instance.Show(titleString, defaultInt.ToString(), "0123456789-", 20, onCancel, 
+        instance.Show(titleString, defaultInt.ToString(), "@!~#$%^&*()+-", 10, onCancel, 
             (string inputText) => {
                 // Try to Parse input string
                 if (int.TryParse(inputText, out int _i)) {

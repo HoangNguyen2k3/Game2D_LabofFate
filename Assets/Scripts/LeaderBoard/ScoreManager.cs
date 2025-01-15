@@ -16,6 +16,7 @@ public class ScoreManager : NetworkBehaviour
     
     public void SubmitScore(string playername,int score)
     {
+        Debug.Log("dm duc");
             SubmitScoreEvent.Invoke(playername,score);
     }
 }

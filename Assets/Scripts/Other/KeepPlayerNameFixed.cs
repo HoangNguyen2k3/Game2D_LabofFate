@@ -31,5 +31,9 @@ public class KeepPlayerNameFixed : NetworkBehaviour
         {
             nameplayer.text = playerSetting.networkPlayerName.Value.ToString();
         }
+/*        else if(nameplayer.text != playerSetting.networkPlayerName.Value.ToString()&& playerSetting.networkPlayerName.Value == "")
+        {
+            nameplayer.text = "Anonymous";
+        }*/
     }
 }

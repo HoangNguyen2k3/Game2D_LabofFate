@@ -4,9 +4,11 @@ using TMPro;
 using UnityEngine;
 using Dan.Main;
 using Unity.VisualScripting;
+using UnityEngine.Events;
 
 public class LeaderBoard : MonoBehaviour
 {
+    public static LeaderBoard instance;
     [SerializeField] private List<TextMeshProUGUI> name_players;
     [SerializeField] private List<TextMeshProUGUI> scores_time;
 
@@ -14,6 +16,7 @@ public class LeaderBoard : MonoBehaviour
 
     private void Start()
     {
+        instance = this;
         GetLeaderboard();
     }
     public void GetLeaderboard()
@@ -33,7 +36,7 @@ public class LeaderBoard : MonoBehaviour
     {
         LeaderboardCreator.UploadNewEntry(publicLeaderboardKey,username,score, ((msg) =>
         {
-
+            LeaderboardCreator.ResetPlayer();
             GetLeaderboard();
         }
         ));

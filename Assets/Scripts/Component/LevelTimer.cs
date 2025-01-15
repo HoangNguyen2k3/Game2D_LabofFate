@@ -50,8 +50,12 @@ public class LevelTimer : NetworkBehaviour
         if (IsServer && !isTimerStopped)
         {
             UpdateTimerOnServer();
+           
         }
-        total_time.Value += Time.deltaTime;
+        if (IsServer)
+        {
+            total_time.Value += Time.deltaTime;
+        }
     }
 
     private void UpdateTimerOnServer()

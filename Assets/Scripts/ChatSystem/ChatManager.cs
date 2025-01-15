@@ -11,6 +11,8 @@ public class ChatManager : NetworkBehaviour
     [SerializeField] private ChatMessage chatMessagePrefab;
     [SerializeField] private CanvasGroup chatContent;
     [SerializeField] private TMP_InputField chatInput;
+    [SerializeField] private GameObject noticeIcon;
+    [SerializeField] private ChatButton btn;
 
     public string playerName;
 
@@ -18,7 +20,7 @@ public class ChatManager : NetworkBehaviour
 
     private void Awake()
     {
-
+        noticeIcon.SetActive(false);
 
     }
     public override void OnNetworkSpawn()
@@ -46,7 +48,7 @@ public class ChatManager : NetworkBehaviour
     private void SendChatMessage(string content,string player_name)
     {
         if(string.IsNullOrWhiteSpace(content)) { return; }
-        string S = player_name + " > " + content;
+        string S =player_name + " > " + content;
         SendChatMessageServerRpc(S);
     }
     void AddMessage(string msg)
@@ -62,6 +64,15 @@ public class ChatManager : NetworkBehaviour
     [ClientRpc]
     void ReceiveChatMessageClientRpc(string message)
     {
+        if (!btn.isActive)
+        {
+            noticeIcon?.SetActive(true);
+        }
+        else
+        {
+            noticeIcon?.SetActive(false);
+        }
+       
         AddMessage(message);
     }
     
