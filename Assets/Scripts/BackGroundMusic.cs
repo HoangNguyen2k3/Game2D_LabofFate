@@ -29,4 +29,12 @@ public class BackgroundMusic : NetworkBehaviour
             Destroy(gameObject); 
         }
     }
+    public void ChangeMusic(AudioClip newMusic)
+    {
+        Debug.Log("vch");
+            audioSource.Stop();
+            audioSource.clip = newMusic;
+            audioSource.Play();
+    }
+    public AudioSource audioSource;
 }
