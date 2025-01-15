@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerSetting : NetworkBehaviour
 {
-    [SerializeField] private TextMeshPro playerName;
+    public TextMeshPro playerName;
     public NetworkVariable<FixedString32Bytes> networkPlayerName = new NetworkVariable<FixedString32Bytes>("HOANG",NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
     private NetworkVariable<Vector3> playerPosition = new NetworkVariable<Vector3>();
 

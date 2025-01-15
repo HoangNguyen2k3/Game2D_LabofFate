@@ -16,7 +16,7 @@ public class LevelTimer : NetworkBehaviour
     public Color neutralColor;
     public Color warningColor;
     public Color dangerColor;
-
+    public NetworkVariable<float> total_time = new NetworkVariable<float>(0,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Server);
     public static LevelTimer Instance { get; private set; }
 
     private bool isTimerStopped;
@@ -51,6 +51,7 @@ public class LevelTimer : NetworkBehaviour
         {
             UpdateTimerOnServer();
         }
+        total_time.Value += Time.deltaTime;
     }
 
     private void UpdateTimerOnServer()
@@ -100,6 +101,7 @@ public class LevelTimer : NetworkBehaviour
     {
         if (IsServer)
         {
+           // total_time.Value=600-(int)remainingTime.Value; 
             remainingTime.Value = 600;
             isTimerStopped = false;
         }

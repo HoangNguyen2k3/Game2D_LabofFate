@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class ManagerGameStartScene : NetworkBehaviour
 {
     public static string PlayerName { get; set; }
+
+    public string player_names = "";
     
     [SerializeField] private List<Transform> playerSpawnPositions;
     [Header("1st Floor")]
@@ -43,6 +45,13 @@ public class ManagerGameStartScene : NetworkBehaviour
         base.OnNetworkSpawn();
         if (IsServer)
         {
+           // string play
+            GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
+            foreach (var item in player)
+            {
+                player_names += item.GetComponent<PlayerSetting>().playerName.text + " ";
+            }
+            player_names.Substring(0,player_names.Length-1);
             SpawnEnemiesServerRpc();
         }
     }
@@ -129,6 +138,9 @@ public class ManagerGameStartScene : NetworkBehaviour
     public void TriggerWinCondition()
     {
         isWinTriggered = true;
+        int temp = (int)LevelTimer.Instance.total_time.Value;
+        ScoreManager.instance.SubmitScore(player_names,(1800-temp));
+      
         ActivateWinScreenClientRpc();
     }
 
