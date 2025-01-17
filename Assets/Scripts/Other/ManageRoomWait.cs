@@ -52,8 +52,11 @@ public class ManageRoomWait : NetworkBehaviour
             isDone = true;
             if (IsServer)
             {
-                enemyTest.GetComponent<NetworkObject>().Despawn();
- NetworkManager.Singleton.SceneManager.LoadScene("SampleScene", UnityEngine.SceneManagement.LoadSceneMode.Single);
+                if (enemyTest)
+                {
+                    enemyTest.GetComponent<NetworkObject>().Despawn();
+                }               
+               NetworkManager.Singleton.SceneManager.LoadScene("SampleScene", UnityEngine.SceneManagement.LoadSceneMode.Single);
             }
            
         }

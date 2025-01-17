@@ -4,7 +4,7 @@ using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseButton : NetworkBehaviour
+public class PauseButton :MonoBehaviour
 {
     [SerializeField] private GameObject PauseMenuWindow;
     [SerializeField] private GameObject openSound;
@@ -17,13 +17,6 @@ public class PauseButton : NetworkBehaviour
    // [SerializeField] private GameObject manager_level;
  //   private bool change_first = false;
   //  private bool change_last = false;
-    public override void OnNetworkSpawn()
-    {
-/*        if (!IsOwner)
-        {
-            gameObject.SetActive(false);
-        }*/
-    }
     private void Start()
     {
         PauseMenuWindow.SetActive(false);
@@ -64,7 +57,7 @@ public class PauseButton : NetworkBehaviour
             }
             SceneManager.LoadScene("UpdatedLobbyTutorial_Done");
 
-        
+        PauseMenuWindow.SetActive(false);
     }
     private void Update()
     {

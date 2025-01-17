@@ -64,7 +64,7 @@ public class ChatManager : NetworkBehaviour
     [ClientRpc]
     void ReceiveChatMessageClientRpc(string message)
     {
-        if (!btn.isActive)
+        if (btn.isActive==false)
         {
             noticeIcon?.SetActive(true);
         }
